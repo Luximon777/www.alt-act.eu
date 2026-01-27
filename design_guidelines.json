@@ -1,0 +1,183 @@
+{
+  "design_system": {
+    "typography": {
+      "font_family": {
+        "heading": "Fraunces, serif",
+        "body": "Manrope, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "scale": {
+        "h1": "text-4xl md:text-6xl font-bold tracking-tight leading-tight",
+        "h2": "text-3xl md:text-4xl font-semibold tracking-tight",
+        "h3": "text-2xl md:text-3xl font-medium",
+        "body_lg": "text-lg md:text-xl leading-relaxed",
+        "body_base": "text-base leading-relaxed",
+        "caption": "text-sm text-muted-foreground uppercase tracking-widest"
+      }
+    },
+    "colors": {
+      "theme": "light",
+      "palette": {
+        "primary": {
+          "DEFAULT": "#D97706",
+          "foreground": "#FFFFFF",
+          "description": "Warm Amber - Represents Energy, Identity, and Optimism"
+        },
+        "secondary": {
+          "DEFAULT": "#0F766E",
+          "foreground": "#FFFFFF",
+          "description": "Deep Teal - Represents Serenity, Professionalism, and Growth"
+        },
+        "background": {
+          "DEFAULT": "#FAFAF9",
+          "paper": "#FFFFFF",
+          "subtle": "#F5F5F4"
+        },
+        "text": {
+          "primary": "#1C1917",
+          "secondary": "#57534E",
+          "muted": "#A8A29E"
+        },
+        "accent": {
+          "warm": "#F59E0B",
+          "cool": "#14B8A6",
+          "soft": "#FEF3C7"
+        },
+        "status": {
+          "success": "#10B981",
+          "warning": "#F59E0B",
+          "error": "#EF4444",
+          "info": "#3B82F6"
+        }
+      }
+    },
+    "layout": {
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "spacing": {
+        "section": "py-16 md:py-24",
+        "component": "p-6 md:p-8",
+        "gap": "gap-6 md:gap-8"
+      },
+      "radius": {
+        "default": "rounded-xl",
+        "large": "rounded-2xl",
+        "full": "rounded-full"
+      },
+      "grid": {
+        "dashboard": "grid grid-cols-1 md:grid-cols-12 gap-6",
+        "cards": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      }
+    },
+    "visual_enhancers": {
+      "shadows": {
+        "card": "shadow-[0_2px_8px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.08)]",
+        "hover": "shadow-[0_4px_12px_rgba(0,0,0,0.08),0_12px_32px_rgba(0,0,0,0.12)]",
+        "inner": "shadow-inner"
+      },
+      "glassmorphism": {
+        "default": "bg-white/80 backdrop-blur-md border border-white/20",
+        "dark": "bg-black/5 backdrop-blur-md border border-black/5"
+      },
+      "gradients": {
+        "warm_glow": "bg-gradient-to-br from-amber-50 to-orange-100",
+        "cool_calm": "bg-gradient-to-br from-teal-50 to-emerald-100",
+        "hero_overlay": "bg-gradient-to-t from-stone-900/60 to-transparent"
+      }
+    },
+    "motion": {
+      "transitions": {
+        "default": "transition-all duration-300 ease-out",
+        "slow": "transition-all duration-700 ease-in-out"
+      },
+      "animations": {
+        "fade_in": "animate-in fade-in duration-500",
+        "slide_up": "animate-in slide-in-from-bottom-4 duration-500",
+        "pulse_slow": "animate-pulse duration-[3000ms]"
+      }
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-3 font-medium shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/90 rounded-full px-8 py-3 font-medium shadow-md hover:shadow-lg transition-all",
+      "outline": "border-2 border-primary text-primary hover:bg-primary/5 rounded-full px-8 py-3 font-medium transition-all",
+      "ghost": "text-foreground hover:bg-muted rounded-lg px-4 py-2 font-medium transition-colors"
+    },
+    "cards": {
+      "feature": "bg-white rounded-2xl p-8 shadow-card hover:shadow-hover transition-all border border-stone-100 group",
+      "profile": "bg-white rounded-2xl p-6 shadow-card border-l-4 border-primary",
+      "job": "bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-stone-200 hover:border-primary/30 cursor-pointer"
+    },
+    "inputs": {
+      "default": "bg-white border-stone-200 focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-lg px-4 py-3 transition-all",
+      "search": "pl-10 bg-stone-50 border-transparent focus:bg-white focus:border-primary rounded-full"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_background": {
+        "url": "https://images.unsplash.com/photo-1764066184156-a5442b81df62?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Warm abstract organic shapes representing growth and potential",
+        "usage": "Hero section background with overlay"
+      },
+      "identity_door": {
+        "url": "https://images.unsplash.com/photo-1674239779222-d0beb8ed69c5?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Person looking at valley sunset",
+        "usage": "Card image for 'Je cherche MON job' (Identity path)"
+      },
+      "job_door": {
+        "url": "https://images.unsplash.com/photo-1758518731468-98e90ffd7430?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Diverse professionals standing together",
+        "usage": "Card image for 'Je cherche UN job' (Market path)"
+      },
+      "pathway_concept": {
+        "url": "https://images.unsplash.com/photo-1761234724271-297565c90afa?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Sunlight streaming through forest path",
+        "usage": "Background for results or transition pages"
+      }
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "stroke-width-1.5"
+    }
+  },
+  "page_specifics": {
+    "home": {
+      "layout": "Split screen or Two-Card Hero",
+      "elements": [
+        "Hero Title: 'Valoriser Son Identité Professionnelle'",
+        "Two Entry Cards: 'Je cherche MON job' vs 'Je cherche UN job'",
+        "Trust indicators (logos, stats) in muted monochrome"
+      ]
+    },
+    "questionnaire": {
+      "layout": "Focused single-column layout",
+      "elements": [
+        "Progress bar (top, sticky)",
+        "Question Card (centered, large text)",
+        "Answer Options (large clickable areas, visual feedback)",
+        "Navigation (Back/Next buttons)"
+      ]
+    },
+    "results": {
+      "layout": "Dashboard grid",
+      "elements": [
+        "Profile Summary (Top Left)",
+        "Radar Chart (Top Right - Personality)",
+        "Job Matches List (Bottom - Scrollable)",
+        "Export PDF Button (Floating or Top Right)"
+      ]
+    }
+  },
+  "universal_guidelines": [
+    "Use 'Manrope' for all UI text and 'Fraunces' for headings to create a 'Warm Professional' vibe.",
+    "Ensure all interactive elements have `data-testid` attributes.",
+    "Use `sonner` for toast notifications.",
+    "Implement smooth loading states (skeletons) for AI generation.",
+    "Mobile-first: Ensure touch targets are at least 44px.",
+    "Accessibility: Maintain high contrast (WCAG AA) for text.",
+    "Do not use pure black (#000000); use Warm Black (#1C1917).",
+    "Use generous whitespace (p-8, p-12) to create a sense of calm.",
+    "Avoid sharp edges; use rounded-xl or rounded-2xl for a friendly feel."
+  ]
+}
