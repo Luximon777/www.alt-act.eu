@@ -447,6 +447,20 @@ const ResultsPage = () => {
     doc.text(splitQualites, 25, y);
     y += splitQualites.length * 7 + 10;
     
+    // Valeurs
+    if (profile.valeurs && profile.valeurs.length > 0) {
+      doc.setFontSize(14);
+      doc.setFont(undefined, 'bold');
+      doc.text("Valeurs (Schwartz)", 20, y);
+      y += 10;
+      doc.setFont(undefined, 'normal');
+      doc.setFontSize(11);
+      const valeursText = profile.valeurs.join(", ");
+      const splitValeurs = doc.splitTextToSize(valeursText, pageWidth - 50);
+      doc.text(splitValeurs, 25, y);
+      y += splitValeurs.length * 7 + 10;
+    }
+    
     // Compétences
     doc.setFontSize(14);
     doc.setFont(undefined, 'bold');
