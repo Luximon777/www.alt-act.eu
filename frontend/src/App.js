@@ -626,6 +626,30 @@ const ResultsPage = () => {
             </CardContent>
           </Card>
 
+          {/* Valeurs */}
+          <Card className="vsi-card animate-fade-in-up delay-150" data-testid="valeurs-card">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2" style={{ fontFamily: 'Fraunces, serif' }}>
+                <Star className="w-5 h-5 text-amber-500" />
+                Valeurs (Schwartz)
+              </CardTitle>
+              <CardDescription>Ce qui compte profondément pour vous</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-2">
+                {profile.valeurs && profile.valeurs.map((valeur) => (
+                  <Badge 
+                    key={valeur} 
+                    variant="secondary"
+                    className="bg-amber-50 text-amber-700 hover:bg-amber-100 py-1.5"
+                  >
+                    {valeur}
+                  </Badge>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
           {/* Compétences psychosociales */}
           <Card className="vsi-card animate-fade-in-up delay-200" data-testid="competences-card">
             <CardHeader>
