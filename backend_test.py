@@ -261,6 +261,197 @@ class VSIAPITester:
             self.log_test("Get Stats", False, str(e))
             return False
 
+    def test_reactif_impact_stats(self) -> bool:
+        """Test RE'ACTIF PRO impact statistics endpoint"""
+        try:
+            response = requests.get(f"{self.api_url}/reactif/impact", timeout=10)
+            success = response.status_code == 200
+            
+            if success:
+                data = response.json()
+                required_fields = [
+                    'profiles_generes', 'plans_action_crees', 'demandes_contact',
+                    'taux_clarification', 'taux_mise_en_action_30j', 
+                    'progression_posture', 'satisfaction'
+                ]
+                success = all(field in data for field in required_fields)
+                details = f"Status: {response.status_code}, Profiles: {data.get('profiles_generes', 0)}"
+                details += f", Plans: {data.get('plans_action_crees', 0)}"
+                details += f", Satisfaction: {data.get('satisfaction', 0)}%"
+            else:
+                details = f"Status: {response.status_code}"
+                
+            self.log_test("RE'ACTIF Impact Stats", success, details)
+            return success
+            
+        except Exception as e:
+            self.log_test("RE'ACTIF Impact Stats", False, str(e))
+            return False
+
+    def test_reactif_contact_submission(self) -> bool:
+        """Test RE'ACTIF PRO contact form submission"""
+        try:
+            # Test RH contact
+            test_data = {
+                "type": "rh",
+                "nom": "Test RH",
+                "email": "test.rh@example.com",
+                "telephone": "0123456789",
+                "organisation": "Test Company",
+                "message": "Test message for RH services"
+            }
+            
+            response = requests.post(
+                f"{self.api_url}/reactif/contact",
+                json=test_data,
+                headers={'Content-Type': 'application/json'},
+                timeout=10
+            )
+            
+            success = response.status_code == 200
+            
+            if success:
+                data = response.json()
+                success = data.get('success') == True
+                details = f"Status: {response.status_code}, Success: {data.get('success')}"
+                details += f", Message: {data.get('message', '')}"
+            else:
+                details = f"Status: {response.status_code}"
+                
+            self.log_test("RE'ACTIF Contact RH", success, details)
+            
+            # Test Partenaire contact
+            test_data["type"] = "partenaire"
+            test_data["nom"] = "Test Partenaire"
+            test_data["email"] = "test.partenaire@example.com"
+            test_data["message"] = "Test message for partnership"
+            
+            response = requests.post(
+                f"{self.api_url}/reactif/contact",
+                json=test_data,
+                headers={'Content-Type': 'application/json'},
+                timeout=10
+            )
+            
+            success2 = response.status_code == 200
+            if success2:
+                data = response.json()
+                success2 = data.get('success') == True
+            
+            self.log_test("RE'ACTIF Contact Partenaire", success2, f"Status: {response.status_code}")
+            
+            return success and success2
+            
+        except Exception as e:
+            self.log_test("RE'ACTIF Contact Submission", False, str(e))
+            return False
+
+    def test_reactif_profile_and_plan(self, profile_id: str = None) -> bool:
+        """Test RE'ACTIF PRO profile retrieval and action plan generation"""
+        if not profile_id:
+            # First create a profile via VSI analyze
+            test_data = {
+                "birth_date": "1990-01-01",
+                "answers": {str(i): "A" for i in range(1, 13)},
+                "entry_type": "mon_job",
+                "target_job": None
+            }
+            
+            try:
+                response = requests.post(
+                    f"{self.api_url}/analyze", 
+                    json=test_data,
+                    headers={'Content-Type': 'application/json'},
+                    timeout=30
+                )
+                
+                if response.status_code != 200:
+                    self.log_test("RE'ACTIF Profile Setup", False, "Failed to create test profile")
+                    return False
+                
+                profile_data = response.json()
+                profile_id = profile_data.get('id')
+                
+                if not profile_id:
+                    self.log_test("RE'ACTIF Profile Setup", False, "No profile ID returned")
+                    return False
+                    
+            except Exception as e:
+                self.log_test("RE'ACTIF Profile Setup", False, str(e))
+                return False
+        
+        # Test profile retrieval
+        try:
+            response = requests.get(f"{self.api_url}/reactif/profile/{profile_id}", timeout=10)
+            success = response.status_code == 200
+            
+            if success:
+                profile_data = response.json()
+                success = 'id' in profile_data and 'vertus_dominantes' in profile_data
+                details = f"Status: {response.status_code}, Profile ID: {profile_data.get('id')}"
+            else:
+                details = f"Status: {response.status_code}"
+                
+            self.log_test("RE'ACTIF Profile Retrieval", success, details)
+            
+            if not success:
+                return False
+                
+        except Exception as e:
+            self.log_test("RE'ACTIF Profile Retrieval", False, str(e))
+            return False
+        
+        # Test action plan generation
+        try:
+            response = requests.post(
+                f"{self.api_url}/reactif/plan-action?profile_id={profile_id}",
+                headers={'Content-Type': 'application/json'},
+                timeout=30  # Longer timeout for AI processing
+            )
+            
+            success = response.status_code == 200
+            
+            if success:
+                plan_data = response.json()
+                required_fields = ['id', 'profile_id', 'actions_30j', 'actions_60j', 'actions_90j']
+                success = all(field in plan_data for field in required_fields)
+                
+                actions_30j = len(plan_data.get('actions_30j', []))
+                actions_60j = len(plan_data.get('actions_60j', []))
+                actions_90j = len(plan_data.get('actions_90j', []))
+                
+                details = f"Status: {response.status_code}, Actions: 30j={actions_30j}, 60j={actions_60j}, 90j={actions_90j}"
+            else:
+                details = f"Status: {response.status_code}"
+                
+            self.log_test("RE'ACTIF Action Plan Generation", success, details)
+            
+            if not success:
+                return False
+                
+        except Exception as e:
+            self.log_test("RE'ACTIF Action Plan Generation", False, str(e))
+            return False
+        
+        # Test action plan retrieval
+        try:
+            response = requests.get(f"{self.api_url}/reactif/plan-action/{profile_id}", timeout=10)
+            success = response.status_code == 200
+            
+            if success:
+                plan_data = response.json()
+                success = 'profile_id' in plan_data and plan_data['profile_id'] == profile_id
+                details = f"Status: {response.status_code}, Plan ID: {plan_data.get('id')}"
+            else:
+                details = f"Status: {response.status_code}"
+                
+            self.log_test("RE'ACTIF Action Plan Retrieval", success, details)
+            return success
+            
+        except Exception as e:
+            self.log_test("RE'ACTIF Action Plan Retrieval", False, str(e))
+            return False
+
     def test_invalid_endpoints(self) -> bool:
         """Test invalid endpoints return proper errors"""
         try:
