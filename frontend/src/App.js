@@ -162,7 +162,7 @@ const QuestionnairePage = ({ entryType }) => {
   const [showIntro, setShowIntro] = useState(true);
 
   // Fetch questions on mount
-  useState(() => {
+  useEffect(() => {
     const fetchQuestions = async () => {
       try {
         const response = await axios.get(`${API}/questions`);
