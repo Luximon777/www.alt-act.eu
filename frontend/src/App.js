@@ -138,7 +138,8 @@ const HomePage = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-8 text-[#57534E]">
               <span className="font-medium">Seligman & Peterson</span>
-              <span className="font-medium">Schwartz</span>
+              <span className="font-medium">Shalom Schwartz</span>
+              <span className="font-medium">C. G. Jung</span>
               <span className="font-medium">OMS</span>
             </div>
           </div>
