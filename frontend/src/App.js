@@ -768,6 +768,25 @@ const ResultsPage = () => {
             </CardContent>
           </Card>
         )}
+
+        {/* CTA to RE'ACTIF PRO */}
+        <Card className="vsi-card mt-6 animate-fade-in-up delay-600 bg-gradient-to-r from-teal-50 to-amber-50 border-2 border-teal-200" data-testid="reactif-cta">
+          <CardContent className="p-6 text-center">
+            <h3 className="text-xl font-semibold mb-2" style={{ fontFamily: 'Fraunces, serif' }}>
+              Passez à l'étape suivante
+            </h3>
+            <p className="text-[#57534E] mb-4">
+              Transformez ce diagnostic en <strong>plan d'action concret</strong> avec RE'ACTIF PRO
+            </p>
+            <Button 
+              onClick={() => navigate(`/reactif/particuliers?profile=${profile.id}`)}
+              className="bg-teal-600 hover:bg-teal-700 text-white rounded-full"
+              data-testid="go-to-reactif-btn"
+            >
+              Continuer vers RE'ACTIF PRO <ExternalLink className="w-4 h-4 ml-2" />
+            </Button>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
