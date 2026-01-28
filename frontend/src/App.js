@@ -19,7 +19,8 @@ import {
   ChevronRight,
   Loader2,
   FileText,
-  Star
+  Star,
+  ExternalLink
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -28,6 +29,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import jsPDF from "jspdf";
+import { ReactifHome, ParticuliersPage, ServicesRHPage, PartenairesPage } from "./ReactifPro";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
