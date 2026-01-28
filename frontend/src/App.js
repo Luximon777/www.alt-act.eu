@@ -379,14 +379,14 @@ const ResultsPage = () => {
   const [profile, setProfile] = useState(null);
   
   // Get profile from navigation state
-  useState(() => {
+  useEffect(() => {
     const state = window.history.state?.usr;
     if (state?.profile) {
       setProfile(state.profile);
     } else {
       navigate("/");
     }
-  }, []);
+  }, [navigate]);
 
   const generatePDF = useCallback(() => {
     if (!profile) return;
