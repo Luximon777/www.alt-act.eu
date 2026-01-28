@@ -393,16 +393,6 @@ def calculate_profile(answers: Dict[str, str]) -> Dict[str, Any]:
         "competences_psychosociales": competences,
         "savoirs_etre": savoirs_etre
     }
-    competences = list(dict.fromkeys(competences))[:6]
-    savoirs_etre = list(dict.fromkeys(savoirs_etre))[:6]
-    
-    return {
-        "vertus_scores": vertus_scores,
-        "vertus_dominantes": vertus_dominantes,
-        "qualites_humaines": qualites,
-        "competences_psychosociales": competences,
-        "savoirs_etre": savoirs_etre
-    }
 
 
 def get_compatible_filieres(vertus_dominantes: List[str]) -> List[Dict[str, Any]]:
