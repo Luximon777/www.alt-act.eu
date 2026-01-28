@@ -523,6 +523,7 @@ async def analyze_questionnaire(data: QuestionnaireResponse):
         timestamp=datetime.now(timezone.utc).isoformat(),
         vertus_scores=profile["vertus_scores"],
         vertus_dominantes=profile["vertus_dominantes"],
+        valeurs=profile["valeurs"],
         qualites_humaines=profile["qualites_humaines"],
         competences_psychosociales=profile["competences_psychosociales"],
         savoirs_etre=profile["savoirs_etre"],
