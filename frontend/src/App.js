@@ -404,7 +404,20 @@ const ResultsPage = () => {
     // Reset text color
     doc.setTextColor(28, 25, 23);
     
-    let y = 55;
+    let y = 50;
+    
+    // Disclaimer
+    doc.setFillColor(254, 243, 199);
+    doc.roundedRect(15, y, pageWidth - 30, 28, 3, 3, 'F');
+    doc.setFontSize(9);
+    doc.setTextColor(146, 64, 14);
+    const disclaimerText = "À noter : Ce profil constitue un premier aperçu de votre identité professionnelle. Il révèle une tendance à être et ne valide pas vos compétences professionnelles acquises. Il est destiné à éclairer votre réflexion, non à vous définir.";
+    const splitDisclaimer = doc.splitTextToSize(disclaimerText, pageWidth - 40);
+    doc.text(splitDisclaimer, 20, y + 8);
+    
+    // Reset text color
+    doc.setTextColor(28, 25, 23);
+    y = 90;
     
     // Vertus dominantes
     doc.setFontSize(14);
