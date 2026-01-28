@@ -329,6 +329,7 @@ class ProfileResult(BaseModel):
     timestamp: str
     vertus_scores: Dict[str, float]
     vertus_dominantes: List[str]
+    valeurs: List[str]
     qualites_humaines: List[str]
     competences_psychosociales: List[str]
     savoirs_etre: List[str]
