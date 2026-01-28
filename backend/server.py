@@ -566,6 +566,164 @@ async def get_stats():
     }
 
 
+# ============== RE'ACTIF PRO ROUTES ==============
+
+# Plan d'action model
+class ActionPlan(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    profile_id: str
+    created_at: str
+    actions_30j: List[Dict[str, Any]]
+    actions_60j: List[Dict[str, Any]]
+    actions_90j: List[Dict[str, Any]]
+    status: str = "actif"
+
+class ContactRequest(BaseModel):
+    type: str  # "particulier", "rh", "partenaire"
+    nom: str
+    email: str
+    telephone: Optional[str] = None
+    organisation: Optional[str] = None
+    message: str
+
+@api_router.get("/reactif/profile/{profile_id}")
+async def get_reactif_profile(profile_id: str):
+    """Get profile for RE'ACTIF PRO from VSI diagnosis"""
+    profile = await db.vsi_profiles.find_one({"id": profile_id}, {"_id": 0})
+    if not profile:
+        raise HTTPException(status_code=404, detail="Profil non trouvé")
+    return profile
+
+@api_router.post("/reactif/plan-action")
+async def create_action_plan(profile_id: str):
+    """Generate action plan 30/60/90 days based on profile"""
+    profile = await db.vsi_profiles.find_one({"id": profile_id}, {"_id": 0})
+    if not profile:
+        raise HTTPException(status_code=404, detail="Profil non trouvé")
+    
+    # Generate AI-powered action plan
+    try:
+        api_key = os.environ.get('EMERGENT_LLM_KEY')
+        if api_key:
+            chat = LlmChat(
+                api_key=api_key,
+                session_id=f"reactif-plan-{uuid.uuid4()}",
+                system_message="""Tu es un conseiller en insertion professionnelle expert.
+Tu crées des plans d'action structurés et réalistes pour l'insertion professionnelle.
+Tu réponds en JSON valide uniquement."""
+            ).with_model("openai", "gpt-4o")
+            
+            vertus_names = [VERTUS_DATA.get(v, {}).get("nom", v) for v in profile.get("vertus_dominantes", [])]
+            filieres_names = [f.get("nom", "") for f in profile.get("filieres_compatibles", [])[:3]]
+            
+            prompt = f"""Crée un plan d'action professionnel structuré pour cette personne:
+
+Vertus dominantes: {', '.join(vertus_names)}
+Qualités: {', '.join(profile.get('qualites_humaines', [])[:5])}
+Compétences: {', '.join(profile.get('competences_psychosociales', [])[:4])}
+Filières compatibles: {', '.join(filieres_names)}
+Type de recherche: {profile.get('entry_type', 'mon_job')}
+{f"Métier visé: {profile.get('target_job')}" if profile.get('target_job') else ""}
+
+Génère un JSON avec cette structure exacte:
+{{
+  "actions_30j": [
+    {{"titre": "...", "description": "...", "priorite": "haute/moyenne/basse"}},
+    ...
+  ],
+  "actions_60j": [...],
+  "actions_90j": [...]
+}}
+
+Chaque période doit avoir 3-4 actions concrètes et réalistes."""
+
+            user_message = UserMessage(text=prompt)
+            response = await chat.send_message(user_message)
+            
+            # Parse JSON from response
+            import json
+            import re
+            json_match = re.search(r'\{[\s\S]*\}', response)
+            if json_match:
+                plan_data = json.loads(json_match.group())
+            else:
+                raise ValueError("No JSON found")
+        else:
+            raise ValueError("No API key")
+            
+    except Exception as e:
+        logging.error(f"Error generating action plan: {e}")
+        # Fallback plan
+        plan_data = {
+            "actions_30j": [
+                {"titre": "Finaliser le CV", "description": "Adapter le CV aux filières identifiées", "priorite": "haute"},
+                {"titre": "Créer profil France Travail", "description": "Mettre à jour ou créer le profil en ligne", "priorite": "haute"},
+                {"titre": "Identifier 10 entreprises cibles", "description": "Rechercher des employeurs dans les secteurs compatibles", "priorite": "moyenne"}
+            ],
+            "actions_60j": [
+                {"titre": "Candidatures ciblées", "description": "Envoyer 15-20 candidatures adaptées", "priorite": "haute"},
+                {"titre": "Développer le réseau", "description": "Contacter 5 professionnels du secteur", "priorite": "moyenne"},
+                {"titre": "Préparer les entretiens", "description": "S'entraîner à présenter son parcours", "priorite": "moyenne"}
+            ],
+            "actions_90j": [
+                {"titre": "Bilan et ajustement", "description": "Évaluer les retours et ajuster la stratégie", "priorite": "haute"},
+                {"titre": "Explorer les formations", "description": "Identifier les formations complémentaires si nécessaire", "priorite": "moyenne"},
+                {"titre": "Immersion métier", "description": "Organiser une période d'immersion si possible", "priorite": "basse"}
+            ]
+        }
+    
+    plan = ActionPlan(
+        profile_id=profile_id,
+        created_at=datetime.now(timezone.utc).isoformat(),
+        actions_30j=plan_data.get("actions_30j", []),
+        actions_60j=plan_data.get("actions_60j", []),
+        actions_90j=plan_data.get("actions_90j", [])
+    )
+    
+    # Save plan
+    await db.action_plans.insert_one(plan.model_dump())
+    
+    return plan
+
+@api_router.get("/reactif/plan-action/{profile_id}")
+async def get_action_plan(profile_id: str):
+    """Get existing action plan for a profile"""
+    plan = await db.action_plans.find_one({"profile_id": profile_id}, {"_id": 0})
+    if not plan:
+        raise HTTPException(status_code=404, detail="Plan d'action non trouvé")
+    return plan
+
+@api_router.post("/reactif/contact")
+async def submit_contact(data: ContactRequest):
+    """Submit contact request (RH or Partners)"""
+    doc = {
+        "id": str(uuid.uuid4()),
+        "created_at": datetime.now(timezone.utc).isoformat(),
+        **data.model_dump()
+    }
+    await db.contact_requests.insert_one(doc)
+    return {"success": True, "message": "Demande envoyée avec succès"}
+
+@api_router.get("/reactif/impact")
+async def get_impact_stats():
+    """Get impact statistics for RE'ACTIF PRO"""
+    total_profiles = await db.vsi_profiles.count_documents({})
+    total_plans = await db.action_plans.count_documents({})
+    total_contacts = await db.contact_requests.count_documents({})
+    
+    # Simulated impact data (in production, would be real metrics)
+    return {
+        "profiles_generes": total_profiles,
+        "plans_action_crees": total_plans,
+        "demandes_contact": total_contacts,
+        "taux_clarification": 87,
+        "taux_mise_en_action_30j": 72,
+        "progression_posture": 65,
+        "satisfaction": 92
+    }
+
+
 # Include the router in the main app
 app.include_router(api_router)
 
