@@ -497,13 +497,24 @@ const ResultsPage = () => {
         <div className="max-w-5xl mx-auto text-center">
           <Badge className="mb-4 bg-white/20 text-white hover:bg-white/30">
             <Sparkles className="w-3 h-3 mr-1" />
-            Profil généré
+            Premier aperçu
           </Badge>
           <h1 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'Fraunces, serif' }}>
             Votre Identité Professionnelle
           </h1>
           <p className="text-white/80 max-w-xl mx-auto">
             Découvrez vos forces, vos valeurs et les environnements où vous pouvez vous épanouir.
+          </p>
+        </div>
+      </div>
+
+      {/* Disclaimer */}
+      <div className="max-w-5xl mx-auto px-4 -mt-4 mb-4">
+        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-center">
+          <p className="text-sm text-amber-800">
+            <strong>À noter :</strong> Ce profil constitue un <strong>premier aperçu</strong> de votre identité professionnelle. 
+            Il révèle une <strong>tendance à être</strong> et ne valide pas vos compétences professionnelles acquises. 
+            Il est destiné à éclairer votre réflexion, non à vous définir.
           </p>
         </div>
       </div>
