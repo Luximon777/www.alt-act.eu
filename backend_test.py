@@ -469,7 +469,7 @@ class VSIAPITester:
 
     def run_all_tests(self) -> Dict[str, Any]:
         """Run all backend tests"""
-        print("🚀 Starting VSI Backend API Tests...")
+        print("🚀 Starting VSI + RE'ACTIF PRO Backend API Tests...")
         print(f"🔗 Testing against: {self.base_url}")
         print("=" * 60)
         
@@ -478,19 +478,32 @@ class VSIAPITester:
             print("❌ API root test failed - stopping tests")
             return self.get_summary()
         
-        # Test data endpoints
+        # Test VSI data endpoints
         questions_data = self.test_get_questions()
         self.test_get_vertus()
         self.test_get_filieres()
         
-        # Test analysis endpoints (core functionality)
+        # Test VSI analysis endpoints (core functionality)
+        profile_id = None
         if questions_data:
             profile_mon_job = self.test_analyze_mon_job()
             profile_un_job = self.test_analyze_un_job()
+            
+            # Get profile ID for RE'ACTIF PRO tests
+            if profile_mon_job:
+                profile_id = profile_mon_job.get('id')
         
-        # Test additional endpoints
+        # Test VSI additional endpoints
         self.test_get_metiers_by_filiere()
         self.test_get_stats()
+        
+        # Test RE'ACTIF PRO endpoints
+        print("\n🔄 Testing RE'ACTIF PRO endpoints...")
+        self.test_reactif_impact_stats()
+        self.test_reactif_contact_submission()
+        self.test_reactif_profile_and_plan(profile_id)
+        
+        # Test error handling
         self.test_invalid_endpoints()
         
         return self.get_summary()
