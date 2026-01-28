@@ -366,19 +366,33 @@ def calculate_profile(answers: Dict[str, str]) -> Dict[str, Any]:
     sorted_vertus = sorted(vertus_scores.items(), key=lambda x: x[1], reverse=True)
     vertus_dominantes = [v[0] for v in sorted_vertus[:3]]
     
-    # Collect qualities, competences, savoirs-etre from dominant vertus
+    # Collect qualities, competences, savoirs-etre, valeurs from dominant vertus
     qualites = []
     competences = []
     savoirs_etre = []
+    valeurs = []
     
     for vertu in vertus_dominantes:
         data = VERTUS_DATA[vertu]
         qualites.extend(data["qualites"][:3])
         competences.extend(data["competences_psy"])
         savoirs_etre.extend(data["savoirs_etre"])
+        valeurs.extend(data["valeurs"])
     
     # Remove duplicates while preserving order
     qualites = list(dict.fromkeys(qualites))[:8]
+    competences = list(dict.fromkeys(competences))[:6]
+    savoirs_etre = list(dict.fromkeys(savoirs_etre))[:6]
+    valeurs = list(dict.fromkeys(valeurs))[:6]
+    
+    return {
+        "vertus_scores": vertus_scores,
+        "vertus_dominantes": vertus_dominantes,
+        "valeurs": valeurs,
+        "qualites_humaines": qualites,
+        "competences_psychosociales": competences,
+        "savoirs_etre": savoirs_etre
+    }
     competences = list(dict.fromkeys(competences))[:6]
     savoirs_etre = list(dict.fromkeys(savoirs_etre))[:6]
     
