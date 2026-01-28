@@ -780,10 +780,17 @@ function App() {
       <Toaster position="top-center" richColors />
       <BrowserRouter>
         <Routes>
+          {/* VSI Routes */}
           <Route path="/" element={<HomePage />} />
           <Route path="/questionnaire/mon_job" element={<QuestionnairePage entryType="mon_job" />} />
           <Route path="/questionnaire/un_job" element={<QuestionnairePage entryType="un_job" />} />
           <Route path="/results" element={<ResultsPage />} />
+          
+          {/* RE'ACTIF PRO Routes */}
+          <Route path="/reactif" element={<ReactifHome />} />
+          <Route path="/reactif/particuliers" element={<ParticuliersPage />} />
+          <Route path="/reactif/services-rh" element={<ServicesRHPage />} />
+          <Route path="/reactif/partenaires" element={<PartenairesPage />} />
         </Routes>
       </BrowserRouter>
     </div>
