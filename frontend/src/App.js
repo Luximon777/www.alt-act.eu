@@ -807,7 +807,8 @@ function App() {
           <Route path="/results" element={<ResultsPage />} />
           
           {/* RE'ACTIF PRO Routes */}
-          <Route path="/reactif" element={<ReactifHome />} />
+          <Route path="/reactif" element={<ReactifLanding />} />
+          <Route path="/reactif/accueil" element={<ReactifHome />} />
           <Route path="/reactif/particuliers" element={<ParticuliersPage />} />
           <Route path="/reactif/services-rh" element={<ServicesRHPage />} />
           <Route path="/reactif/partenaires" element={<PartenairesPage />} />
