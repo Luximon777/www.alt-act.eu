@@ -30,6 +30,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import jsPDF from "jspdf";
 import { ReactifHome, ParticuliersPage, ServicesRHPage, PartenairesPage } from "./ReactifPro";
+import { ReactifLanding } from "./ReactifLanding";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
