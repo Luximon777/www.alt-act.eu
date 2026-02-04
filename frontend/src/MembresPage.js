@@ -285,9 +285,22 @@ Sa présence au sein du Comité de mission éthique envoie un signal particuliè
         nom: "Alexandra Horst",
         fonction: "Psychologue clinicienne",
         role: "Consultatif indépendant",
+        soustitre: "Psychologue clinicienne & praticienne en ressources humaines",
         photo: null,
-        bio: "Psychologue clinicienne, elle apporte son expertise sur les dimensions psychologiques de l'accompagnement et veille au respect de l'intégrité des personnes.",
-        expertise: ["Psychologie", "Accompagnement", "Bien-être", "Éthique clinique"]
+        bio: `Alexandra Horst est une psychologue clinicienne libérale installée à Strasbourg, dotée d'une double formation en psychologie clinique et en gestion des ressources humaines, ce qui lui confère une expertise tant dans l'accompagnement psychologique que dans la compréhension des dynamiques humaines au sein des organisations.
+
+Sa présence au sein du Comité de mission éthique d'ALT&ACT apporte une dimension réflexive, centrée sur l'humain, enrichissant les approches institutionnelles par une lecture des facteurs psychologiques, comportementaux et relationnels qui influencent les trajectoires individuelles et collectives.`,
+        realisations: `Alexandra exerce en tant que psychologue clinicienne à Strasbourg, où elle accompagne des adultes et des adolescents dans leurs questionnements personnels, familiaux ou professionnels, à travers des consultations individuelles et des approches psychothérapeutiques adaptées.
+
+Sa pratique repose sur un référentiel clinique intégratif, combinant des éléments analytiques, cognitifs, comportementaux et systémiques pour offrir un accompagnement souple et adapté. Elle adapte sa posture professionnelle à chaque personne, plutôt que de faire correspondre systématiquement le patient à un modèle unique de thérapie.
+
+Elle s'est également positionnée dans des actions publiques, notamment via des prises de parole sur les enjeux de reconnaissance et de régulation de la profession de psychologue en France.`,
+        vision: `Au sein du Comité de mission éthique, Alexandra apporte une expertise précieuse sur les dimensions humaines invisibles mais déterminantes des parcours d'accompagnement professionnel et social. Son intervention renforce notamment l'intégration systémique des facteurs psychologiques dans les dispositifs de soutien, l'élaboration de cadres d'accompagnement centrés sur la personne, la capacité à anticiper les blocages comportementaux ou émotionnels dans les trajectoires, et la qualité de l'écoute institutionnelle pour outiller les publics dans leurs transitions.
+
+Ces contributions sont particulièrement pertinentes dans un contexte européen ou institutionnel où les projets axés sur l'impact social exigent une intégration solide des dimensions psychologiques et humaines.`,
+        signature: `Alexandra combine rigueur clinique, bienveillance structurée et lecture stratégique des processus humains. Elle travaille à la fois sur la compréhension des dynamiques internes des individus, l'ajustement des comportements à des contextes de changement, et la transformation des relations interpersonnelles vers des conditions de réussite. Sa pratique clinique se complète d'une sensibilité organisationnelle acquise via sa double formation, ce qui la rend particulièrement adaptée à une mission éthique stratégique dans une organisation qui souhaite articuler impact social et compréhension profonde des personnes.`,
+        formation: ["Master en Psychologie clinique interculturelle et transculturelle – Université de Strasbourg", "Master en Gestion des Ressources Humaines – IAE Strasbourg"],
+        expertise: ["Psychologie clinique", "Accompagnement des transitions", "Approches intégratives", "Dynamiques interculturelles", "Gestion des ressources humaines", "Facteurs socio-émotionnels", "Lecture systémique", "Éthique clinique"]
       },
       {
         nom: "Martine Caillard-Dahl",
