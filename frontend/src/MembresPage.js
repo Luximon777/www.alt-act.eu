@@ -159,9 +159,19 @@ Il assure le pilotage des risques de cybersécurité au sein d'organisations pub
         nom: "Rajwantee Lepain",
         fonction: "Membre fondatrice",
         role: "Décisionnaire",
+        soustitre: "Psychologue clinicienne | Actrice de l'accompagnement humain et de la transformation sociale",
         photo: null,
-        bio: "Co-fondatrice engagée dans la dimension interculturelle du projet.",
-        expertise: ["Interculturalité", "Diversité", "Inclusion"]
+        bio: `Rajwantee Lepain est une psychologue clinicienne établie à Strasbourg, dont l'activité professionnelle repose sur l'accompagnement psychologique des individus, l'analyse des dynamiques humaines et la facilitation de processus de changement profond. Son expertise clinique, orientée vers l'écoute, la compréhension des trajectoires de vie et l'accompagnement des transitions personnelles, fait d'elle une contributrice essentielle aux approches humaines, sociales et systématiques portées par ALT&ACT.
+
+Son rôle transcende une simple fonction clinique : par sa compréhension fine des facteurs humains au cœur des transitions, elle constitue une ressource stratégique pour des projets d'envergure visant à articuler performance sociale, cohésion et développement des capacités humaines.`,
+        realisations: `En tant que psychologue clinicienne, Rajwantee intervient auprès de populations très diverses pour évaluer et soutenir les processus psychiques en contexte de changement ou de stress, accompagner les transitions de vie (personnelles, professionnelles, identitaires), faciliter la construction d'un sens cohérent des expériences vécues, et aider à la mobilisation des ressources internes et relationnelles.
+
+Son expertise repose sur une posture clinique fondée sur l'écoute active et empathique, l'analyse des facteurs psychologiques structurels, l'évaluation des blocages et leviers de transformation, et la construction d'espaces de dialogue et de reconstruction identitaire.`,
+        vision: `La contribution de Rajwantee à la gouvernance enrichit la stratégie de l'association en apportant une compréhension fine des facteurs humains au cœur de l'employabilité, une capacité à intégrer des dimensions psychologiques et systémiques dans les parcours d'accompagnement, une expertise essentielle dans la construction de dispositifs adaptés à la personne, et une ressource stratégique pour penser l'impact social en termes d'effets durables sur le bien-être, la confiance et les trajectoires de vie.
+
+Cette dimension est particulièrement recherchée dans les projets européens ou institutionnels portant sur l'inclusion, le développement des compétences ou le renforcement des capacités des publics.`,
+        signature: `Rajwantee incarne une approche centrée sur l'humain dans sa globalité, plaçant l'expérience subjective et les ressources internes comme des vecteurs indispensables de construction de trajectoires stables et durables. Cette posture s'articule avec les valeurs portées par ALT&ACT : humanisme, responsabilité, équité et transformation positive. Elle constitue une voix qualifiée pour connecter les dimensions psychologiques aux enjeux sociétaux.`,
+        expertise: ["Psychologie clinique", "Accompagnement des transitions", "Dynamiques humaines", "Développement personnel", "Analyse systémique", "Écoute empathique", "Reconstruction identitaire", "Facteurs d'employabilité"]
       },
       {
         nom: "Sébastien Ehlenberger",
