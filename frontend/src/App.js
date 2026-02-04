@@ -813,6 +813,7 @@ function App() {
           <Route path="/reactif/particuliers" element={<ParticuliersPage />} />
           <Route path="/reactif/services-rh" element={<ServicesRHPage />} />
           <Route path="/reactif/partenaires" element={<PartenairesPage />} />
+          <Route path="/reactif/membres" element={<MembresPage />} />
         </Routes>
       </BrowserRouter>
     </div>
