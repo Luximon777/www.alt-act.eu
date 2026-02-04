@@ -326,9 +326,19 @@ Dans une structure à impact, ce type de parcours renforce l'ouverture aux dimen
         nom: "Laxsounee Bhoodun",
         fonction: "Juriste",
         role: "Consultatif indépendant",
+        soustitre: "Juriste | Experte en sécurisation juridique et conformité",
         photo: null,
-        bio: "Juriste spécialisée, elle garantit la conformité légale du dispositif et veille au respect des droits des bénéficiaires.",
-        expertise: ["Droit", "Conformité", "Protection juridique", "Droits des personnes"]
+        bio: `Laxsounee Bhoodun est juriste au sein d'un organisme de protection sociale, où elle intervient sur des problématiques juridiques exigeant rigueur, maîtrise réglementaire et sens de la responsabilité institutionnelle. Son expertise contribue à sécuriser les cadres d'action, à garantir la conformité des pratiques et à accompagner les organisations dans la compréhension de leurs obligations légales.
+
+Au sein du Comité de mission éthique d'ALT&ACT, elle apporte une lecture structurante des enjeux juridiques, essentielle pour toute organisation engagée dans des projets à impact social et amenée à interagir avec des partenaires publics ou institutionnels.`,
+        realisations: `En tant que juriste au sein d'un organisme de protection sociale (CARSAT), son activité s'inscrit dans un environnement fortement normé, caractérisé par l'analyse et l'interprétation de textes juridiques, la gestion de situations réglementaires complexes, la sécurisation des décisions administratives, la prévention des risques contentieux, et l'accompagnement des parties prenantes dans l'application du droit.
+
+Cette expérience développe une capacité à conjuguer précision technique et compréhension des réalités opérationnelles.`,
+        vision: `La présence d'une juriste au sein du comité éthique constitue un marqueur important de maturité organisationnelle. Laxsounee Bhoodun renforce notamment la capacité de l'association à structurer ses pratiques dans le respect des cadres légaux, anticiper les risques liés aux projets et aux partenariats, consolider la crédibilité de la gouvernance, et protéger l'organisation dans ses phases de développement.
+
+Son regard favorise un équilibre entre innovation et sécurité juridique — un facteur clé pour les structures appelées à croître ou à mobiliser des financements.`,
+        signature: `Le profil de Laxsounee Bhoodun correspond à celui d'une garante du cadre, contribuant à installer une culture de conformité et de responsabilité. Dans un contexte où les exigences réglementaires se renforcent, notamment pour les projets à dimension sociale ou financés sur fonds publics, cette compétence devient stratégique. Sa participation au Comité de mission éthique soutient une gouvernance attentive à la solidité de ses fondations juridiques, condition indispensable à un développement durable et maîtrisé.`,
+        expertise: ["Analyse juridique", "Veille réglementaire", "Gestion des risques", "Conformité", "Sécurisation des procédures", "Droit de la protection sociale", "Responsabilité institutionnelle", "Prévention des contentieux"]
       }
     ]
   }
