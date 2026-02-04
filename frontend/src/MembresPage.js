@@ -177,9 +177,19 @@ Cette dimension est particulièrement recherchée dans les projets européens ou
         nom: "Sébastien Ehlenberger",
         fonction: "Membre fondateur",
         role: "Décisionnaire",
+        soustitre: "Manager de projets | Expert en coordination intersectorielle",
         photo: null,
-        bio: "Co-fondateur apportant son expertise en développement et innovation.",
-        expertise: ["Développement", "Innovation", "Stratégie"]
+        bio: `Sébastien E. est un professionnel confirmé dans le pilotage de projets, la coordination d'équipes et la mise en œuvre d'initiatives collaboratives. Son parcours repose sur l'acquisition d'une expertise opérationnelle riche, orientée vers l'efficacité organisationnelle, la structuration de processus et l'animation de partenariats.
+
+Présent au sein de la gouvernance d'ALT&ACT en tant que membre fondateur, il contribue à renforcer la capacité de l'association à concevoir, déployer et piloter des projets structurants à impact social, avec une lecture pragmatique des exigences organisationnelles et des dynamiques collectives.`,
+        realisations: `Le parcours de Sébastien se développe dans des environnements où le pilotage de projet, la coordination multi-acteurs et l'élaboration de stratégies d'action concrètes sont centraux.
+
+Il assure la gestion de projets complexes impliquant de multiples parties prenantes, la coordination intersectorielle garantissant l'alignement des objectifs et des livrables, l'animation de projets structurants intégrant des stratégies de communication et de mobilisation des ressources, et l'accompagnement de transformations organisationnelles avec une attention particulière à l'efficacité collective.`,
+        vision: `La présence de Sébastien au sein du conseil fondateur constitue un atout stratégique pour assurer la cohérence opérationnelle entre les orientations stratégiques et leur mise en œuvre effective, renforcer la gouvernance interne par une approche structurée du pilotage de projets, faciliter les coopérations avec des acteurs institutionnels, économiques et associatifs, et soutenir la professionnalisation des processus de coordination pour des programmes ambitieux.
+
+Cette position lui permet de contribuer à l'émergence d'un cadre d'action robuste, capable de soutenir des projets complexes et à fort impact social.`,
+        signature: `Sébastien fonctionne à l'interface entre direction stratégique et opérationnalité. Il sait traduire les ambitions institutionnelles — conceptuelles ou politiques — en plans d'action clairs, mesurables et alignés sur les objectifs collectifs. Il favorise une approche inclusive, structurée et axée résultats, tout en gardant une lecture fine des dynamiques organisationnelles qui influencent la qualité de la mise en œuvre.`,
+        expertise: ["Pilotage de projet", "Coordination opérationnelle", "Gestion multi-acteurs", "Dispositifs collaboratifs", "Leadership transversal", "Communication structurée", "Transformation organisationnelle"]
       }
     ]
   },
