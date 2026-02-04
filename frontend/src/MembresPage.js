@@ -37,9 +37,16 @@ const COMITES = [
         nom: "Chitrasen Luximon",
         fonction: "Président – Représentant légal",
         role: "Décisionnaire",
+        soustitre: "Fondateur | Architecte de projets à impact sociétal",
         photo: null,
-        bio: "Fondateur et président d'ALT&ACT, Chitrasen porte la vision d'une insertion professionnelle sans barrières, centrée sur l'humain et ses potentiels.",
-        expertise: ["Leadership", "Vision stratégique", "Innovation sociale"]
+        bio: `Chitrasen Luximon est un dirigeant engagé dans la transformation des modèles d'insertion professionnelle et dans l'émergence de solutions structurantes face aux mutations profondes du marché du travail. Président et représentant légal de l'association ALT&ACT, il conduit une stratégie orientée vers l'intérêt général, articulant innovation sociale, sécurisation des parcours et développement du capital humain.
+
+Son positionnement dépasse le cadre d'une gouvernance associative classique : il s'inscrit dans une logique d'ingénierie systémique visant à rapprocher les besoins des territoires, les dynamiques économiques et les trajectoires professionnelles des citoyens.`,
+        vision: `Il défend une conception moderne de l'employabilité, considérée comme un levier de cohésion sociale, de compétitivité et de stabilité démocratique. Son action contribue à structurer des réponses capables d'anticiper les transformations des compétences, tout en renforçant la capacité d'adaptation des organisations et des individus.`,
+        realisations: `Au cours de son parcours, Chitrasen Luximon a accompagné plus de 2 000 personnes dans leurs transitions professionnelles, contribuant à renforcer leur capacité d'action, leur estime de soi et leur inscription durable dans l'emploi. Fondateur d'une structure de conseil spécialisée dans la gestion de carrière et la formation pour adultes, il a conçu et piloté des dispositifs d'accompagnement destinés à des publics hétérogènes.`,
+        signature: `Sa démarche repose sur une conviction structurante : la stabilité des sociétés repose en partie sur la capacité des individus à trouver une place reconnue et utile dans le monde professionnel. Son approche conjugue exigence méthodologique, responsabilité éthique et vision de long terme.`,
+        formation: ["Master II en ingénierie de la formation et des compétences", "Accréditations en analyse des types psychologiques", "Identification des talents et dynamiques collectives"],
+        expertise: ["Gouvernance et direction de projets à impact", "Stratégies d'employabilité et politiques de compétences", "Ingénierie de formation", "Lecture systémique des parcours", "Innovation sociale appliquée au travail", "Pilotage d'écosystèmes partenariaux"]
       },
       {
         nom: "Anne-Marie Schwemmer",
@@ -70,9 +77,10 @@ const COMITES = [
         nom: "Chitrasen Luximon",
         fonction: "Membre fondateur",
         role: "Décisionnaire",
+        soustitre: "Architecte de projets à impact sociétal",
         photo: null,
-        bio: "Initiateur du projet RE'ACTIF PRO et de la méthode VSI.",
-        expertise: ["Innovation", "Insertion professionnelle", "Développement territorial"]
+        bio: `Initiateur du projet RE'ACTIF PRO et de la méthode VSI. Son expérience opérationnelle nourrit une lecture stratégique des enjeux liés aux tensions sur les compétences, aux transitions professionnelles accélérées, et à la nécessité de modèles d'accompagnement plus prédictifs et personnalisés.`,
+        expertise: ["Innovation", "Insertion professionnelle", "Développement territorial", "Ingénierie de formation"]
       },
       {
         nom: "Chitra Dorffer",
