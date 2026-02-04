@@ -306,9 +306,21 @@ Ces contributions sont particulièrement pertinentes dans un contexte européen 
         nom: "Martine Caillard-Dahl",
         fonction: "Productrice culturelle",
         role: "Consultatif indépendant",
+        soustitre: "Productrice culturelle | Actrice de la création audiovisuelle",
         photo: null,
-        bio: "Productrice culturelle, elle enrichit le dispositif de sa vision créative et de son expertise en médiation culturelle.",
-        expertise: ["Culture", "Médiation", "Créativité", "Arts"]
+        bio: `Martine Caillard-Dahl est une professionnelle de la production audiovisuelle, reconnue pour son engagement dans la valorisation de projets culturels à dimension patrimoniale et sociétale. Fondatrice de la société Token Productions en 1995, elle a contribué au développement de contenus cinématographiques, documentaires et publicitaires, inscrivant son action dans une logique de transmission culturelle et de mise en récit des réalités humaines.
+
+Son parcours témoigne d'une capacité à concevoir et piloter des projets créatifs impliquant des enjeux historiques, identitaires et territoriaux — une compétence particulièrement pertinente pour une organisation attentive à l'impact social et à la compréhension des sociétés.`,
+        realisations: `Fondatrice de Token Productions à Strasbourg, elle a assuré la direction et gestion de projets audiovisuels avec des activités centrées sur la production de films documentaires, cinématographiques et publicitaires.
+
+Productions notables : "Jean-Marie Tjibaou ou le rêve d'indépendance" (2000), œuvre s'inscrivant dans une réflexion historique et politique autour des dynamiques d'émancipation. "AD!, monnaie kanak" (1992) pour l'Agence de Développement de la Culture Kanak et le Musée territorial de Nouvelle-Calédonie.
+
+Elle a également participé au Festival des arts du Pacifique (1984–1985), témoignant d'une sensibilité aux enjeux culturels internationaux ainsi qu'aux questions d'identité, de mémoire collective et de reconnaissance des peuples.`,
+        vision: `Martine Caillard-Dahl incarne un profil de productrice engagée, capable de relier création artistique et compréhension des dynamiques sociales. Son expérience dans des projets à portée culturelle internationale contribue à enrichir la gouvernance par une perspective sensible aux représentations, aux identités et aux transformations sociétales.
+
+Dans une structure à impact, ce type de parcours renforce l'ouverture aux dimensions culturelles des trajectoires humaines, la capacité à penser les projets dans leur profondeur sociétale, et l'intégration de la diversité des récits et des contextes.`,
+        signature: `Au sein du Comité de mission éthique, elle apporte une lecture culturelle des transformations sociales, utile pour inscrire les actions dans une compréhension élargie des contextes humains, favoriser des approches respectueuses des identités et des parcours, et enrichir la réflexion éthique par une sensibilité aux représentations collectives. Sa présence participe ainsi à installer une gouvernance attentive non seulement aux résultats, mais aussi au sens et à la portée sociétale des initiatives.`,
+        expertise: ["Production audiovisuelle", "Projets culturels", "Patrimoine et récits sociétaux", "Coordination artistique", "Interculturalité", "Médiation culturelle", "Mémoire collective", "Identités et territoires"]
       },
       {
         nom: "Laxsounee Bhoodun",
