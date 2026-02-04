@@ -53,9 +53,19 @@ Son positionnement dépasse le cadre d'une gouvernance associative classique : i
         nom: "Anne-Marie Schwemmer",
         fonction: "Secrétaire",
         role: "Décisionnaire",
+        soustitre: "Experte en leadership, transformation organisationnelle et management stratégique",
         photo: null,
-        bio: "Garante de l'organisation et de la coordination des activités associatives.",
-        expertise: ["Organisation", "Coordination", "Administration"]
+        bio: `Anne-Marie Schwemmer est une dirigeante et stratège reconnue pour sa capacité à structurer, organiser et piloter des projets complexes au sein d'écosystèmes professionnels variés. En tant que Secrétaire au sein de l'Association ALT&ACT, elle assume des responsabilités institutionnelles fortes en matière de conformité, de structuration administrative et de coordination des instances décisionnelles.
+
+Sa posture conjugue rigueur opérationnelle, vision systémique et leadership collaboratif, ce qui en fait un atout majeur pour le développement de dispositifs d'impact sociétal et de partenariats stratégiques.`,
+        vision: `Anne-Marie est animée par une vision intégrée du management, où la performance organisationnelle se nourrit de la qualité des processus internes, de la cohérence des pratiques et de la mobilisation du capital humain.
+
+Dans une perspective européenne et territoriale, elle est en mesure de structurer les mécanismes de gouvernance et les cadres de décision, assurer l'articulation des acteurs, des partenaires et des parties prenantes, ancrer les projets dans des approches durables et intégrées, et piloter des démarches de changement alignées avec les politiques publiques.`,
+        realisations: `Anne-Marie s'est construite une expertise solide au croisement du management, du leadership et du développement organisationnel, à travers l'animation de communautés professionnelles et de réseaux, la facilitation de transformations internes, la coordination de projets transversaux impliquant des acteurs multiples, et l'accompagnement de dirigeants dans leurs dynamiques de leadership.
+
+Elle combine une compréhension fine des enjeux humains avec une pratique affirmée des processus décisionnels structurés.`,
+        signature: `Anne-Marie place la qualité de l'organisation interne au cœur de la performance et de l'impact durable des projets. Son approche s'appuie sur une lecture systémique des dynamiques collaboratives et institutionnelles, visant à sécuriser les processus tout en favorisant l'innovation et la réactivité. Elle sait articuler la rigueur des cadres de gouvernance avec la créativité requise pour impulser des transformations profondes.`,
+        expertise: ["Gouvernance institutionnelle", "Coordination de projets", "Leadership collaboratif", "Transformation organisationnelle", "Animation de réseaux", "Pilotage stratégique", "Conformité administrative", "Pratiques managériales"]
       },
       {
         nom: "Chitra Dorffer",
