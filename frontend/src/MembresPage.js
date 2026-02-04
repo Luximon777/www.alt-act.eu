@@ -262,9 +262,24 @@ Cette combinaison de compétences positionne ALT&ACT de manière favorable face 
         nom: "Jean-Marc Lepain",
         fonction: "Société civile",
         role: "Consultatif indépendant",
+        soustitre: "Expert international en gestion des finances publiques | Directeur de programmes institutionnels",
         photo: null,
-        bio: "Représentant de la société civile, il veille à ce que le dispositif reste ancré dans les réalités sociales et réponde aux besoins des citoyens.",
-        expertise: ["Société civile", "Engagement citoyen", "Éthique sociale"]
+        bio: `Jean-Marc Lepain est un expert international de la gestion des finances publiques (Public Financial Management – PFM) et du pilotage de réformes budgétaires à grande échelle. Il évolue depuis plus d'une décennie au cœur des transformations institutionnelles, accompagnant des gouvernements, des organisations internationales et des bailleurs dans la modernisation de leurs systèmes financiers.
+
+Il occupe récemment la fonction de Chief of Party pour un programme de soutien à la gestion des finances publiques au Sénégal, mené dans le cadre d'un partenariat entre USAID et Deloitte. À ce titre, il dirige un dispositif complexe mobilisant une équipe permanente et des consultants, avec un périmètre couvrant plusieurs ministères, la Cour des comptes, l'Assemblée nationale ainsi que des agences gouvernementales.`,
+        realisations: `Son parcours se distingue par une forte dimension géographique et stratégique, avec des responsabilités exercées en Afrique, au Moyen-Orient et en Asie.
+
+Au Sénégal (Direction de programme) : pilotage de réformes PFM à l'échelle de l'État, renforcement de la transparence budgétaire, modernisation des systèmes de gestion de la dette, introduction de budgets verts.
+
+Au Brunei (Ministère des Finances) : création d'outils de prévision budgétaire, conception et déploiement d'un programme de consolidation budgétaire, mise en œuvre de réformes structurantes.
+
+Au FMI (Conseiller régional) : diagnostics des systèmes de finances publiques, appui à la planification macro-budgétaire, renforcement des capacités auprès des ministères des finances.`,
+        vision: `Jean-Marc Lepain présente un profil typique des architectes de réformes publiques, intervenant sur des programmes à fort impact systémique. Sa capacité à opérer dans des environnements gouvernementaux complexes et à piloter des transformations structurelles constitue un marqueur élevé de crédibilité institutionnelle.
+
+Sa présence au sein du Comité de mission éthique envoie un signal particulièrement fort : culture avancée de la redevabilité et de la transparence, maîtrise des cadres de gouvernance exigés par les financeurs publics, compréhension des logiques d'impact et d'évaluation, et capacité à structurer des dispositifs robustes et conformes aux standards internationaux.`,
+        signature: `Au-delà de la dimension éthique, il contribue implicitement à installer une discipline de gouvernance souvent observée dans les organisations à forte maturité institutionnelle. Son expérience auprès d'organisations internationales et de ministères positionne son expertise au niveau des standards attendus dans les programmes financés par les grands bailleurs.`,
+        formation: ["Institut d'Études Politiques de Paris (Sciences Po)"],
+        expertise: ["Finances publiques (PFM)", "Réformes budgétaires", "Direction de programmes internationaux", "Macro-fiscalité", "Transparence et redevabilité", "Renforcement institutionnel", "Coordination bailleurs", "Conduite du changement"]
       },
       {
         nom: "Alexandra Horst",
