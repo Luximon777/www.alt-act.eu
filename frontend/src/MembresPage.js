@@ -71,9 +71,19 @@ Elle combine une compréhension fine des enjeux humains avec une pratique affirm
         nom: "Chitra Dorffer",
         fonction: "Trésorière",
         role: "Décisionnaire",
+        soustitre: "Experte en pilotage financier, contrôle de gestion et optimisation des organisations",
         photo: null,
-        bio: "Responsable de la gestion financière et de la pérennité économique du dispositif.",
-        expertise: ["Gestion financière", "Budget", "Contrôle"]
+        bio: `Chitra Dorffer est une dirigeante spécialisée dans les fonctions financières stratégiques et le contrôle de gestion au sein d'organisations structurées. En tant que Trésorière de l'Association ALT&ACT, elle est responsable de la structuration des processus financiers, de la conformité budgétaire, de la transparence des comptes et de la sécurisation des pratiques de gestion.
+
+Son expertise repose sur une expérience robuste en pilotage financier, reporting, optimisation des performances et gestion des risques économiques, compétences essentielles pour accompagner des projets à fort impact et des programmes multi-partenaires.`,
+        realisations: `Chitra a développé son expertise principalement dans des environnements exigeants au plan financier et organisationnel. Elle occupe actuellement un poste de contrôle de gestion et de responsabilité financière au sein d'une grande entreprise industrielle, où elle est en charge de l'élaboration et du suivi des budgets, la production de tableaux de bord de performance, l'analyse des écarts et la proposition de mesures correctives, et l'intégration d'indicateurs clés pour améliorer la performance opérationnelle et financière.
+
+Cette expérience lui confère une vision à la fois analytique et stratégique des enjeux financiers, ce qui est déterminant pour assurer la pérennité et la crédibilité d'organisations structurées.`,
+        vision: `Chitra Dorffer apporte à la gouvernance d'ALT&ACT une maîtrise des enjeux de transparence financière essentielle pour les financeurs publics et institutionnels, une capacité à structurer les processus budgétaires et de reporting pour les projets multi-sources, une lecture stratégique des risques économiques et de conformité, et une expertise en pilotage des performances financières au service de l'impact social.
+
+Par sa fonction de trésorière, elle sécurise les choix financiers, garantit l'intégrité des pratiques de gestion et favorise une allocation optimale des ressources dans le cadre des projets structurants de l'association.`,
+        signature: `Son approche se caractérise par une forte orientation vers la fiabilité des données financières et des processus de contrôle interne, une capacité à connecter la performance économique avec les ambitions sociales et les objectifs de transformation, et un leadership pragmatique orienté vers la performance durable des projets et des organisations. Dans un contexte européen ou institutionnel, cette expertise renforce la crédibilité de l'association auprès des partenaires financiers, des bailleurs de fonds publics ou privés, et des réseaux de coopération.`,
+        expertise: ["Contrôle de gestion stratégique", "Pilotage budgétaire", "Responsabilité financière", "Supervision comptable", "Optimisation des processus", "Tableaux de bord de performance", "Gestion des risques économiques", "Conformité financière"]
       }
     ]
   },
