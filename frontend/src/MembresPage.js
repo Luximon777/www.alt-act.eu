@@ -233,9 +233,21 @@ Ces dimensions donnent à ALT&ACT une capacité accrue à développer des projet
         nom: "Marc Avanzo",
         fonction: "Leadership & transformation humaine",
         role: "Consultatif",
+        soustitre: "Expert en leadership, transformation humaine & développement des organisations",
         photo: null,
-        bio: "Spécialiste du leadership et de la transformation, il apporte son expertise sur l'accompagnement humain et le développement des compétences.",
-        expertise: ["Leadership", "Transformation", "Coaching", "Développement personnel"]
+        bio: `Marc Avanzo est un professionnel reconnu pour son expertise en leadership transformationnel, accompagnement du changement et développement des organisations humaines. Il possède une solide expérience dans l'accompagnement des transformations culturelles et dans la facilitation du déploiement de stratégies centrées sur l'humain et la performance durable.
+
+En tant que membre du Comité de pilotage consultatif d'ALT&ACT, il apporte une dimension stratégique essentielle : celle de la qualité relationnelle, de la maturité des pratiques organisationnelles et de la structuration de dynamiques collectives porteuses d'impact.`,
+        realisations: `Marc a construit son expertise à travers des missions d'accompagnement de dirigeants, d'équipes et d'organisations engagés dans des processus de changement profond.
+
+En accompagnement du leadership, il assure la facilitation de processus de transformation des cultures organisationnelles, le coaching de dirigeants et de collectifs en contexte de transition, et le développement de postures qui favorisent l'engagement, l'autonomie et la performance durable.
+
+En développement organisationnel, il construit des modèles de leadership centrés sur la confiance, la co-responsabilité et la coopération, met en place des démarches collaboratives structurées, et accompagne l'élaboration d'écosystèmes internes capables de s'adapter aux mutations sociales et économiques.`,
+        vision: `La contribution de Marc au comité consultatif offre à ALT&ACT un appui stratégique pour intégrer la dimension humaine au cœur de la gouvernance, une lecture fine des enjeux de transformation organisationnelle essentielle dans les projets structurants, une expertise pour favoriser l'émergence d'équipes résilientes, autonomes et orientées vers l'impact social, et une capacité à relier innovation sociale et dynamique collective.
+
+Cette combinaison de compétences positionne ALT&ACT de manière favorable face aux partenaires publics, aux financeurs institutionnels et aux réseaux européens qui cherchent à soutenir des projets où la transformation humaine est un facteur clé de réussite.`,
+        signature: `Marc fonctionne à l'interface entre la stratégie, la culture organisationnelle et les pratiques managériales. Il adopte une approche intégrative fondée sur l'alignement des pratiques quotidiennes avec la vision stratégique, le renforcement de la confiance et de l'intelligence collective, et la construction de mécanismes d'apprentissage organisationnel. Sa démarche permet de faire émerger des organisations capables d'assumer des transformations profondes tout en mobilisant éthiquement leurs parties prenantes.`,
+        expertise: ["Leadership transformationnel", "Accompagnement du changement", "Dynamiques collectives", "Facilitation collaborative", "Coaching de dirigeants", "Culture organisationnelle", "Intelligence collective", "Performance durable"]
       }
     ]
   },
