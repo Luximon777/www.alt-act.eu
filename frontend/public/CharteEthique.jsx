@@ -21,149 +21,149 @@ const CharteEthique = () => {
       title: "Voir le potentiel avant le manque",
       icon: Eye,
       color: "amber",
-      intro: "Nous refusons les approches qui reduisent une personne a ses freins, a ses ruptures de parcours ou a ses vulnerabilites.",
-      responsibility: "Notre responsabilite est de :",
+      intro: "Nous refusons les approches qui réduisent une personne à ses freins, à ses ruptures de parcours ou à ses vulnérabilités.",
+      responsibility: "Notre responsabilité est de :",
       points: [
-        "detecter les ressources souvent invisibles",
-        "rendre lisibles les competences reelles",
-        "transformer l'experience en valeur professionnelle",
-        "restaurer la capacite de projection"
+        "détecter les ressources souvent invisibles",
+        "rendre lisibles les compétences réelles",
+        "transformer l'expérience en valeur professionnelle",
+        "restaurer la capacité de projection"
       ],
-      conclusion: "Nous ne reparons pas des trajectoires. Nous revelons des dynamiques d'avenir."
+      conclusion: "Nous ne réparons pas des trajectoires. Nous révélons des dynamiques d'avenir."
     },
     {
       number: "2",
-      title: "Faire de l'identite professionnelle un facteur de stabilite sociale",
+      title: "Faire de l'identité professionnelle un facteur de stabilité sociale",
       icon: Shield,
       color: "teal",
-      intro: "Une societe se fragilise lorsque les individus ne trouvent plus leur place.",
-      responsibility: "C'est pourquoi ALT&ACT donne la priorite au travail de structuration de l'identite professionnelle, consideree comme :",
+      intro: "Une société se fragilise lorsque les individus ne trouvent plus leur place.",
+      responsibility: "C'est pourquoi ALT&ACT donne la priorité au travail de structuration de l'identité professionnelle, considérée comme :",
       points: [
-        "un repere dans les periodes de transition",
+        "un repère dans les périodes de transition",
         "un levier de confiance",
-        "un facteur de securisation des parcours",
+        "un facteur de sécurisation des parcours",
         "un socle d'engagement durable"
       ],
-      conclusion: "Avant de chercher a inserer, nous cherchons a aligner."
+      conclusion: "Avant de chercher à insérer, nous cherchons à aligner."
     },
     {
       number: "3",
       title: "Assumer une innovation responsable",
       icon: Rocket,
       color: "purple",
-      intro: "L'innovation n'a de valeur que si elle protege l'humain.",
-      responsibility: "A travers RE'ACTIF PRO, nous developpons des outils destines a :",
+      intro: "L'innovation n'a de valeur que si elle protège l'humain.",
+      responsibility: "À travers RE'ACTIF PRO, nous développons des outils destinés à :",
       points: [
-        "eclairer sans enfermer",
-        "orienter sans predeterminer",
-        "objectiver sans deshumaniser"
+        "éclairer sans enfermer",
+        "orienter sans prédéterminer",
+        "objectiver sans déshumaniser"
       ],
-      conclusion: "Nous affirmons une vigilance constante : aucune technologie ne doit produire de nouvelles formes d'exclusion. L'intelligence des systemes doit rester au service de la liberte des personnes."
+      conclusion: "Nous affirmons une vigilance constante : aucune technologie ne doit produire de nouvelles formes d'exclusion. L'intelligence des systèmes doit rester au service de la liberté des personnes."
     },
     {
       number: "4",
-      title: "Agir sur les causes plutot que sur les symptomes",
+      title: "Agir sur les causes plutôt que sur les symptômes",
       icon: Target,
       color: "blue",
-      intro: "Les reponses superficielles creent des insertions fragiles.",
-      responsibility: "ALT&ACT privilegie une lecture profonde des situations afin de :",
+      intro: "Les réponses superficielles créent des insertions fragiles.",
+      responsibility: "ALT&ACT privilégie une lecture profonde des situations afin de :",
       points: [
-        "comprendre les mecanismes de rupture",
-        "prevenir les desengagements professionnels",
-        "securiser les transitions",
+        "comprendre les mécanismes de rupture",
+        "prévenir les désengagements professionnels",
+        "sécuriser les transitions",
         "favoriser des trajectoires durables"
       ],
-      conclusion: "Notre ambition n'est pas de generer des sorties rapides, mais des equilibres solides."
+      conclusion: "Notre ambition n'est pas de générer des sorties rapides, mais des équilibres solides."
     },
     {
       number: "5",
-      title: "Porter une responsabilite societale mesurable",
+      title: "Porter une responsabilité sociétale mesurable",
       icon: CheckCircle,
       color: "green",
-      intro: "L'utilite sociale doit pouvoir se demontrer.",
-      responsibility: "Nous nous engageons a :",
+      intro: "L'utilité sociale doit pouvoir se démontrer.",
+      responsibility: "Nous nous engageons à :",
       points: [
-        "evaluer l'impact reel de nos actions",
-        "rechercher des ameliorations continues",
+        "évaluer l'impact réel de nos actions",
+        "rechercher des améliorations continues",
         "partager nos enseignements",
-        "contribuer aux reflexions sur l'evolution du travail"
+        "contribuer aux réflexions sur l'évolution du travail"
       ],
-      conclusion: "Notre credibilite repose sur les transformations observables que vivent les personnes accompagnees."
+      conclusion: "Notre crédibilité repose sur les transformations observables que vivent les personnes accompagnées."
     },
     {
       number: "6",
-      title: "Garantir une ethique irreprochable de la donnee",
+      title: "Garantir une éthique irréprochable de la donnée",
       icon: Database,
       color: "red",
-      intro: "Les informations confiees traduisent des parcours de vie. Elles appellent une exigence absolue.",
-      responsibility: "ALT&ACT s'engage a :",
+      intro: "Les informations confiées traduisent des parcours de vie. Elles appellent une exigence absolue.",
+      responsibility: "ALT&ACT s'engage à :",
       points: [
-        "proteger rigoureusement les donnees personnelles",
-        "assurer une transparence complete sur leur usage",
-        "exclure toute exploitation contraire a l'interet des individus",
-        "appliquer les standards les plus eleves en matiere de securite"
+        "protéger rigoureusement les données personnelles",
+        "assurer une transparence complète sur leur usage",
+        "exclure toute exploitation contraire à l'intérêt des individus",
+        "appliquer les standards les plus élevés en matière de sécurité"
       ],
-      conclusion: "La confiance n'est pas un principe declaratif. Elle se construit par des pratiques irreprochables."
+      conclusion: "La confiance n'est pas un principe déclaratif. Elle se construit par des pratiques irréprochables."
     },
     {
       number: "7",
-      title: "Cultiver une independance qui protege l'interet des publics",
+      title: "Cultiver une indépendance qui protège l'intérêt des publics",
       icon: Scale,
       color: "indigo",
-      intro: "Notre liberte d'action est une condition de notre integrite.",
-      responsibility: "Nous veillons a :",
+      intro: "Notre liberté d'action est une condition de notre intégrité.",
+      responsibility: "Nous veillons à :",
       points: [
         "maintenir une autonomie dans nos orientations",
-        "refuser les logiques contraires a notre mission",
-        "prevenir tout conflit d'interets",
-        "agir avec clarte aupres de nos partenaires"
+        "refuser les logiques contraires à notre mission",
+        "prévenir tout conflit d'intérêts",
+        "agir avec clarté auprès de nos partenaires"
       ],
-      conclusion: "Aucune performance ne justifie un renoncement ethique."
+      conclusion: "Aucune performance ne justifie un renoncement éthique."
     },
     {
       number: "8",
-      title: "Installer une gouvernance qui anticipe plutot qu'elle ne reagit",
+      title: "Installer une gouvernance qui anticipe plutôt qu'elle ne réagit",
       icon: Building,
       color: "slate",
-      intro: "Dans un environnement professionnel instable, la responsabilite des organisations est d'eclairer l'avenir.",
+      intro: "Dans un environnement professionnel instable, la responsabilité des organisations est d'éclairer l'avenir.",
       responsibility: "ALT&ACT structure sa gouvernance pour :",
       points: [
-        "encourager la reflexion strategique",
-        "integrer la vigilance ethique dans les decisions",
+        "encourager la réflexion stratégique",
+        "intégrer la vigilance éthique dans les décisions",
         "croiser les expertises",
         "inscrire ses actions dans le temps long"
       ],
-      conclusion: "Le comite de mission constitue le garant actif de cette exigence."
+      conclusion: "Le comité de mission constitue le garant actif de cette exigence."
     },
     {
       number: "9",
-      title: "Construire des cooperations qui elevent les pratiques",
+      title: "Construire des coopérations qui élèvent les pratiques",
       icon: Handshake,
       color: "orange",
-      intro: "Nous choisissons des partenaires non seulement pour leurs competences, mais pour leur conception de la responsabilite sociale.",
+      intro: "Nous choisissons des partenaires non seulement pour leurs compétences, mais pour leur conception de la responsabilité sociale.",
       responsibility: "Nos collaborations reposent sur :",
       points: [
-        "la reciprocite",
-        "la coherence des engagements",
+        "la réciprocité",
+        "la cohérence des engagements",
         "la recherche d'impact",
         "le respect des personnes"
       ],
-      conclusion: "Cooperer n'est pas juxtaposer des actions - c'est renforcer une ambition commune."
+      conclusion: "Coopérer n'est pas juxtaposer des actions — c'est renforcer une ambition commune."
     },
     {
       number: "10",
-      title: "Preparer le futur du travail avec lucidite",
+      title: "Préparer le futur du travail avec lucidité",
       icon: Rocket,
       color: "cyan",
-      intro: "Les mutations professionnelles redessinent deja les equilibres sociaux.",
+      intro: "Les mutations professionnelles redessinent déjà les équilibres sociaux.",
       responsibility: "ALT&ACT fait le choix de :",
       points: [
-        "developper des approches anticipatrices",
-        "contribuer a la comprehension des competences emergentes",
-        "soutenir l'adaptabilite des individus",
-        "favoriser une economie plus inclusive"
+        "développer des approches anticipatrices",
+        "contribuer à la compréhension des compétences émergentes",
+        "soutenir l'adaptabilité des individus",
+        "favoriser une économie plus inclusive"
       ],
-      conclusion: "Preparer l'avenir n'est pas une option. C'est une responsabilite."
+      conclusion: "Préparer l'avenir n'est pas une option. C'est une responsabilité."
     }
   ];
 
@@ -203,11 +203,11 @@ const CharteEthique = () => {
             onClick={handleBackHome} 
             className="text-white hover:bg-white/20 mb-6"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" /> Retour a l'accueil
+            <ArrowLeft className="w-4 h-4 mr-2" /> Retour à l'accueil
           </Button>
           <Badge className="mb-4 bg-white/20 text-white border-white/30">Engagement ALT&ACT</Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Charte Ethique</h1>
-          <p className="text-xl text-blue-100">Pour une societe ou chacun peut se sentir utile</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Charte Éthique</h1>
+          <p className="text-xl text-blue-100">Pour une société où chacun peut se sentir utile</p>
         </div>
       </header>
 
@@ -225,16 +225,16 @@ const CharteEthique = () => {
           
           <div className="space-y-4 text-gray-700 leading-relaxed">
             <p>
-              Nous considerons que l'insertion professionnelle ne se limite pas a l'acces a un emploi. Elle engage la place de la personne dans la societe, sa capacite a contribuer, a evoluer et a construire un parcours porteur de sens.
+              Nous considérons que l'insertion professionnelle ne se limite pas à l'accès à un emploi. Elle engage la place de la personne dans la société, sa capacité à contribuer, à évoluer et à construire un parcours porteur de sens.
             </p>
             <p className="text-lg font-medium text-[#0b2a55]">
-              ALT&ACT est nee d'une conviction forte : l'utilite sociale d'une personne ne se decrete pas - elle se revele, se structure et se securise.
+              ALT&ACT est née d'une conviction forte : l'utilité sociale d'une personne ne se décrète pas — elle se révèle, se structure et se sécurise.
             </p>
             <p>
-              Notre action consiste a creer les conditions permettant a chacun de retrouver un pouvoir d'agir durable dans un monde du travail en mutation.
+              Notre action consiste à créer les conditions permettant à chacun de retrouver un pouvoir d'agir durable dans un monde du travail en mutation.
             </p>
             <p className="italic border-l-4 border-orange-500 pl-4 bg-orange-50 py-3 rounded-r-lg">
-              Cette charte exprime un positionnement volontairement exigeant. Elle depasse une logique reglementaire pour affirmer une responsabilite societale.
+              Cette charte exprime un positionnement volontairement exigeant. Elle dépasse une logique réglementaire pour affirmer une responsabilité sociétale.
             </p>
           </div>
         </div>
@@ -284,12 +284,12 @@ const CharteEthique = () => {
         <div className="bg-gradient-to-r from-[#0b2a55] to-[#1a4280] rounded-2xl shadow-lg p-8 md:p-12 mt-12 text-white">
           <h2 className="text-2xl font-bold mb-6">Notre engagement fondamental</h2>
           <p className="mb-6 text-blue-100">
-            Nous croyons qu'une societe plus stable se construit lorsque chacun peut :
+            Nous croyons qu'une société plus stable se construit lorsque chacun peut :
           </p>
           <div className="grid md:grid-cols-2 gap-4 mb-6">
             {[
               "identifier sa valeur",
-              "exercer ses capacites",
+              "exercer ses capacités",
               "contribuer utilement",
               "envisager l'avenir avec confiance"
             ].map((item, idx) => (
@@ -300,21 +300,21 @@ const CharteEthique = () => {
             ))}
           </div>
           <p className="text-lg font-medium">
-            ALT&ACT agit pour que l'insertion professionnelle devienne un espace de reconnaissance, de structuration et de projection - et non une simple reponse a l'urgence.
+            ALT&ACT agit pour que l'insertion professionnelle devienne un espace de reconnaissance, de structuration et de projection — et non une simple réponse à l'urgence.
           </p>
         </div>
 
-        {/* Portee de la charte */}
+        {/* Portée de la charte */}
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mt-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Portee de la charte</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Portée de la charte</h2>
           <p className="text-gray-700 mb-4">Cette charte :</p>
           <ul className="space-y-3 text-gray-700 mb-6">
             {[
-              "oriente nos decisions",
+              "oriente nos décisions",
               "structure nos pratiques",
               "engage nos dirigeants",
-              "eclaire nos partenaires",
-              "protege les publics"
+              "éclaire nos partenaires",
+              "protège les publics"
             ].map((item, idx) => (
               <li key={idx} className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-green-500" />
@@ -323,7 +323,7 @@ const CharteEthique = () => {
             ))}
           </ul>
           <p className="italic text-gray-600 border-l-4 border-orange-500 pl-4 bg-orange-50 py-3 rounded-r-lg">
-            Elle constitue une reference vivante, appelee a evoluer pour rester a la hauteur des transformations du monde du travail.
+            Elle constitue une référence vivante, appelée à évoluer pour rester à la hauteur des transformations du monde du travail.
           </p>
         </div>
 
@@ -335,10 +335,10 @@ const CharteEthique = () => {
             className="border-[#0b2a55] text-[#0b2a55] hover:bg-[#0b2a55] hover:text-white"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Retour a l'accueil
+            Retour à l'accueil
           </Button>
           <span className="text-gray-500 text-sm">
-            Association ALT&ACT - Alterite & Action
+            Association ALT&ACT — Altérité & Action
           </span>
         </div>
       </main>
