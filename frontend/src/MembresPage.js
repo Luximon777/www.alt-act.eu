@@ -143,9 +143,9 @@ Elle apporte notamment une lecture pédagogique des parcours, une sensibilité a
         nom: "Anthony Ratolojanahary",
         fonction: "Membre fondateur",
         role: "Décisionnaire",
-        soustitre: "Spécialiste en cybersécurité, gestion des risques et protection des systèmes d'information",
+        soustitre: "RSSI (CISO) MES-DMP | Caisse nationale de l'Assurance Maladie",
         photo: null,
-        bio: `Anthony Ratolojanahary est un professionnel confirmé dans le domaine de la cybersécurité, de la protection des données et du management des risques liés aux systèmes d'information. Actuellement en poste au sein de la Caisse nationale de l'Assurance Maladie, il exerce dans un environnement à haute exigence de sécurité, de conformité réglementaire et de fiabilité des systèmes critiques.
+        bio: `Anthony Ratolojanahary est un professionnel confirmé dans le domaine de la cybersécurité, de la protection des données et du management des risques liés aux systèmes d'information. Il occupe actuellement le poste de RSSI (CISO) du domaine MES (Mon Espace Santé) - DMP (Dossier Médical Partagé) au sein de la Caisse nationale de l'Assurance Maladie, où il exerce dans un environnement à haute exigence de sécurité, de conformité réglementaire et de fiabilité des systèmes critiques.
 
 Cette expertise technique et stratégique confère une dimension essentielle à la gouvernance d'ALT&ACT, notamment lorsque l'organisation s'inscrit dans des projets numériques, des démarches d'innovation ou des configurations multi-partenaires où la sécurité des données, la confidentialité et la conformité juridique sont des prérequis indispensables.`,
         realisations: `Anthony a construit son expérience professionnelle au cœur d'enjeux opérationnels où la cybersécurité ne se limite pas à la technique, mais devient un vecteur de confiance organisationnelle et de pérennité pour les opérations critiques.
