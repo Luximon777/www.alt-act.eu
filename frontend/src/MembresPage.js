@@ -215,9 +215,19 @@ Cette position lui permet de contribuer à l'émergence d'un cadre d'action robu
         nom: "Dr. Stéphano Vacher",
         fonction: "Stratégie, RSE, innovation responsable",
         role: "Consultatif",
+        soustitre: "Expert en stratégie, RSE & innovation responsable",
         photo: null,
-        bio: "Docteur et expert en stratégie d'entreprise, il accompagne ALT&ACT dans sa démarche RSE et d'innovation responsable.",
-        expertise: ["RSE", "Stratégie", "Innovation responsable", "Développement durable"]
+        bio: `Dr. Stéphano Vacher est un expert reconnu dans les domaines de la stratégie, de la responsabilité sociétale des organisations (RSE) et de l'innovation responsable. Il allie une expertise académique solide à une expérience pratique dans l'accompagnement des transformations organisationnelles et des projets complexes.
+
+Au sein du Comité de pilotage consultatif d'ALT&ACT, il apporte une lecture stratégique des enjeux à l'interface entre innovation sociétale, gouvernance responsable et impacts durables, ce qui constitue un atout majeur pour structurer une démarche porteuse de sens et de résultats à l'échelle européenne.`,
+        realisations: `Stéphano a construit une trajectoire riche qui croise réflexion stratégique, accompagnement des transformations et leadership éclairé sur les sujets d'innovation et de durabilité.
+
+En stratégie et pilotage, il assure la conception et l'accompagnement de démarches stratégiques structurant la performance globale des organisations. En RSE, il déploie des démarches pour institutionnaliser des pratiques responsables et intégrer les enjeux sociétaux et environnementaux dans les modèles d'affaires. En innovation responsable, il développe des solutions innovantes répondant aux défis sociétaux, économiques et environnementaux, en cohérence avec les ODD.`,
+        vision: `La contribution de Stéphano au Comité de pilotage enrichit l'organisation sur plusieurs axes : conception de stratégies robustes et responsables alignées avec les grands référentiels européens, structuration de modèles d'innovation sociale qui maximisent l'impact et la transférabilité des projets, prise en compte des enjeux de durabilité et d'éthique dans toutes les phases de développement, et capacité à intégrer des dispositifs d'évaluation d'impact requis par les programmes européens.
+
+Ces dimensions donnent à ALT&ACT une capacité accrue à développer des projets structurants, robustes et conformes aux standards internationaux en matière de performance sociétale.`,
+        signature: `Stéphano combine une réflexion stratégique rigoureuse avec une pratique opérationnelle tournée vers les résultats et l'impact réel. Il adopte une approche systémique qui articule les objectifs économiques, sociaux et environnementaux, favorise l'innovation ouverte et collaborative, et place les parties prenantes au cœur des démarches de transformation. Sa lecture fine des enjeux contemporains fait de lui un soutien précieux pour tout projet associatif ou institutionnel visant à répondre à des problématiques complexes dans un monde en mutation.`,
+        expertise: ["Gouvernance stratégique", "RSE", "Innovation responsable", "Développement durable", "Pilotage de projets complexes", "Évaluation d'impact", "Performance sociétale", "ODD"]
       },
       {
         nom: "Marc Avanzo",
