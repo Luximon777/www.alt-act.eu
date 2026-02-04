@@ -123,9 +123,21 @@ Par sa fonction de trésorière, elle sécurise les choix financiers, garantit l
         nom: "Sandrine Ratolojanahary",
         fonction: "Membre fondatrice",
         role: "Décisionnaire",
+        soustitre: "Professionnelle de l'éducation | Actrice de l'engagement sociétal",
         photo: null,
-        bio: "Co-fondatrice apportant son expertise en accompagnement des publics.",
-        expertise: ["Accompagnement", "Formation", "Médiation"]
+        bio: `Sandrine Ratolojanahary est une professionnelle de l'éducation dont le parcours s'inscrit à la convergence des enjeux pédagogiques, environnementaux et sociétaux. Professeure des écoles, elle contribue quotidiennement au développement des compétences fondamentales, à la structuration des apprentissages et à la formation du citoyen.
+
+Son engagement dépasse le cadre strict de l'enseignement : ses premières expériences en tant qu'éco-conseillère ainsi que son implication dans des initiatives humanitaires et éducatives à Madagascar témoignent d'une sensibilité affirmée aux questions de développement durable, de transmission et d'égalité des chances.`,
+        realisations: `En tant que professeure des écoles, Sandrine mobilise une expertise pédagogique centrée sur l'acquisition des savoirs fondamentaux, l'accompagnement des trajectoires d'apprentissage, l'adaptation aux besoins diversifiés des publics, et le développement de l'autonomie et de la confiance chez les apprenants.
+
+Son entrée dans la vie professionnelle par l'éco-conseil lui a permis d'intégrer très tôt une lecture systémique des enjeux environnementaux et la pédagogie du changement de comportement.
+
+Son implication dans des actions humanitaires et éducatives à Madagascar traduit une capacité à intervenir dans des contextes interculturels et à forte utilité sociale, développant des initiatives éducatives et des actions de soutien aux publics vulnérables.`,
+        vision: `La présence de Sandrine au sein des membres fondateurs participe à l'équilibre de la gouvernance en y intégrant une expertise essentielle : celle des dynamiques d'apprentissage et de construction des compétences dès les premières étapes de la vie.
+
+Elle apporte notamment une lecture pédagogique des parcours, une sensibilité aux enjeux d'égalité des opportunités, une culture de la transmission, une approche préventive des fragilités sociales, et une capacité à relier éducation et insertion professionnelle.`,
+        signature: `Son parcours reflète une conviction forte : le développement des individus repose sur un accès équitable à l'éducation, à l'accompagnement et aux opportunités. Elle inscrit son action dans une logique de contribution durable à la société, fondée sur la transmission des savoirs et la responsabilisation. Sa posture conjugue exigence éducative, engagement humain et vision de long terme.`,
+        expertise: ["Pédagogie et transmission", "Développement des compétences", "Éco-conseil", "Développement durable", "Engagement humanitaire", "Interculturalité", "Égalité des chances", "Accompagnement éducatif"]
       },
       {
         nom: "Anthony Ratolojanahary",
