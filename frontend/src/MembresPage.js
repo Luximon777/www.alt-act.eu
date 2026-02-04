@@ -204,9 +204,9 @@ Cette position lui permet de contribuer à l'émergence d'un cadre d'action robu
         nom: "Anthony Ratolojanahary",
         fonction: "Cybersécurité & données sensibles",
         role: "Consultatif",
-        soustitre: "Spécialiste en cybersécurité, gestion des risques et protection des systèmes d'information",
+        soustitre: "RSSI (CISO) MES-DMP | Caisse nationale de l'Assurance Maladie",
         photo: null,
-        bio: `Anthony Ratolojanahary est un professionnel confirmé dans le domaine de la cybersécurité, de la protection des données et du management des risques liés aux systèmes d'information. Actuellement en poste au sein de la Caisse nationale de l'Assurance Maladie, il exerce dans un environnement à haute exigence de sécurité, de conformité réglementaire et de fiabilité des systèmes critiques.`,
+        bio: `Anthony Ratolojanahary est un professionnel confirmé dans le domaine de la cybersécurité, de la protection des données et du management des risques liés aux systèmes d'information. Il occupe actuellement le poste de RSSI (CISO) du domaine MES (Mon Espace Santé) - DMP (Dossier Médical Partagé) au sein de la Caisse nationale de l'Assurance Maladie, où il exerce dans un environnement à haute exigence de sécurité, de conformité réglementaire et de fiabilité des systèmes critiques.`,
         vision: `Au sein du Comité de pilotage, il apporte son expertise pour sécuriser les processus numériques, garantir la conformité réglementaire (RGPD, normes internationales), et renforcer la crédibilité technique auprès des partenaires institutionnels.`,
         signature: `Anthony conjugue rigueur technique et compréhension des enjeux de gouvernance, faisant le lien entre les exigences opérationnelles de la sécurité informatique et les impératifs stratégiques des projets à impact sociétal.`,
         expertise: ["Cybersécurité", "RGPD", "Protection des données", "Architecture technique", "Gestion des risques IT", "Conformité réglementaire"]
