@@ -224,8 +224,11 @@ const MembreCard = ({ membre, color }) => {
   // Générer initiales pour avatar
   const initials = membre.nom.split(' ').map(n => n[0]).join('').slice(0, 2);
   
+  // Vérifier si c'est un profil enrichi
+  const isEnriched = membre.vision || membre.realisations || membre.signature;
+  
   return (
-    <Card className={`vsi-card hover:shadow-lg transition-all ${expanded ? 'ring-2 ring-offset-2 ring-teal-500' : ''}`}>
+    <Card className={`vsi-card hover:shadow-lg transition-all ${expanded ? 'ring-2 ring-offset-2 ring-teal-500' : ''} ${isEnriched ? 'md:col-span-2 lg:col-span-3' : ''}`}>
       <CardContent className="pt-6">
         <div className="flex items-start gap-4">
           {/* Avatar */}
@@ -241,7 +244,10 @@ const MembreCard = ({ membre, color }) => {
           <div className="flex-1 min-w-0">
             <h4 className="font-semibold text-[#1C1917] text-lg">{membre.nom}</h4>
             <p className={`text-sm ${colors.text} font-medium`}>{membre.fonction}</p>
-            <Badge variant="outline" className={`mt-1 text-xs ${colors.border} ${colors.text}`}>
+            {membre.soustitre && (
+              <p className="text-xs text-[#57534E] mt-1">{membre.soustitre}</p>
+            )}
+            <Badge variant="outline" className={`mt-2 text-xs ${colors.border} ${colors.text}`}>
               {membre.role}
             </Badge>
           </div>
@@ -254,17 +260,63 @@ const MembreCard = ({ membre, color }) => {
             className="flex items-center gap-1 text-sm text-[#57534E] hover:text-[#1C1917] transition-colors"
           >
             {expanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-            {expanded ? "Voir moins" : "Voir le profil"}
+            {expanded ? "Voir moins" : "Voir le profil complet"}
           </button>
           
           {expanded && (
-            <div className="mt-4 space-y-4 animate-fade-in-up">
-              <p className="text-sm text-[#57534E] leading-relaxed">
-                {membre.bio}
-              </p>
-              
+            <div className="mt-6 space-y-6 animate-fade-in-up">
+              {/* Profil exécutif */}
               <div>
-                <p className="text-xs text-[#A8A29E] uppercase tracking-wider mb-2">Domaines d'expertise</p>
+                <h5 className="text-sm font-semibold text-[#1C1917] mb-2 flex items-center gap-2">
+                  <Award className="w-4 h-4 text-amber-500" />
+                  Profil exécutif
+                </h5>
+                <p className="text-sm text-[#57534E] leading-relaxed whitespace-pre-line">
+                  {membre.bio}
+                </p>
+              </div>
+
+              {/* Vision stratégique */}
+              {membre.vision && (
+                <div>
+                  <h5 className="text-sm font-semibold text-[#1C1917] mb-2 flex items-center gap-2">
+                    <Lightbulb className="w-4 h-4 text-amber-500" />
+                    Vision stratégique
+                  </h5>
+                  <p className="text-sm text-[#57534E] leading-relaxed">
+                    {membre.vision}
+                  </p>
+                </div>
+              )}
+
+              {/* Réalisations */}
+              {membre.realisations && (
+                <div>
+                  <h5 className="text-sm font-semibold text-[#1C1917] mb-2 flex items-center gap-2">
+                    <Briefcase className="w-4 h-4 text-teal-500" />
+                    Trajectoire et réalisations
+                  </h5>
+                  <p className="text-sm text-[#57534E] leading-relaxed">
+                    {membre.realisations}
+                  </p>
+                </div>
+              )}
+
+              {/* Signature professionnelle */}
+              {membre.signature && (
+                <div className="bg-gradient-to-r from-amber-50 to-teal-50 p-4 rounded-xl border-l-4 border-l-amber-500">
+                  <h5 className="text-sm font-semibold text-[#1C1917] mb-2">Signature professionnelle</h5>
+                  <p className="text-sm text-[#57534E] italic leading-relaxed">
+                    {membre.signature}
+                  </p>
+                </div>
+              )}
+              
+              {/* Domaines d'autorité / Expertise */}
+              <div>
+                <p className="text-xs text-[#A8A29E] uppercase tracking-wider mb-2">
+                  {isEnriched ? "Domaines d'autorité" : "Domaines d'expertise"}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {membre.expertise.map((exp, idx) => (
                     <Badge key={idx} variant="secondary" className={`${colors.bg} ${colors.text} text-xs`}>
@@ -273,6 +325,21 @@ const MembreCard = ({ membre, color }) => {
                   ))}
                 </div>
               </div>
+
+              {/* Formation */}
+              {membre.formation && (
+                <div>
+                  <p className="text-xs text-[#A8A29E] uppercase tracking-wider mb-2">Formation</p>
+                  <ul className="space-y-1">
+                    {membre.formation.map((f, idx) => (
+                      <li key={idx} className="text-sm text-[#57534E] flex items-start gap-2">
+                        <GraduationCap className="w-4 h-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           )}
         </div>
