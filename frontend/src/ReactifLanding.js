@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import {
   Users,
@@ -32,7 +32,10 @@ import {
   Award,
   Leaf,
   Infinity,
-  HeartHandshake
+  HeartHandshake,
+  Menu,
+  X,
+  ChevronDown
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -40,6 +43,129 @@ import { Badge } from "@/components/ui/badge";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
+
+// ============== NAVIGATION HEADER ==============
+const NavHeader = () => {
+  const navigate = useNavigate();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [presentationOpen, setPresentationOpen] = useState(false);
+
+  return (
+    <nav className="bg-white/95 backdrop-blur-md border-b border-stone-200 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link to="/reactif" className="flex items-center gap-2">
+            <span className="text-xl font-bold text-[#1C1917]" style={{ fontFamily: 'Fraunces, serif' }}>
+              RE'ACTIF <span className="text-teal-600">PRO</span>
+            </span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            {/* Présentation dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setPresentationOpen(!presentationOpen)}
+                onBlur={() => setTimeout(() => setPresentationOpen(false), 200)}
+                className="flex items-center gap-1 text-[#57534E] hover:text-[#1C1917] transition-colors font-medium"
+              >
+                Présentation
+                <ChevronDown className={`w-4 h-4 transition-transform ${presentationOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {presentationOpen && (
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-stone-200 py-2 animate-fade-in-up">
+                  <Link
+                    to="/reactif"
+                    className="block px-4 py-2 text-sm text-[#57534E] hover:bg-teal-50 hover:text-teal-700"
+                  >
+                    À propos
+                  </Link>
+                  <Link
+                    to="/reactif/membres"
+                    className="block px-4 py-2 text-sm text-[#57534E] hover:bg-teal-50 hover:text-teal-700"
+                  >
+                    Nos membres
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <Link to="/reactif/accueil" className="text-[#57534E] hover:text-[#1C1917] transition-colors font-medium">
+              Dispositif
+            </Link>
+            <Link to="/reactif/partenaires" className="text-[#57534E] hover:text-[#1C1917] transition-colors font-medium">
+              Partenaires
+            </Link>
+            <Link to="/" className="text-[#57534E] hover:text-[#1C1917] transition-colors font-medium">
+              VSI
+            </Link>
+            
+            <Button
+              onClick={() => navigate("/reactif/accueil")}
+              className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-6"
+            >
+              Accéder
+            </Button>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 text-[#57534E]"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="md:hidden py-4 border-t border-stone-200 animate-fade-in-up">
+            <div className="space-y-2">
+              <p className="px-2 text-xs text-[#A8A29E] uppercase tracking-wider">Présentation</p>
+              <Link
+                to="/reactif"
+                className="block px-4 py-2 text-[#57534E] hover:bg-teal-50 rounded-lg"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                À propos
+              </Link>
+              <Link
+                to="/reactif/membres"
+                className="block px-4 py-2 text-[#57534E] hover:bg-teal-50 rounded-lg"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Nos membres
+              </Link>
+              <hr className="my-2 border-stone-200" />
+              <Link
+                to="/reactif/accueil"
+                className="block px-4 py-2 text-[#57534E] hover:bg-teal-50 rounded-lg"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Dispositif
+              </Link>
+              <Link
+                to="/reactif/partenaires"
+                className="block px-4 py-2 text-[#57534E] hover:bg-teal-50 rounded-lg"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Partenaires
+              </Link>
+              <Link
+                to="/"
+                className="block px-4 py-2 text-[#57534E] hover:bg-teal-50 rounded-lg"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                VSI
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
 
 // ============== PAGE D'ACCUEIL INSTITUTIONNELLE ==============
 export const ReactifLanding = () => {
