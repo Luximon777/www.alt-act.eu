@@ -617,11 +617,18 @@ export const ReactifLanding = () => {
               </ul>
             </div>
             <div>
+              <h4 className="font-semibold mb-4">Présentation</h4>
+              <ul className="space-y-2 text-stone-400 text-sm">
+                <li><a href="/reactif" className="hover:text-white transition-colors">À propos</a></li>
+                <li><a href="/reactif/membres" className="hover:text-white transition-colors">Nos membres</a></li>
+                <li><a href="/reactif/partenaires" className="hover:text-white transition-colors">Observatoire</a></li>
+              </ul>
+            </div>
+            <div>
               <h4 className="font-semibold mb-4">Outils</h4>
               <ul className="space-y-2 text-stone-400 text-sm">
                 <li><a href="/" className="hover:text-white transition-colors">VSI - Diagnostic</a></li>
                 <li><a href="/reactif/accueil" className="hover:text-white transition-colors">Apply VSI PRO</a></li>
-                <li><a href="/reactif/partenaires" className="hover:text-white transition-colors">Observatoire</a></li>
               </ul>
             </div>
             <div>
