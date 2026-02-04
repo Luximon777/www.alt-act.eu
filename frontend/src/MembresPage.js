@@ -143,9 +143,17 @@ Elle apporte notamment une lecture pédagogique des parcours, une sensibilité a
         nom: "Anthony Ratolojanahary",
         fonction: "Membre fondateur",
         role: "Décisionnaire",
+        soustitre: "Spécialiste en cybersécurité, gestion des risques et protection des systèmes d'information",
         photo: null,
-        bio: "Co-fondateur et expert en technologies et sécurité des données.",
-        expertise: ["Cybersécurité", "Technologies", "Protection des données"]
+        bio: `Anthony Ratolojanahary est un professionnel confirmé dans le domaine de la cybersécurité, de la protection des données et du management des risques liés aux systèmes d'information. Actuellement en poste au sein de la Caisse nationale de l'Assurance Maladie, il exerce dans un environnement à haute exigence de sécurité, de conformité réglementaire et de fiabilité des systèmes critiques.
+
+Cette expertise technique et stratégique confère une dimension essentielle à la gouvernance d'ALT&ACT, notamment lorsque l'organisation s'inscrit dans des projets numériques, des démarches d'innovation ou des configurations multi-partenaires où la sécurité des données, la confidentialité et la conformité juridique sont des prérequis indispensables.`,
+        realisations: `Anthony a construit son expérience professionnelle au cœur d'enjeux opérationnels où la cybersécurité ne se limite pas à la technique, mais devient un vecteur de confiance organisationnelle et de pérennité pour les opérations critiques.
+
+Il assure le pilotage des risques de cybersécurité au sein d'organisations publiques, la sécurisation des infrastructures informatiques avec une attention particulière aux processus de protection des données personnelles, et la conformité réglementaire essentielle pour répondre aux exigences des financeurs européens ou institutionnels.`,
+        vision: `La présence d'Anthony dans l'équipe fondatrice renforce l'association sur plusieurs plans : sécurité des processus numériques avec capacité à anticiper et maîtriser les vulnérabilités, conformité réglementaire notamment en matière de traitement des données personnelles (RGPD), et crédibilité technique auprès des partenaires institutionnels exigeants.`,
+        signature: `Anthony conjugue rigueur technique et compréhension des enjeux de gouvernance : il sait faire le lien entre les exigences opérationnelles de la sécurité informatique et les impératifs stratégiques des projets à impact sociétal. Cette capacité à naviguer entre le complexe technologique et le besoin de fiabilité organisationnelle est un atout stratégique majeur pour ALT&ACT dans un contexte où les données, la confiance et la sécurité numérique deviennent des enjeux centraux.`,
+        expertise: ["Cybersécurité", "Protection des données", "Gestion des risques IT", "Conformité RGPD", "Sécurité des systèmes d'information", "Résilience organisationnelle", "Gouvernance informatique"]
       },
       {
         nom: "Rajwantee Lepain",
