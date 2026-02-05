@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, FileText, Quote, Users, UserCircle, Heart } from 'lucide-react';
+import { Menu, X, ChevronDown, FileText, Quote, Users, UserCircle, Heart, Briefcase } from 'lucide-react';
 import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
 
@@ -55,6 +55,12 @@ function Navigation() {
     e.preventDefault();
     setIsMobileMenuOpen(false);
     navigate('/charte-ethique');
+  };
+
+  const goToConseils = (e) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    navigate('/conseils-accompagnement');
   };
 
   return (
@@ -114,6 +120,15 @@ function Navigation() {
                           <p className="text-xs text-gray-500">Nos engagements</p>
                         </div>
                       </a>
+                      <a href="/conseils-accompagnement" onClick={goToConseils} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 hover:text-[#0b2a55] transition-all duration-200 group/item">
+                        <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center group-hover/item:bg-purple-500 transition-colors duration-200">
+                          <Briefcase className="w-5 h-5 text-purple-600 group-hover/item:text-white transition-colors duration-200" />
+                        </div>
+                        <div>
+                          <p className="font-semibold">Conseils & Accompagnement</p>
+                          <p className="text-xs text-gray-500">Bien-être au travail</p>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -149,7 +164,7 @@ function Navigation() {
       </nav>
 
       <div className={`fixed inset-0 bg-black/50 z-40 md:hidden transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={() => setIsMobileMenuOpen(false)}>
-        <div className={`fixed top-36 right-0 bottom-0 w-72 bg-white shadow-2xl transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} onClick={(e) => e.stopPropagation()}>
+        <div className={`fixed top-36 right-0 bottom-0 w-72 bg-white shadow-2xl transform transition-transform duration-300 overflow-y-auto ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} onClick={(e) => e.stopPropagation()}>
           <div className="flex flex-col p-6 space-y-2">
             <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Présentation</p>
             <a href="#presentation" onClick={(e) => scrollToSection(e, '#presentation')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
@@ -167,6 +182,10 @@ function Navigation() {
             <a href="/charte-ethique" onClick={goToCharteEthique} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
               <Heart className="w-5 h-5 text-rose-600" />
               <span className="font-medium">Charte éthique</span>
+            </a>
+            <a href="/conseils-accompagnement" onClick={goToConseils} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
+              <Briefcase className="w-5 h-5 text-purple-600" />
+              <span className="font-medium">Conseils & Accompagnement</span>
             </a>
             <div className="border-t border-gray-100 my-3"></div>
             {navLinks.map((link) => (
