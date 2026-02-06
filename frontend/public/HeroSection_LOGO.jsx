@@ -1,39 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, Users, Target, Sparkles, TrendingUp } from 'lucide-react';
+import { ArrowRight, Heart, Users, Globe, Scale } from 'lucide-react';
 import { Button } from './ui/button';
 import { heroData } from '../mock/altactData';
 
 const HeroSection = () => {
   const navigate = useNavigate();
-  const [counters, setCounters] = useState(heroData.stats.map(() => 0));
-
-  useEffect(() => {
-    const duration = 2000;
-    const steps = 60;
-    const stepDuration = duration / steps;
-
-    const timers = heroData.stats.map((stat, index) => {
-      const increment = stat.value / steps;
-      let currentStep = 0;
-
-      return setInterval(() => {
-        currentStep++;
-        if (currentStep <= steps) {
-          setCounters((prev) => {
-            const newCounters = [...prev];
-            newCounters[index] = Math.min(
-              Math.round(increment * currentStep),
-              stat.value
-            );
-            return newCounters;
-          });
-        }
-      }, stepDuration);
-    });
-
-    return () => timers.forEach((timer) => clearInterval(timer));
-  }, []);
 
   const scrollToSection = (href) => {
     const element = document.querySelector(href);
@@ -48,7 +20,12 @@ const HeroSection = () => {
     }
   };
 
-  const icons = [Users, Target, Sparkles, TrendingUp];
+  const valeurs = [
+    { icon: Heart, label: "Humanisme", description: "L'humain au cœur de tout" },
+    { icon: Users, label: "Inclusion", description: "L'insertion sans barrières" },
+    { icon: Globe, label: "Impact social", description: "Transformer durablement" },
+    { icon: Scale, label: "Éthique", description: "Intégrité et transparence" }
+  ];
 
   return (
     <section id="top" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -107,17 +84,14 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        {/* Stats */}
+        {/* Valeurs */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-          {heroData.stats.map((stat, index) => {
-            const Icon = icons[index];
-            const isClickable = stat.linkTo;
-            
+          {valeurs.map((valeur, index) => {
+            const Icon = valeur.icon;
             return (
               <div
                 key={index}
-                onClick={() => isClickable && navigate(stat.linkTo)}
-                className={`bg-white/10 backdrop-blur-md rounded-2xl p-6 transform hover:scale-105 transition-all duration-300 animate-fade-in-up ${isClickable ? 'cursor-pointer hover:bg-white/20' : ''}`}
+                className="bg-white/10 backdrop-blur-md rounded-2xl p-6 transform hover:scale-105 transition-all duration-300 animate-fade-in-up hover:bg-white/20"
                 style={{ animationDelay: `${0.4 + index * 0.1}s` }}
               >
                 <div className="flex justify-center mb-3">
@@ -125,17 +99,12 @@ const HeroSection = () => {
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                 </div>
-                <div className="text-4xl font-bold text-white mb-2">
-                  {counters[index]}{stat.suffix}
+                <div className="text-xl font-bold text-white mb-2">
+                  {valeur.label}
                 </div>
                 <div className="text-blue-200 text-sm font-medium">
-                  {stat.label}
+                  {valeur.description}
                 </div>
-                {isClickable && (
-                  <div className="mt-2 text-xs text-blue-100 opacity-75">
-                    Cliquez pour en savoir plus
-                  </div>
-                )}
               </div>
             );
           })}
