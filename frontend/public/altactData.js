@@ -3,7 +3,7 @@
 export const heroData = {
   title: "Alt&Act",
   subtitle: "L'insertion professionnelle sans barrières",
-  description: "Association humaniste œuvrant pour l'intégration professionnelle et sociale, le soutien aux transitions et la promotion de pratiques éthiques et inclusives.",
+  description: "Agir pour une Europe de l'emploi plus accessible, plus équitable et plus humaine. Accompagne les personnes et les organisations dans leurs transformations, soutient le développement des compétences tout au long de la vie et déploie des approches éthiques favorisant une participation pleine et entière au marché du travail.",
   stats: [
     { label: "Personnes accompagnées", value: 2000, suffix: "+", linkTo: "/profil-methodologique" },
     { label: "Partenaires", value: 45, suffix: "+" },
