@@ -75,7 +75,7 @@ const HeroSection = () => {
           <img 
             src="https://customer-assets.emergentagent.com/job_d4392e18-68a6-4d72-af1f-982787d9dcde/artifacts/2ly4eg7d_assetslogo-altact.png" 
             alt="Alt&Act" 
-            className="h-24 md:h-32 lg:h-40 w-auto mx-auto"
+            className="h-16 md:h-20 lg:h-24 w-auto mx-auto"
           />
         </div>
         
