@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, FileText, Quote, Users, UserCircle, Heart, Briefcase, Target, Compass } from 'lucide-react';
+import { Menu, X, ChevronDown, FileText, Quote, Users, UserCircle, Heart } from 'lucide-react';
 import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,6 +17,7 @@ function Navigation() {
   }, []);
 
   const navLinks = [
+    { label: 'Mission', href: '#mission' },
     { label: 'Actions', href: '#actions' },
     { label: 'Gouvernance', href: '#gouvernance' },
     { label: 'Impact', href: '#impact' },
@@ -54,12 +55,6 @@ function Navigation() {
     e.preventDefault();
     setIsMobileMenuOpen(false);
     navigate('/charte-ethique');
-  };
-
-  const goToConseils = (e) => {
-    e.preventDefault();
-    setIsMobileMenuOpen(false);
-    navigate('/conseils-accompagnement');
   };
 
   return (
@@ -125,41 +120,7 @@ function Navigation() {
                 </div>
               </div>
 
-              {/* Dropdown Mission */}
-              <div className="relative group">
-                <a href="#mission" onClick={(e) => scrollToSection(e, '#mission')} className="text-orange-600 hover:text-orange-700 font-semibold text-base transition-colors duration-200 flex items-center gap-1 py-4">
-                  Mission
-                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
-                </a>
-                <div className="absolute top-full left-1/2 -translate-x-1/2 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
-                  <div className="bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden">
-                    <div className="bg-gradient-to-r from-[#0b2a55] to-[#1a4280] px-4 py-3">
-                      <p className="text-white text-sm font-medium">Notre mission</p>
-                    </div>
-                    <div className="p-2">
-                      <a href="#mission" onClick={(e) => scrollToSection(e, '#mission')} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 hover:text-[#0b2a55] transition-all duration-200 group/item">
-                        <div className="w-10 h-10 rounded-lg bg-[#0b2a55]/10 flex items-center justify-center group-hover/item:bg-[#0b2a55] transition-colors duration-200">
-                          <Target className="w-5 h-5 text-[#0b2a55] group-hover/item:text-white transition-colors duration-200" />
-                        </div>
-                        <div>
-                          <p className="font-semibold">Notre raison d&apos;être</p>
-                          <p className="text-xs text-gray-500">Vision et objectifs</p>
-                        </div>
-                      </a>
-                      <a href="/conseils-accompagnement" onClick={goToConseils} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 hover:text-[#0b2a55] transition-all duration-200 group/item">
-                        <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center group-hover/item:bg-purple-500 transition-colors duration-200">
-                          <Briefcase className="w-5 h-5 text-purple-600 group-hover/item:text-white transition-colors duration-200" />
-                        </div>
-                        <div>
-                          <p className="font-semibold">Conseils & Accompagnement</p>
-                          <p className="text-xs text-gray-500">Bien-être au travail</p>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+              {/* Liens directs */}
               {navLinks.map((link) => (
                 <a key={link.href} href={link.href} onClick={(e) => scrollToSection(e, link.href)} className="text-orange-600 hover:text-orange-700 font-semibold text-base transition-colors duration-200 relative group">
                   {link.label}
@@ -214,19 +175,7 @@ function Navigation() {
             
             <div className="border-t border-gray-100 my-3"></div>
             
-            {/* Section Mission - Mobile */}
-            <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Mission</p>
-            <a href="#mission" onClick={(e) => scrollToSection(e, '#mission')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
-              <Target className="w-5 h-5 text-[#0b2a55]" />
-              <span className="font-medium">Notre raison d&apos;être</span>
-            </a>
-            <a href="/conseils-accompagnement" onClick={goToConseils} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
-              <Briefcase className="w-5 h-5 text-purple-600" />
-              <span className="font-medium">Conseils & Accompagnement</span>
-            </a>
-            
-            <div className="border-t border-gray-100 my-3"></div>
-            
+            {/* Liens directs - Mobile */}
             {navLinks.map((link) => (
               <a key={link.href} href={link.href} onClick={(e) => scrollToSection(e, link.href)} className="text-orange-600 hover:text-orange-700 font-semibold text-base py-3 px-3 rounded-lg hover:bg-orange-50 transition-colors">
                 {link.label}
