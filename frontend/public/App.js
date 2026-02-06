@@ -19,6 +19,7 @@ import MotPresident from "./components/MotPresident";
 import MembresPage from "./components/MembresPage";
 import CharteEthique from "./components/CharteEthique";
 import ConseilsAccompagnement from "./components/ConseilsAccompagnement";
+import EspaceUbuntoo from "./components/EspaceUbuntoo";
 import { Toaster } from "./components/ui/sonner";
 
 function HomePage() {
@@ -52,6 +53,7 @@ function App() {
           <Route path="/membres" element={<MembresPage />} />
           <Route path="/charte-ethique" element={<CharteEthique />} />
           <Route path="/conseils-accompagnement" element={<ConseilsAccompagnement />} />
+          <Route path="/espace-ubuntoo" element={<EspaceUbuntoo />} />
         </Routes>
         <Toaster />
       </div>
