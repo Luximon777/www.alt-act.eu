@@ -183,9 +183,8 @@ function Navigation() {
             
             {/* Bouton Espace Ubuntoo - Mobile */}
             <a 
-              href="https://ubuntoo.altact.org" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+              href="/espace-ubuntoo" 
+              onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); navigate('/espace-ubuntoo'); }}
               className="flex items-center justify-center gap-2 bg-[#0F4C5C] text-white py-3 px-3 rounded-lg font-semibold hover:bg-[#0A3844] transition-colors"
             >
               <Users className="w-5 h-5" />
