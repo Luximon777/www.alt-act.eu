@@ -184,7 +184,7 @@ function Navigation() {
             
             {/* Bouton Espace Ubuntoo - Mobile */}
             <a 
-              href="https://member-portal-90.preview.emergentagent.com" 
+              href="https://ubuntoo.altact.org" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="flex items-center justify-center gap-2 bg-[#0F4C5C] text-white py-3 px-3 rounded-lg font-semibold hover:bg-[#0A3844] transition-colors"
