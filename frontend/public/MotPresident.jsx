@@ -60,16 +60,15 @@ function MotPresident() {
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="relative text-white py-20 overflow-hidden">
-        {/* Image de fond en filigrane */}
+        {/* Image de fond - Unité multiculturelle */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750')",
-            opacity: 0.5
+            backgroundImage: "url('https://images.unsplash.com/photo-1722963220475-979db2dbf216?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHw0fHxkaXZlcnNlJTIwdGVhbSUyMGNvbGxhYm9yYXRpb24lMjBncm91cCUyMHBlb3BsZSUyMGNpcmNsZXxlbnwwfHx8fDE3NzA0Njc1MzV8MA&ixlib=rb-4.1.0&q=85')"
           }}
         ></div>
         {/* Overlay bleu */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0b2a55]/85 to-[#1a4280]/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0b2a55]/80 to-[#1a4280]/80"></div>
         {/* Contenu */}
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Quote className="w-16 h-16 mx-auto mb-6 opacity-70" />
