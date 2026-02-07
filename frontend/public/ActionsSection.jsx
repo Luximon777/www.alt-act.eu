@@ -8,26 +8,26 @@ const ActionsSection = () => {
       public: "Personnes en recherche d'emploi",
       title: "Devenir auteur de sa trajectoire",
       before: "Orienter et prescrire",
-      after: "Eveiller et reveler",
-      description: "Nous ne cherchons pas a inserer une personne dans un systeme. Nous l'accompagnons a decouvrir sa capacite unique de contribution et a devenir suffisamment solide pour prendre part au monde.",
+      after: "Éveiller et révéler",
+      description: "Nous ne cherchons pas à insérer une personne dans un système. Nous l'accompagnons à découvrir sa capacité unique de contribution et à devenir suffisamment solide pour prendre part au monde.",
       icon: Compass,
       color: "from-[#0b2a55] to-[#1a4280]"
     },
     {
       public: "Personnes en transition",
       title: "Traverser sans perdre sa direction",
-      before: "Securiser un parcours",
+      before: "Sécuriser un parcours",
       after: "Structurer la personne",
-      description: "Les transitions ne se traversent pas avec des outils, mais avec une solidite interieure. Nous developpons la maturite qui permet d'affronter l'incertitude avec autonomie et sens.",
+      description: "Les transitions ne se traversent pas avec des outils, mais avec une solidité intérieure. Nous développons la maturité qui permet d'affronter l'incertitude avec autonomie et sens.",
       icon: ArrowRight,
       color: "from-orange-500 to-amber-500"
     },
     {
       public: "Personnes en situation de handicap",
-      title: "Talents a valoriser",
+      title: "Talents à valoriser",
       before: "Compenser des limites",
-      after: "Reveler des ressources",
-      description: "La ou d'autres voient des limites, nous reconnaissons des competences, des talents et des atouts a valoriser dans une dynamique de participation pleine et entiere.",
+      after: "Révéler des ressources",
+      description: "Là où d'autres voient des limites, nous reconnaissons des compétences, des talents et des atouts à valoriser dans une dynamique de participation pleine et entière.",
       icon: Heart,
       color: "from-rose-500 to-pink-500"
     },
@@ -36,16 +36,16 @@ const ActionsSection = () => {
       title: "Espaces de contribution",
       before: "Inclusion par obligation",
       after: "Transformation par conviction",
-      description: "Nous accompagnons les organisations a devenir des lieux ou chacun peut apporter sa valeur unique - pas seulement des structures qui integrent, mais des espaces qui font grandir.",
+      description: "Nous accompagnons les organisations à devenir des lieux où chacun peut apporter sa valeur unique — pas seulement des structures qui intègrent, mais des espaces qui font grandir.",
       icon: Building,
       color: "from-teal-500 to-emerald-500"
     },
     {
       public: "Territoires et Partenaires",
-      title: "Architectes du developpement humain",
+      title: "Architectes du développement humain",
       before: "Coordonner des dispositifs",
-      after: "Creer des ecosystemes de maturation",
-      description: "Nous batissons avec les acteurs locaux des espaces capables de redonner du sens, de soutenir la responsabilite et de former des adultes capables de contribuer.",
+      after: "Créer des écosystèmes de maturation",
+      description: "Nous bâtissons avec les acteurs locaux des espaces capables de redonner du sens, de soutenir la responsabilité et de former des adultes capables de contribuer.",
       icon: Globe,
       color: "from-purple-500 to-violet-500"
     }
@@ -64,24 +64,24 @@ const ActionsSection = () => {
             Un changement de paradigme
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Nous ne cherchons pas a inserer des personnes dans un systeme existant - nous les accompagnons a devenir suffisamment solides pour y contribuer et, parfois, pour le transformer.
+            Nous ne cherchons pas à insérer des personnes dans un système existant — nous les accompagnons à devenir suffisamment solides pour y contribuer et parfois, pour participer à son évolution.
           </p>
         </div>
 
         {/* Paradigm shift banner */}
         <div className="mb-16 p-6 md:p-8 bg-gradient-to-r from-[#0b2a55] to-[#1a4280] rounded-2xl text-white text-center">
           <p className="text-lg md:text-xl font-medium mb-4">
-            De l'insertion a la contribution
+            De l'insertion à la contribution
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
             <div className="flex items-center gap-2 text-blue-200">
               <X className="w-5 h-5 text-red-400" />
-              <span>Former - Adapter - Placer</span>
+              <span>Former — Adapter — Placer</span>
             </div>
             <ArrowRight className="w-6 h-6 text-orange-400 hidden md:block" />
             <div className="flex items-center gap-2 text-white font-semibold">
               <Check className="w-5 h-5 text-green-400" />
-              <span>Eveiller - Structurer - Contribuer</span>
+              <span>Éveiller — Structurer — Contribuer</span>
             </div>
           </div>
         </div>
@@ -138,9 +138,9 @@ const ActionsSection = () => {
         <div className="mt-16 text-center">
           <div className="inline-block p-8 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-orange-100 max-w-3xl">
             <p className="text-xl text-gray-800 italic leading-relaxed mb-4">
-              "Accompagner ne consiste pas a integrer une personne dans un systeme, mais a l'aider a devenir suffisamment structuree pour contribuer a transformer ce systeme."
+              "Accompagner ne consiste pas à intégrer une personne dans un système, mais à l'aider à devenir suffisamment structurée pour contribuer à son évolution."
             </p>
-            <p className="text-orange-600 font-semibold">- Notre conviction</p>
+            <p className="text-orange-600 font-semibold">— Notre conviction</p>
           </div>
         </div>
 
@@ -149,10 +149,10 @@ const ActionsSection = () => {
           {/* Lien vers Conseils et Accompagnement */}
           <div className="p-8 bg-gradient-to-r from-[#0b2a55]/5 to-orange-50 rounded-2xl border border-orange-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">
-              Vous etes une entreprise ?
+              Vous êtes une entreprise ?
             </h3>
             <p className="text-gray-600 mb-6">
-              Decouvrez comment transformer votre organisation en espace de contribution
+              Découvrez comment transformer votre organisation en espace de contribution
             </p>
             <a 
               href="#/conseils-accompagnement" 
@@ -169,7 +169,7 @@ const ActionsSection = () => {
               Besoin d'accompagnement ?
             </h3>
             <p className="text-gray-600 mb-6">
-              Echangeons sur votre parcours et vos aspirations
+              Échangeons sur votre parcours et vos aspirations
             </p>
             <button className="inline-flex items-center gap-2 px-6 py-3 bg-[#0b2a55] text-white rounded-lg font-semibold hover:bg-[#1a4280] transition-colors duration-200">
               Prendre rendez-vous
