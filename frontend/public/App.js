@@ -55,6 +55,7 @@ function App() {
           <Route path="/charte-ethique" element={<CharteEthique />} />
           <Route path="/conseils-accompagnement" element={<ConseilsAccompagnement />} />
           <Route path="/espace-ubuntoo" element={<EspaceUbuntoo />} />
+          <Route path="/vision-methode" element={<VisionMethode />} />
         </Routes>
         <Toaster />
       </div>
