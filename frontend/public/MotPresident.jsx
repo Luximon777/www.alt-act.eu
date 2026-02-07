@@ -65,10 +65,10 @@ function MotPresident() {
           <img 
             src="https://images.unsplash.com/photo-1761566333643-bf7d2c94f0ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwyfHxtb3VudGFpbiUyMHN1bW1pdCUyMGhvcml6b24lMjBzdW5yaXNlJTIwc2lsaG91ZXR0ZXxlbnwwfHx8fDE3NzA0NjU4MDB8MA&ixlib=rb-4.1.0&q=85" 
             alt="" 
-            className="w-full h-full object-cover opacity-20"
+            className="w-full h-full object-cover opacity-40"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0b2a55]/80 to-[#1a4280]/80"></div>
         </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0b2a55]/60 to-[#1a4280]/60"></div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Quote className="w-16 h-16 mx-auto mb-6 opacity-70" />
           <h1 className="text-3xl md:text-5xl font-bold mb-4">Le mot du fondateur</h1>
