@@ -16,19 +16,27 @@ function VisionMethode() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-gradient-to-br from-[#0b2a55] to-[#1a4280] text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Eye className="w-16 h-16 mx-auto mb-6 opacity-50" />
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Vision et méthode</h1>
-          <p className="text-xl text-blue-100 italic max-w-3xl mx-auto">
+      {/* Header avec image de fond */}
+      <header className="relative bg-gradient-to-br from-[#0b2a55] to-[#1a4280] text-white py-20">
+        <div className="absolute inset-0 opacity-20">
+          <img 
+            src="https://images.unsplash.com/photo-1758873268631-fa944fc5cad2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwyfHx0ZWFtd29yayUyMGNvbGxhYm9yYXRpb24lMjBkaXZlcnNlJTIwcGVvcGxlfGVufDB8fHx8MTc3MDQ2MzkyNXww&ixlib=rb-4.1.0&q=85" 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Eye className="w-16 h-16 mx-auto mb-6 opacity-70" />
+          <h1 className="text-3xl md:text-5xl font-bold mb-6">Vision et méthode</h1>
+          <p className="text-xl text-blue-100 italic max-w-3xl mx-auto leading-relaxed">
             Accompagner une personne, ce n&apos;est pas seulement sécuriser un parcours — c&apos;est révéler sa capacité à prendre part à la construction du monde qui vient.
           </p>
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="p-8 md:p-12 space-y-8">
+          <div className="p-8 md:p-12 space-y-12">
             
             {/* Introduction */}
             <section>
@@ -39,6 +47,20 @@ function VisionMethode() {
                 C&apos;est face à cette réalité que s&apos;enracine la conviction d&apos;<strong className="text-[#0b2a55]">ALT&amp;ACT</strong> : les défis de notre époque ne pourront être relevés uniquement par des réponses techniques ou par la multiplication des dispositifs. Ils appellent une compréhension renouvelée de l&apos;être humain, de ses capacités et de sa place dans la construction du bien commun.
               </p>
             </section>
+
+            {/* Image section - Équipe diverse */}
+            <div className="relative rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1758873268663-5a362616b5a7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwzfHx0ZWFtd29yayUyMGNvbGxhYm9yYXRpb24lMjBkaXZlcnNlJTIwcGVvcGxlfGVufDB8fHx8MTc3MDQ2MzkyNXww&ixlib=rb-4.1.0&q=85" 
+                alt="Équipe diverse collaborant ensemble" 
+                className="w-full h-64 md:h-80 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/70 to-transparent flex items-end">
+                <p className="p-6 text-white text-lg font-medium">
+                  La force du collectif au service du développement de chacun
+                </p>
+              </div>
+            </div>
 
             {/* Notre vision */}
             <section>
@@ -88,6 +110,34 @@ function VisionMethode() {
               </p>
             </section>
 
+            {/* Image section - Accompagnement professionnel */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1758518727600-2c5f48419eac?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtZWV0aW5nJTIwYnVzaW5lc3MlMjBkaXNjdXNzaW9uJTIwb2ZmaWNlfGVufDB8fHx8MTc3MDQ2Mzk0Mnww&ixlib=rb-4.1.0&q=85" 
+                  alt="Accompagnement professionnel" 
+                  className="w-full h-48 md:h-56 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                  <p className="p-4 text-white text-sm font-medium">
+                    Accompagnement personnalisé
+                  </p>
+                </div>
+              </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1758518726869-01aff69a56e3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBtZWV0aW5nJTIwYnVzaW5lc3MlMjBkaXNjdXNzaW9uJTIwb2ZmaWNlfGVufDB8fHx8MTc3MDQ2Mzk0Mnww&ixlib=rb-4.1.0&q=85" 
+                  alt="Discussion et échange professionnel" 
+                  className="w-full h-48 md:h-56 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                  <p className="p-4 text-white text-sm font-medium">
+                    Dialogue et co-construction
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Notre méthode */}
             <section>
               <div className="flex items-center gap-3 mb-4">
@@ -130,6 +180,20 @@ function VisionMethode() {
                 Ainsi, nous cherchons moins à orienter qu&apos;à éveiller, moins à prescrire qu&apos;à rendre chacun auteur de sa trajectoire.
               </p>
             </section>
+
+            {/* Image section - Solidarité */}
+            <div className="relative rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1758599669186-9eaf14f6f3ea?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwzfHxoZWxwaW5nJTIwaGFuZHMlMjBzdXBwb3J0JTIwY29tbXVuaXR5JTIwc29saWRhcml0eXxlbnwwfHx8fDE3NzA0NjM5Mzh8MA&ixlib=rb-4.1.0&q=85" 
+                alt="Solidarité et engagement communautaire" 
+                className="w-full h-64 md:h-72 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/70 to-transparent flex items-end">
+                <p className="p-6 text-white text-lg font-medium">
+                  S&apos;engager ensemble pour un impact durable
+                </p>
+              </div>
+            </div>
 
             {/* Approche systémique */}
             <section>
