@@ -20,6 +20,7 @@ import MembresPage from "./components/MembresPage";
 import CharteEthique from "./components/CharteEthique";
 import ConseilsAccompagnement from "./components/ConseilsAccompagnement";
 import EspaceUbuntoo from "./components/EspaceUbuntoo";
+import VisionMethode from "./components/VisionMethode";
 import { Toaster } from "./components/ui/sonner";
 
 function HomePage() {
