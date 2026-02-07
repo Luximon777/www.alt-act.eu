@@ -161,9 +161,9 @@ function Navigation() {
           <div className="flex flex-col p-6 space-y-2">
             {/* Section Présentation - Mobile */}
             <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Présentation</p>
-            <a href="#presentation" onClick={(e) => scrollToSection(e, '#presentation')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
+            <a href="/vision-methode" onClick={goToVisionMethode} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
               <FileText className="w-5 h-5 text-[#0b2a55]" />
-              <span className="font-medium">Vue d&apos;ensemble</span>
+              <span className="font-medium">Vision et méthode</span>
             </a>
             <a href="/mot-president" onClick={goToMotPresident} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
               <Quote className="w-5 h-5 text-orange-600" />
