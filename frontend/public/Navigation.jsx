@@ -39,6 +39,12 @@ function Navigation() {
     }
   };
 
+  const goToVisionMethode = (e) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    navigate('/vision-methode');
+  };
+
   const goToMotPresident = (e) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
