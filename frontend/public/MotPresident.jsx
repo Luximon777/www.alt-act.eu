@@ -38,7 +38,7 @@ function MotPresident() {
           <div className="p-8 md:p-12 space-y-6">
             
             <p className="text-gray-700 leading-relaxed text-lg">
-              Ces dernières années ont agi comme un révélateur. La période post-pandémique a mis sous tension nos services publics — santé, social, éducation, emploi — et éprouvé profondément celles et ceux qui y consacrent leur engagement. Les professionnels de l&apos;accompagnement font aujourd&apos;hui face à une intensification des vulnérabilités, à la montée des enjeux de santé mentale et à l&apos;apparition de problématiques nouvelles, souvent plus complexes et plus imbriquées.
+              Ces dernières années ont sonné la fin des réponses d&apos;hier et ouvert l&apos;exigence de repenser en profondeur nos manières d&apos;accompagner, de former et de faire société. La période post-pandémique a mis sous tension nos services publics — santé, social, éducation, emploi — et éprouvé profondément celles et ceux qui y consacrent leur engagement. Les professionnels de l&apos;accompagnement font aujourd&apos;hui face à une intensification des vulnérabilités, à la montée des enjeux de santé mentale et à l&apos;apparition de problématiques nouvelles, souvent plus complexes et plus imbriquées.
             </p>
 
             <p className="text-gray-700 leading-relaxed text-lg">
