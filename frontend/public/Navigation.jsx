@@ -93,7 +93,7 @@ function Navigation() {
                           <Quote className="w-5 h-5 text-orange-600 group-hover/item:text-white transition-colors duration-200" />
                         </div>
                         <div>
-                          <p className="font-semibold">Le mot du Président</p>
+                          <p className="font-semibold">Le mot du fondateur</p>
                           <p className="text-xs text-gray-500">Vision et engagement</p>
                         </div>
                       </a>
