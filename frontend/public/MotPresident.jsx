@@ -38,7 +38,7 @@ function MotPresident() {
           <div className="p-8 md:p-12 space-y-6">
             
             <p className="text-gray-700 leading-relaxed text-lg">
-              Ces dernières années ont sonné la fin des réponses d&apos;hier et ouvert l&apos;exigence de repenser en profondeur nos manières d&apos;accompagner, de former et de faire société. La période post-pandémique a mis sous tension nos services publics — santé, social, éducation, emploi — et éprouvé profondément celles et ceux qui y consacrent leur engagement. Les professionnels de l&apos;accompagnement font aujourd&apos;hui face à une intensification des vulnérabilités, à la montée des enjeux de santé mentale et à l&apos;apparition de problématiques nouvelles, souvent plus complexes et plus imbriquées.
+              Ces dernières années ont sonné la fin des réponses d&apos;hier et ouvert l&apos;exigence de repenser en profondeur nos manières d&apos;accompagner, de former et de faire société. Les fragilités qui traversent aujourd&apos;hui nos institutions ne sont pas apparues soudainement ; elles s&apos;enracinent dans des mutations profondes engagées depuis plusieurs années. La période post-pandémique s&apos;est inscrite dans ce contexte déjà exigeant, accentuant des tensions devenues particulièrement visibles au sein de nos services publics — santé, social, éducation, emploi — et éprouvant profondément celles et ceux qui s&apos;y engagent au quotidien. Les professionnels de l&apos;accompagnement font désormais face à une intensification des vulnérabilités, à la progression des enjeux de santé mentale et à l&apos;émergence de situations nouvelles, souvent plus complexes et étroitement imbriquées.
             </p>
 
             <p className="text-gray-700 leading-relaxed text-lg">
