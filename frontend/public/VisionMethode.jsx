@@ -191,7 +191,10 @@ function VisionMethode() {
                     Cette vision nous conduit à dépasser une approche strictement réparatrice pour privilégier une dynamique de développement. Il ne s&apos;agit pas seulement de sécuriser des parcours professionnels, mais de permettre à chacun de trouver sa juste place — une place qui conjugue utilité sociale, dignité et pouvoir d&apos;agir.
                   </p>
                   <p className="text-gray-700 leading-relaxed text-lg mt-4">
-                    Nous portons une attention particulière aux publics fragilisés par les parcours de vie, les inégalités ou les ruptures professionnelles. Convaincus que la cohésion sociale repose sur l&apos;équité, nous agissons avec détermination pour prévenir et combattre toute forme de discrimination, condition indispensable à une participation pleine et entière à la vie collective. Car une société plus juste n&apos;est pas seulement celle qui protège — c&apos;est celle qui permet à chacun de contribuer.
+                    Nous portons une attention particulière à la diversité des personnes que nous accompagnons et veillons à adapter nos pratiques à la singularité de chaque parcours. Cette exigence nous conduit à développer une approche interculturelle attentive aux réalités, aux références et aux richesses liées aux origines multiples des publics que nous accueillons. Elle nous engage également à reconnaître pleinement les compétences, les talents et les ressources des personnes en situation de handicap, non comme des limites à compenser, mais comme des atouts à valoriser dans une dynamique de participation.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed text-lg mt-4">
+                    Convaincus que la cohésion sociale repose sur l&apos;équité, nous agissons avec détermination pour prévenir et combattre toute forme de discrimination, condition indispensable à une participation pleine et entière à la vie collective. Car une société plus juste n&apos;est pas seulement celle qui protège — c&apos;est celle qui sait reconnaître les capacités de chacun et lui permettre de contribuer.
                   </p>
                 </section>
 
