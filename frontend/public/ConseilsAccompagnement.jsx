@@ -93,8 +93,16 @@ const ConseilsAccompagnement = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Header */}
-      <header className="bg-gradient-to-br from-[#0b2a55] via-[#1a4280] to-[#0b2a55] text-white py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header className="relative bg-gradient-to-br from-[#0b2a55] via-[#1a4280] to-[#0b2a55] text-white py-20 overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0 opacity-20">
+          <img 
+            src="https://images.unsplash.com/photo-1565688527174-775059ac429c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBjb2FjaGluZyUyMGJ1c2luZXNzJTIwbWVldGluZyUyMHRlYW13b3JrJTIwc3VwcG9ydHxlbnwwfHx8fDE3NzA1NjY4MTN8MA&ixlib=rb-4.1.0&q=85" 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <Button 
             variant="ghost" 
             onClick={handleBackHome} 
