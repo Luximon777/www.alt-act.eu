@@ -150,8 +150,8 @@ function Navigation() {
               
               {/* Espace Employeurs */}
               <a 
-                href="/espace-employeurs" 
-                onClick={(e) => { e.preventDefault(); navigate('/espace-employeurs'); }}
+                href="/conseils-accompagnement" 
+                onClick={(e) => { e.preventDefault(); navigate('/conseils-accompagnement'); }}
                 className="flex items-center gap-2 bg-teal-600 text-white px-4 py-2.5 rounded-full font-semibold text-sm transition-all duration-200 hover:bg-teal-700 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <Building className="w-4 h-4" />
