@@ -222,6 +222,26 @@ function Navigation() {
                 Contact
               </Button>
             </div>
+            
+            {/* Espace Employeurs - Mobile */}
+            <a 
+              href="/espace-employeurs" 
+              onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); navigate('/espace-employeurs'); }}
+              className="flex items-center justify-center gap-2 bg-teal-600 text-white py-3 px-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
+            >
+              <Building className="w-5 h-5" />
+              Espace Employeurs
+            </a>
+            
+            {/* Espace Personnel - Mobile */}
+            <a 
+              href="/espace-personnel" 
+              onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); navigate('/espace-personnel'); }}
+              className="flex items-center justify-center gap-2 bg-orange-500 text-white py-3 px-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors"
+            >
+              <User className="w-5 h-5" />
+              Espace Personnel
+            </a>
           </div>
         </div>
       </div>
