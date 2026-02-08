@@ -97,7 +97,7 @@ const ConseilsAccompagnement = () => {
         {/* Background image */}
         <div className="absolute inset-0 opacity-20">
           <img 
-            src="https://images.unsplash.com/photo-1565688527174-775059ac429c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBjb2FjaGluZyUyMGJ1c2luZXNzJTIwbWVldGluZyUyMHRlYW13b3JrJTIwc3VwcG9ydHxlbnwwfHx8fDE3NzA1NjY4MTN8MA&ixlib=rb-4.1.0&q=85" 
+            src="https://images.unsplash.com/photo-1764391801025-9cee2194f564?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHw0fHx0ZWFtJTIwbWVldGluZyUyMG9mZmljZSUyMHBlb3BsZSUyMGRpc2N1c3NpbmclMjB0YWJsZSUyMGNvcnBvcmF0ZXxlbnwwfHx8fDE3NzA1Njc1MjF8MA&ixlib=rb-4.1.0&q=85" 
             alt="" 
             className="w-full h-full object-cover"
           />
