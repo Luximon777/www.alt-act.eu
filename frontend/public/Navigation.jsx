@@ -177,7 +177,7 @@ function Navigation() {
       </nav>
 
       <div className={`fixed inset-0 bg-black/50 z-40 md:hidden transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={() => setIsMobileMenuOpen(false)}>
-        <div className={`fixed top-36 right-0 bottom-0 w-72 bg-white shadow-2xl transform transition-transform duration-300 overflow-y-auto ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} onClick={(e) => e.stopPropagation()}>
+        <div className={`fixed top-20 right-0 bottom-0 w-72 bg-white shadow-2xl transform transition-transform duration-300 overflow-y-auto ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} onClick={(e) => e.stopPropagation()}>
           <div className="flex flex-col p-6 space-y-2">
             {/* Section Présentation - Mobile */}
             <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Présentation</p>
