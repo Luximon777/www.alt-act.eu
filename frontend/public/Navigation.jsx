@@ -67,9 +67,9 @@ function Navigation() {
     <React.Fragment>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-36">
+          <div className="flex items-center justify-between h-20">
             <a href="#top" onClick={(e) => scrollToSection(e, '#top')} className="flex items-center group">
-              <img src="https://customer-assets.emergentagent.com/job_institut-fusion/artifacts/n4nzcgj5_LOGOS%202.png" alt="Alt and Act" className="h-32 w-auto transform group-hover:scale-105 transition-transform duration-200" />
+              <span className="text-2xl font-bold text-[#0b2a55]">ALT&ACT</span>
             </a>
 
             <div className="hidden md:flex items-center space-x-8">
