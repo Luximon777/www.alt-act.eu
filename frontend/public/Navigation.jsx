@@ -225,8 +225,8 @@ function Navigation() {
             
             {/* Espace Employeurs - Mobile */}
             <a 
-              href="/espace-employeurs" 
-              onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); navigate('/espace-employeurs'); }}
+              href="/conseils-accompagnement" 
+              onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); navigate('/conseils-accompagnement'); }}
               className="flex items-center justify-center gap-2 bg-teal-600 text-white py-3 px-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
             >
               <Building className="w-5 h-5" />
