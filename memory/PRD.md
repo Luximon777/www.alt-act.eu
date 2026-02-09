@@ -1,76 +1,120 @@
-# VSI + RE'ACTIF PRO - Plateforme d'Insertion Professionnelle
+# ALT&ACT - Site Web Associatif
 
-## Problem Statement
-Création d'une plateforme web complète pour l'insertion et reconversion professionnelle, composée de:
-1. **VSI** (Valoriser Son Identité Professionnelle) - Diagnostic/questionnaire
-2. **RE'ACTIF PRO** - Étape 2: Transformation du diagnostic en actions concrètes
+## Description du projet
+Site web de l'association ALT&ACT - "L'insertion sans barrières". Une association d'intérêt général qui œuvre pour une société où chaque personne peut révéler son potentiel et contribuer pleinement à la collectivité.
 
-## User Personas
-- Demandeurs d'emploi (France Travail)
-- Personnes en reconversion professionnelle
-- Jeunes en orientation / Seniors / RQTH
-- Services RH (mobilité, transition, sécurisation)
-- Partenaires sociaux (missions locales, organismes formation, ESS)
+## Architecture technique
+- **Frontend**: React.js avec HashRouter
+- **Styling**: Tailwind CSS
+- **UI Components**: Shadcn/UI (`/app/frontend/src/components/ui/`)
+- **Icons**: lucide-react
+- **Build**: CRACO (Create React App Configuration Override)
 
-## Core Requirements
+## Structure des routes
 
-### VSI (Étape 1 - Diagnostic)
-- 2 portes d'entrée: "Je cherche MON job" / "Je cherche UN job"
-- Questionnaire 12 questions situationnelles (MBTI/Ennéagramme)
-- Génération profil: vertus, valeurs, qualités, compétences, savoirs-être
-- Matching filières professionnelles
-- Recommandations IA (OpenAI GPT-4o)
-- Export PDF
+### Pages principales
+- `/` - Page d'accueil (HomePage)
+- `/notre-mission` - Notre mission
+- `/notre-vision` - Notre vision  
+- `/notre-action` - Notre action
 
-### RE'ACTIF PRO (Étape 2 - Action)
-- 3 entrées utilisateurs: Particuliers / Services RH / Partenaires sociaux
-- Parcours Particuliers en 4 étapes: Comprendre → Clarifier → Consolider → Agir
-- Plan d'action personnalisé 30/60/90 jours (généré par IA)
-- Indicateurs d'impact (clarification, mise en action, posture, satisfaction)
-- Formulaires contact RH et Partenaires
+### Présentation
+- `/vision-methode` - Vision et méthode
+- `/mot-president` - Le mot du fondateur
+- `/membres` - Nos membres
 
-## Architecture
-- **Frontend**: React + Tailwind CSS + shadcn/ui
-- **Backend**: FastAPI + MongoDB
-- **IA**: OpenAI GPT-4o via Emergent LLM Key
-- **PDF**: jsPDF côté client
+### Charte éthique
+- `/charte-ethique` - Charte éthique (10 principes)
+- `/gouvernance-consultative` - Gouvernance consultative
 
-## What's Been Implemented (Jan 28, 2026)
+### Espaces
+- `/conseils-accompagnement` - Espace Employeurs
+- `/espace-personnel` - Espace Personnel
+- `/espace-ubuntoo` - Espace Ubuntoo
 
-### VSI ✅
-- Page d'accueil avec 2 portes d'entrée visuelles
-- Questionnaire interactif 12 questions
-- Système de scoring des vertus (6 vertus Seligman & Peterson)
-- Valeurs Schwartz intégrées
-- Matching filières professionnelles (11 filières)
-- Intégration OpenAI pour recommandations personnalisées
-- Page résultats complète avec disclaimer
-- Export PDF fonctionnel
-- Mentions "Inspiré de Seligman, Shalom Schwartz, C.G. Jung, OMS"
+### Pages légales
+- `/mentions-legales` - Mentions légales
+- `/confidentialite` - Politique de confidentialité
 
-### RE'ACTIF PRO ✅
-- Page accueil avec 3 entrées utilisateurs
-- Parcours Particuliers complet (4 étapes)
-- Génération plan d'action IA (30/60/90 jours)
-- Page Services RH avec formulaire contact
-- Page Partenaires avec indicateurs d'impact + formulaire
-- Lien fluide VSI → RE'ACTIF PRO avec profile ID
-- Design cohérent avec VSI
+## Structure de navigation
 
-## API Endpoints
-- `/api/questions` - Questions VSI
-- `/api/analyze` - Analyse questionnaire + profil
-- `/api/reactif/profile/{id}` - Récupération profil
-- `/api/reactif/plan-action` - Génération plan d'action
-- `/api/reactif/contact` - Formulaires contact
-- `/api/reactif/impact` - Statistiques d'impact
+### Menu principal (desktop)
+1. **Présentation** (dropdown)
+   - Vision et méthode
+   - Le mot du fondateur
+   - Nos membres
 
-## Backlog / Future Features
-- P0: Aucun item critique
-- P1: Graphique radar vertus
-- P1: Historique des plans d'action
-- P2: Espace RH avec gestion collaborateurs
-- P2: Dashboard partenaires avec données réelles
-- P2: Multi-langue (EN, ES)
-- P3: Intégration France Travail API
-- P3: Application mobile native
+2. **Mission** (dropdown) ✅ NOUVEAU
+   - Notre mission
+   - Notre vision
+   - Notre action
+
+3. **Charte éthique** (dropdown)
+   - Charte éthique
+   - Gouvernance consultative
+
+4. **Contact** (dropdown)
+   - Contact
+   - Devenir membre
+
+### Boutons d'accès rapide
+- Espace Employeurs (teal)
+- Espace Personnel (bleu marine)
+- Espace Ubuntoo (vert foncé)
+
+## Fichiers clés
+
+### Composants principaux
+- `/app/frontend/src/App.js` - Configuration des routes
+- `/app/frontend/src/components/Navigation.jsx` - Navigation avec dropdowns
+- `/app/frontend/src/components/HeroSection.jsx` - Section héro
+- `/app/frontend/src/components/Footer.jsx` - Pied de page
+
+### Pages Mission (CRÉÉES - 09/12/2025)
+- `/app/frontend/src/components/NotreMission.jsx`
+- `/app/frontend/src/components/NotreVision.jsx`
+- `/app/frontend/src/components/NotreAction.jsx`
+
+## Contenu des pages Mission
+
+### Notre Mission
+- Révéler les capacités humaines
+- Structurer le pouvoir d'agir
+- Permettre à chacun de contribuer pleinement à la société
+- Le travail comme espace d'expression, d'apprentissage et de responsabilité
+- **Travail comme acte de service à la communauté**
+- **Alignement sur les directives européennes**
+
+### Notre Vision
+- Une société plus juste et durable
+- Le développement humain comme fondement
+- Le travail comme lieu de contribution, dignité et progrès partagé
+- Organisations conciliant performance et responsabilité
+- Référence au Socle européen des droits sociaux
+
+### Notre Action
+- Accompagner les trajectoires professionnelles
+- Développer les compétences (processus continu)
+- S'adapter à la diversité des parcours
+- Transformer les organisations
+- Favoriser l'équité et prévenir les discriminations
+- Alignement sur la stratégie européenne pour l'emploi
+
+## Changelog
+
+### 09/12/2025 - Restructuration Mission/Vision/Action
+- ✅ Création des 3 nouvelles pages (NotreMission, NotreVision, NotreAction)
+- ✅ Ajout du menu dropdown "Mission" dans la navigation
+- ✅ Suppression de "Actions & Impact" du menu
+- ✅ Intégration du contenu fourni par l'utilisateur
+- ✅ Accent sur le travail comme service à la communauté
+- ✅ Références aux directives européennes
+- ✅ Tests frontend passés (100% - 16/16)
+
+## Tâches futures
+- Aucune tâche définie actuellement
+
+## Notes techniques
+- L'application utilise HashRouter (`#/`) pour la navigation
+- Les composants utilisent les data-testid pour les tests automatisés
+- Les imports UI proviennent de `./ui/` (Shadcn components)
