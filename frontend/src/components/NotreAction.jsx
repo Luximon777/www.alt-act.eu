@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Zap, Users, ArrowRight, Building, Globe, Heart, Shield, Compass, Target, Scale, Sparkles, HandHeart, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect, useMemo } from 'react';
+import { Zap, Users, ArrowRight, Building, Globe, Heart, Compass, Target, Scale, Sparkles, HandHeart, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
 import Navigation from './Navigation';
@@ -9,14 +9,14 @@ const NotreAction = () => {
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState('engagement');
 
-  const memoItems = [
+  const memoItems = useMemo(() => [
     { id: 'engagement', title: 'Notre engagement', summary: 'Accompagner les transformations', icon: Zap, color: 'bg-green-500' },
     { id: 'domaines', title: 'Nos interventions', summary: '5 domaines d\'action concrets', icon: Compass, color: 'bg-amber-500' },
-    { id: 'citation', title: 'Notre conviction', summary: 'Accéder et participer', icon: Sparkles, color: 'bg-teal-500' },
+    { id: 'citation', title: 'Notre conviction', summary: 'Acceder et participer', icon: Sparkles, color: 'bg-teal-500' },
     { id: 'service', title: 'Acte de service', summary: 'Le travail au service de tous', icon: HandHeart, color: 'bg-rose-500' },
-    { id: 'europe', title: 'Orientations européennes', summary: 'Stratégie emploi et inclusion', icon: Globe, color: 'bg-blue-500' },
+    { id: 'europe', title: 'Orientations europeennes', summary: 'Strategie emploi et inclusion', icon: Globe, color: 'bg-blue-500' },
     { id: 'publics', title: 'Nos publics', summary: 'Qui nous accompagnons', icon: Users, color: 'bg-purple-500' },
-  ];
+  ], []);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -43,7 +43,7 @@ const NotreAction = () => {
     
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [memoItems]);
 
   const actionsData = [
     {
