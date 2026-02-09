@@ -77,6 +77,70 @@ const NotreAmbition = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-8">
             
+            {/* Sidebar Mémo - à gauche */}
+            <aside className="hidden lg:block lg:w-80 flex-shrink-0">
+              <div className="sticky top-24">
+                <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                  {/* Header du mémo */}
+                  <div className="bg-gradient-to-r from-blue-600 to-teal-600 px-5 py-4">
+                    <h3 className="text-white font-bold text-lg flex items-center gap-2">
+                      <Star className="w-5 h-5" />
+                      En résumé
+                    </h3>
+                    <p className="text-blue-100 text-sm mt-1">Les points clés de notre ambition</p>
+                  </div>
+                  
+                  {/* Liste des sections */}
+                  <div className="p-3">
+                    {memoItems.map((item) => {
+                      const Icon = item.icon;
+                      const isActive = activeSection === item.id;
+                      return (
+                        <button
+                          key={item.id}
+                          onClick={() => scrollToSection(item.id)}
+                          className={`w-full text-left p-3 rounded-xl mb-2 transition-all duration-300 group ${
+                            isActive 
+                              ? 'bg-blue-50 border-l-4 border-blue-500' 
+                              : 'hover:bg-gray-50 border-l-4 border-transparent'
+                          }`}
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className={`w-8 h-8 rounded-lg ${item.color} flex items-center justify-center flex-shrink-0 ${
+                              isActive ? 'scale-110' : 'group-hover:scale-105'
+                            } transition-transform duration-200`}>
+                              <Icon className="w-4 h-4 text-white" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <p className={`font-semibold text-sm ${isActive ? 'text-blue-700' : 'text-gray-800'}`}>
+                                {item.title}
+                              </p>
+                              <p className="text-xs text-gray-500 mt-0.5 line-clamp-2">
+                                {item.summary}
+                              </p>
+                            </div>
+                            <ChevronRight className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-200 ${
+                              isActive ? 'translate-x-1 text-blue-500' : ''
+                            }`} />
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {/* Citation */}
+                  <div className="px-5 pb-5">
+                    <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-xl p-4 border border-blue-100">
+                      <p className="text-sm text-gray-700 italic leading-relaxed">
+                        "Faire grandir les personnes autant que les projets."
+                      </p>
+                      <p className="text-xs text-blue-700 mt-2 font-medium">— Notre ambition</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
             {/* Main Content */}
             <main className="flex-1 min-w-0 space-y-12">
           
@@ -244,70 +308,6 @@ const NotreAmbition = () => {
                 </div>
               </div>
             </main>
-
-            {/* Sidebar Mémo */}
-            <aside className="hidden lg:block lg:w-80 flex-shrink-0">
-              <div className="sticky top-24">
-                <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-                  {/* Header du mémo */}
-                  <div className="bg-gradient-to-r from-blue-600 to-teal-600 px-5 py-4">
-                    <h3 className="text-white font-bold text-lg flex items-center gap-2">
-                      <Star className="w-5 h-5" />
-                      En résumé
-                    </h3>
-                    <p className="text-blue-100 text-sm mt-1">Les points clés de notre ambition</p>
-                  </div>
-                  
-                  {/* Liste des sections */}
-                  <div className="p-3">
-                    {memoItems.map((item) => {
-                      const Icon = item.icon;
-                      const isActive = activeSection === item.id;
-                      return (
-                        <button
-                          key={item.id}
-                          onClick={() => scrollToSection(item.id)}
-                          className={`w-full text-left p-3 rounded-xl mb-2 transition-all duration-300 group ${
-                            isActive 
-                              ? 'bg-blue-50 border-l-4 border-blue-500' 
-                              : 'hover:bg-gray-50 border-l-4 border-transparent'
-                          }`}
-                        >
-                          <div className="flex items-start gap-3">
-                            <div className={`w-8 h-8 rounded-lg ${item.color} flex items-center justify-center flex-shrink-0 ${
-                              isActive ? 'scale-110' : 'group-hover:scale-105'
-                            } transition-transform duration-200`}>
-                              <Icon className="w-4 h-4 text-white" />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <p className={`font-semibold text-sm ${isActive ? 'text-blue-700' : 'text-gray-800'}`}>
-                                {item.title}
-                              </p>
-                              <p className="text-xs text-gray-500 mt-0.5 line-clamp-2">
-                                {item.summary}
-                              </p>
-                            </div>
-                            <ChevronRight className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-200 ${
-                              isActive ? 'translate-x-1 text-blue-500' : ''
-                            }`} />
-                          </div>
-                        </button>
-                      );
-                    })}
-                  </div>
-
-                  {/* Citation */}
-                  <div className="px-5 pb-5">
-                    <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-xl p-4 border border-blue-100">
-                      <p className="text-sm text-gray-700 italic leading-relaxed">
-                        "Faire grandir les personnes autant que les projets."
-                      </p>
-                      <p className="text-xs text-blue-700 mt-2 font-medium">— Notre ambition</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </aside>
 
           </div>
         </div>
