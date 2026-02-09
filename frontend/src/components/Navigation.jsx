@@ -40,9 +40,9 @@ function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <a href="/" onClick={(e) => goToPage(e, '/')} className="flex items-center group" data-testid="logo-link">
-              <span className="text-xl font-black tracking-tight">
-                <span className="text-[#0b2a55]">Alt</span>
-                <span className="text-[#f59e0b] italic">&</span>
+              <span className="text-2xl font-black tracking-tight drop-shadow-sm">
+                <span className="text-[#1e3a5f]">Alt</span>
+                <span className="text-[#f59e0b]">&</span>
                 <span className="text-[#65a30d]">Act</span>
               </span>
             </a>
