@@ -47,9 +47,11 @@ const HeroSection = () => {
         </div>
 
         {/* Logo/Title */}
-        <div className="mb-6 animate-fade-in-up inline-block">
-          <img src="/logo.png" alt="Alt&Act" className="h-12 md:h-14 lg:h-16 w-auto" />
-          <p className="text-[14px] italic text-blue-100 mt-1 text-right">Altérité & Action</p>
+        <div className="mb-6 animate-fade-in-up flex justify-center">
+          <div className="inline-block">
+            <img src="/logo.png" alt="Alt&Act" className="h-12 md:h-14 lg:h-16 w-auto" />
+            <p className="text-[14px] italic text-blue-100 mt-1 text-right">Altérité & Action</p>
+          </div>
         </div>
         
         <p className="text-2xl md:text-3xl text-blue-100 mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
