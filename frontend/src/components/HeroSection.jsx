@@ -48,7 +48,7 @@ const HeroSection = () => {
 
         {/* Logo/Title */}
         <div className="mb-6 animate-fade-in-up">
-          <img src="/logo.png" alt="Alt&Act" className="h-20 md:h-24 lg:h-28 w-auto mx-auto" />
+          <img src="/logo.png" alt="Alt&Act" className="h-12 md:h-14 lg:h-16 w-auto mx-auto" />
         </div>
         
         <p className="text-2xl md:text-3xl text-blue-100 mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
