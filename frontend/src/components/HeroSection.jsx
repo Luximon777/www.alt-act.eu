@@ -48,8 +48,10 @@ const HeroSection = () => {
 
         {/* Logo/Title */}
         <div className="mb-6 animate-fade-in-up">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white">
-            ALT&ACT
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight">
+            <span className="text-white">Alt</span>
+            <span className="text-[#fbbf24]">&</span>
+            <span className="text-[#84cc16]">Act</span>
           </h1>
         </div>
         
