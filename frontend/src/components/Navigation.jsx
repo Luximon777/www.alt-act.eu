@@ -96,11 +96,11 @@ function Navigation() {
                         </div>
                         <div><p className="font-semibold">Notre mission</p><p className="text-xs text-gray-500">Révéler et structurer</p></div>
                       </a>
-                      <a href="/notre-vision" onClick={(e) => goToPage(e, '/notre-vision')} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-all duration-200 group/item" data-testid="notre-vision-link">
+                      <a href="/notre-ambition" onClick={(e) => goToPage(e, '/notre-ambition')} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-all duration-200 group/item" data-testid="notre-ambition-link">
                         <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center group-hover/item:bg-blue-500 transition-colors duration-200">
                           <Eye className="w-5 h-5 text-blue-600 group-hover/item:text-white transition-colors duration-200" />
                         </div>
-                        <div><p className="font-semibold">Notre vision</p><p className="text-xs text-gray-500">Le travail comme service</p></div>
+                        <div><p className="font-semibold">Notre ambition</p><p className="text-xs text-gray-500">Le travail comme service</p></div>
                       </a>
                       <a href="/notre-action" onClick={(e) => goToPage(e, '/notre-action')} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-all duration-200 group/item" data-testid="notre-action-link">
                         <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center group-hover/item:bg-green-500 transition-colors duration-200">
@@ -210,8 +210,8 @@ function Navigation() {
             <a href="/notre-mission" onClick={(e) => goToPage(e, '/notre-mission')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-amber-50 transition-colors">
               <Target className="w-5 h-5 text-amber-600" /><span className="font-medium">Notre mission</span>
             </a>
-            <a href="/notre-vision" onClick={(e) => goToPage(e, '/notre-vision')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-amber-50 transition-colors">
-              <Eye className="w-5 h-5 text-blue-600" /><span className="font-medium">Notre vision</span>
+            <a href="/notre-ambition" onClick={(e) => goToPage(e, '/notre-ambition')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-amber-50 transition-colors">
+              <Eye className="w-5 h-5 text-blue-600" /><span className="font-medium">Notre ambition</span>
             </a>
             <a href="/notre-action" onClick={(e) => goToPage(e, '/notre-action')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-amber-50 transition-colors">
               <Zap className="w-5 h-5 text-green-600" /><span className="font-medium">Notre action</span>
