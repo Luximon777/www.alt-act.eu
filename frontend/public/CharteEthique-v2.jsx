@@ -57,7 +57,7 @@ const CharteEthique = () => {
     { id: 'principe-8', icon: Building, title: '8. Gouvernance', summary: 'Anticiper l\'avenir', color: 'bg-slate-500' },
     { id: 'principe-9', icon: Handshake, title: '9. Coopérations', summary: 'Élever les pratiques', color: 'bg-orange-500' },
     { id: 'principe-10', icon: Rocket, title: '10. Futur du travail', summary: 'Lucidité et action', color: 'bg-cyan-500' },
-    { id: 'gouvernance', icon: Users, title: 'Gouvernance', summary: 'Sociocratie', color: 'bg-rose-500' },
+    { id: 'gouvernance', icon: Users, title: 'Notre Consultation', summary: 'Sociocratie', color: 'bg-rose-500' },
   ];
 
   const sections = [
