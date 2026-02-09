@@ -40,7 +40,13 @@ function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <a href="/" onClick={(e) => goToPage(e, '/')} className="flex items-center group" data-testid="logo-link">
-              <span className="text-2xl font-bold text-[#0b2a55]">ALT&ACT</span>
+              <div className="bg-[#0b2a55] px-3 py-1.5 rounded-lg shadow-md">
+                <span className="text-lg font-black tracking-tight">
+                  <span className="text-white">Alt</span>
+                  <span className="text-[#fbbf24]">&</span>
+                  <span className="text-[#84cc16]">Act</span>
+                </span>
+              </div>
             </a>
             <div className="hidden md:flex items-center space-x-6">
               {/* Dropdown Présentation */}
