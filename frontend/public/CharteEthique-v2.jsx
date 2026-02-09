@@ -95,7 +95,7 @@ const CharteEthique = () => {
             <ArrowLeft className="w-4 h-4 mr-2" /> Retour
           </Button>
           <Badge className="mb-4 bg-white/20 text-white border-white/30">Engagement ALT&ACT</Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Charte éthique et gouvernance</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Charte éthique</h1>
           <p className="text-xl text-blue-100">Pour une société où chacun peut se sentir utile</p>
         </div>
       </header>
