@@ -182,12 +182,12 @@ const CharteEthique = () => {
               <p className="text-lg font-medium">ALT&ACT agit pour que l'insertion professionnelle devienne un espace de reconnaissance, de structuration et de projection.</p>
             </div>
 
-            {/* Section Gouvernance */}
+            {/* Section Notre Consultation */}
             <div id="gouvernance" className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mt-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-full bg-rose-500 flex items-center justify-center"><Users className="w-6 h-6 text-white" /></div>
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-900">Gouvernance</h2>
+                  <h2 className="text-2xl font-bold text-gray-900">Notre Consultation</h2>
                   <p className="text-gray-600">Une organisation démocratique et participative</p>
                 </div>
               </div>
