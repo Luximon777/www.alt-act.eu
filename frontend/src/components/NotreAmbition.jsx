@@ -10,12 +10,12 @@ const NotreAmbition = () => {
   const [activeSection, setActiveSection] = useState('ambition');
 
   const memoItems = useMemo(() => [
-    { id: 'ambition', title: 'Notre ambition', summary: 'Une societe plus juste et durable', icon: Star, color: 'bg-blue-500' },
-    { id: 'travail', title: 'Le travail reinvente', summary: 'Contribution, dignite, progres partage', icon: HandHeart, color: 'bg-amber-500' },
-    { id: 'organisations', title: 'Organisations transformees', summary: 'Performance et responsabilite', icon: Building, color: 'bg-gray-700' },
+    { id: 'ambition', title: 'Notre ambition', summary: 'Une société plus juste et durable', icon: Star, color: 'bg-blue-500' },
+    { id: 'travail', title: 'Le travail réinventé', summary: 'Contribution, dignité, progrès partagé', icon: HandHeart, color: 'bg-amber-500' },
+    { id: 'organisations', title: 'Organisations transformées', summary: 'Performance et responsabilité', icon: Building, color: 'bg-gray-700' },
     { id: 'citation', title: 'Notre conviction', summary: 'Faire grandir personnes et projets', icon: Sparkles, color: 'bg-teal-500' },
-    { id: 'inclusive', title: 'Societe inclusive', summary: 'Chacun trouve sa place', icon: Users, color: 'bg-green-500' },
-    { id: 'europe', title: 'Vision europeenne', summary: 'Economie sociale et solidaire', icon: Globe, color: 'bg-indigo-500' },
+    { id: 'inclusive', title: 'Société inclusive', summary: 'Chacun trouve sa place', icon: Users, color: 'bg-green-500' },
+    { id: 'europe', title: 'Vision européenne', summary: 'Économie sociale et solidaire', icon: Globe, color: 'bg-indigo-500' },
   ], []);
 
   const scrollToSection = (id) => {

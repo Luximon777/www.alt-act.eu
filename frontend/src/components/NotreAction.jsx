@@ -12,9 +12,9 @@ const NotreAction = () => {
   const memoItems = useMemo(() => [
     { id: 'engagement', title: 'Notre engagement', summary: 'Accompagner les transformations', icon: Zap, color: 'bg-green-500' },
     { id: 'domaines', title: 'Nos interventions', summary: '5 domaines d\'action concrets', icon: Compass, color: 'bg-amber-500' },
-    { id: 'citation', title: 'Notre conviction', summary: 'Acceder et participer', icon: Sparkles, color: 'bg-teal-500' },
+    { id: 'citation', title: 'Notre conviction', summary: 'Accéder et participer', icon: Sparkles, color: 'bg-teal-500' },
     { id: 'service', title: 'Acte de service', summary: 'Le travail au service de tous', icon: HandHeart, color: 'bg-rose-500' },
-    { id: 'europe', title: 'Orientations europeennes', summary: 'Strategie emploi et inclusion', icon: Globe, color: 'bg-blue-500' },
+    { id: 'europe', title: 'Orientations européennes', summary: 'Stratégie emploi et inclusion', icon: Globe, color: 'bg-blue-500' },
     { id: 'publics', title: 'Nos publics', summary: 'Qui nous accompagnons', icon: Users, color: 'bg-purple-500' },
   ], []);
 

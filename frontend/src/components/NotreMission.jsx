@@ -10,11 +10,11 @@ const NotreMission = () => {
   const [activeSection, setActiveSection] = useState('conviction');
 
   const memoItems = useMemo(() => [
-    { id: 'conviction', title: 'Notre conviction', summary: 'Chaque personne porte un potentiel de developpement', icon: Heart, color: 'bg-amber-500' },
-    { id: 'travail', title: 'Le travail reinvente', summary: 'Expression, apprentissage et responsabilite', icon: Brain, color: 'bg-blue-500' },
-    { id: 'service', title: 'Acte de service', summary: 'Le travail au service de la communaute', icon: HandHeart, color: 'bg-rose-500' },
-    { id: 'europe', title: 'Directives europeennes', summary: 'Alignes sur les orientations de l\'UE', icon: Globe, color: 'bg-teal-500' },
-    { id: 'piliers', title: 'Nos piliers', summary: 'Reveler, structurer, contribuer', icon: Target, color: 'bg-purple-500' },
+    { id: 'conviction', title: 'Notre conviction', summary: 'Chaque personne porte un potentiel de développement', icon: Heart, color: 'bg-amber-500' },
+    { id: 'travail', title: 'Le travail réinventé', summary: 'Expression, apprentissage et responsabilité', icon: Brain, color: 'bg-blue-500' },
+    { id: 'service', title: 'Acte de service', summary: 'Le travail au service de la communauté', icon: HandHeart, color: 'bg-rose-500' },
+    { id: 'europe', title: 'Directives européennes', summary: 'Alignés sur les orientations de l\'UE', icon: Globe, color: 'bg-teal-500' },
+    { id: 'piliers', title: 'Nos piliers', summary: 'Révéler, structurer, contribuer', icon: Target, color: 'bg-purple-500' },
   ], []);
 
   const scrollToSection = (id) => {
