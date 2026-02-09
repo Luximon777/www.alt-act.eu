@@ -37,7 +37,7 @@ const MissionSection = () => {
             <span className="text-[#0b2a55] text-sm font-semibold">NOS CONVICTIONS</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Pourquoi l'insertion professionnelle compte
+            Contribuer, pas seulement travailler
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             L'insertion professionnelle ne se limite pas à l'accès à un emploi. Elle engage la place de la personne dans la société, sa capacité à contribuer et à construire un parcours porteur de sens.
