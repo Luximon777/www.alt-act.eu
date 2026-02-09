@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 
 // Mission Pages
 import NotreMission from "./components/NotreMission";
-import NotreVision from "./components/NotreVision";
+import NotreAmbition from "./components/NotreAmbition";
 import NotreAction from "./components/NotreAction";
 
 // Other Pages
@@ -50,7 +50,7 @@ function App() {
           
           {/* Mission Pages */}
           <Route path="/notre-mission" element={<NotreMission />} />
-          <Route path="/notre-vision" element={<NotreVision />} />
+          <Route path="/notre-ambition" element={<NotreAmbition />} />
           <Route path="/notre-action" element={<NotreAction />} />
           
           {/* Presentation Pages */}
