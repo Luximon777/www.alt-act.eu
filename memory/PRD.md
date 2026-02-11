@@ -1,55 +1,91 @@
-# ALT&ACT - Document de Référence du Projet
+# ALT&ACT Website - Product Requirements Document
 
-## Description du projet
-Site web institutionnel pour ALT&ACT, une association d'intérêt général française. Le site présente la mission, l'ambition et les actions de l'association dans le domaine de l'accompagnement professionnel et de l'inclusion sociale.
+## Original Problem Statement
+Site web institutionnel pour l'association ALT&ACT, une organisation francaise dediee a l'insertion professionnelle et au developpement du capital humain.
 
-## Stack technique
-- **Frontend**: React.js avec Tailwind CSS
-- **Routing**: react-router-dom (HashRouter pour GitHub Pages)
-- **Build**: Create React App avec craco
-- **CI/CD**: GitHub Actions → GitHub Pages
-- **Components**: Shadcn/UI, Lucide React icons
+## Core Requirements
+1. **Accents francais corrects** - Tout le texte doit afficher correctement les accents francais
+2. **Navigation globale** - Barre de navigation presente sur toutes les pages
+3. **Images d'en-tete** - Pages Mission/Ambition/Action avec image d'en-tete coherente
+4. **Contenu institutionnel** - Pages detaillees pour chaque section (Mission, Action, Espaces, etc.)
+5. **Selecteur de langue** - Traduction via Google Translate avec menu deroulant
+6. **Menu "Vos acces"** - Dropdown pour les pages Espace Employeurs/Personnel/Ubuntoo
+7. **Page Membres** - Profils detailles de tous les membres de la gouvernance
 
-## Architecture des fichiers
+## Tech Stack
+- **Frontend**: React + Vite + TailwindCSS
+- **Routing**: react-router-dom (HashRouter)
+- **Deployment**: Netlify (continuous deployment)
+- **i18n**: Google Translate API (custom integration)
+- **UI Components**: Shadcn/UI
+
+## Architecture
 ```
 /app/frontend/
 ├── public/
-│   └── index.html
-└── src/
-    ├── components/
-    │   ├── App.js (routes)
-    │   ├── Navigation.jsx
-    │   ├── HeroSection.jsx
-    │   ├── Footer.jsx
-    │   ├── NotreAction.jsx
-    │   ├── NotreMission.jsx
-    │   ├── NotreAmbition.jsx
-    │   └── ui/ (composants Shadcn)
-    └── index.js
+│   └── index.html (Google Translate script)
+├── src/
+│   ├── components/
+│   │   ├── Navigation.jsx (global nav + language switcher)
+│   │   ├── App.js (routing)
+│   │   ├── MembresPage.jsx (membres avec profils detailles)
+│   │   ├── NotreAction.jsx
+│   │   ├── NotreMission.jsx
+│   │   ├── NotreAmbition.jsx
+│   │   ├── EspacePersonnel.jsx
+│   │   ├── EspaceEmployeurs.jsx
+│   │   ├── EspaceUbuntoo.jsx
+│   │   └── ContactSection.jsx
+│   └── components/ui/ (Shadcn components)
+├── netlify.toml
+└── package.json
 ```
 
-## Fonctionnalités implémentées
-- [x] Navigation avec menus déroulants
-- [x] Page d'accueil (HeroSection)
-- [x] Page Notre Mission
-- [x] Page Notre Ambition
-- [x] Page Notre Action
-- [x] Footer
-- [x] Routing HashRouter
-- [x] Logo cliquable vers l'accueil
-- [x] Sidebar mémo sur les pages de contenu
-- [x] Accents et typographie française correcte
+## Completed Features (December 2025)
 
-## Corrections effectuées (Décembre 2025)
-- Restauration des accents dans NotreAction.jsx, NotreMission.jsx, NotreAmbition.jsx
-- Vérification de Navigation.jsx ("Découvrir ALT&ACT", "Notre raison d'être")
+### Session 1
+- [x] Correction des accents francais sur toutes les pages
+- [x] Migration de GitHub Pages vers Netlify
+- [x] Navigation globale sur toutes les pages
+- [x] Images d'en-tete pour pages Mission/Ambition/Action
+- [x] Refonte contenu NotreAction.jsx
+- [x] Refonte contenu EspacePersonnel.jsx
+- [x] Suppression section reseaux sociaux dans Contact
+- [x] Selecteur de langue avec Google Translate
+- [x] Menu dropdown "Vos acces"
 
-## Problèmes connus
-- **Logo**: Actuellement chargé via URL externe hardcodée. À améliorer avec chemin local (public/logo.png)
-- **Encodage**: Attention lors du copier-coller depuis l'extérieur (risque de caractères invisibles)
-- **CI/CD**: Utilise CI=false pour éviter que les warnings ESLint bloquent le build
+### Session 2 (Current)
+- [x] Ajout Marion Perrin-Pujol au Comite de mission ethique
+  - Profil executif complet
+  - Vision strategique
+  - Realisations
+  - Signature professionnelle
+  - 8 domaines d'expertise
 
-## Backlog (P1-P2)
-1. P1: Implémenter logo avec chemin local (`process.env.PUBLIC_URL + '/logo.png'`)
-2. P2: Audit complet des textes pour accents manquants
-3. P2: Optimisation des images et performances
+## Page Members Structure
+- **Bureau**: President, Secretaire, Tresoriere
+- **Comite de direction**: 7 membres fondateurs
+- **Comite de pilotage**: 2 experts consultatifs
+- **Comite de mission ethique**: 5 membres consultatifs independants
+  - Jean-Marc Lepain (Finances publiques)
+  - Alexandra Horst (Psychologie clinique)
+  - Martine Caillard-Dahl (Production culturelle)
+  - Laxsounee Bhoodun (Juriste)
+  - Marion Perrin-Pujol (Enfance et handicap) **NEW**
+
+## Backlog / Future Tasks
+- [ ] Migration vers react-i18next pour une meilleure gestion i18n
+- [ ] Ajout de photos de profil pour les membres
+- [ ] Formulaire de contact fonctionnel
+- [ ] Integration backend pour les donnees dynamiques
+- [ ] SEO optimization
+
+## Deployment
+- **Production URL**: Deployed on Netlify
+- **Preview URL**: https://french-ngos-together.preview.emergentagent.com
+- **Config**: netlify.toml at root
+
+## Notes
+- Toutes les donnees membres sont hardcodees dans MembresPage.jsx
+- Le fichier mock/altactData.js n'existe pas (donnees inline)
+- Google Translate utilise une implementation custom (non react-i18next)
