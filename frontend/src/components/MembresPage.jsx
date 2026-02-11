@@ -23,232 +23,232 @@ const COMITES = [
   {
     id: "bureau",
     nom: "Bureau",
-    description: "Instance decisionnaire - Representation legale",
+    description: "Instance décisionnaire - Représentation légale",
     icon: Crown,
     color: "amber",
     membres: [
       {
         nom: "Chitrasen Luximon",
-        fonction: "President - Representant legal",
-        role: "Decisionnaire",
-        soustitre: "Fondateur | Architecte de projets a impact societal",
+        fonction: "Président - Représentant légal",
+        role: "Décisionnaire",
+        soustitre: "Fondateur | Architecte de projets à impact sociétal",
         photo: null,
-        bio: "Chitrasen Luximon est un dirigeant engage dans la transformation des modeles d'insertion professionnelle et dans l'emergence de solutions structurantes face aux mutations profondes du marche du travail. President et representant legal de l'association ALT&ACT, il conduit une strategie orientee vers l'interet general, articulant innovation sociale, securisation des parcours et developpement du capital humain. Son positionnement depasse le cadre d'une gouvernance associative classique : il s'inscrit dans une logique d'ingenierie systemique visant a rapprocher les besoins des territoires, les dynamiques economiques et les trajectoires professionnelles des citoyens.",
-        vision: "Il defend une conception moderne de l'employabilite, consideree comme un levier de cohesion sociale, de competitivite et de stabilite democratique. Son action contribue a structurer des reponses capables d'anticiper les transformations des competences, tout en renforcant la capacite d'adaptation des organisations et des individus.",
-        realisations: "Au cours de son parcours, Chitrasen Luximon a accompagne plus de 2 000 personnes dans leurs transitions professionnelles, contribuant a renforcer leur capacite d'action, leur estime de soi et leur inscription durable dans l'emploi. Fondateur d'une structure de conseil specialisee dans la gestion de carriere et la formation pour adultes, il a concu et pilote des dispositifs d'accompagnement destines a des publics heterogenes.",
-        signature: "Sa demarche repose sur une conviction structurante : la stabilite des societes repose en partie sur la capacite des individus a trouver une place reconnue et utile dans le monde professionnel. Son approche conjugue exigence methodologique, responsabilite ethique et vision de long terme.",
-        formation: ["Master II en ingenierie de la formation et des competences", "Accreditations en analyse des types psychologiques", "Identification des talents et dynamiques collectives"],
-        expertise: ["Gouvernance et direction de projets a impact", "Strategies d'employabilite et politiques de competences", "Ingenierie de formation", "Lecture systemique des parcours", "Innovation sociale appliquee au travail", "Pilotage d'ecosystemes partenariaux"]
+        bio: "Chitrasen Luximon est un dirigeant engagé dans la transformation des modèles d'insertion professionnelle et dans l'émergence de solutions structurantes face aux mutations profondes du marché du travail. Président et représentant légal de l'association ALT&ACT, il conduit une stratégie orientée vers l'intérêt général, articulant innovation sociale, sécurisation des parcours et développement du capital humain. Son positionnement dépasse le cadre d'une gouvernance associative classique : il s'inscrit dans une logique d'ingénierie systémique visant à rapprocher les besoins des territoires, les dynamiques économiques et les trajectoires professionnelles des citoyens.",
+        vision: "Il défend une conception moderne de l'employabilité, considérée comme un levier de cohésion sociale, de compétitivité et de stabilité démocratique. Son action contribue à structurer des réponses capables d'anticiper les transformations des compétences, tout en renforçant la capacité d'adaptation des organisations et des individus.",
+        realisations: "Au cours de son parcours, Chitrasen Luximon a accompagné plus de 2 000 personnes dans leurs transitions professionnelles, contribuant à renforcer leur capacité d'action, leur estime de soi et leur inscription durable dans l'emploi. Fondateur d'une structure de conseil spécialisée dans la gestion de carrière et la formation pour adultes, il a conçu et piloté des dispositifs d'accompagnement destinés à des publics hétérogènes.",
+        signature: "Sa démarche repose sur une conviction structurante : la stabilité des sociétés repose en partie sur la capacité des individus à trouver une place reconnue et utile dans le monde professionnel. Son approche conjugue exigence méthodologique, responsabilité éthique et vision de long terme.",
+        formation: ["Master II en ingénierie de la formation et des compétences", "Accréditations en analyse des types psychologiques", "Identification des talents et dynamiques collectives"],
+        expertise: ["Gouvernance et direction de projets à impact", "Stratégies d'employabilité et politiques de compétences", "Ingénierie de formation", "Lecture systémique des parcours", "Innovation sociale appliquée au travail", "Pilotage d'écosystèmes partenariaux"]
       },
       {
         nom: "Anne-Marie Schwemmer",
-        fonction: "Secretaire",
-        role: "Decisionnaire",
-        soustitre: "Experte en leadership, transformation organisationnelle et management strategique",
+        fonction: "Secrétaire",
+        role: "Décisionnaire",
+        soustitre: "Experte en leadership, transformation organisationnelle et management stratégique",
         photo: null,
-        bio: "Anne-Marie Schwemmer est une dirigeante et stratege reconnue pour sa capacite a structurer, organiser et piloter des projets complexes au sein d'ecosystemes professionnels varies. En tant que Secretaire au sein de l'Association ALT&ACT, elle assume des responsabilites institutionnelles fortes en matiere de conformite, de structuration administrative et de coordination des instances decisionnelles. Sa posture conjugue rigueur operationnelle, vision systemique et leadership collaboratif, ce qui en fait un atout majeur pour le developpement de dispositifs d'impact societal et de partenariats strategiques.",
-        vision: "Anne-Marie est animee par une vision integree du management, ou la performance organisationnelle se nourrit de la qualite des processus internes, de la coherence des pratiques et de la mobilisation du capital humain. Dans une perspective europeenne et territoriale, elle est en mesure de structurer les mecanismes de gouvernance et les cadres de decision, assurer l'articulation des acteurs, des partenaires et des parties prenantes, ancrer les projets dans des approches durables et integrees, et piloter des demarches de changement alignees avec les politiques publiques.",
-        realisations: "Anne-Marie s'est construite une expertise solide au croisement du management, du leadership et du developpement organisationnel, a travers l'animation de communautes professionnelles et de reseaux, la facilitation de transformations internes, la coordination de projets transversaux impliquant des acteurs multiples, et l'accompagnement de dirigeants dans leurs dynamiques de leadership. Elle combine une comprehension fine des enjeux humains avec une pratique affirmee des processus decisionnels structures.",
-        signature: "Anne-Marie place la qualite de l'organisation interne au coeur de la performance et de l'impact durable des projets. Son approche s'appuie sur une lecture systemique des dynamiques collaboratives et institutionnelles, visant a securiser les processus tout en favorisant l'innovation et la reactivite. Elle sait articuler la rigueur des cadres de gouvernance avec la creativite requise pour impulser des transformations profondes.",
-        expertise: ["Gouvernance institutionnelle", "Coordination de projets", "Leadership collaboratif", "Transformation organisationnelle", "Animation de reseaux", "Pilotage strategique", "Conformite administrative", "Pratiques manageriales"]
+        bio: "Anne-Marie Schwemmer est une dirigeante et stratège reconnue pour sa capacité à structurer, organiser et piloter des projets complexes au sein d'écosystèmes professionnels variés. En tant que Secrétaire au sein de l'Association ALT&ACT, elle assume des responsabilités institutionnelles fortes en matière de conformité, de structuration administrative et de coordination des instances décisionnelles. Sa posture conjugue rigueur opérationnelle, vision systémique et leadership collaboratif, ce qui en fait un atout majeur pour le développement de dispositifs d'impact sociétal et de partenariats stratégiques.",
+        vision: "Anne-Marie est animée par une vision intégrée du management, où la performance organisationnelle se nourrit de la qualité des processus internes, de la cohérence des pratiques et de la mobilisation du capital humain. Dans une perspective européenne et territoriale, elle est en mesure de structurer les mécanismes de gouvernance et les cadres de décision, assurer l'articulation des acteurs, des partenaires et des parties prenantes, ancrer les projets dans des approches durables et intégrées, et piloter des démarches de changement alignées avec les politiques publiques.",
+        realisations: "Anne-Marie s'est construite une expertise solide au croisement du management, du leadership et du développement organisationnel, à travers l'animation de communautés professionnelles et de réseaux, la facilitation de transformations internes, la coordination de projets transversaux impliquant des acteurs multiples, et l'accompagnement de dirigeants dans leurs dynamiques de leadership. Elle combine une compréhension fine des enjeux humains avec une pratique affirmée des processus décisionnels structurés.",
+        signature: "Anne-Marie place la qualité de l'organisation interne au cœur de la performance et de l'impact durable des projets. Son approche s'appuie sur une lecture systémique des dynamiques collaboratives et institutionnelles, visant à sécuriser les processus tout en favorisant l'innovation et la réactivité. Elle sait articuler la rigueur des cadres de gouvernance avec la créativité requise pour impulser des transformations profondes.",
+        expertise: ["Gouvernance institutionnelle", "Coordination de projets", "Leadership collaboratif", "Transformation organisationnelle", "Animation de réseaux", "Pilotage stratégique", "Conformité administrative", "Pratiques managériales"]
       },
       {
         nom: "Chitra Dorffer",
-        fonction: "Tresoriere",
-        role: "Decisionnaire",
-        soustitre: "Experte en pilotage financier, controle de gestion et optimisation des organisations",
+        fonction: "Trésorière",
+        role: "Décisionnaire",
+        soustitre: "Experte en pilotage financier, contrôle de gestion et optimisation des organisations",
         photo: null,
-        bio: "Chitra Dorffer est une dirigeante specialisee dans les fonctions financieres strategiques et le controle de gestion au sein d'organisations structurees. En tant que Tresoriere de l'Association ALT&ACT, elle est responsable de la structuration des processus financiers, de la conformite budgetaire, de la transparence des comptes et de la securisation des pratiques de gestion. Son expertise repose sur une experience robuste en pilotage financier, reporting, optimisation des performances et gestion des risques economiques, competences essentielles pour accompagner des projets a fort impact et des programmes multi-partenaires.",
-        realisations: "Chitra a developpe son expertise principalement dans des environnements exigeants au plan financier et organisationnel. Elle occupe actuellement un poste de controle de gestion et de responsabilite financiere au sein d'une grande entreprise industrielle, ou elle est en charge de l'elaboration et du suivi des budgets, la production de tableaux de bord de performance, l'analyse des ecarts et la proposition de mesures correctives, et l'integration d'indicateurs cles pour ameliorer la performance operationnelle et financiere. Cette experience lui confere une vision a la fois analytique et strategique des enjeux financiers, ce qui est determinant pour assurer la perennite et la credibilite d'organisations structurees.",
-        vision: "Chitra Dorffer apporte a la gouvernance d'ALT&ACT une maitrise des enjeux de transparence financiere essentielle pour les financeurs publics et institutionnels, une capacite a structurer les processus budgetaires et de reporting pour les projets multi-sources, une lecture strategique des risques economiques et de conformite, et une expertise en pilotage des performances financieres au service de l'impact social. Par sa fonction de tresoriere, elle securise les choix financiers, garantit l'integrite des pratiques de gestion et favorise une allocation optimale des ressources dans le cadre des projets structurants de l'association.",
-        signature: "Son approche se caracterise par une forte orientation vers la fiabilite des donnees financieres et des processus de controle interne, une capacite a connecter la performance economique avec les ambitions sociales et les objectifs de transformation, et un leadership pragmatique oriente vers la performance durable des projets et des organisations. Dans un contexte europeen ou institutionnel, cette expertise renforce la credibilite de l'association aupres des partenaires financiers, des bailleurs de fonds publics ou prives, et des reseaux de cooperation.",
-        expertise: ["Controle de gestion strategique", "Pilotage budgetaire", "Responsabilite financiere", "Supervision comptable", "Optimisation des processus", "Tableaux de bord de performance", "Gestion des risques economiques", "Conformite financiere"]
+        bio: "Chitra Dorffer est une dirigeante spécialisée dans les fonctions financières stratégiques et le contrôle de gestion au sein d'organisations structurées. En tant que Trésorière de l'Association ALT&ACT, elle est responsable de la structuration des processus financiers, de la conformité budgétaire, de la transparence des comptes et de la sécurisation des pratiques de gestion. Son expertise repose sur une expérience robuste en pilotage financier, reporting, optimisation des performances et gestion des risques économiques, compétences essentielles pour accompagner des projets à fort impact et des programmes multi-partenaires.",
+        realisations: "Chitra a développé son expertise principalement dans des environnements exigeants au plan financier et organisationnel. Elle occupe actuellement un poste de contrôle de gestion et de responsabilité financière au sein d'une grande entreprise industrielle, où elle est en charge de l'élaboration et du suivi des budgets, la production de tableaux de bord de performance, l'analyse des écarts et la proposition de mesures correctives, et l'intégration d'indicateurs clés pour améliorer la performance opérationnelle et financière. Cette expérience lui confère une vision à la fois analytique et stratégique des enjeux financiers, ce qui est déterminant pour assurer la pérennité et la crédibilité d'organisations structurées.",
+        vision: "Chitra Dorffer apporte à la gouvernance d'ALT&ACT une maîtrise des enjeux de transparence financière essentielle pour les financeurs publics et institutionnels, une capacité à structurer les processus budgétaires et de reporting pour les projets multi-sources, une lecture stratégique des risques économiques et de conformité, et une expertise en pilotage des performances financières au service de l'impact social. Par sa fonction de trésorière, elle sécurise les choix financiers, garantit l'intégrité des pratiques de gestion et favorise une allocation optimale des ressources dans le cadre des projets structurants de l'association.",
+        signature: "Son approche se caractérise par une forte orientation vers la fiabilité des données financières et des processus de contrôle interne, une capacité à connecter la performance économique avec les ambitions sociales et les objectifs de transformation, et un leadership pragmatique orienté vers la performance durable des projets et des organisations. Dans un contexte européen ou institutionnel, cette expertise renforce la crédibilité de l'association auprès des partenaires financiers, des bailleurs de fonds publics ou privés, et des réseaux de coopération.",
+        expertise: ["Contrôle de gestion stratégique", "Pilotage budgétaire", "Responsabilité financière", "Supervision comptable", "Optimisation des processus", "Tableaux de bord de performance", "Gestion des risques économiques", "Conformité financière"]
       }
     ]
   },
   {
     id: "direction",
-    nom: "Comite de direction",
-    description: "Membres fondateurs - Orientations strategiques",
+    nom: "Comité de direction",
+    description: "Membres fondateurs - Orientations stratégiques",
     icon: Compass,
     color: "teal",
     membres: [
       {
         nom: "Chitrasen Luximon",
         fonction: "Membre fondateur",
-        role: "Decisionnaire",
-        soustitre: "Architecte de projets a impact societal",
+        role: "Décisionnaire",
+        soustitre: "Architecte de projets à impact sociétal",
         photo: null,
-        bio: "Initiateur du projet RE'ACTIF PRO et de la methode VSI. Son experience operationnelle nourrit une lecture strategique des enjeux lies aux tensions sur les competences, aux transitions professionnelles accelerees, et a la necessite de modeles d'accompagnement plus predictifs et personnalises.",
-        expertise: ["Innovation", "Insertion professionnelle", "Developpement territorial", "Ingenierie de formation"]
+        bio: "Initiateur du projet RE'ACTIF PRO et de la méthode VSI. Son expérience opérationnelle nourrit une lecture stratégique des enjeux liés aux tensions sur les compétences, aux transitions professionnelles accélérées, et à la nécessité de modèles d'accompagnement plus prédictifs et personnalisés.",
+        expertise: ["Innovation", "Insertion professionnelle", "Développement territorial", "Ingénierie de formation"]
       },
       {
         nom: "Chitra Dorffer",
         fonction: "Membre fondatrice",
-        role: "Decisionnaire",
+        role: "Décisionnaire",
         photo: null,
-        bio: "Co-fondatrice engagee dans l'inclusion et l'accessibilite.",
-        expertise: ["Inclusion", "Accessibilite", "Gestion"]
+        bio: "Co-fondatrice engagée dans l'inclusion et l'accessibilité.",
+        expertise: ["Inclusion", "Accessibilité", "Gestion"]
       },
       {
         nom: "Anne-Marie Schwemmer",
         fonction: "Membre fondatrice",
-        role: "Decisionnaire",
+        role: "Décisionnaire",
         photo: null,
-        bio: "Co-fondatrice impliquee dans la structuration du dispositif.",
-        expertise: ["Organisation", "Developpement", "Partenariats"]
+        bio: "Co-fondatrice impliquée dans la structuration du dispositif.",
+        expertise: ["Organisation", "Développement", "Partenariats"]
       },
       {
         nom: "Sandrine Ratolojanahary",
         fonction: "Membre fondatrice",
-        role: "Decisionnaire",
-        soustitre: "Professionnelle de l'education | Actrice de l'engagement societal",
+        role: "Décisionnaire",
+        soustitre: "Professionnelle de l'éducation | Actrice de l'engagement sociétal",
         photo: null,
-        bio: "Sandrine Ratolojanahary est une professionnelle de l'education dont le parcours s'inscrit a la convergence des enjeux pedagogiques, environnementaux et societaux. Professeure des ecoles, elle contribue quotidiennement au developpement des competences fondamentales, a la structuration des apprentissages et a la formation du citoyen. Son engagement depasse le cadre strict de l'enseignement : ses premieres experiences en tant qu'eco-conseillere ainsi que son implication dans des initiatives humanitaires et educatives a Madagascar temoignent d'une sensibilite affirmee aux questions de developpement durable, de transmission et d'egalite des chances.",
-        realisations: "En tant que professeure des ecoles, Sandrine mobilise une expertise pedagogique centree sur l'acquisition des savoirs fondamentaux, l'accompagnement des trajectoires d'apprentissage, l'adaptation aux besoins diversifies des publics, et le developpement de l'autonomie et de la confiance chez les apprenants. Son entree dans la vie professionnelle par l'eco-conseil lui a permis d'integrer tres tot une lecture systemique des enjeux environnementaux et la pedagogie du changement de comportement. Son implication dans des actions humanitaires et educatives a Madagascar traduit une capacite a intervenir dans des contextes interculturels et a forte utilite sociale, developpant des initiatives educatives et des actions de soutien aux publics vulnerables.",
-        vision: "La presence de Sandrine au sein des membres fondateurs participe a l'equilibre de la gouvernance en y integrant une expertise essentielle : celle des dynamiques d'apprentissage et de construction des competences des les premieres etapes de la vie. Elle apporte notamment une lecture pedagogique des parcours, une sensibilite aux enjeux d'egalite des opportunites, une culture de la transmission, une approche preventive des fragilites sociales, et une capacite a relier education et insertion professionnelle.",
-        signature: "Son parcours reflete une conviction forte : le developpement des individus repose sur un acces equitable a l'education, a l'accompagnement et aux opportunites. Elle inscrit son action dans une logique de contribution durable a la societe, fondee sur la transmission des savoirs et la responsabilisation. Sa posture conjugue exigence educative, engagement humain et vision de long terme.",
-        expertise: ["Pedagogie et transmission", "Developpement des competences", "Eco-conseil", "Developpement durable", "Engagement humanitaire", "Interculturalite", "Egalite des chances", "Accompagnement educatif"]
+        bio: "Sandrine Ratolojanahary est une professionnelle de l'éducation dont le parcours s'inscrit à la convergence des enjeux pédagogiques, environnementaux et sociétaux. Professeure des écoles, elle contribue quotidiennement au développement des compétences fondamentales, à la structuration des apprentissages et à la formation du citoyen. Son engagement dépasse le cadre strict de l'enseignement : ses premières expériences en tant qu'éco-conseillère ainsi que son implication dans des initiatives humanitaires et éducatives à Madagascar témoignent d'une sensibilité affirmée aux questions de développement durable, de transmission et d'égalité des chances.",
+        realisations: "En tant que professeure des écoles, Sandrine mobilise une expertise pédagogique centrée sur l'acquisition des savoirs fondamentaux, l'accompagnement des trajectoires d'apprentissage, l'adaptation aux besoins diversifiés des publics, et le développement de l'autonomie et de la confiance chez les apprenants. Son entrée dans la vie professionnelle par l'éco-conseil lui a permis d'intégrer très tôt une lecture systémique des enjeux environnementaux et la pédagogie du changement de comportement. Son implication dans des actions humanitaires et éducatives à Madagascar traduit une capacité à intervenir dans des contextes interculturels et à forte utilité sociale, développant des initiatives éducatives et des actions de soutien aux publics vulnérables.",
+        vision: "La présence de Sandrine au sein des membres fondateurs participe à l'équilibre de la gouvernance en y intégrant une expertise essentielle : celle des dynamiques d'apprentissage et de construction des compétences dès les premières étapes de la vie. Elle apporte notamment une lecture pédagogique des parcours, une sensibilité aux enjeux d'égalité des opportunités, une culture de la transmission, une approche préventive des fragilités sociales, et une capacité à relier éducation et insertion professionnelle.",
+        signature: "Son parcours reflète une conviction forte : le développement des individus repose sur un accès équitable à l'éducation, à l'accompagnement et aux opportunités. Elle inscrit son action dans une logique de contribution durable à la société, fondée sur la transmission des savoirs et la responsabilisation. Sa posture conjugue exigence éducative, engagement humain et vision de long terme.",
+        expertise: ["Pédagogie et transmission", "Développement des compétences", "Éco-conseil", "Développement durable", "Engagement humanitaire", "Interculturalité", "Égalité des chances", "Accompagnement éducatif"]
       },
       {
         nom: "Anthony Ratolojanahary",
         fonction: "Membre fondateur",
-        role: "Decisionnaire",
+        role: "Décisionnaire",
         soustitre: "RSSI (CISO) MES-DMP | Caisse nationale de l'Assurance Maladie",
         photo: null,
-        bio: "Anthony Ratolojanahary est un professionnel confirme dans le domaine de la cybersecurite, de la protection des donnees et du management des risques lies aux systemes d'information. Il occupe actuellement le poste de RSSI (CISO) du domaine MES (Mon Espace Sante) - DMP (Dossier Medical Partage) au sein de la Caisse nationale de l'Assurance Maladie, ou il exerce dans un environnement a haute exigence de securite, de conformite reglementaire et de fiabilite des systemes critiques. Cette expertise technique et strategique confere une dimension essentielle a la gouvernance d'ALT&ACT, notamment lorsque l'organisation s'inscrit dans des projets numeriques, des demarches d'innovation ou des configurations multi-partenaires ou la securite des donnees, la confidentialite et la conformite juridique sont des prerequis indispensables.",
-        realisations: "Anthony a construit son experience professionnelle au coeur d'enjeux operationnels ou la cybersecurite ne se limite pas a la technique, mais devient un vecteur de confiance organisationnelle et de perennite pour les operations critiques. Il assure le pilotage des risques de cybersecurite au sein d'organisations publiques, la securisation des infrastructures informatiques avec une attention particuliere aux processus de protection des donnees personnelles, et la conformite reglementaire essentielle pour repondre aux exigences des financeurs europeens ou institutionnels.",
-        vision: "La presence d'Anthony dans l'equipe fondatrice renforce l'association sur plusieurs plans : securite des processus numeriques avec capacite a anticiper et maitriser les vulnerabilites, conformite reglementaire notamment en matiere de traitement des donnees personnelles (RGPD), et credibilite technique aupres des partenaires institutionnels exigeants.",
-        signature: "Anthony conjugue rigueur technique et comprehension des enjeux de gouvernance : il sait faire le lien entre les exigences operationnelles de la securite informatique et les imperatifs strategiques des projets a impact societal. Cette capacite a naviguer entre le complexe technologique et le besoin de fiabilite organisationnelle est un atout strategique majeur pour ALT&ACT dans un contexte ou les donnees, la confiance et la securite numerique deviennent des enjeux centraux.",
-        expertise: ["Cybersecurite", "Protection des donnees", "Gestion des risques IT", "Conformite RGPD", "Securite des systemes d'information", "Resilience organisationnelle", "Gouvernance informatique"]
+        bio: "Anthony Ratolojanahary est un professionnel confirmé dans le domaine de la cybersécurité, de la protection des données et du management des risques liés aux systèmes d'information. Il occupe actuellement le poste de RSSI (CISO) du domaine MES (Mon Espace Santé) - DMP (Dossier Médical Partagé) au sein de la Caisse nationale de l'Assurance Maladie, où il exerce dans un environnement à haute exigence de sécurité, de conformité réglementaire et de fiabilité des systèmes critiques. Cette expertise technique et stratégique confère une dimension essentielle à la gouvernance d'ALT&ACT, notamment lorsque l'organisation s'inscrit dans des projets numériques, des démarches d'innovation ou des configurations multi-partenaires où la sécurité des données, la confidentialité et la conformité juridique sont des prérequis indispensables.",
+        realisations: "Anthony a construit son expérience professionnelle au cœur d'enjeux opérationnels où la cybersécurité ne se limite pas à la technique, mais devient un vecteur de confiance organisationnelle et de pérennité pour les opérations critiques. Il assure le pilotage des risques de cybersécurité au sein d'organisations publiques, la sécurisation des infrastructures informatiques avec une attention particulière aux processus de protection des données personnelles, et la conformité réglementaire essentielle pour répondre aux exigences des financeurs européens ou institutionnels.",
+        vision: "La présence d'Anthony dans l'équipe fondatrice renforce l'association sur plusieurs plans : sécurité des processus numériques avec capacité à anticiper et maîtriser les vulnérabilités, conformité réglementaire notamment en matière de traitement des données personnelles (RGPD), et crédibilité technique auprès des partenaires institutionnels exigeants.",
+        signature: "Anthony conjugue rigueur technique et compréhension des enjeux de gouvernance : il sait faire le lien entre les exigences opérationnelles de la sécurité informatique et les impératifs stratégiques des projets à impact sociétal. Cette capacité à naviguer entre le complexe technologique et le besoin de fiabilité organisationnelle est un atout stratégique majeur pour ALT&ACT dans un contexte où les données, la confiance et la sécurité numérique deviennent des enjeux centraux.",
+        expertise: ["Cybersécurité", "Protection des données", "Gestion des risques IT", "Conformité RGPD", "Sécurité des systèmes d'information", "Résilience organisationnelle", "Gouvernance informatique"]
       },
       {
         nom: "Rajwantee Lepain",
         fonction: "Membre fondatrice",
-        role: "Decisionnaire",
+        role: "Décisionnaire",
         soustitre: "Psychologue clinicienne | Actrice de l'accompagnement humain et de la transformation sociale",
         photo: null,
-        bio: "Rajwantee Lepain est une psychologue clinicienne etablie a Strasbourg, dont l'activite professionnelle repose sur l'accompagnement psychologique des individus, l'analyse des dynamiques humaines et la facilitation de processus de changement profond. Son expertise clinique, orientee vers l'ecoute, la comprehension des trajectoires de vie et l'accompagnement des transitions personnelles, fait d'elle une contributrice essentielle aux approches humaines, sociales et systematiques portees par ALT&ACT. Son role transcende une simple fonction clinique : par sa comprehension fine des facteurs humains au coeur des transitions, elle constitue une ressource strategique pour des projets d'envergure visant a articuler performance sociale, cohesion et developpement des capacites humaines.",
-        realisations: "En tant que psychologue clinicienne, Rajwantee intervient aupres de populations tres diverses pour evaluer et soutenir les processus psychiques en contexte de changement ou de stress, accompagner les transitions de vie (personnelles, professionnelles, identitaires), faciliter la construction d'un sens coherent des experiences vecues, et aider a la mobilisation des ressources internes et relationnelles. Son expertise repose sur une posture clinique fondee sur l'ecoute active et empathique, l'analyse des facteurs psychologiques structurels, l'evaluation des blocages et leviers de transformation, et la construction d'espaces de dialogue et de reconstruction identitaire.",
-        vision: "La contribution de Rajwantee a la gouvernance enrichit la strategie de l'association en apportant une comprehension fine des facteurs humains au coeur de l'employabilite, une capacite a integrer des dimensions psychologiques et systemiques dans les parcours d'accompagnement, une expertise essentielle dans la construction de dispositifs adaptes a la personne, et une ressource strategique pour penser l'impact social en termes d'effets durables sur le bien-etre, la confiance et les trajectoires de vie. Cette dimension est particulierement recherchee dans les projets europeens ou institutionnels portant sur l'inclusion, le developpement des competences ou le renforcement des capacites des publics.",
-        signature: "Rajwantee incarne une approche centree sur l'humain dans sa globalite, placant l'experience subjective et les ressources internes comme des vecteurs indispensables de construction de trajectoires stables et durables. Cette posture s'articule avec les valeurs portees par ALT&ACT : humanisme, responsabilite, equite et transformation positive. Elle constitue une voix qualifiee pour connecter les dimensions psychologiques aux enjeux societaux.",
-        expertise: ["Psychologie clinique", "Accompagnement des transitions", "Dynamiques humaines", "Developpement personnel", "Analyse systemique", "Ecoute empathique", "Reconstruction identitaire", "Facteurs d'employabilite"]
+        bio: "Rajwantee Lepain est une psychologue clinicienne établie à Strasbourg, dont l'activité professionnelle repose sur l'accompagnement psychologique des individus, l'analyse des dynamiques humaines et la facilitation de processus de changement profond. Son expertise clinique, orientée vers l'écoute, la compréhension des trajectoires de vie et l'accompagnement des transitions personnelles, fait d'elle une contributrice essentielle aux approches humaines, sociales et systématiques portées par ALT&ACT. Son rôle transcende une simple fonction clinique : par sa compréhension fine des facteurs humains au cœur des transitions, elle constitue une ressource stratégique pour des projets d'envergure visant à articuler performance sociale, cohésion et développement des capacités humaines.",
+        realisations: "En tant que psychologue clinicienne, Rajwantee intervient auprès de populations très diverses pour évaluer et soutenir les processus psychiques en contexte de changement ou de stress, accompagner les transitions de vie (personnelles, professionnelles, identitaires), faciliter la construction d'un sens cohérent des expériences vécues, et aider à la mobilisation des ressources internes et relationnelles. Son expertise repose sur une posture clinique fondée sur l'écoute active et empathique, l'analyse des facteurs psychologiques structurels, l'évaluation des blocages et leviers de transformation, et la construction d'espaces de dialogue et de reconstruction identitaire.",
+        vision: "La contribution de Rajwantee à la gouvernance enrichit la stratégie de l'association en apportant une compréhension fine des facteurs humains au cœur de l'employabilité, une capacité à intégrer des dimensions psychologiques et systémiques dans les parcours d'accompagnement, une expertise essentielle dans la construction de dispositifs adaptés à la personne, et une ressource stratégique pour penser l'impact social en termes d'effets durables sur le bien-être, la confiance et les trajectoires de vie. Cette dimension est particulièrement recherchée dans les projets européens ou institutionnels portant sur l'inclusion, le développement des compétences ou le renforcement des capacités des publics.",
+        signature: "Rajwantee incarne une approche centrée sur l'humain dans sa globalité, plaçant l'expérience subjective et les ressources internes comme des vecteurs indispensables de construction de trajectoires stables et durables. Cette posture s'articule avec les valeurs portées par ALT&ACT : humanisme, responsabilité, équité et transformation positive. Elle constitue une voix qualifiée pour connecter les dimensions psychologiques aux enjeux sociétaux.",
+        expertise: ["Psychologie clinique", "Accompagnement des transitions", "Dynamiques humaines", "Développement personnel", "Analyse systémique", "Écoute empathique", "Reconstruction identitaire", "Facteurs d'employabilité"]
       },
       {
-        nom: "Sebastien Ehlenberger",
+        nom: "Sébastien Ehlenberger",
         fonction: "Membre fondateur",
-        role: "Decisionnaire",
+        role: "Décisionnaire",
         soustitre: "Manager de projets | Expert en coordination intersectorielle",
         photo: null,
-        bio: "Sebastien E. est un professionnel confirme dans le pilotage de projets, la coordination d'equipes et la mise en oeuvre d'initiatives collaboratives. Son parcours repose sur l'acquisition d'une expertise operationnelle riche, orientee vers l'efficacite organisationnelle, la structuration de processus et l'animation de partenariats. Present au sein de la gouvernance d'ALT&ACT en tant que membre fondateur, il contribue a renforcer la capacite de l'association a concevoir, deployer et piloter des projets structurants a impact social, avec une lecture pragmatique des exigences organisationnelles et des dynamiques collectives.",
-        realisations: "Le parcours de Sebastien se developpe dans des environnements ou le pilotage de projet, la coordination multi-acteurs et l'elaboration de strategies d'action concretes sont centraux. Il assure la gestion de projets complexes impliquant de multiples parties prenantes, la coordination intersectorielle garantissant l'alignement des objectifs et des livrables, l'animation de projets structurants integrant des strategies de communication et de mobilisation des ressources, et l'accompagnement de transformations organisationnelles avec une attention particuliere a l'efficacite collective.",
-        vision: "La presence de Sebastien au sein du conseil fondateur constitue un atout strategique pour assurer la coherence operationnelle entre les orientations strategiques et leur mise en oeuvre effective, renforcer la gouvernance interne par une approche structuree du pilotage de projets, faciliter les cooperations avec des acteurs institutionnels, economiques et associatifs, et soutenir la professionnalisation des processus de coordination pour des programmes ambitieux. Cette position lui permet de contribuer a l'emergence d'un cadre d'action robuste, capable de soutenir des projets complexes et a fort impact social.",
-        signature: "Sebastien fonctionne a l'interface entre direction strategique et operationnalite. Il sait traduire les ambitions institutionnelles - conceptuelles ou politiques - en plans d'action clairs, mesurables et alignes sur les objectifs collectifs. Il favorise une approche inclusive, structuree et axee resultats, tout en gardant une lecture fine des dynamiques organisationnelles qui influencent la qualite de la mise en oeuvre.",
-        expertise: ["Pilotage de projet", "Coordination operationnelle", "Gestion multi-acteurs", "Dispositifs collaboratifs", "Leadership transversal", "Communication structuree", "Transformation organisationnelle"]
+        bio: "Sébastien E. est un professionnel confirmé dans le pilotage de projets, la coordination d'équipes et la mise en œuvre d'initiatives collaboratives. Son parcours repose sur l'acquisition d'une expertise opérationnelle riche, orientée vers l'efficacité organisationnelle, la structuration de processus et l'animation de partenariats. Présent au sein de la gouvernance d'ALT&ACT en tant que membre fondateur, il contribue à renforcer la capacité de l'association à concevoir, déployer et piloter des projets structurants à impact social, avec une lecture pragmatique des exigences organisationnelles et des dynamiques collectives.",
+        realisations: "Le parcours de Sébastien se développe dans des environnements où le pilotage de projet, la coordination multi-acteurs et l'élaboration de stratégies d'action concrètes sont centraux. Il assure la gestion de projets complexes impliquant de multiples parties prenantes, la coordination intersectorielle garantissant l'alignement des objectifs et des livrables, l'animation de projets structurants intégrant des stratégies de communication et de mobilisation des ressources, et l'accompagnement de transformations organisationnelles avec une attention particulière à l'efficacité collective.",
+        vision: "La présence de Sébastien au sein du conseil fondateur constitue un atout stratégique pour assurer la cohérence opérationnelle entre les orientations stratégiques et leur mise en œuvre effective, renforcer la gouvernance interne par une approche structurée du pilotage de projets, faciliter les coopérations avec des acteurs institutionnels, économiques et associatifs, et soutenir la professionnalisation des processus de coordination pour des programmes ambitieux. Cette position lui permet de contribuer à l'émergence d'un cadre d'action robuste, capable de soutenir des projets complexes et à fort impact social.",
+        signature: "Sébastien fonctionne à l'interface entre direction stratégique et opérationnalité. Il sait traduire les ambitions institutionnelles - conceptuelles ou politiques - en plans d'action clairs, mesurables et alignés sur les objectifs collectifs. Il favorise une approche inclusive, structurée et axée résultats, tout en gardant une lecture fine des dynamiques organisationnelles qui influencent la qualité de la mise en œuvre.",
+        expertise: ["Pilotage de projet", "Coordination opérationnelle", "Gestion multi-acteurs", "Dispositifs collaboratifs", "Leadership transversal", "Communication structurée", "Transformation organisationnelle"]
       }
     ]
   },
   {
     id: "pilotage",
-    nom: "Comite de pilotage",
+    nom: "Comité de pilotage",
     description: "Instance consultative - Expertise et conseil",
     icon: Lightbulb,
     color: "purple",
     membres: [
       {
         nom: "Anthony Ratolojanahary",
-        fonction: "Cybersecurite & donnees sensibles",
+        fonction: "Cybersécurité & données sensibles",
         role: "Consultatif",
         soustitre: "RSSI (CISO) MES-DMP | Caisse nationale de l'Assurance Maladie",
         photo: null,
-        bio: "Anthony Ratolojanahary est un professionnel confirme dans le domaine de la cybersecurite, de la protection des donnees et du management des risques lies aux systemes d'information. Il occupe actuellement le poste de RSSI (CISO) du domaine MES (Mon Espace Sante) - DMP (Dossier Medical Partage) au sein de la Caisse nationale de l'Assurance Maladie, ou il exerce dans un environnement a haute exigence de securite, de conformite reglementaire et de fiabilite des systemes critiques.",
-        vision: "Au sein du Comite de pilotage, il apporte son expertise pour securiser les processus numeriques, garantir la conformite reglementaire (RGPD, normes internationales), et renforcer la credibilite technique aupres des partenaires institutionnels.",
-        signature: "Anthony conjugue rigueur technique et comprehension des enjeux de gouvernance, faisant le lien entre les exigences operationnelles de la securite informatique et les imperatifs strategiques des projets a impact societal.",
-        expertise: ["Cybersecurite", "RGPD", "Protection des donnees", "Architecture technique", "Gestion des risques IT", "Conformite reglementaire"]
+        bio: "Anthony Ratolojanahary est un professionnel confirmé dans le domaine de la cybersécurité, de la protection des données et du management des risques liés aux systèmes d'information. Il occupe actuellement le poste de RSSI (CISO) du domaine MES (Mon Espace Santé) - DMP (Dossier Médical Partagé) au sein de la Caisse nationale de l'Assurance Maladie, où il exerce dans un environnement à haute exigence de sécurité, de conformité réglementaire et de fiabilité des systèmes critiques.",
+        vision: "Au sein du Comité de pilotage, il apporte son expertise pour sécuriser les processus numériques, garantir la conformité réglementaire (RGPD, normes internationales), et renforcer la crédibilité technique auprès des partenaires institutionnels.",
+        signature: "Anthony conjugue rigueur technique et compréhension des enjeux de gouvernance, faisant le lien entre les exigences opérationnelles de la sécurité informatique et les impératifs stratégiques des projets à impact sociétal.",
+        expertise: ["Cybersécurité", "RGPD", "Protection des données", "Architecture technique", "Gestion des risques IT", "Conformité réglementaire"]
       },
       {
         nom: "Dr. Stephano Vacher",
-        fonction: "Strategie, RSE, innovation responsable",
+        fonction: "Stratégie, RSE, innovation responsable",
         role: "Consultatif",
-        soustitre: "Expert en strategie, RSE & innovation responsable",
+        soustitre: "Expert en stratégie, RSE & innovation responsable",
         photo: null,
-        bio: "Dr. Stephano Vacher est un expert reconnu dans les domaines de la strategie, de la responsabilite societale des organisations (RSE) et de l'innovation responsable. Il allie une expertise academique solide a une experience pratique dans l'accompagnement des transformations organisationnelles et des projets complexes. Au sein du Comite de pilotage consultatif d'ALT&ACT, il apporte une lecture strategique des enjeux a l'interface entre innovation societale, gouvernance responsable et impacts durables, ce qui constitue un atout majeur pour structurer une demarche porteuse de sens et de resultats a l'echelle europeenne.",
-        realisations: "Stephano a construit une trajectoire riche qui croise reflexion strategique, accompagnement des transformations et leadership eclaire sur les sujets d'innovation et de durabilite. En strategie et pilotage, il assure la conception et l'accompagnement de demarches strategiques pour des organisations publiques, privees ou associatives, l'integration des dimensions RSE et ESG dans les modeles de developpement, et la structuration de feuilles de route pour des projets a impact.",
-        vision: "Sa presence au sein du Comite de pilotage renforce la capacite de l'association a s'inscrire dans les cadres europeens en matiere de durabilite et de responsabilite societale, integrer des exigences croissantes de transparence, de gouvernance ethique et de mesure d'impact, et construire une strategie coherente avec les attentes des institutions et des partenaires. Il constitue une ressource strategique pour articuler les ambitions de l'association avec les politiques publiques europeennes en matiere de transition ecologique, d'emploi et de competences.",
-        signature: "Stephano incarne une approche exigeante et eclairee de la strategie, ou l'innovation ne se concoit qu'a travers le prisme de la responsabilite, de l'ethique et de l'impact reel. Il apporte une capacite a conceptualiser des trajectoires complexes, a en mesurer les effets, et a les ajuster dans une logique d'amelioration continue.",
-        formation: ["Doctorat en strategie et management de l'innovation", "Expertise en RSE et gouvernance responsable"],
-        expertise: ["Strategie organisationnelle", "RSE et ESG", "Innovation responsable", "Gouvernance ethique", "Transformation durable", "Formation en management", "Politiques publiques europeennes", "Mesure d'impact"]
+        bio: "Dr. Stephano Vacher est un expert reconnu dans les domaines de la stratégie, de la responsabilité sociétale des organisations (RSE) et de l'innovation responsable. Il allie une expertise académique solide à une expérience pratique dans l'accompagnement des transformations organisationnelles et des projets complexes. Au sein du Comité de pilotage consultatif d'ALT&ACT, il apporte une lecture stratégique des enjeux à l'interface entre innovation sociétale, gouvernance responsable et impacts durables, ce qui constitue un atout majeur pour structurer une démarche porteuse de sens et de résultats à l'échelle européenne.",
+        realisations: "Stephano a construit une trajectoire riche qui croise réflexion stratégique, accompagnement des transformations et leadership éclairé sur les sujets d'innovation et de durabilité. En stratégie et pilotage, il assure la conception et l'accompagnement de démarches stratégiques pour des organisations publiques, privées ou associatives, l'intégration des dimensions RSE et ESG dans les modèles de développement, et la structuration de feuilles de route pour des projets à impact.",
+        vision: "Sa présence au sein du Comité de pilotage renforce la capacité de l'association à s'inscrire dans les cadres européens en matière de durabilité et de responsabilité sociétale, intégrer des exigences croissantes de transparence, de gouvernance éthique et de mesure d'impact, et construire une stratégie cohérente avec les attentes des institutions et des partenaires. Il constitue une ressource stratégique pour articuler les ambitions de l'association avec les politiques publiques européennes en matière de transition écologique, d'emploi et de compétences.",
+        signature: "Stephano incarne une approche exigeante et éclairée de la stratégie, où l'innovation ne se conçoit qu'à travers le prisme de la responsabilité, de l'éthique et de l'impact réel. Il apporte une capacité à conceptualiser des trajectoires complexes, à en mesurer les effets, et à les ajuster dans une logique d'amélioration continue.",
+        formation: ["Doctorat en stratégie et management de l'innovation", "Expertise en RSE et gouvernance responsable"],
+        expertise: ["Stratégie organisationnelle", "RSE et ESG", "Innovation responsable", "Gouvernance éthique", "Transformation durable", "Formation en management", "Politiques publiques européennes", "Mesure d'impact"]
       }
     ]
   },
   {
     id: "ethique",
-    nom: "Comite de mission ethique",
-    description: "Garants de l'integrite et de la conformite",
+    nom: "Comité de mission éthique",
+    description: "Garants de l'intégrité et de la conformité",
     icon: Heart,
     color: "green",
     membres: [
       {
         nom: "Jean-Marc Lepain",
         fonction: "Expert en finances publiques",
-        role: "Consultatif independant",
+        role: "Consultatif indépendant",
         soustitre: "Expert international en finances publiques (PFM) | Ancien Conseiller FMI",
         photo: null,
-        bio: "Jean-Marc Lepain est un expert international reconnu dans le domaine des finances publiques (Public Financial Management - PFM), avec une trajectoire de plus de 25 ans au service de la reforme des administrations publiques et du renforcement des capacites institutionnelles a grande echelle. Il evolue depuis plus d'une decennie au coeur des transformations institutionnelles, accompagnant des gouvernements, des organisations internationales et des bailleurs dans la modernisation de leurs systemes financiers. Il occupe recemment la fonction de Chief of Party pour un programme de soutien a la gestion des finances publiques au Senegal, mene dans le cadre d'un partenariat entre USAID et Deloitte.",
-        realisations: "Son parcours se distingue par une forte dimension geographique et strategique, avec des responsabilites exercees en Afrique, au Moyen-Orient et en Asie. Au Senegal (Direction de programme) : pilotage de reformes PFM a l'echelle de l'Etat, renforcement de la transparence budgetaire, modernisation des systemes de gestion de la dette, introduction de budgets verts. Au Brunei (Ministere des Finances) : creation d'outils de prevision budgetaire, conception et deploiement d'un programme de consolidation budgetaire, mise en oeuvre de reformes structurantes. Au FMI (Conseiller regional) : diagnostics des systemes de finances publiques, appui a la planification macro-budgetaire, renforcement des capacites aupres des ministeres des finances.",
-        vision: "Jean-Marc Lepain presente un profil typique des architectes de reformes publiques, intervenant sur des programmes a fort impact systemique. Sa capacite a operer dans des environnements gouvernementaux complexes et a piloter des transformations structurelles constitue un marqueur eleve de credibilite institutionnelle. Sa presence au sein du Comite de mission ethique envoie un signal particulierement fort : culture avancee de la redevabilite et de la transparence, maitrise des cadres de gouvernance exiges par les financeurs publics, comprehension des logiques d'impact et d'evaluation, et capacite a structurer des dispositifs robustes et conformes aux standards internationaux.",
-        signature: "Au-dela de la dimension ethique, il contribue implicitement a installer une discipline de gouvernance souvent observee dans les organisations a forte maturite institutionnelle. Son experience aupres d'organisations internationales et de ministeres positionne son expertise au niveau des standards attendus dans les programmes finances par les grands bailleurs.",
-        formation: ["Institut d'Etudes Politiques de Paris (Sciences Po)"],
-        expertise: ["Finances publiques (PFM)", "Reformes budgetaires", "Direction de programmes internationaux", "Macro-fiscalite", "Transparence et redevabilite", "Renforcement institutionnel", "Coordination bailleurs", "Conduite du changement"]
+        bio: "Jean-Marc Lepain est un expert international reconnu dans le domaine des finances publiques (Public Financial Management - PFM), avec une trajectoire de plus de 25 ans au service de la réforme des administrations publiques et du renforcement des capacités institutionnelles à grande échelle. Il évolue depuis plus d'une décennie au cœur des transformations institutionnelles, accompagnant des gouvernements, des organisations internationales et des bailleurs dans la modernisation de leurs systèmes financiers. Il occupe récemment la fonction de Chief of Party pour un programme de soutien à la gestion des finances publiques au Sénégal, mené dans le cadre d'un partenariat entre USAID et Deloitte.",
+        realisations: "Son parcours se distingue par une forte dimension géographique et stratégique, avec des responsabilités exercées en Afrique, au Moyen-Orient et en Asie. Au Sénégal (Direction de programme) : pilotage de réformes PFM à l'échelle de l'État, renforcement de la transparence budgétaire, modernisation des systèmes de gestion de la dette, introduction de budgets verts. Au Brunei (Ministère des Finances) : création d'outils de prévision budgétaire, conception et déploiement d'un programme de consolidation budgétaire, mise en œuvre de réformes structurantes. Au FMI (Conseiller régional) : diagnostics des systèmes de finances publiques, appui à la planification macro-budgétaire, renforcement des capacités auprès des ministères des finances.",
+        vision: "Jean-Marc Lepain présente un profil typique des architectes de réformes publiques, intervenant sur des programmes à fort impact systémique. Sa capacité à opérer dans des environnements gouvernementaux complexes et à piloter des transformations structurelles constitue un marqueur élevé de crédibilité institutionnelle. Sa présence au sein du Comité de mission éthique envoie un signal particulièrement fort : culture avancée de la redevabilité et de la transparence, maîtrise des cadres de gouvernance exigés par les financeurs publics, compréhension des logiques d'impact et d'évaluation, et capacité à structurer des dispositifs robustes et conformes aux standards internationaux.",
+        signature: "Au-delà de la dimension éthique, il contribue implicitement à installer une discipline de gouvernance souvent observée dans les organisations à forte maturité institutionnelle. Son expérience auprès d'organisations internationales et de ministères positionne son expertise au niveau des standards attendus dans les programmes financés par les grands bailleurs.",
+        formation: ["Institut d'Études Politiques de Paris (Sciences Po)"],
+        expertise: ["Finances publiques (PFM)", "Réformes budgétaires", "Direction de programmes internationaux", "Macro-fiscalité", "Transparence et redevabilité", "Renforcement institutionnel", "Coordination bailleurs", "Conduite du changement"]
       },
       {
         nom: "Alexandra Horst",
         fonction: "Psychologue clinicienne",
-        role: "Consultatif independant",
+        role: "Consultatif indépendant",
         soustitre: "Psychologue clinicienne & praticienne en ressources humaines",
         photo: null,
-        bio: "Alexandra Horst est une psychologue clinicienne liberale installee a Strasbourg, dotee d'une double formation en psychologie clinique et en gestion des ressources humaines, ce qui lui confere une expertise tant dans l'accompagnement psychologique que dans la comprehension des dynamiques humaines au sein des organisations. Sa presence au sein du Comite de mission ethique d'ALT&ACT apporte une dimension reflexive, centree sur l'humain, enrichissant les approches institutionnelles par une lecture des facteurs psychologiques, comportementaux et relationnels qui influencent les trajectoires individuelles et collectives.",
-        realisations: "Alexandra exerce en tant que psychologue clinicienne a Strasbourg, ou elle accompagne des adultes et des adolescents dans leurs questionnements personnels, familiaux ou professionnels, a travers des consultations individuelles et des approches psychotherapeutiques adaptees. Sa pratique repose sur un referentiel clinique integratif, combinant des elements analytiques, cognitifs, comportementaux et systemiques pour offrir un accompagnement souple et adapte.",
-        vision: "Au sein du Comite de mission ethique, Alexandra apporte une expertise precieuse sur les dimensions humaines invisibles mais determinantes des parcours d'accompagnement professionnel et social. Son intervention renforce notamment l'integration systemique des facteurs psychologiques dans les dispositifs de soutien, l'elaboration de cadres d'accompagnement centres sur la personne, la capacite a anticiper les blocages comportementaux ou emotionnels dans les trajectoires, et la qualite de l'ecoute institutionnelle pour outiller les publics dans leurs transitions.",
-        signature: "Alexandra combine rigueur clinique, bienveillance structuree et lecture strategique des processus humains. Elle travaille a la fois sur la comprehension des dynamiques internes des individus, l'ajustement des comportements a des contextes de changement, et la transformation des relations interpersonnelles vers des conditions de reussite.",
-        formation: ["Master en Psychologie clinique interculturelle et transculturelle - Universite de Strasbourg", "Master en Gestion des Ressources Humaines - IAE Strasbourg"],
-        expertise: ["Psychologie clinique", "Accompagnement des transitions", "Approches integratives", "Dynamiques interculturelles", "Gestion des ressources humaines", "Facteurs socio-emotionnels", "Lecture systemique", "Ethique clinique"]
+        bio: "Alexandra Horst est une psychologue clinicienne libérale installée à Strasbourg, dotée d'une double formation en psychologie clinique et en gestion des ressources humaines, ce qui lui confère une expertise tant dans l'accompagnement psychologique que dans la compréhension des dynamiques humaines au sein des organisations. Sa présence au sein du Comité de mission éthique d'ALT&ACT apporte une dimension réflexive, centrée sur l'humain, enrichissant les approches institutionnelles par une lecture des facteurs psychologiques, comportementaux et relationnels qui influencent les trajectoires individuelles et collectives.",
+        realisations: "Alexandra exerce en tant que psychologue clinicienne à Strasbourg, où elle accompagne des adultes et des adolescents dans leurs questionnements personnels, familiaux ou professionnels, à travers des consultations individuelles et des approches psychothérapeutiques adaptées. Sa pratique repose sur un référentiel clinique intégratif, combinant des éléments analytiques, cognitifs, comportementaux et systémiques pour offrir un accompagnement souple et adapté.",
+        vision: "Au sein du Comité de mission éthique, Alexandra apporte une expertise précieuse sur les dimensions humaines invisibles mais déterminantes des parcours d'accompagnement professionnel et social. Son intervention renforce notamment l'intégration systémique des facteurs psychologiques dans les dispositifs de soutien, l'élaboration de cadres d'accompagnement centrés sur la personne, la capacité à anticiper les blocages comportementaux ou émotionnels dans les trajectoires, et la qualité de l'écoute institutionnelle pour outiller les publics dans leurs transitions.",
+        signature: "Alexandra combine rigueur clinique, bienveillance structurée et lecture stratégique des processus humains. Elle travaille à la fois sur la compréhension des dynamiques internes des individus, l'ajustement des comportements à des contextes de changement, et la transformation des relations interpersonnelles vers des conditions de réussite.",
+        formation: ["Master en Psychologie clinique interculturelle et transculturelle - Université de Strasbourg", "Master en Gestion des Ressources Humaines - IAE Strasbourg"],
+        expertise: ["Psychologie clinique", "Accompagnement des transitions", "Approches intégratives", "Dynamiques interculturelles", "Gestion des ressources humaines", "Facteurs socio-émotionnels", "Lecture systémique", "Éthique clinique"]
       },
       {
         nom: "Martine Caillard-Dahl",
         fonction: "Productrice culturelle",
-        role: "Consultatif independant",
-        soustitre: "Productrice culturelle | Actrice de la creation audiovisuelle",
+        role: "Consultatif indépendant",
+        soustitre: "Productrice culturelle | Actrice de la création audiovisuelle",
         photo: null,
-        bio: "Martine Caillard-Dahl est une professionnelle de la production audiovisuelle, reconnue pour son engagement dans la valorisation de projets culturels a dimension patrimoniale et societale. Fondatrice de la societe Token Productions en 1995, elle a contribue au developpement de contenus cinematographiques, documentaires et publicitaires, inscrivant son action dans une logique de transmission culturelle et de mise en recit des realites humaines. Son parcours temoigne d'une capacite a concevoir et piloter des projets creatifs impliquant des enjeux historiques, identitaires et territoriaux.",
-        realisations: "Fondatrice de Token Productions a Strasbourg, elle a assure la direction et gestion de projets audiovisuels avec des activites centrees sur la production de films documentaires, cinematographiques et publicitaires. Productions notables : Jean-Marie Tjibaou ou le reve d'independance (2000), oeuvre s'inscrivant dans une reflexion historique et politique autour des dynamiques d'emancipation. AD!, monnaie kanak (1992) pour l'Agence de Developpement de la Culture Kanak et le Musee territorial de Nouvelle-Caledonie. Elle a egalement participe au Festival des arts du Pacifique (1984-1985).",
-        vision: "Martine Caillard-Dahl incarne un profil de productrice engagee, capable de relier creation artistique et comprehension des dynamiques sociales. Son experience dans des projets a portee culturelle internationale contribue a enrichir la gouvernance par une perspective sensible aux representations, aux identites et aux transformations societales.",
-        signature: "Au sein du Comite de mission ethique, elle apporte une lecture culturelle des transformations sociales, utile pour inscrire les actions dans une comprehension elargie des contextes humains, favoriser des approches respectueuses des identites et des parcours, et enrichir la reflexion ethique par une sensibilite aux representations collectives.",
-        expertise: ["Production audiovisuelle", "Projets culturels", "Patrimoine et recits societaux", "Coordination artistique", "Interculturalite", "Mediation culturelle", "Memoire collective", "Identites et territoires"]
+        bio: "Martine Caillard-Dahl est une professionnelle de la production audiovisuelle, reconnue pour son engagement dans la valorisation de projets culturels à dimension patrimoniale et sociétale. Fondatrice de la société Token Productions en 1995, elle a contribué au développement de contenus cinématographiques, documentaires et publicitaires, inscrivant son action dans une logique de transmission culturelle et de mise en récit des réalités humaines. Son parcours témoigne d'une capacité à concevoir et piloter des projets créatifs impliquant des enjeux historiques, identitaires et territoriaux.",
+        realisations: "Fondatrice de Token Productions à Strasbourg, elle a assuré la direction et gestion de projets audiovisuels avec des activités centrées sur la production de films documentaires, cinématographiques et publicitaires. Productions notables : Jean-Marie Tjibaou ou le rêve d'indépendance (2000), œuvre s'inscrivant dans une réflexion historique et politique autour des dynamiques d'émancipation. AD!, monnaie kanak (1992) pour l'Agence de Développement de la Culture Kanak et le Musée territorial de Nouvelle-Calédonie. Elle a également participé au Festival des arts du Pacifique (1984-1985).",
+        vision: "Martine Caillard-Dahl incarne un profil de productrice engagée, capable de relier création artistique et compréhension des dynamiques sociales. Son expérience dans des projets à portée culturelle internationale contribue à enrichir la gouvernance par une perspective sensible aux représentations, aux identités et aux transformations sociétales.",
+        signature: "Au sein du Comité de mission éthique, elle apporte une lecture culturelle des transformations sociales, utile pour inscrire les actions dans une compréhension élargie des contextes humains, favoriser des approches respectueuses des identités et des parcours, et enrichir la réflexion éthique par une sensibilité aux représentations collectives.",
+        expertise: ["Production audiovisuelle", "Projets culturels", "Patrimoine et récits sociétaux", "Coordination artistique", "Interculturalité", "Médiation culturelle", "Mémoire collective", "Identités et territoires"]
       },
       {
         nom: "Laxsounee Bhoodun",
         fonction: "Juriste",
-        role: "Consultatif independant",
-        soustitre: "Juriste | Experte en securisation juridique et conformite",
+        role: "Consultatif indépendant",
+        soustitre: "Juriste | Experte en sécurisation juridique et conformité",
         photo: null,
-        bio: "Laxsounee Bhoodun est juriste au sein d'un organisme de protection sociale, ou elle intervient sur des problematiques juridiques exigeant rigueur, maitrise reglementaire et sens de la responsabilite institutionnelle. Son expertise contribue a securiser les cadres d'action, a garantir la conformite des pratiques et a accompagner les organisations dans la comprehension de leurs obligations legales. Au sein du Comite de mission ethique d'ALT&ACT, elle apporte une lecture structurante des enjeux juridiques, essentielle pour toute organisation engagee dans des projets a impact social et amenee a interagir avec des partenaires publics ou institutionnels.",
-        realisations: "En tant que juriste au sein d'un organisme de protection sociale (CARSAT), son activite s'inscrit dans un environnement fortement norme, caracterise par l'analyse et l'interpretation de textes juridiques, la gestion de situations reglementaires complexes, la securisation des decisions administratives, la prevention des risques contentieux, et l'accompagnement des parties prenantes dans l'application du droit. Cette experience developpe une capacite a conjuguer precision technique et comprehension des realites operationnelles.",
-        vision: "La presence d'une juriste au sein du comite ethique constitue un marqueur important de maturite organisationnelle. Laxsounee Bhoodun renforce notamment la capacite de l'association a structurer ses pratiques dans le respect des cadres legaux, anticiper les risques lies aux projets et aux partenariats, consolider la credibilite de la gouvernance, et proteger l'organisation dans ses phases de developpement. Son regard favorise un equilibre entre innovation et securite juridique.",
-        signature: "Le profil de Laxsounee Bhoodun correspond a celui d'une garante du cadre, contribuant a installer une culture de conformite et de responsabilite. Dans un contexte ou les exigences reglementaires se renforcent, notamment pour les projets a dimension sociale ou finances sur fonds publics, cette competence devient strategique. Sa participation au Comite de mission ethique soutient une gouvernance attentive a la solidite de ses fondations juridiques, condition indispensable a un developpement durable et maitrise.",
-        expertise: ["Analyse juridique", "Veille reglementaire", "Gestion des risques", "Conformite", "Securisation des procedures", "Droit de la protection sociale", "Responsabilite institutionnelle", "Prevention des contentieux"]
+        bio: "Laxsounee Bhoodun est juriste au sein d'un organisme de protection sociale, où elle intervient sur des problématiques juridiques exigeant rigueur, maîtrise réglementaire et sens de la responsabilité institutionnelle. Son expertise contribue à sécuriser les cadres d'action, à garantir la conformité des pratiques et à accompagner les organisations dans la compréhension de leurs obligations légales. Au sein du Comité de mission éthique d'ALT&ACT, elle apporte une lecture structurante des enjeux juridiques, essentielle pour toute organisation engagée dans des projets à impact social et amenée à interagir avec des partenaires publics ou institutionnels.",
+        realisations: "En tant que juriste au sein d'un organisme de protection sociale (CARSAT), son activité s'inscrit dans un environnement fortement normé, caractérisé par l'analyse et l'interprétation de textes juridiques, la gestion de situations réglementaires complexes, la sécurisation des décisions administratives, la prévention des risques contentieux, et l'accompagnement des parties prenantes dans l'application du droit. Cette expérience développe une capacité à conjuguer précision technique et compréhension des réalités opérationnelles.",
+        vision: "La présence d'une juriste au sein du comité éthique constitue un marqueur important de maturité organisationnelle. Laxsounee Bhoodun renforce notamment la capacité de l'association à structurer ses pratiques dans le respect des cadres légaux, anticiper les risques liés aux projets et aux partenariats, consolider la crédibilité de la gouvernance, et protéger l'organisation dans ses phases de développement. Son regard favorise un équilibre entre innovation et sécurité juridique.",
+        signature: "Le profil de Laxsounee Bhoodun correspond à celui d'une garante du cadre, contribuant à installer une culture de conformité et de responsabilité. Dans un contexte où les exigences réglementaires se renforcent, notamment pour les projets à dimension sociale ou financés sur fonds publics, cette compétence devient stratégique. Sa participation au Comité de mission éthique soutient une gouvernance attentive à la solidité de ses fondations juridiques, condition indispensable à un développement durable et maîtrisé.",
+        expertise: ["Analyse juridique", "Veille réglementaire", "Gestion des risques", "Conformité", "Sécurisation des procédures", "Droit de la protection sociale", "Responsabilité institutionnelle", "Prévention des contentieux"]
       },
       {
         nom: "Marion Perrin-Pujol",
         fonction: "Cheffe de service CRPEH, EMPEH, LAEP Ressources",
-        role: "Consultatif independant",
+        role: "Consultatif indépendant",
         soustitre: "Apedi Alsace | Inclusion petite enfance et handicap",
         photo: null,
-        bio: "Marion Perrin-Pujol est Cheffe de service au sein de l'Apedi Alsace, ou elle pilote trois dispositifs strategiques dedies a l'inclusion des jeunes enfants en situation de handicap : le CRPEH (Centre Ressources Petite Enfance et Handicap), l'EMPEH (Equipe Mobile Petite Enfance et Handicap) et le LAEP Ressources (Lieu d'Accueil Enfants-Parents). Son role se situe a la croisee du medico-social, de la petite enfance et de l'ingenierie de parcours inclusifs, avec une responsabilite directe sur le pilotage d'equipes pluridisciplinaires, la coordination partenariale territoriale et la garantie du cadre reglementaire et ethique.",
-        realisations: "A travers le CRPEH, elle favorise l'inclusion des enfants a besoins specifiques dans les structures petite enfance via l'accueil des familles, l'evaluation des besoins et l'appui aux projets d'accueil individualises. L'EMPEH qu'elle dirige intervient directement sur les lieux d'accueil (creches, domiciles) pour observer, ajuster les pratiques et prevenir les exclusions. Le LAEP Ressources offre un espace d'accueil libre et gratuit renfor cant le lien parent-enfant et permettant le reperage precoce des fragilites. Ces trois dispositifs partagent un objectif commun : prevenir les ruptures de parcours des le plus jeune age.",
-        vision: "Sa presence au sein du Comite de Mission Ethique d'ALT&ACT apporte une expertise concrete sur les enjeux d'equite et d'accessibilite dans les pratiques d'accompagnement, une vigilance quant a l'adaptation des dispositifs aux situations necessitant une attention particuliere, et une sensibilite aux demarches de co-construction avec les familles et les professionnels. Elle renforce une gouvernance attentive a la responsabilite sociale et a la coherence entre les valeurs portees par l'association et leur mise en oeuvre operationnelle.",
-        signature: "Marion Perrin-Pujol incarne une vision ou l'accompagnement se construit en partenariat etroit avec les familles, les equipes educatives et les partenaires medico-sociaux. Son engagement temoigne d'une conviction profonde : chaque enfant, quelle que soit sa situation, merite un accompagnement adapte qui respecte sa singularite et favorise son plein epanouissement dans un environnement ordinaire.",
-        expertise: ["Pilotage de dispositifs medico-sociaux", "Inclusion petite enfance", "Coordination partenariale territoriale", "Accompagnement des familles", "Supervision d'equipes pluridisciplinaires", "Prevention des ruptures de parcours", "Soutien a la parentalite", "Ingenierie de parcours inclusifs"]
+        bio: "Marion Perrin-Pujol est Cheffe de service au sein de l'Apedi Alsace, où elle pilote trois dispositifs stratégiques dédiés à l'inclusion des jeunes enfants en situation de handicap : le CRPEH (Centre Ressources Petite Enfance et Handicap), l'EMPEH (Équipe Mobile Petite Enfance et Handicap) et le LAEP Ressources (Lieu d'Accueil Enfants-Parents). Son rôle se situe à la croisée du médico-social, de la petite enfance et de l'ingénierie de parcours inclusifs, avec une responsabilité directe sur le pilotage d'équipes pluridisciplinaires, la coordination partenariale territoriale et la garantie du cadre réglementaire et éthique.",
+        realisations: "À travers le CRPEH, elle favorise l'inclusion des enfants à besoins spécifiques dans les structures petite enfance via l'accueil des familles, l'évaluation des besoins et l'appui aux projets d'accueil individualisés. L'EMPEH qu'elle dirige intervient directement sur les lieux d'accueil (crèches, domiciles) pour observer, ajuster les pratiques et prévenir les exclusions. Le LAEP Ressources offre un espace d'accueil libre et gratuit renforçant le lien parent-enfant et permettant le repérage précoce des fragilités. Ces trois dispositifs partagent un objectif commun : prévenir les ruptures de parcours dès le plus jeune âge.",
+        vision: "Sa présence au sein du Comité de Mission Éthique d'ALT&ACT apporte une expertise concrète sur les enjeux d'équité et d'accessibilité dans les pratiques d'accompagnement, une vigilance quant à l'adaptation des dispositifs aux situations nécessitant une attention particulière, et une sensibilité aux démarches de co-construction avec les familles et les professionnels. Elle renforce une gouvernance attentive à la responsabilité sociale et à la cohérence entre les valeurs portées par l'association et leur mise en œuvre opérationnelle.",
+        signature: "Marion Perrin-Pujol incarne une vision où l'accompagnement se construit en partenariat étroit avec les familles, les équipes éducatives et les partenaires médico-sociaux. Son engagement témoigne d'une conviction profonde : chaque enfant, quelle que soit sa situation, mérite un accompagnement adapté qui respecte sa singularité et favorise son plein épanouissement dans un environnement ordinaire.",
+        expertise: ["Pilotage de dispositifs médico-sociaux", "Inclusion petite enfance", "Coordination partenariale territoriale", "Accompagnement des familles", "Supervision d'équipes pluridisciplinaires", "Prévention des ruptures de parcours", "Soutien à la parentalité", "Ingénierie de parcours inclusifs"]
       }
     ]
   }
@@ -306,7 +306,7 @@ const MembreCard = ({ membre, color }) => {
               <div>
                 <h5 className="text-sm font-semibold text-[#0b2a55] mb-2 flex items-center gap-2">
                   <Award className="w-4 h-4 text-amber-500" />
-                  Profil executif
+                  Profil exécutif
                 </h5>
                 <p className="text-sm text-gray-600 leading-relaxed whitespace-pre-line">
                   {membre.bio}
@@ -317,7 +317,7 @@ const MembreCard = ({ membre, color }) => {
                 <div>
                   <h5 className="text-sm font-semibold text-[#0b2a55] mb-2 flex items-center gap-2">
                     <Lightbulb className="w-4 h-4 text-amber-500" />
-                    Vision strategique
+                    Vision stratégique
                   </h5>
                   <p className="text-sm text-gray-600 leading-relaxed">
                     {membre.vision}
@@ -329,7 +329,7 @@ const MembreCard = ({ membre, color }) => {
                 <div>
                   <h5 className="text-sm font-semibold text-[#0b2a55] mb-2 flex items-center gap-2">
                     <Briefcase className="w-4 h-4 text-teal-500" />
-                    Trajectoire et realisations
+                    Trajectoire et réalisations
                   </h5>
                   <p className="text-sm text-gray-600 leading-relaxed">
                     {membre.realisations}
@@ -348,7 +348,7 @@ const MembreCard = ({ membre, color }) => {
               
               <div>
                 <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">
-                  {isEnriched ? "Domaines d'autorite" : "Domaines d'expertise"}
+                  {isEnriched ? "Domaines d'autorité" : "Domaines d'expertise"}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {membre.expertise.map((exp, idx) => (
@@ -404,7 +404,7 @@ function MembresPage() {
             onClick={() => navigate("/")} 
             className="text-white hover:bg-white/20 mb-6"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" /> Retour a l'accueil
+            <ArrowLeft className="w-4 h-4 mr-2" /> Retour à l'accueil
           </Button>
           
           <Badge className="mb-4 bg-white/20 text-white border-white/30">Gouvernance ALT&ACT</Badge>
@@ -412,7 +412,7 @@ function MembresPage() {
             Nos Membres
           </h1>
           <p className="text-blue-100 text-lg max-w-2xl">
-            Decouvrez les femmes et les hommes qui portent la vision d'ALT&ACT et construisent 
+            Découvrez les femmes et les hommes qui portent la vision d'ALT&ACT et construisent 
             ensemble un dispositif d'insertion professionnelle durable.
           </p>
         </div>
@@ -480,16 +480,16 @@ function MembresPage() {
               Une gouvernance au service de notre mission
             </h3>
             <p className="text-gray-500 max-w-2xl mx-auto">
-              Version institutionnelle - statuts, reglement interieur et communication alignes
+              Version institutionnelle - statuts, règlement intérieur et communication alignés
             </p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { icon: Heart, title: "Ethique", desc: "Respect et integrite au coeur de nos actions" },
-              { icon: Globe, title: "Inclusion", desc: "L'insertion sans barrieres pour tous" },
-              { icon: Lock, title: "Confiance", desc: "Protection des donnees et transparence" },
-              { icon: Award, title: "Excellence", desc: "Innovation responsable et qualite" }
+              { icon: Heart, title: "Éthique", desc: "Respect et intégrité au cœur de nos actions" },
+              { icon: Globe, title: "Inclusion", desc: "L'insertion sans barrières pour tous" },
+              { icon: Lock, title: "Confiance", desc: "Protection des données et transparence" },
+              { icon: Award, title: "Excellence", desc: "Innovation responsable et qualité" }
             ].map((value, idx) => {
               const Icon = value.icon;
               return (
