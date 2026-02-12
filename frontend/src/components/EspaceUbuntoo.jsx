@@ -1,11 +1,15 @@
-import React, { useEffect } from 'react';
-import { ArrowLeft, Users, Globe, Heart, Sparkles, MessageCircle, Award, Target, Lightbulb } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { ArrowLeft, Users, Globe, Heart, Sparkles, MessageCircle, Award, Target, Lightbulb, Mail, Lock, Eye, EyeOff, LogIn } from 'lucide-react';
 import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent } from './ui/card';
 
 function EspaceUbuntoo() {
   const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [rememberMe, setRememberMe] = useState(false);
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -13,6 +17,12 @@ function EspaceUbuntoo() {
 
   const handleBackHome = () => {
     navigate('/');
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    // Pour l'instant, afficher une alerte - À connecter ultérieurement à l'API RE'ACTIF PRO
+    alert("Fonctionnalité en cours de développement. Vos identifiants RE'ACTIF PRO seront bientôt actifs.");
   };
 
   const fonctionnalites = [
