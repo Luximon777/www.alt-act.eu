@@ -88,6 +88,109 @@ function EspaceUbuntoo() {
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
+        {/* Section Connexion */}
+        <section className="mb-16">
+          <div className="max-w-md mx-auto">
+            <Card className="shadow-xl border-0 overflow-hidden">
+              <div className="bg-gradient-to-r from-[#0F4C5C] to-[#0A3844] p-6 text-center">
+                <div className="w-16 h-16 mx-auto bg-white/20 rounded-full flex items-center justify-center mb-4">
+                  <LogIn className="w-8 h-8 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold text-white mb-2">Connexion Ubuntoo</h2>
+                <p className="text-teal-100 text-sm">Utilisez vos identifiants RE'ACTIF PRO</p>
+              </div>
+              <CardContent className="p-6">
+                <form onSubmit={handleLogin} className="space-y-4">
+                  {/* Champ Email/Identifiant */}
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                      Identifiant ou Email
+                    </label>
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <input
+                        type="text"
+                        id="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="votre.email@exemple.com"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0F4C5C] focus:border-transparent transition-all outline-none"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  {/* Champ Mot de passe */}
+                  <div>
+                    <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
+                      Mot de passe
+                    </label>
+                    <div className="relative">
+                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <input
+                        type={showPassword ? "text" : "password"}
+                        id="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="••••••••"
+                        className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0F4C5C] focus:border-transparent transition-all outline-none"
+                        required
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                      >
+                        {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Options */}
+                  <div className="flex items-center justify-between">
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={rememberMe}
+                        onChange={(e) => setRememberMe(e.target.checked)}
+                        className="w-4 h-4 text-[#0F4C5C] border-gray-300 rounded focus:ring-[#0F4C5C]"
+                      />
+                      <span className="text-sm text-gray-600">Se souvenir de moi</span>
+                    </label>
+                    <a href="#" className="text-sm text-[#0F4C5C] hover:underline">
+                      Mot de passe oublié ?
+                    </a>
+                  </div>
+
+                  {/* Bouton Connexion */}
+                  <Button 
+                    type="submit"
+                    className="w-full bg-[#0F4C5C] hover:bg-[#0A3844] text-white py-3 text-lg font-medium"
+                  >
+                    <LogIn className="w-5 h-5 mr-2" />
+                    Se connecter
+                  </Button>
+                </form>
+
+                {/* Lien inscription */}
+                <div className="mt-6 pt-6 border-t border-gray-200 text-center">
+                  <p className="text-sm text-gray-600">
+                    Pas encore de compte ?{' '}
+                    <a 
+                      href="https://reactifpro.altact.org" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-[#0F4C5C] font-medium hover:underline"
+                    >
+                      Créer un compte RE'ACTIF PRO
+                    </a>
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
         {/* Section Introduction */}
         <section className="mb-16">
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
