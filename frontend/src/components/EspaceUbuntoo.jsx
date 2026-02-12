@@ -65,7 +65,7 @@ function EspaceUbuntoo() {
           </div>
           <div className="flex justify-center mb-4">
             <img 
-              src="https://customer-assets.emergentagent.com/job_d0bc5493-6633-44a1-9dd3-9efc2f6d6bf1/artifacts/2rye2775_logo%20ubuntoo.png" 
+              src="/logo ubuntoo.png" 
               alt="Ubuntoo" 
               className="h-32 md:h-40 w-auto"
             />
