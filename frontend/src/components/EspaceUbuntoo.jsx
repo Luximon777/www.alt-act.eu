@@ -57,13 +57,19 @@ function EspaceUbuntoo() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-gradient-to-br from-[#0F4C5C] to-[#0A3844] text-white py-16">
+      <header className="bg-gradient-to-br from-[#0F4C5C] to-[#0A3844] text-white py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6">
             <Users className="w-5 h-5" />
             <span className="text-sm font-medium">Communauté ALT&amp;ACT</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Espace Ubuntoo</h1>
+          <div className="flex justify-center mb-4">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_d0bc5493-6633-44a1-9dd3-9efc2f6d6bf1/artifacts/2rye2775_logo%20ubuntoo.png" 
+              alt="Ubuntoo" 
+              className="h-32 md:h-40 w-auto"
+            />
+          </div>
           <p className="text-xl text-teal-100 max-w-2xl mx-auto">
             La communauté apprenante au service de votre parcours professionnel
           </p>
