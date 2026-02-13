@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { ArrowLeft, Shield, Lock, Eye, FileText, Mail } from 'lucide-react';
 import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
+import Navigation from './Navigation';
 
 const PolitiqueConfidentialite = () => {
   const navigate = useNavigate();

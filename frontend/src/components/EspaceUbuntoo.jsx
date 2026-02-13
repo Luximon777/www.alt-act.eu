@@ -3,6 +3,7 @@ import { ArrowLeft, Users, Globe, Heart, Sparkles, MessageCircle, Award, Target,
 import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent } from './ui/card';
+import Navigation from './Navigation';
 
 function EspaceUbuntoo() {
   const navigate = useNavigate();

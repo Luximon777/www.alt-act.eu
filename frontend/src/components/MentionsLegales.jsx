@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
+import Navigation from './Navigation';
 
 const MentionsLegales = () => {
   const navigate = useNavigate();

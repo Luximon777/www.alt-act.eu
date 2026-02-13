@@ -3,6 +3,7 @@ import { ArrowLeft, Eye, Heart, Users, Target, Handshake, Shield, CheckCircle, C
 import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
 import { Badge } from './ui/badge';
+import Navigation from './Navigation';
 
 const GouvernanceConsultative = () => {
   const navigate = useNavigate();

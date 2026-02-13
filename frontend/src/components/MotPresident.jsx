@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ArrowLeft, Quote, AlertTriangle, Cpu, HelpCircle, Sparkles, Heart, Users, TrendingUp, Target, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
+import Navigation from './Navigation';
 
 function MotPresident() {
   const navigate = useNavigate();

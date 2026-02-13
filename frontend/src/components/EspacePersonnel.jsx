@@ -4,6 +4,7 @@ import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
 import { Badge } from './ui/badge';
 import { Card, CardContent } from './ui/card';
+import Navigation from './Navigation';
 
 const EspacePersonnel = () => {
   const navigate = useNavigate();
