@@ -56,7 +56,7 @@ function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <a href="/" onClick={(e) => goToPage(e, '/')} className="flex items-center group" data-testid="logo-link">
-              <img src="/logo.png" alt="Alt&Act" className="h-6 w-auto" />
+              <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Alt&Act" className="h-6 w-auto" />
             </a>
             <div className="hidden md:flex items-center space-x-6">
               {/* Dropdown Présentation */}
