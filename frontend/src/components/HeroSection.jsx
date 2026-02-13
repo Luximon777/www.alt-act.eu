@@ -118,8 +118,17 @@ const HeroSection = () => {
                   document.getElementById('logo-fallback').style.display = 'block';
                 }}
               />
-              <div id="logo-fallback" className="text-5xl md:text-6xl lg:text-7xl font-bold text-white" style={{ display: 'none' }}>
-                Alt<span className="text-[#7CB342]">&</span>Act
+              <div 
+                id="logo-fallback" 
+                className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight"
+                style={{ 
+                  display: 'none',
+                  fontFamily: "'Fraunces', serif"
+                }}
+              >
+                <span className="text-white">Alt</span>
+                <span className="text-[#7CB342]">&</span>
+                <span className="text-white">Act</span>
               </div>
             </div>
             <p className="text-sm md:text-base italic text-blue-100 mt-2">Altérité & Action</p>
