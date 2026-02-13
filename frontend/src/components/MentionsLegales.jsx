@@ -17,8 +17,9 @@ const MentionsLegales = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Navigation />
       {/* Header */}
-      <header className="bg-gradient-to-br from-[#0b2a55] to-[#1a4280] text-white py-16">
+      <header className="bg-gradient-to-br from-[#0b2a55] to-[#1a4280] text-white pt-28 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Mentions legales</h1>
           <p className="text-xl text-blue-100">Association ALT&ACT - Alterite & Action</p>
