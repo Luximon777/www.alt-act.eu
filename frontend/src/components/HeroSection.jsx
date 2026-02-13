@@ -107,18 +107,21 @@ const HeroSection = () => {
         {/* Logo/Title */}
         <div className="mb-6 animate-fade-in-up">
           <div className="flex flex-col items-center justify-center">
-            <img 
-              src="/logo.png" 
-              alt="Alt&Act" 
-              className="h-16 md:h-20 lg:h-24 w-auto mx-auto"
-              onError={(e) => {
-                e.target.style.display = 'none';
-                e.target.nextSibling.style.display = 'block';
-              }}
-            />
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white hidden">
-              Alt<span className="text-[#7CB342]">&</span>Act
-            </h1>
+            <div className="relative">
+              <img 
+                src="/logo.png" 
+                alt="Alt&Act" 
+                className="h-16 md:h-20 lg:h-24 w-auto mx-auto logo-image"
+                style={{ display: 'block' }}
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  document.getElementById('logo-fallback').style.display = 'block';
+                }}
+              />
+              <div id="logo-fallback" className="text-5xl md:text-6xl lg:text-7xl font-bold text-white" style={{ display: 'none' }}>
+                Alt<span className="text-[#7CB342]">&</span>Act
+              </div>
+            </div>
             <p className="text-sm md:text-base italic text-blue-100 mt-2">Altérité & Action</p>
           </div>
         </div>
