@@ -17,8 +17,9 @@ const PolitiqueConfidentialite = () => {
 
   return (
     <div className="min-h-screen bg-gray-50" data-testid="politique-confidentialite">
+      <Navigation />
       {/* Header */}
-      <header className="bg-gradient-to-r from-[#0b2a55] to-[#1a4280] text-white py-16">
+      <header className="bg-gradient-to-r from-[#0b2a55] to-[#1a4280] text-white pt-28 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Button 
             variant="ghost" 
