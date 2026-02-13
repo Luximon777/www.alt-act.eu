@@ -93,8 +93,9 @@ const ConseilsAccompagnement = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <Navigation />
       {/* Header */}
-      <header className="relative bg-gradient-to-br from-[#0b2a55] via-[#1a4280] to-[#0b2a55] text-white py-20 overflow-hidden">
+      <header className="relative bg-gradient-to-br from-[#0b2a55] via-[#1a4280] to-[#0b2a55] text-white pt-28 pb-20 overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0 opacity-20">
           <img 
