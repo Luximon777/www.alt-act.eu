@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ArrowLeft, Eye, Target, Users, Heart, Lightbulb, TrendingUp, Globe, Compass, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
+import Navigation from './Navigation';
 
 function VisionMethode() {
   const navigate = useNavigate();

@@ -3,6 +3,7 @@ import { ArrowLeft, Heart, Eye, Shield, Users, Target, Database, Scale, Building
 import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
 import { Badge } from './ui/badge';
+import Navigation from './Navigation';
 
 const CharteEthique = () => {
   const navigate = useNavigate();
