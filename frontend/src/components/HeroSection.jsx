@@ -105,10 +105,21 @@ const HeroSection = () => {
         </div>
 
         {/* Logo/Title */}
-        <div className="mb-6 animate-fade-in-up flex justify-center">
-          <div className="inline-block">
-            <img src="/logo.png" alt="Alt&Act" className="h-12 md:h-14 lg:h-16 w-auto" />
-            <p className="text-[14px] italic text-blue-100 mt-1 text-right">Altérité & Action</p>
+        <div className="mb-6 animate-fade-in-up">
+          <div className="flex flex-col items-center justify-center">
+            <img 
+              src="/logo.png" 
+              alt="Alt&Act" 
+              className="h-16 md:h-20 lg:h-24 w-auto mx-auto"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'block';
+              }}
+            />
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white hidden">
+              Alt<span className="text-[#7CB342]">&</span>Act
+            </h1>
+            <p className="text-sm md:text-base italic text-blue-100 mt-2">Altérité & Action</p>
           </div>
         </div>
         
