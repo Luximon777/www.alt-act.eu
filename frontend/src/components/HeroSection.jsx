@@ -26,6 +26,31 @@ const HeroSection = () => {
     { icon: Scale, label: "Éthique", description: "Intégrité et transparence" }
   ];
 
+  // Composant pour les étoiles européennes
+  const EuropeanStars = () => {
+    const stars = Array.from({ length: 12 }, (_, i) => {
+      const angle = (i * 30 - 90) * (Math.PI / 180);
+      const radius = 45;
+      const x = 50 + radius * Math.cos(angle);
+      const y = 50 + radius * Math.sin(angle);
+      return { x, y };
+    });
+
+    return (
+      <svg viewBox="0 0 100 100" className="w-full h-full">
+        {stars.map((star, i) => (
+          <g key={i} transform={`translate(${star.x}, ${star.y})`}>
+            <polygon
+              points="0,-4 1.2,-1.2 4,-1.2 2,0.8 3,4 0,2 -3,4 -2,0.8 -4,-1.2 -1.2,-1.2"
+              fill="#FFD700"
+              opacity="0.9"
+            />
+          </g>
+        ))}
+      </svg>
+    );
+  };
+
   return (
     <section id="top" className="relative min-h-screen flex items-center justify-center overflow-hidden" data-testid="hero-section">
       {/* Background Image with Overlay */}
@@ -36,6 +61,18 @@ const HeroSection = () => {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-[#0b2a55]/95 via-[#0b2a55]/90 to-[#1a4280]/85"></div>
+      </div>
+
+      {/* European Stars Background - Decorative */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Grande couronne d'étoiles en haut à droite */}
+        <div className="absolute -top-20 -right-20 w-96 h-96 opacity-10 animate-spin-slow">
+          <EuropeanStars />
+        </div>
+        {/* Petite couronne d'étoiles en bas à gauche */}
+        <div className="absolute -bottom-10 -left-10 w-64 h-64 opacity-8">
+          <EuropeanStars />
+        </div>
       </div>
 
       {/* Content */}
