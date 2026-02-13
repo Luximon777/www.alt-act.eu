@@ -82,7 +82,7 @@ Site web institutionnel pour l'association ALT&ACT, une organisation francaise d
 
 ## Deployment
 - **Production URL**: Deployed on Netlify
-- **Preview URL**: https://french-ngos-together.preview.emergentagent.com
+- **Preview URL**: https://ubuntoo-login.preview.emergentagent.com
 - **Config**: netlify.toml at root
 
 ## Notes
