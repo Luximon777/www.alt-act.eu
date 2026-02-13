@@ -26,6 +26,8 @@ import EspacePersonnel from "./components/EspacePersonnel";
 import EspaceUbuntoo from "./components/EspaceUbuntoo";
 import MentionsLegales from "./components/MentionsLegales";
 import PolitiqueConfidentialite from "./components/PolitiqueConfidentialite";
+import ContactPage from "./components/ContactPage";
+import DevenirMembrePage from "./components/DevenirMembrePage";
 
 // Homepage Component
 function HomePage() {
