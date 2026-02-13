@@ -1,91 +1,69 @@
-# ALT&ACT Website - Product Requirements Document
+# ALT&ACT - Product Requirements Document
 
 ## Original Problem Statement
-Site web institutionnel pour l'association ALT&ACT, une organisation francaise dediee a l'insertion professionnelle et au developpement du capital humain.
+Site web institutionnel pour ALT&ACT, une association d'intérêt général dédiée à l'insertion professionnelle et au développement des compétences.
 
-## Core Requirements
-1. **Accents francais corrects** - Tout le texte doit afficher correctement les accents francais
-2. **Navigation globale** - Barre de navigation presente sur toutes les pages
-3. **Images d'en-tete** - Pages Mission/Ambition/Action avec image d'en-tete coherente
-4. **Contenu institutionnel** - Pages detaillees pour chaque section (Mission, Action, Espaces, etc.)
-5. **Selecteur de langue** - Traduction via Google Translate avec menu deroulant
-6. **Menu "Vos acces"** - Dropdown pour les pages Espace Employeurs/Personnel/Ubuntoo
-7. **Page Membres** - Profils detailles de tous les membres de la gouvernance
+## Current State (December 2024)
+Application React (Vite, TailwindCSS) déployée sur Netlify avec:
+- Navigation globale
+- Pages de contenu institutionnel
+- Page Membres avec gouvernance complète
+- Page Espace Ubuntoo avec formulaire de connexion (visuel uniquement)
 
-## Tech Stack
-- **Frontend**: React + Vite + TailwindCSS
-- **Routing**: react-router-dom (HashRouter)
-- **Deployment**: Netlify (continuous deployment)
-- **i18n**: Google Translate API (custom integration)
-- **UI Components**: Shadcn/UI
+## What's Been Implemented
 
-## Architecture
+### Session du 13/12/2024
+- **Ajout de Marc Avanzo** au Comité de pilotage dans `MembresPage.jsx`
+  - Profil complet avec bio, vision stratégique, réalisations, signature professionnelle
+  - Formation : Supélec, INSEAD MBA, ICF PCC, Communication Non Violente
+  - Domaines d'expertise : Leadership transformationnel, Coaching exécutif, Facilitation de gouvernance
+
+### Sessions précédentes
+- Ajout de Marion Perrin-Pujol au Comité de mission éthique
+- Mise à jour des profils de Stephano Vacher et Alexandra Horst
+- Correction des accents français sur MembresPage.jsx
+- Ajout du logo Ubuntoo sur EspaceUbuntoo.jsx (URL externe temporaire)
+- Ajout du formulaire de connexion visuel sur EspaceUbuntoo.jsx
+- Ajout de la bannière sur MembresPage.jsx
+
+## Known Issues
+
+### P0 - Logo Ubuntoo (URL externe)
+- **Problème**: Le logo utilise une URL externe temporaire
+- **Cause**: Espace dans le nom du fichier (`logo ubuntoo.png`)
+- **Solution**: Renommer en `logo-ubuntoo.png` et mettre à jour le chemin
+
+## Backlog
+
+### P0 - À faire immédiatement
+- Corriger le chemin du logo Ubuntoo (renommer fichier)
+
+### P1 - Fonctionnalités importantes
+- Rendre le formulaire de connexion Ubuntoo fonctionnel (backend requis)
+- Refactoriser les données des membres vers `altactData.js`
+
+### P2 - Améliorations futures
+- Migrer vers une bibliothèque i18n (react-i18next) au lieu de Google Translate
+
+## Technical Architecture
+
 ```
 /app/frontend/
-├── public/
-│   └── index.html (Google Translate script)
 ├── src/
 │   ├── components/
-│   │   ├── Navigation.jsx (global nav + language switcher)
-│   │   ├── App.js (routing)
-│   │   ├── MembresPage.jsx (membres avec profils detailles)
-│   │   ├── NotreAction.jsx
-│   │   ├── NotreMission.jsx
-│   │   ├── NotreAmbition.jsx
-│   │   ├── EspacePersonnel.jsx
-│   │   ├── EspaceEmployeurs.jsx
-│   │   ├── EspaceUbuntoo.jsx
-│   │   └── ContactSection.jsx
-│   └── components/ui/ (Shadcn components)
-├── netlify.toml
-└── package.json
+│   │   ├── MembresPage.jsx    # Page des membres (données hardcodées)
+│   │   ├── EspaceUbuntoo.jsx  # Page Ubuntoo avec login visuel
+│   │   └── ...
+│   └── App.js                  # HashRouter config
+├── public/
+│   └── logo ubuntoo.png        # À renommer
+└── netlify.toml
 ```
 
-## Completed Features (December 2025)
+## Key Files Modified
+- `frontend/src/components/MembresPage.jsx` - Membres et gouvernance
+- `frontend/src/components/EspaceUbuntoo.jsx` - Espace communautaire
 
-### Session 1
-- [x] Correction des accents francais sur toutes les pages
-- [x] Migration de GitHub Pages vers Netlify
-- [x] Navigation globale sur toutes les pages
-- [x] Images d'en-tete pour pages Mission/Ambition/Action
-- [x] Refonte contenu NotreAction.jsx
-- [x] Refonte contenu EspacePersonnel.jsx
-- [x] Suppression section reseaux sociaux dans Contact
-- [x] Selecteur de langue avec Google Translate
-- [x] Menu dropdown "Vos acces"
-
-### Session 2 (Current)
-- [x] Ajout Marion Perrin-Pujol au Comite de mission ethique
-  - Profil executif complet
-  - Vision strategique
-  - Realisations
-  - Signature professionnelle
-  - 8 domaines d'expertise
-
-## Page Members Structure
-- **Bureau**: President, Secretaire, Tresoriere
-- **Comite de direction**: 7 membres fondateurs
-- **Comite de pilotage**: 2 experts consultatifs
-- **Comite de mission ethique**: 5 membres consultatifs independants
-  - Jean-Marc Lepain (Finances publiques)
-  - Alexandra Horst (Psychologie clinique)
-  - Martine Caillard-Dahl (Production culturelle)
-  - Laxsounee Bhoodun (Juriste)
-  - Marion Perrin-Pujol (Enfance et handicap) **NEW**
-
-## Backlog / Future Tasks
-- [ ] Migration vers react-i18next pour une meilleure gestion i18n
-- [ ] Ajout de photos de profil pour les membres
-- [ ] Formulaire de contact fonctionnel
-- [ ] Integration backend pour les donnees dynamiques
-- [ ] SEO optimization
-
-## Deployment
-- **Production URL**: Deployed on Netlify
-- **Preview URL**: https://ubuntoo-login.preview.emergentagent.com
-- **Config**: netlify.toml at root
-
-## Notes
-- Toutes les donnees membres sont hardcodees dans MembresPage.jsx
-- Le fichier mock/altactData.js n'existe pas (donnees inline)
-- Google Translate utilise une implementation custom (non react-i18next)
+## Integration Notes
+- Google Translate pour traduction (pas de clé API requise)
+- Toutes les données sont hardcodées dans les composants React
