@@ -67,8 +67,9 @@ function EspaceUbuntoo() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Navigation />
       {/* Header */}
-      <header className="bg-gradient-to-br from-[#0F4C5C] to-[#0A3844] text-white py-12">
+      <header className="bg-gradient-to-br from-[#0F4C5C] to-[#0A3844] text-white pt-24 pb-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6">
             <Users className="w-5 h-5" />
