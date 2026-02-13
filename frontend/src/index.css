@@ -224,3 +224,17 @@
 .skeleton {
   @apply animate-pulse bg-stone-200 rounded;
 }
+
+/* European stars slow rotation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 120s linear infinite;
+}
