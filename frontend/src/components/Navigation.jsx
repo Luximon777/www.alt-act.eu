@@ -18,13 +18,29 @@ function Navigation() {
 
   const scrollToSection = (e, href) => {
     e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
+    setIsMobileMenuOpen(false);
+    
+    const scrollToElement = () => {
+      const element = document.querySelector(href);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
+    };
+
+    // Check if we're on the homepage
+    const isHomePage = window.location.hash === '' || window.location.hash === '#/' || window.location.hash === '#';
+    
+    if (isHomePage) {
+      // Already on homepage, just scroll
+      scrollToElement();
+    } else {
+      // Navigate to homepage first, then scroll
+      navigate('/');
+      // Wait for navigation and DOM update
+      setTimeout(scrollToElement, 100);
     }
   };
 
