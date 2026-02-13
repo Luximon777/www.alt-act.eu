@@ -78,9 +78,30 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-8 animate-fade-in">
-          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-          <span className="text-white text-sm font-medium">Association d'intérêt général</span>
+        <div className="flex flex-wrap gap-3 justify-center mb-8 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+            <span className="text-white text-sm font-medium">Association d'intérêt général</span>
+          </div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#003399]/30 to-[#FFD700]/20 backdrop-blur-sm rounded-full border border-[#FFD700]/30">
+            <svg viewBox="0 0 100 100" className="w-5 h-5">
+              {Array.from({ length: 12 }, (_, i) => {
+                const angle = (i * 30 - 90) * (Math.PI / 180);
+                const radius = 38;
+                const x = 50 + radius * Math.cos(angle);
+                const y = 50 + radius * Math.sin(angle);
+                return (
+                  <g key={i} transform={`translate(${x}, ${y})`}>
+                    <polygon
+                      points="0,-6 1.8,-1.8 6,-1.8 3,1.2 4.5,6 0,3 -4.5,6 -3,1.2 -6,-1.8 -1.8,-1.8"
+                      fill="#FFD700"
+                    />
+                  </g>
+                );
+              })}
+            </svg>
+            <span className="text-white text-sm font-medium">Vocation européenne</span>
+          </div>
         </div>
 
         {/* Logo/Title */}
