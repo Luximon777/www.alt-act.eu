@@ -263,24 +263,23 @@ function Navigation() {
               <Users className="w-5 h-5 text-indigo-600" /><span className="font-medium">Gouvernance consultative</span>
             </a>
             
+            <p className="text-xs text-gray-400 uppercase tracking-wider mt-4 mb-2">Vos accès</p>
+            <a href="/conseils-accompagnement" onClick={(e) => goToPage(e, '/conseils-accompagnement')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-teal-50 transition-colors">
+              <Building className="w-5 h-5 text-teal-600" /><span className="font-medium">Espace Employeurs</span>
+            </a>
+            <a href="/espace-personnel" onClick={(e) => goToPage(e, '/espace-personnel')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
+              <User className="w-5 h-5 text-[#0b2a55]" /><span className="font-medium">Espace Personnel</span>
+            </a>
+            <a href="/espace-ubuntoo" onClick={(e) => goToPage(e, '/espace-ubuntoo')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0F4C5C]/10 transition-colors">
+              <Users className="w-5 h-5 text-[#0F4C5C]" /><span className="font-medium">Espace Ubuntoo</span>
+            </a>
+            
             <p className="text-xs text-gray-400 uppercase tracking-wider mt-4 mb-2">Contact</p>
             <a href="/contact" onClick={(e) => goToPage(e, '/contact')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
               <Mail className="w-5 h-5 text-[#0b2a55]" /><span className="font-medium">Contact</span>
             </a>
             <a href="/devenir-membre" onClick={(e) => goToPage(e, '/devenir-membre')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
               <UserPlus className="w-5 h-5 text-green-600" /><span className="font-medium">Devenir membre</span>
-            </a>
-            
-            <div className="border-t border-gray-100 my-3"></div>
-            
-            <a href="/conseils-accompagnement" onClick={(e) => goToPage(e, '/conseils-accompagnement')} className="flex items-center justify-center gap-2 bg-teal-600 text-white py-3 px-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
-              <Building className="w-5 h-5" />Espace Employeurs
-            </a>
-            <a href="/espace-personnel" onClick={(e) => goToPage(e, '/espace-personnel')} className="flex items-center justify-center gap-2 bg-[#0b2a55] text-white py-3 px-3 rounded-lg font-semibold hover:bg-[#1a4280] transition-colors">
-              <User className="w-5 h-5" />Espace Personnel
-            </a>
-            <a href="/espace-ubuntoo" onClick={(e) => goToPage(e, '/espace-ubuntoo')} className="flex items-center justify-center gap-2 bg-[#0F4C5C] text-white py-3 px-3 rounded-lg font-semibold hover:bg-[#0A3844] transition-colors">
-              <Users className="w-5 h-5" />Espace Ubuntoo
             </a>
           </div>
         </div>
