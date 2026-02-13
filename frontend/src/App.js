@@ -72,6 +72,10 @@ function App() {
           {/* Legal Pages */}
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/confidentialite" element={<PolitiqueConfidentialite />} />
+          
+          {/* Contact Pages */}
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/devenir-membre" element={<DevenirMembrePage />} />
         </Routes>
         <Toaster />
       </div>

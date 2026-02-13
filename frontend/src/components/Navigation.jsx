@@ -170,13 +170,13 @@ function Navigation() {
                       <p className="text-white text-sm font-medium">Nous rejoindre</p>
                     </div>
                     <div className="p-2">
-                      <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 hover:text-[#0b2a55] transition-all duration-200 group/item" data-testid="contact-link">
+                      <a href="/contact" onClick={(e) => goToPage(e, '/contact')} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 hover:text-[#0b2a55] transition-all duration-200 group/item" data-testid="contact-link">
                         <div className="w-10 h-10 rounded-lg bg-[#0b2a55]/10 flex items-center justify-center group-hover/item:bg-[#0b2a55] transition-colors duration-200">
                           <Mail className="w-5 h-5 text-[#0b2a55] group-hover/item:text-white transition-colors duration-200" />
                         </div>
                         <div><p className="font-semibold">Contact</p><p className="text-xs text-gray-500">Nous écrire</p></div>
                       </a>
-                      <a href="#membre" onClick={(e) => scrollToSection(e, '#membre')} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 hover:text-[#0b2a55] transition-all duration-200 group/item" data-testid="devenir-membre-link">
+                      <a href="/devenir-membre" onClick={(e) => goToPage(e, '/devenir-membre')} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 hover:text-[#0b2a55] transition-all duration-200 group/item" data-testid="devenir-membre-link">
                         <div className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center group-hover/item:bg-green-500 transition-colors duration-200">
                           <UserPlus className="w-5 h-5 text-green-600 group-hover/item:text-white transition-colors duration-200" />
                         </div>
@@ -242,10 +242,10 @@ function Navigation() {
             </a>
             
             <p className="text-xs text-gray-400 uppercase tracking-wider mt-4 mb-2">Contact</p>
-            <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
+            <a href="/contact" onClick={(e) => goToPage(e, '/contact')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
               <Mail className="w-5 h-5 text-[#0b2a55]" /><span className="font-medium">Contact</span>
             </a>
-            <a href="#membre" onClick={(e) => scrollToSection(e, '#membre')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
+            <a href="/devenir-membre" onClick={(e) => goToPage(e, '/devenir-membre')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
               <UserPlus className="w-5 h-5 text-green-600" /><span className="font-medium">Devenir membre</span>
             </a>
             
