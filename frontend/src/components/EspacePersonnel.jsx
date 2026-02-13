@@ -33,7 +33,8 @@ const EspacePersonnel = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      <header className="relative bg-gradient-to-br from-orange-500 via-orange-600 to-amber-600 text-white py-20 overflow-hidden">
+      <Navigation />
+      <header className="relative bg-gradient-to-br from-orange-500 via-orange-600 to-amber-600 text-white pt-28 pb-20 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=srgb&fm=jpg&w=1200" alt="" className="w-full h-full object-cover" />
         </div>
