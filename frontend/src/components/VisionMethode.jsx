@@ -58,8 +58,9 @@ function VisionMethode() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Navigation />
       {/* Header avec image de fond */}
-      <header className="relative bg-gradient-to-br from-[#0b2a55] to-[#1a4280] text-white py-20">
+      <header className="relative bg-gradient-to-br from-[#0b2a55] to-[#1a4280] text-white pt-28 pb-20">
         <div className="absolute inset-0 opacity-20">
           <img 
             src="https://images.unsplash.com/photo-1758873268631-fa944fc5cad2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwyfHx0ZWFtd29yayUyMGNvbGxhYm9yYXRpb24lMjBkaXZlcnNlJTIwcGVvcGxlfGVufDB8fHx8MTc3MDQ2MzkyNXww&ixlib=rb-4.1.0&q=85" 

@@ -77,7 +77,8 @@ const CharteEthique = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="relative text-white py-20 overflow-hidden">
+      <Navigation />
+      <header className="relative text-white pt-28 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?crop=entropy&cs=srgb&fm=jpg&w=1920')" }}></div>
         <div className="absolute inset-0 bg-[#0b2a55]/70"></div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
