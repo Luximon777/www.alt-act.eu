@@ -60,7 +60,8 @@ function MotPresident() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="relative text-white py-20 overflow-hidden">
+      <Navigation />
+      <header className="relative text-white pt-28 pb-20 overflow-hidden">
         {/* Image de fond - Unité multiculturelle */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
