@@ -18,6 +18,8 @@ Fix navigation issues on the ALT&ACT website where "Contact" and "Devenir membre
   - Dispositifs innovants
   - Nouveaux modèles organisationnels
   - Ambition européenne
+- **Added inclusive illustrations**: 3 custom-generated illustrations showing diversity (persons with disabilities, women wearing hijab, multicultural teams)
+- **Added scroll animations**: Fade-in and slide-up animations on scroll using IntersectionObserver
 
 ## Current Architecture
 
