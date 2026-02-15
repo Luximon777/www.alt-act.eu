@@ -73,8 +73,8 @@ const PresentationSection = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="relative rounded-2xl overflow-hidden h-64 md:h-80 group bg-slate-50">
               <img 
-                src="https://static.prod-images.emergentagent.com/jobs/dfa0c8ea-6b8b-46d6-8cd8-613d66fc4292/images/174bc048521c17e63788c33cea49dde8a878ab95e91e29e8ced796a7e725545a.png"
-                alt="Illustration accompagnement personnalisé - équipe inclusive"
+                src="https://static.prod-images.emergentagent.com/jobs/dfa0c8ea-6b8b-46d6-8cd8-613d66fc4292/images/5191d4a4f2f5f2b84222d130da6a067ccb5390ee06c3e51df641d7f56b3179cc.png"
+                alt="Illustration accompagnement personnalisé - équipe inclusive diversifiée"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/80 via-transparent to-transparent"></div>
@@ -84,8 +84,8 @@ const PresentationSection = () => {
             </div>
             <div className="relative rounded-2xl overflow-hidden h-64 md:h-80 group bg-slate-50">
               <img 
-                src="https://static.prod-images.emergentagent.com/jobs/dfa0c8ea-6b8b-46d6-8cd8-613d66fc4292/images/6e90c63c573341c764f30fe5dd0aeeba74177fa14e0190aaaebe5026aeffdbc2.png"
-                alt="Illustration intégration professionnelle - réunion inclusive"
+                src="https://static.prod-images.emergentagent.com/jobs/dfa0c8ea-6b8b-46d6-8cd8-613d66fc4292/images/354762f0e5b714f665226c07b00e9f9434a5dab47d12c57544b1e6ce4bf576e9.png"
+                alt="Illustration intégration professionnelle - réunion inclusive multiculturelle"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/80 via-transparent to-transparent"></div>
@@ -95,8 +95,8 @@ const PresentationSection = () => {
             </div>
             <div className="relative rounded-2xl overflow-hidden h-64 md:h-80 group bg-slate-50">
               <img 
-                src="https://static.prod-images.emergentagent.com/jobs/dfa0c8ea-6b8b-46d6-8cd8-613d66fc4292/images/5292710826cc75a116347187f7c6a56e521c5960f1208e8799c52f9a4bcd596a.png"
-                alt="Illustration travail collaboratif inclusif - diversité au travail"
+                src="https://static.prod-images.emergentagent.com/jobs/dfa0c8ea-6b8b-46d6-8cd8-613d66fc4292/images/9ea8af81bbe4bdc3b0a31d0331711203f48b96c8dc1c935688dcf0375133b58b.png"
+                alt="Illustration travail collaboratif inclusif - diversité et handicap"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/80 via-transparent to-transparent"></div>
