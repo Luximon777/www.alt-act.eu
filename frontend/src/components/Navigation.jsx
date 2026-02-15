@@ -309,6 +309,17 @@ function Navigation() {
               <Users className="w-5 h-5 text-[#0F4C5C]" /><span className="font-medium">Espace Ubuntoo</span>
             </a>
             
+            <p className="text-xs text-gray-400 uppercase tracking-wider mt-4 mb-2">RE'ACTIF PRO</p>
+            <a href="/reactif-pro/presentation" onClick={(e) => goToPage(e, '/reactif-pro/presentation')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
+              <Lightbulb className="w-5 h-5 text-[#0b2a55]" /><span className="font-medium">Présentation</span>
+            </a>
+            <a href="/reactif-pro/mission" onClick={(e) => goToPage(e, '/reactif-pro/mission')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-amber-50 transition-colors">
+              <Target className="w-5 h-5 text-amber-600" /><span className="font-medium">Mission</span>
+            </a>
+            <a href="/reactif-pro/actions" onClick={(e) => goToPage(e, '/reactif-pro/actions')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-teal-50 transition-colors">
+              <Zap className="w-5 h-5 text-teal-600" /><span className="font-medium">Actions</span>
+            </a>
+            
             <p className="text-xs text-gray-400 uppercase tracking-wider mt-4 mb-2">Contact</p>
             <a href="/contact" onClick={(e) => goToPage(e, '/contact')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
               <Mail className="w-5 h-5 text-[#0b2a55]" /><span className="font-medium">Contact</span>
