@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Users, Globe, Eye } from 'lucide-react';
+import { Heart, Users, Globe, Eye, Lightbulb, Target, Sparkles, Building2 } from 'lucide-react';
 
 const PresentationSection = () => {
   return (
@@ -17,6 +17,73 @@ const PresentationSection = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             ALT&ACT est une association d'intérêt général qui œuvre pour une société où chaque personne peut révéler son potentiel et contribuer pleinement à la collectivité.
           </p>
+        </div>
+
+        {/* ALT&ACT Laboratoire d'innovation - Nouveau contenu */}
+        <div className="mb-20 bg-gradient-to-br from-slate-50 to-blue-50 rounded-3xl p-8 md:p-12 border border-slate-200">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 rounded-full mb-4">
+              <Lightbulb className="w-4 h-4 text-amber-600" />
+              <span className="text-amber-700 text-sm font-semibold">LABORATOIRE D'INNOVATION</span>
+            </div>
+            <h3 className="text-2xl md:text-3xl font-bold text-[#0b2a55] mb-4">
+              ALT&ACT — Laboratoire d'innovation sociale et technologique fondé sur l'éthique et les valeurs humanistes
+            </h3>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Bloc 1: Fondation et valeurs */}
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-[#0b2a55] rounded-lg flex items-center justify-center">
+                  <Heart className="w-5 h-5 text-white" />
+                </div>
+                <h4 className="text-lg font-bold text-gray-900">Fondation et valeurs</h4>
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                ALT&ACT est un laboratoire d'innovation sociale et technologique fondé sur des valeurs humanistes universelles, affirmant la dignité intrinsèque de chaque personne, le sens du service envers la société et la nécessité de dépasser les préjugés ainsi que toute forme de discrimination. L'association inscrit son action dans une vision du travail considérée comme un espace de contribution, de responsabilité et de développement mutuel, au service à la fois des individus et du progrès collectif.
+              </p>
+            </div>
+
+            {/* Bloc 2: Dispositifs innovants */}
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-teal-500 rounded-lg flex items-center justify-center">
+                  <Target className="w-5 h-5 text-white" />
+                </div>
+                <h4 className="text-lg font-bold text-gray-900">Dispositifs innovants</h4>
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                Dans ce cadre, ALT&ACT conçoit, expérimente et déploie des dispositifs innovants visant à accompagner les transformations structurelles du travail et des organisations. Ces dispositifs reposent sur des principes éthiques exigeants, garantissant le respect des personnes, la transparence des pratiques, la responsabilité des acteurs et la recherche d'un équilibre durable entre performance, justice sociale et bien-être.
+              </p>
+            </div>
+
+            {/* Bloc 3: Nouveaux modèles organisationnels */}
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center">
+                  <Sparkles className="w-5 h-5 text-white" />
+                </div>
+                <h4 className="text-lg font-bold text-gray-900">Nouveaux modèles organisationnels</h4>
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                En articulant innovation sociale, innovation technologique et responsabilité éthique, ALT&ACT contribue à faire émerger de nouveaux modèles organisationnels capables de répondre aux mutations contemporaines du travail. Son approche vise à renforcer la capacité des organisations à évoluer vers des pratiques plus équitables, plus inclusives et plus respectueuses du potentiel humain.
+              </p>
+            </div>
+
+            {/* Bloc 4: Ambition européenne */}
+            <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center">
+                  <Building2 className="w-5 h-5 text-white" />
+                </div>
+                <h4 className="text-lg font-bold text-gray-900">Ambition européenne</h4>
+              </div>
+              <p className="text-gray-600 leading-relaxed">
+                À travers son action, ALT&ACT aspire à devenir une référence à l'échelle européenne dans l'accompagnement éthique des transformations organisationnelles, en soutenant l'émergence d'écosystèmes professionnels fondés sur la confiance, la responsabilité partagée et la contribution au bien commun.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Values Grid */}
