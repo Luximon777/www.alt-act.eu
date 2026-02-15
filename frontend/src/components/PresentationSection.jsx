@@ -29,8 +29,8 @@ const PresentationSection = () => {
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1758519290800-a824cc6dd2ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHw0fHxlbXBvd2VybWVudCUyMHByb2Zlc3Npb25hbCUyMGdyb3d0aCUyMGNvbmZpZGVuY2UlMjB3b3JrcGxhY2V8ZW58MHx8fHwxNzcxMTQ4OTU5fDA&ixlib=rb-4.1.0&q=85"
-                  alt="Personne célébrant sa réussite professionnelle"
+                  src="https://images.unsplash.com/photo-1573497701240-345a300b8d36?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwY293b3JrZXJzJTIwZGlzY3Vzc2lvbiUyMG1lZXRpbmclMjBtdWx0aWN1bHR1cmFsfGVufDB8fHx8MTc3MTE0Nzc3MXww&ixlib=rb-4.1.0&q=85"
+                  alt="Réunion professionnelle avec des personnes diverses en discussion"
                   className="w-full h-80 md:h-[420px] object-cover"
                 />
               </div>
