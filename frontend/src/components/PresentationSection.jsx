@@ -105,39 +105,28 @@ const PresentationSection = () => {
               </div>
             </div>
 
-            {/* Images */}
+            {/* Illustrations inclusives */}
             <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1624555130296-e551faf8969b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHw0fHxkaXZlcnNlJTIwdGVhbSUyMG1lZXRpbmclMjBjb2xsYWJvcmF0aW9uJTIwb2ZmaWNlJTIwcHJvZmVzc2lvbmFsc3xlbnwwfHx8fDE3NzExNDY5MTN8MA&ixlib=rb-4.1.0&q=85"
-                    alt="Équipe diverse en réunion"
-                    className="w-full h-48 object-cover"
-                  />
-                </div>
-                <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1630068846062-3ffe78aa5049?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwaGFuZHMlMjB1bml0eSUyMHRlYW13b3JrJTIwc29saWRhcml0eXxlbnwwfHx8fDE3NzExNDY5MDJ8MA&ixlib=rb-4.1.0&q=85"
-                    alt="Mains unies en cercle"
-                    className="w-full h-32 object-cover"
-                  />
-                </div>
+              <div className="col-span-2 rounded-2xl overflow-hidden shadow-lg bg-slate-50">
+                <img 
+                  src="https://static.prod-images.emergentagent.com/jobs/dfa0c8ea-6b8b-46d6-8cd8-613d66fc4292/images/09d3b7260095f365cd7a7afa031cc8110ffcc3a25250bcfb15e51a9a676a0ad0.png"
+                  alt="Illustration réunion inclusive avec personne voilée et personne en fauteuil roulant"
+                  className="w-full h-52 object-cover"
+                />
               </div>
-              <div className="space-y-4 pt-8">
-                <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1622675363311-3e1904dc1885?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwdGVhbSUyMG1lZXRpbmclMjBjb2xsYWJvcmF0aW9uJTIwb2ZmaWNlJTIwcHJvZmVzc2lvbmFsc3xlbnwwfHx8fDE3NzExNDY5MTN8MA&ixlib=rb-4.1.0&q=85"
-                    alt="Collaboration professionnelle"
-                    className="w-full h-32 object-cover"
-                  />
-                </div>
-                <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1758518731468-98e90ffd7430?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwdGVhbSUyMG1lZXRpbmclMjBjb2xsYWJvcmF0aW9uJTIwb2ZmaWNlJTIwcHJvZmVzc2lvbmFsc3xlbnwwfHx8fDE3NzExNDY5MTN8MA&ixlib=rb-4.1.0&q=85"
-                    alt="Professionnels divers"
-                    className="w-full h-48 object-cover"
-                  />
-                </div>
+              <div className="rounded-2xl overflow-hidden shadow-lg bg-slate-50">
+                <img 
+                  src="https://static.prod-images.emergentagent.com/jobs/dfa0c8ea-6b8b-46d6-8cd8-613d66fc4292/images/d0a5acedd3394ff9995c02d3326320fe6c6b712bddb48a7807306e1483d912a6.png"
+                  alt="Illustration équipe diverse au travail"
+                  className="w-full h-40 object-cover"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1655720359248-eeace8c709c5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwaGFuZHMlMjB1bml0eSUyMHRlYW13b3JrJTIwc29saWRhcml0eXxlbnwwfHx8fDE3NzExNDY5MDJ8MA&ixlib=rb-4.1.0&q=85"
+                  alt="Mains unies solidarité"
+                  className="w-full h-40 object-cover"
+                />
               </div>
             </div>
           </div>
