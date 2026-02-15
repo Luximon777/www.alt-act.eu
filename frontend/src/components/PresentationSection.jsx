@@ -138,8 +138,8 @@ const PresentationSection = () => {
               </div>
               <div className="rounded-2xl overflow-hidden mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1739298061766-e2751d92e9db?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwxfHxwZW9wbGUlMjBjb2xsYWJvcmF0aW9uJTIwYWNoaWV2ZW1lbnQlMjBzdWNjZXNzJTIwdGVhbXdvcmt8ZW58MHx8fHwxNzcxMTQ4OTYwfDA&ixlib=rb-4.1.0&q=85"
-                  alt="Équipe célébrant ensemble un succès"
+                  src="https://images.unsplash.com/photo-1758691737543-09a1b2b715fa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxjb3dvcmtlcnMlMjB0ZWFtd29yayUyMGRpc2N1c3Npb24lMjBtb2Rlcm4lMjBvZmZpY2UlMjBkaXZlcnNlfGVufDB8fHx8MTc3MTE1MDM2NXww&ixlib=rb-4.1.0&q=85"
+                  alt="Équipe diverse en discussion dans un bureau moderne"
                   className="w-full h-48 object-cover"
                 />
               </div>
