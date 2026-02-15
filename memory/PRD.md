@@ -46,18 +46,21 @@ Fix navigation issues on the ALT&ACT website where "Contact" and "Devenir membre
 
 ## Key Routes
 - `/` - Homepage
-- `/contact` - Contact page (NEW)
-- `/devenir-membre` - Membership page (NEW)
+- `/contact` - Contact page
+- `/devenir-membre` - Membership page
 - `/notre-mission`, `/notre-ambition`, `/notre-action` - Mission pages
 - `/vision-methode`, `/mot-president`, `/membres` - Presentation pages
 - `/charte-ethique`, `/gouvernance-consultative` - Ethics pages
 - `/conseils-accompagnement`, `/espace-personnel`, `/espace-ubuntoo` - Spaces
+- `/reactif-pro/presentation`, `/reactif-pro/mission`, `/reactif-pro/actions` - RE'ACTIF PRO section
 
 ## P0 - Completed
 - [x] Contact and Devenir membre as dedicated pages
 - [x] Header images on new pages
 - [x] Navigation updated to route to pages
 - [x] Logo fixed with PUBLIC_URL
+- [x] Homepage photos updated (no illustrations, diverse team photos)
+- [x] RE'ACTIF PRO section created with 3 pages
 
 ## P1 - Pending
 - [ ] Logo Ubuntoo - rename file to remove space (`logo ubuntoo.png` → `logo-ubuntoo.png`)
