@@ -1,237 +1,197 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Heart, Users, Globe, Eye, Lightbulb, Target, Sparkles, Building2 } from 'lucide-react';
-
-const useInView = (options = {}) => {
-  const ref = useRef(null);
-  const [isInView, setIsInView] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setIsInView(true);
-        observer.unobserve(entry.target);
-      }
-    }, { threshold: 0.1, ...options });
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  return [ref, isInView];
-};
-
-const AnimatedCard = ({ children, delay = 0, className = '' }) => {
-  const [ref, isInView] = useInView();
-  
-  return (
-    <div
-      ref={ref}
-      className={`transform transition-all duration-700 ease-out ${className} ${
-        isInView 
-          ? 'opacity-100 translate-y-0' 
-          : 'opacity-0 translate-y-8'
-      }`}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
-      {children}
-    </div>
-  );
-};
+import React from 'react';
+import { Heart, Users, Globe, Eye, Shield, Sparkles, HandHeart, Scale } from 'lucide-react';
 
 const PresentationSection = () => {
-  const [headerRef, headerInView] = useInView();
-  const [labRef, labInView] = useInView();
-  const [quoteRef, quoteInView] = useInView();
-
   return (
     <section id="presentation" className="py-24 bg-white" data-testid="presentation-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* Section Header */}
-        <div 
-          ref={headerRef}
-          className={`text-center mb-16 transform transition-all duration-700 ease-out ${
-            headerInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
+        <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0b2a55]/10 rounded-full mb-4">
             <Eye className="w-4 h-4 text-[#0b2a55]" />
-            <span className="text-[#0b2a55] text-sm font-semibold">QUI SOMMES-NOUS</span>
+            <span className="text-[#0b2a55] text-sm font-semibold">NOTRE ENGAGEMENT</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             L'insertion sans barrières
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            ALT&ACT est une association d'intérêt général qui œuvre pour une société où chaque personne peut révéler son potentiel et contribuer pleinement à la collectivité.
+            ALT&ACT accompagne, conseille et oriente les citoyens dans un monde du travail 
+            en pleine mutation, où l'éthique doit reprendre sa place.
           </p>
         </div>
 
-        {/* Section Illustrations - Inclusion et Diversité */}
-        <AnimatedCard delay={100} className="mb-16">
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="relative rounded-2xl overflow-hidden h-64 md:h-80 group bg-slate-50">
-              <img 
-                src="https://static.prod-images.emergentagent.com/jobs/dfa0c8ea-6b8b-46d6-8cd8-613d66fc4292/images/5191d4a4f2f5f2b84222d130da6a067ccb5390ee06c3e51df641d7f56b3179cc.png"
-                alt="Illustration accompagnement personnalisé - équipe inclusive diversifiée"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/80 via-transparent to-transparent"></div>
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <p className="font-semibold text-lg">Accompagnement personnalisé</p>
+        {/* Hero Image + Message Principal */}
+        <div className="mb-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Image des mains entrelacées */}
+            <div className="relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1655720359248-eeace8c709c5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwaGFuZHMlMjB1bml0eSUyMHRlYW13b3JrJTIwc29saWRhcml0eXxlbnwwfHx8fDE3NzExNDY5MDJ8MA&ixlib=rb-4.1.0&q=85"
+                  alt="Mains diverses unies en solidarité"
+                  className="w-full h-80 md:h-96 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/60 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <p className="text-white text-lg font-semibold">La diversité comme force d'unité</p>
+                </div>
+              </div>
+              {/* Badge flottant */}
+              <div className="absolute -bottom-6 -right-6 bg-amber-500 text-white p-4 rounded-2xl shadow-xl hidden md:block">
+                <HandHeart className="w-8 h-8" />
               </div>
             </div>
-            <div className="relative rounded-2xl overflow-hidden h-64 md:h-80 group bg-slate-50">
-              <img 
-                src="https://static.prod-images.emergentagent.com/jobs/dfa0c8ea-6b8b-46d6-8cd8-613d66fc4292/images/354762f0e5b714f665226c07b00e9f9434a5dab47d12c57544b1e6ce4bf576e9.png"
-                alt="Illustration intégration professionnelle - réunion inclusive multiculturelle"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/80 via-transparent to-transparent"></div>
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <p className="font-semibold text-lg">Intégration professionnelle</p>
-              </div>
-            </div>
-            <div className="relative rounded-2xl overflow-hidden h-64 md:h-80 group bg-slate-50">
-              <img 
-                src="https://static.prod-images.emergentagent.com/jobs/dfa0c8ea-6b8b-46d6-8cd8-613d66fc4292/images/9ea8af81bbe4bdc3b0a31d0331711203f48b96c8dc1c935688dcf0375133b58b.png"
-                alt="Illustration travail collaboratif inclusif - diversité et handicap"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/80 via-transparent to-transparent"></div>
-              <div className="absolute bottom-4 left-4 right-4 text-white">
-                <p className="font-semibold text-lg">Travail collaboratif inclusif</p>
+
+            {/* Message Principal */}
+            <div className="space-y-6">
+              <h3 className="text-3xl font-bold text-gray-900">
+                Un changement de paradigme nécessaire
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Le monde du travail exige aujourd'hui une transformation profonde. 
+                Face aux mutations économiques et sociales, <strong className="text-[#0b2a55]">l'éthique 
+                doit reprendre sa place</strong> au cœur des pratiques professionnelles.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                ALT&ACT s'engage à <strong className="text-teal-600">soutenir, conseiller, orienter 
+                et faciliter</strong> le parcours de chaque citoyen vers une insertion 
+                professionnelle épanouissante et durable.
+              </p>
+              <div className="flex flex-wrap gap-3 pt-4">
+                <span className="px-4 py-2 bg-[#0b2a55]/10 text-[#0b2a55] rounded-full text-sm font-medium">Accompagnement</span>
+                <span className="px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-medium">Orientation</span>
+                <span className="px-4 py-2 bg-amber-100 text-amber-700 rounded-full text-sm font-medium">Conseil</span>
               </div>
             </div>
           </div>
-        </AnimatedCard>
+        </div>
 
-        {/* ALT&ACT Laboratoire d'innovation - Nouveau contenu */}
-        <div 
-          ref={labRef}
-          className={`mb-20 bg-gradient-to-br from-slate-50 to-blue-50 rounded-3xl p-8 md:p-12 border border-slate-200 transform transition-all duration-700 ease-out ${
-            labInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 rounded-full mb-4">
-              <Lightbulb className="w-4 h-4 text-amber-600" />
-              <span className="text-amber-700 text-sm font-semibold">LABORATOIRE D'INNOVATION</span>
+        {/* Section Diversité & Anti-discrimination */}
+        <div className="mb-20 bg-gradient-to-br from-slate-50 to-blue-50 rounded-3xl p-8 md:p-12 border border-slate-200">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Texte */}
+            <div className="order-2 lg:order-1">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 rounded-full mb-6">
+                <Shield className="w-4 h-4 text-purple-600" />
+                <span className="text-purple-700 text-sm font-semibold">NOS CONVICTIONS</span>
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                Combattre les discriminations, célébrer la diversité
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                Nous luttons contre <strong className="text-gray-900">toutes les formes de discrimination</strong>. 
+                La diversité des origines et des cultures n'est pas un obstacle, 
+                c'est un <strong className="text-purple-600">enrichissement</strong> et un 
+                <strong className="text-purple-600"> facteur d'unité</strong>.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                  <Scale className="w-6 h-6 text-[#0b2a55]" />
+                  <span className="font-medium text-gray-800">Équité</span>
+                </div>
+                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                  <Users className="w-6 h-6 text-teal-500" />
+                  <span className="font-medium text-gray-800">Inclusion</span>
+                </div>
+                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                  <Heart className="w-6 h-6 text-rose-500" />
+                  <span className="font-medium text-gray-800">Respect</span>
+                </div>
+                <div className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm">
+                  <Sparkles className="w-6 h-6 text-amber-500" />
+                  <span className="font-medium text-gray-800">Reconnaissance</span>
+                </div>
+              </div>
             </div>
-            <h3 className="text-2xl md:text-3xl font-bold text-[#0b2a55] mb-4">
-              ALT&ACT — Laboratoire d'innovation sociale et technologique fondé sur l'éthique et les valeurs humanistes
-            </h3>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Bloc 1: Fondation et valeurs */}
-            <AnimatedCard delay={100} className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-[#0b2a55] rounded-lg flex items-center justify-center">
-                  <Heart className="w-5 h-5 text-white" />
+            {/* Images */}
+            <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <div className="rounded-2xl overflow-hidden shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1624555130296-e551faf8969b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHw0fHxkaXZlcnNlJTIwdGVhbSUyMG1lZXRpbmclMjBjb2xsYWJvcmF0aW9uJTIwb2ZmaWNlJTIwcHJvZmVzc2lvbmFsc3xlbnwwfHx8fDE3NzExNDY5MTN8MA&ixlib=rb-4.1.0&q=85"
+                    alt="Équipe diverse en réunion"
+                    className="w-full h-48 object-cover"
+                  />
                 </div>
-                <h4 className="text-lg font-bold text-gray-900">Fondation et valeurs</h4>
-              </div>
-              <p className="text-gray-600 leading-relaxed">
-                ALT&ACT est un laboratoire d'innovation sociale et technologique fondé sur des valeurs humanistes universelles, affirmant la dignité intrinsèque de chaque personne, le sens du service envers la société et la nécessité de dépasser les préjugés ainsi que toute forme de discrimination. L'association inscrit son action dans une vision du travail considérée comme un espace de contribution, de responsabilité et de développement mutuel, au service à la fois des individus et du progrès collectif.
-              </p>
-            </AnimatedCard>
-
-            {/* Bloc 2: Dispositifs innovants */}
-            <AnimatedCard delay={200} className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-teal-500 rounded-lg flex items-center justify-center">
-                  <Target className="w-5 h-5 text-white" />
+                <div className="rounded-2xl overflow-hidden shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1630068846062-3ffe78aa5049?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwaGFuZHMlMjB1bml0eSUyMHRlYW13b3JrJTIwc29saWRhcml0eXxlbnwwfHx8fDE3NzExNDY5MDJ8MA&ixlib=rb-4.1.0&q=85"
+                    alt="Mains unies en cercle"
+                    className="w-full h-32 object-cover"
+                  />
                 </div>
-                <h4 className="text-lg font-bold text-gray-900">Dispositifs innovants</h4>
               </div>
-              <p className="text-gray-600 leading-relaxed">
-                Dans ce cadre, ALT&ACT conçoit, expérimente et déploie des dispositifs innovants visant à accompagner les transformations structurelles du travail et des organisations. Ces dispositifs reposent sur des principes éthiques exigeants, garantissant le respect des personnes, la transparence des pratiques, la responsabilité des acteurs et la recherche d'un équilibre durable entre performance, justice sociale et bien-être.
-              </p>
-            </AnimatedCard>
-
-            {/* Bloc 3: Nouveaux modèles organisationnels */}
-            <AnimatedCard delay={300} className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center">
-                  <Sparkles className="w-5 h-5 text-white" />
+              <div className="space-y-4 pt-8">
+                <div className="rounded-2xl overflow-hidden shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1622675363311-3e1904dc1885?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwdGVhbSUyMG1lZXRpbmclMjBjb2xsYWJvcmF0aW9uJTIwb2ZmaWNlJTIwcHJvZmVzc2lvbmFsc3xlbnwwfHx8fDE3NzExNDY5MTN8MA&ixlib=rb-4.1.0&q=85"
+                    alt="Collaboration professionnelle"
+                    className="w-full h-32 object-cover"
+                  />
                 </div>
-                <h4 className="text-lg font-bold text-gray-900">Nouveaux modèles organisationnels</h4>
-              </div>
-              <p className="text-gray-600 leading-relaxed">
-                En articulant innovation sociale, innovation technologique et responsabilité éthique, ALT&ACT contribue à faire émerger de nouveaux modèles organisationnels capables de répondre aux mutations contemporaines du travail. Son approche vise à renforcer la capacité des organisations à évoluer vers des pratiques plus équitables, plus inclusives et plus respectueuses du potentiel humain.
-              </p>
-            </AnimatedCard>
-
-            {/* Bloc 4: Ambition européenne */}
-            <AnimatedCard delay={400} className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center">
-                  <Building2 className="w-5 h-5 text-white" />
+                <div className="rounded-2xl overflow-hidden shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1758518731468-98e90ffd7430?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwdGVhbSUyMG1lZXRpbmclMjBjb2xsYWJvcmF0aW9uJTIwb2ZmaWNlJTIwcHJvZmVzc2lvbmFsc3xlbnwwfHx8fDE3NzExNDY5MTN8MA&ixlib=rb-4.1.0&q=85"
+                    alt="Professionnels divers"
+                    className="w-full h-48 object-cover"
+                  />
                 </div>
-                <h4 className="text-lg font-bold text-gray-900">Ambition européenne</h4>
               </div>
-              <p className="text-gray-600 leading-relaxed">
-                À travers son action, ALT&ACT aspire à devenir une référence à l'échelle européenne dans l'accompagnement éthique des transformations organisationnelles, en soutenant l'émergence d'écosystèmes professionnels fondés sur la confiance, la responsabilité partagée et la contribution au bien commun.
-              </p>
-            </AnimatedCard>
+            </div>
           </div>
         </div>
 
         {/* Values Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <AnimatedCard delay={100} className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border border-amber-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 border border-amber-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <div className="w-14 h-14 bg-amber-500 rounded-xl flex items-center justify-center mb-6">
               <Heart className="w-7 h-7 text-white" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Humanisme</h3>
             <p className="text-gray-600">
-              Nous plaçons l'humain au cœur de chaque action, reconnaissant la dignité et le potentiel de chaque personne.
+              L'humain au cœur de chaque action, reconnaissant la dignité et le potentiel de chaque personne.
             </p>
-          </AnimatedCard>
+          </div>
 
-          <AnimatedCard delay={200} className="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-8 border border-teal-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div className="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl p-8 border border-teal-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <div className="w-14 h-14 bg-teal-500 rounded-xl flex items-center justify-center mb-6">
               <Users className="w-7 h-7 text-white" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Inclusion</h3>
             <p className="text-gray-600">
-              Nous croyons en une société où chacun trouve sa place, quels que soient son parcours et ses singularités.
+              Une société où chacun trouve sa place, quels que soient son parcours et ses singularités.
             </p>
-          </AnimatedCard>
+          </div>
 
-          <AnimatedCard delay={300} className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <div className="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mb-6">
               <Globe className="w-7 h-7 text-white" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Impact</h3>
             <p className="text-gray-600">
-              Nous agissons pour des transformations durables, mesurables et porteuses de sens pour les individus et la société.
+              Des transformations durables, mesurables et porteuses de sens pour les individus et la société.
             </p>
-          </AnimatedCard>
+          </div>
 
-          <AnimatedCard delay={400} className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <div className="w-14 h-14 bg-purple-500 rounded-xl flex items-center justify-center mb-6">
               <Eye className="w-7 h-7 text-white" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Éthique</h3>
             <p className="text-gray-600">
-              Nous faisons de l'intégrité et de la transparence les piliers de notre action et de nos partenariats.
+              L'intégrité et la transparence comme piliers de notre action et de nos partenariats.
             </p>
-          </AnimatedCard>
+          </div>
         </div>
 
         {/* Bottom Quote */}
-        <div 
-          ref={quoteRef}
-          className={`mt-16 text-center transform transition-all duration-700 ease-out ${
-            quoteInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-          }`}
-        >
+        <div className="text-center">
           <div className="bg-gradient-to-r from-[#0b2a55] to-[#1a4280] rounded-3xl p-8 md:p-12 text-white max-w-4xl mx-auto">
             <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-4 italic">
-              "Notre conviction : chaque personne porte en elle un potentiel de développement qui, lorsqu'il est reconnu et cultivé, devient une force pour l'ensemble de la collectivité."
+              "La diversité des origines et des cultures est notre richesse commune. 
+              Elle est facteur d'unité et d'enrichissement mutuel."
             </blockquote>
             <p className="text-blue-200 font-semibold">— ALT&ACT</p>
           </div>
