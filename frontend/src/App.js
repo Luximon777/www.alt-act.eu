@@ -29,6 +29,11 @@ import PolitiqueConfidentialite from "./components/PolitiqueConfidentialite";
 import ContactPage from "./components/ContactPage";
 import DevenirMembrePage from "./components/DevenirMembrePage";
 
+// RE'ACTIF PRO Pages
+import ReActifProPresentation from "./components/ReActifProPresentation";
+import ReActifProMission from "./components/ReActifProMission";
+import ReActifProActions from "./components/ReActifProActions";
+
 // Homepage Component
 function HomePage() {
   return (
