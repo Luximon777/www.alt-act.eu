@@ -24,12 +24,12 @@ const PresentationSection = () => {
         {/* Hero Image + Message Principal */}
         <div className="mb-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Illustration mains unies */}
+            {/* Photo équipe diverse */}
             <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-50">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://static.prod-images.emergentagent.com/jobs/dfa0c8ea-6b8b-46d6-8cd8-613d66fc4292/images/42fbc62eb823268274598046db31203c0defb2e4bad8bcd1a524bb5c3793907f.png"
-                  alt="Illustration mains diverses unies en solidarité"
+                  src="https://images.unsplash.com/photo-1758873268631-fa944fc5cad2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwdGVhbSUyMGNvbGxhYm9yYXRpb24lMjB3b3JrcGxhY2UlMjBpbmNsdXNpb258ZW58MHx8fHwxNzcxMTQ3NzYxfDA&ixlib=rb-4.1.0&q=85"
+                  alt="Équipe diverse et souriante dans un bureau moderne"
                   className="w-full h-80 md:h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/60 to-transparent"></div>
@@ -105,26 +105,26 @@ const PresentationSection = () => {
               </div>
             </div>
 
-            {/* Illustrations inclusives */}
+            {/* Photos inclusives - diversité et handicap */}
             <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
-              <div className="col-span-2 rounded-2xl overflow-hidden shadow-lg bg-slate-50">
+              <div className="col-span-2 rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://static.prod-images.emergentagent.com/jobs/dfa0c8ea-6b8b-46d6-8cd8-613d66fc4292/images/09d3b7260095f365cd7a7afa031cc8110ffcc3a25250bcfb15e51a9a676a0ad0.png"
-                  alt="Illustration réunion inclusive avec personne voilée et personne en fauteuil roulant"
+                  src="https://images.unsplash.com/photo-1573497701240-345a300b8d36?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwY293b3JrZXJzJTIwZGlzY3Vzc2lvbiUyMG1lZXRpbmclMjBtdWx0aWN1bHR1cmFsfGVufDB8fHx8MTc3MTE0Nzc3MXww&ixlib=rb-4.1.0&q=85"
+                  alt="Réunion d'équipe multiculturelle en entreprise"
                   className="w-full h-52 object-cover"
                 />
               </div>
-              <div className="rounded-2xl overflow-hidden shadow-lg bg-slate-50">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://static.prod-images.emergentagent.com/jobs/dfa0c8ea-6b8b-46d6-8cd8-613d66fc4292/images/d0a5acedd3394ff9995c02d3326320fe6c6b712bddb48a7807306e1483d912a6.png"
-                  alt="Illustration équipe diverse au travail"
+                  src="https://images.unsplash.com/photo-1581090122319-8fab9528eaaa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHx3aGVlbGNoYWlyJTIwcHJvZmVzc2lvbmFsJTIwd29ya3BsYWNlJTIwZGlzYWJpbGl0eSUyMGluY2x1c2lvbnxlbnwwfHx8fDE3NzExNDc3NjN8MA&ixlib=rb-4.1.0&q=85"
+                  alt="Professionnel en fauteuil roulant au travail"
                   className="w-full h-40 object-cover"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1655720359248-eeace8c709c5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwaGFuZHMlMjB1bml0eSUyMHRlYW13b3JrJTIwc29saWRhcml0eXxlbnwwfHx8fDE3NzExNDY5MDJ8MA&ixlib=rb-4.1.0&q=85"
-                  alt="Mains unies solidarité"
+                  src="https://images.unsplash.com/photo-1642929392581-e7abec90b81c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxtdXNsaW0lMjB3b21hbiUyMHByb2Zlc3Npb25hbCUyMG9mZmljZSUyMGhpamFiJTIwYnVzaW5lc3N8ZW58MHx8fHwxNzcxMTQ3NzcwfDA&ixlib=rb-4.1.0&q=85"
+                  alt="Femme voilée professionnelle souriante avec tablette"
                   className="w-full h-40 object-cover"
                 />
               </div>
