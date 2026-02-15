@@ -68,6 +68,45 @@ const PresentationSection = () => {
           </p>
         </div>
 
+        {/* Section Images - Inclusion et Diversité */}
+        <AnimatedCard delay={100} className="mb-16">
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="relative rounded-2xl overflow-hidden h-64 md:h-80 group">
+              <img 
+                src="https://images.unsplash.com/photo-1581090122319-8fab9528eaaa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxkaXNhYmlsaXR5JTIwaW5jbHVzaW9uJTIwd29ya3BsYWNlJTIwd2hlZWxjaGFpciUyMGRpdmVyc2UlMjB0ZWFtfGVufDB8fHx8MTc3MTE0MzE3OXww&ixlib=rb-4.1.0&q=85&w=800"
+                alt="Collaboration professionnelle inclusive"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/70 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <p className="font-semibold">Accompagnement personnalisé</p>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden h-64 md:h-80 group">
+              <img 
+                src="https://images.unsplash.com/photo-1581090123456-6405208b0264?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHx3aGVlbGNoYWlyJTIwcHJvZmVzc2lvbmFsJTIwb2ZmaWNlJTIwbWVldGluZyUyMGNvbGxlYWd1ZXMlMjB3b3JraW5nfGVufDB8fHx8MTc3MTE0MzE4NXww&ixlib=rb-4.1.0&q=85&w=800"
+                alt="Professionnel en situation de handicap au travail"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/70 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <p className="font-semibold">Intégration professionnelle</p>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden h-64 md:h-80 group">
+              <img 
+                src="https://images.unsplash.com/photo-1727857934741-93f20b9ffe71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHw0fHx3aGVlbGNoYWlyJTIwcHJvZmVzc2lvbmFsJTIwb2ZmaWNlJTIwbWVldGluZyUyMGNvbGxlYWd1ZXMlMjB3b3JraW5nfGVufDB8fHx8MTc3MTE0MzE4NXww&ixlib=rb-4.1.0&q=85&w=800"
+                alt="Équipe diverse en réunion"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/70 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <p className="font-semibold">Travail collaboratif inclusif</p>
+              </div>
+            </div>
+          </div>
+        </AnimatedCard>
+
         {/* ALT&ACT Laboratoire d'innovation - Nouveau contenu */}
         <div 
           ref={labRef}
