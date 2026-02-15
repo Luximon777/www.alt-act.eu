@@ -34,8 +34,12 @@ Fix navigation issues on the ALT&ACT website where "Contact" and "Devenir membre
 ├── App.js                    # Main routes configuration
 ├── components/
 │   ├── Navigation.jsx        # Main navigation with dropdowns
-│   ├── ContactPage.jsx       # NEW - Contact page with form
-│   ├── DevenirMembrePage.jsx # NEW - Membership page with form
+│   ├── ContactPage.jsx       # Contact page with form
+│   ├── DevenirMembrePage.jsx # Membership page with form
+│   ├── PresentationSection.jsx # Homepage - diversity section (photos only)
+│   ├── ReActifProPresentation.jsx # RE'ACTIF PRO landing
+│   ├── ReActifProMission.jsx # RE'ACTIF PRO mission
+│   ├── ReActifProActions.jsx # RE'ACTIF PRO actions
 │   ├── Footer.jsx
 │   └── ... (other pages)
 ```
