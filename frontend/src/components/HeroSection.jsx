@@ -111,7 +111,7 @@ const HeroSection = () => {
               <img 
                 src="https://customer-assets.emergentagent.com/job_d3bc6ef5-a9cd-4c9e-82cd-f8d680b06566/artifacts/ahmzyvay_LOGOS%202%20%281%29.png" 
                 alt="Alt&Act" 
-                className="h-20 md:h-28 lg:h-36 w-auto mx-auto"
+                className="h-16 md:h-20 lg:h-24 w-auto mx-auto"
                 data-testid="hero-logo"
               />
             </div>
