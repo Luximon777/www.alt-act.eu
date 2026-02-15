@@ -29,8 +29,8 @@ const PresentationSection = () => {
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1573497701240-345a300b8d36?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwY293b3JrZXJzJTIwZGlzY3Vzc2lvbiUyMG1lZXRpbmclMjBtdWx0aWN1bHR1cmFsfGVufDB8fHx8MTc3MTE0Nzc3MXww&ixlib=rb-4.1.0&q=85"
-                  alt="Réunion professionnelle avec des personnes diverses en discussion"
+                  src="https://customer-assets.emergentagent.com/job_685a9b1f-a3b7-4dd9-8465-63ecb4591e28/artifacts/aop7cquw_labor-union-members-working-together.jpg"
+                  alt="Personnes travaillant ensemble en équipe"
                   className="w-full h-80 md:h-[420px] object-cover"
                 />
               </div>
