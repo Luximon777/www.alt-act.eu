@@ -193,6 +193,41 @@ function Navigation() {
                 </div>
               </div>
 
+              {/* Dropdown RE'ACTIF PRO */}
+              <div className="relative group">
+                <button className="text-orange-600 hover:text-orange-700 font-semibold text-base transition-colors duration-200 flex items-center gap-1 py-4" data-testid="reactif-dropdown">
+                  RE'ACTIF PRO
+                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                </button>
+                <div className="absolute top-full left-1/2 -translate-x-1/2 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
+                  <div className="bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden">
+                    <div className="bg-gradient-to-r from-[#0b2a55] to-teal-600 px-4 py-3">
+                      <p className="text-white text-sm font-medium">Innovation sociale</p>
+                    </div>
+                    <div className="p-2">
+                      <a href="/reactif-pro/presentation" onClick={(e) => goToPage(e, '/reactif-pro/presentation')} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 hover:text-[#0b2a55] transition-all duration-200 group/item" data-testid="reactif-presentation-link">
+                        <div className="w-10 h-10 rounded-lg bg-[#0b2a55]/10 flex items-center justify-center group-hover/item:bg-[#0b2a55] transition-colors duration-200">
+                          <Lightbulb className="w-5 h-5 text-[#0b2a55] group-hover/item:text-white transition-colors duration-200" />
+                        </div>
+                        <div><p className="font-semibold">Présentation</p><p className="text-xs text-gray-500">Découvrir le projet</p></div>
+                      </a>
+                      <a href="/reactif-pro/mission" onClick={(e) => goToPage(e, '/reactif-pro/mission')} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-all duration-200 group/item" data-testid="reactif-mission-link">
+                        <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center group-hover/item:bg-amber-500 transition-colors duration-200">
+                          <Target className="w-5 h-5 text-amber-600 group-hover/item:text-white transition-colors duration-200" />
+                        </div>
+                        <div><p className="font-semibold">Mission</p><p className="text-xs text-gray-500">Nos objectifs</p></div>
+                      </a>
+                      <a href="/reactif-pro/actions" onClick={(e) => goToPage(e, '/reactif-pro/actions')} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-teal-50 hover:text-teal-700 transition-all duration-200 group/item" data-testid="reactif-actions-link">
+                        <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center group-hover/item:bg-teal-500 transition-colors duration-200">
+                          <Zap className="w-5 h-5 text-teal-600 group-hover/item:text-white transition-colors duration-200" />
+                        </div>
+                        <div><p className="font-semibold">Actions</p><p className="text-xs text-gray-500">Nos axes d'innovation</p></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* Dropdown Contact */}
               <div className="relative group">
                 <button className="text-orange-600 hover:text-orange-700 font-semibold text-base transition-colors duration-200 flex items-center gap-1 py-4" data-testid="contact-dropdown">
