@@ -1,11 +1,21 @@
 # ALT&ACT - Product Requirements Document
 
 ## Original Problem Statement
-Fix navigation issues on the ALT&ACT website where "Contact" and "Devenir membre" links were not accessible from all pages. This evolved into creating dedicated pages for Contact and Devenir Membre with proper navigation structure.
+Fix navigation issues on the ALT&ACT website where "Contact" and "Devenir membre" links were not accessible from all pages. This evolved into creating dedicated pages for Contact and Devenir Membre with proper navigation structure, plus ongoing improvements to homepage content focusing on diversity, inclusion, and ethics.
 
 ## What's Been Implemented
 
-### December 2025
+### December 2025 (Latest Session)
+- **Updated PresentationSection.jsx photos**: Replaced all illustrations with authentic stock photos:
+  - Hero image: Diverse smiling team in modern office
+  - Diversity section: Multicultural meeting, wheelchair professional, hijab-wearing businesswoman
+  - Removed overused "crossed arms" image per user request
+- **RE'ACTIF PRO section created**: 3 new pages with navigation integration
+  - ReActifProPresentation.jsx
+  - ReActifProMission.jsx  
+  - ReActifProActions.jsx
+
+### Previous Sessions
 - **Created ContactPage.jsx**: Full page with hero image header (email/communication themed), contact form, and contact information cards
 - **Created DevenirMembrePage.jsx**: Full page with hero image header (teamwork/hands together themed), benefits section, and membership form
 - **Updated App.js**: Added routes `/contact` and `/devenir-membre`
@@ -13,12 +23,8 @@ Fix navigation issues on the ALT&ACT website where "Contact" and "Devenir membre
   - Changed Contact dropdown links from anchor scrolls to page routes
   - Fixed logo path to use `process.env.PUBLIC_URL`
   - Both desktop and mobile navigation updated
-- **Restored PresentationSection.jsx content**: Added full "Laboratoire d'innovation sociale et technologique" text with 4 structured blocks:
-  - Fondation et valeurs
-  - Dispositifs innovants
-  - Nouveaux modèles organisationnels
-  - Ambition européenne
-- **Added inclusive illustrations**: 3 custom-generated illustrations showing diversity (persons with disabilities, women wearing hijab, multicultural teams)
+  - Added RE'ACTIF PRO dropdown menu
+- **Restored PresentationSection.jsx content**: Added full "Laboratoire d'innovation sociale et technologique" text with 4 structured blocks
 - **Added scroll animations**: Fade-in and slide-up animations on scroll using IntersectionObserver
 
 ## Current Architecture
