@@ -13,6 +13,11 @@ Fix navigation issues on the ALT&ACT website where "Contact" and "Devenir membre
   - Changed Contact dropdown links from anchor scrolls to page routes
   - Fixed logo path to use `process.env.PUBLIC_URL`
   - Both desktop and mobile navigation updated
+- **Restored PresentationSection.jsx content**: Added full "Laboratoire d'innovation sociale et technologique" text with 4 structured blocks:
+  - Fondation et valeurs
+  - Dispositifs innovants
+  - Nouveaux modèles organisationnels
+  - Ambition européenne
 
 ## Current Architecture
 
