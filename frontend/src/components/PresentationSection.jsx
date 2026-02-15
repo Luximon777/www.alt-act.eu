@@ -17,7 +17,7 @@ const PresentationSection = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             ALT&ACT accompagne, conseille et oriente les citoyens dans un monde du travail 
-            en pleine mutation, où l'éthique doit reprendre sa place.
+            en pleine mutation, en plaçant l'humain au cœur de chaque action.
           </p>
         </div>
 
@@ -116,8 +116,8 @@ const PresentationSection = () => {
               </div>
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1581090122319-8fab9528eaaa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHx3aGVlbGNoYWlyJTIwcHJvZmVzc2lvbmFsJTIwd29ya3BsYWNlJTIwZGlzYWJpbGl0eSUyMGluY2x1c2lvbnxlbnwwfHx8fDE3NzExNDc3NjN8MA&ixlib=rb-4.1.0&q=85"
-                  alt="Professionnel en fauteuil roulant au travail"
+                  src="https://images.unsplash.com/photo-1757405934467-21fc25c60660?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHw0fHxkaXZlcnNlJTIwY29sbGVhZ3VlcyUyMHNtaWxpbmclMjBvZmZpY2UlMjBjb2xsYWJvcmF0aW9ufGVufDB8fHx8MTc3MTE0ODI1N3ww&ixlib=rb-4.1.0&q=85"
+                  alt="Collègues qui rient ensemble au bureau"
                   className="w-full h-40 object-cover"
                 />
               </div>
