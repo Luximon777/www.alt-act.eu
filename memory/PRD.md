@@ -6,10 +6,16 @@ Fix navigation issues on the ALT&ACT website where "Contact" and "Devenir membre
 ## What's Been Implemented
 
 ### December 2025 (Latest Session)
-- **Updated PresentationSection.jsx photos**: Replaced all illustrations with authentic stock photos:
-  - Hero image: Diverse smiling team in modern office
-  - Diversity section: Multicultural meeting, wheelchair professional, hijab-wearing businesswoman
-  - Removed overused "crossed arms" image per user request
+- **Complete rewrite of PresentationSection.jsx** with new philosophical content:
+  - Section 1: "Notre Raison d'Être" - Construire une Europe où chacun peut contribuer
+  - Section 2: "Principe Fondamental" - Reconnaissance de la capacité de contribution
+  - Section 3: "De l'assistance à l'activation" - 4 étapes (Reconnaître, Comprendre, Se situer, Agir)
+  - Section 4: "Responsabilité partagée" - Double action (Personnes + Organisations)
+  - Section 5: "Notre Vision" - Société fondée sur la contribution et la dignité
+- **New photos**: 
+  - Hero: Équipe de travailleurs collaborant (gilets jaunes, casques)
+  - Section Personnes: Groupe célébrant ensemble (high five)
+  - Section Organisations: Équipe diverse en réunion stratégique
 - **RE'ACTIF PRO section created**: 3 new pages with navigation integration
   - ReActifProPresentation.jsx
   - ReActifProMission.jsx  
