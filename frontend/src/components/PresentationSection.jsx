@@ -138,8 +138,8 @@ const PresentationSection = () => {
               </div>
               <div className="rounded-2xl overflow-hidden mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1758691737543-09a1b2b715fa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxjb3dvcmtlcnMlMjB0ZWFtd29yayUyMGRpc2N1c3Npb24lMjBtb2Rlcm4lMjBvZmZpY2UlMjBkaXZlcnNlfGVufDB8fHx8MTc3MTE1MDM2NXww&ixlib=rb-4.1.0&q=85"
-                  alt="Équipe diverse en discussion dans un bureau moderne"
+                  src="https://images.unsplash.com/photo-1581090122319-8fab9528eaaa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwxfHxkaXNhYmlsaXR5JTIwaW5jbHVzaW9uJTIwd29ya3BsYWNlJTIwcHJvZmVzc2lvbmFsJTIwdGVhbSUyMG1lZXRpbmd8ZW58MHx8fHwxNzcxMTUwNTg3fDA&ixlib=rb-4.1.0&q=85"
+                  alt="Collaboration professionnelle inclusive avec collègue en fauteuil roulant"
                   className="w-full h-48 object-cover"
                 />
               </div>
@@ -163,8 +163,8 @@ const PresentationSection = () => {
               </div>
               <div className="rounded-2xl overflow-hidden mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1758873269317-51888e824b28?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwYnVzaW5lc3MlMjBtZWV0aW5nJTIwZGlzY3Vzc2lvbiUyMHN0cmF0ZWd5JTIwcGxhbm5pbmd8ZW58MHx8fHwxNzcxMTQ4OTcwfDA&ixlib=rb-4.1.0&q=85"
-                  alt="Équipe diverse collaborant autour d'une table"
+                  src="https://images.unsplash.com/photo-1655720359248-eeace8c709c5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwaGFuZHMlMjB0b2dldGhlciUyMGNpcmNsZSUyMHRlYW0lMjB1bml0eSUyMHNvbGlkYXJpdHl8ZW58MHx8fHwxNzcxMTUwNTg3fDA&ixlib=rb-4.1.0&q=85"
+                  alt="Mains diverses entrelacées symbolisant l'unité dans la diversité"
                   className="w-full h-48 object-cover"
                 />
               </div>
