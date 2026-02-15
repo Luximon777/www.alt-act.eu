@@ -138,7 +138,7 @@ const PresentationSection = () => {
               </div>
               <div className="rounded-2xl overflow-hidden mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1581090122319-8fab9528eaaa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwxfHxkaXNhYmlsaXR5JTIwaW5jbHVzaW9uJTIwd29ya3BsYWNlJTIwcHJvZmVzc2lvbmFsJTIwdGVhbSUyMG1lZXRpbmd8ZW58MHx8fHwxNzcxMTUwNTg3fDA&ixlib=rb-4.1.0&q=85"
+                  src="https://customer-assets.emergentagent.com/job_685a9b1f-a3b7-4dd9-8465-63ecb4591e28/artifacts/6c9cn6t8_h1.webp"
                   alt="Collaboration professionnelle inclusive avec collègue en fauteuil roulant"
                   className="w-full h-48 object-cover"
                 />
@@ -163,8 +163,8 @@ const PresentationSection = () => {
               </div>
               <div className="rounded-2xl overflow-hidden mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1655720359248-eeace8c709c5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwaGFuZHMlMjB0b2dldGhlciUyMGNpcmNsZSUyMHRlYW0lMjB1bml0eSUyMHNvbGlkYXJpdHl8ZW58MHx8fHwxNzcxMTUwNTg3fDA&ixlib=rb-4.1.0&q=85"
-                  alt="Mains diverses entrelacées symbolisant l'unité dans la diversité"
+                  src="https://customer-assets.emergentagent.com/job_685a9b1f-a3b7-4dd9-8465-63ecb4591e28/artifacts/ql4b0ko4_people-joining-hands-volunteers-wearing-mask-new-normal.jpg"
+                  alt="Mains diverses unies symbolisant l'unité dans la diversité"
                   className="w-full h-48 object-cover"
                 />
               </div>
