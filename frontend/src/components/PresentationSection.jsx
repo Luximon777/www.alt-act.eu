@@ -24,12 +24,12 @@ const PresentationSection = () => {
         {/* Hero Image + Message Principal */}
         <div className="mb-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Image des mains entrelacées */}
+            {/* Illustration mains unies */}
             <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-50">
                 <img 
-                  src="https://images.unsplash.com/photo-1655720359248-eeace8c709c5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwaGFuZHMlMjB1bml0eSUyMHRlYW13b3JrJTIwc29saWRhcml0eXxlbnwwfHx8fDE3NzExNDY5MDJ8MA&ixlib=rb-4.1.0&q=85"
-                  alt="Mains diverses unies en solidarité"
+                  src="https://static.prod-images.emergentagent.com/jobs/dfa0c8ea-6b8b-46d6-8cd8-613d66fc4292/images/42fbc62eb823268274598046db31203c0defb2e4bad8bcd1a524bb5c3793907f.png"
+                  alt="Illustration mains diverses unies en solidarité"
                   className="w-full h-80 md:h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/60 to-transparent"></div>
