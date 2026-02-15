@@ -81,6 +81,11 @@ function App() {
           {/* Contact Pages */}
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/devenir-membre" element={<DevenirMembrePage />} />
+          
+          {/* RE'ACTIF PRO Pages */}
+          <Route path="/reactif-pro/presentation" element={<ReActifProPresentation />} />
+          <Route path="/reactif-pro/mission" element={<ReActifProMission />} />
+          <Route path="/reactif-pro/actions" element={<ReActifProActions />} />
         </Routes>
         <Toaster />
       </div>
