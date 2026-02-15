@@ -109,29 +109,13 @@ const HeroSection = () => {
           <div className="flex flex-col items-center justify-center">
             <div className="relative">
               <img 
-                src="/logo.png" 
+                src="https://customer-assets.emergentagent.com/job_d3bc6ef5-a9cd-4c9e-82cd-f8d680b06566/artifacts/ahmzyvay_LOGOS%202%20%281%29.png" 
                 alt="Alt&Act" 
-                className="h-16 md:h-20 lg:h-24 w-auto mx-auto logo-image"
-                style={{ display: 'block' }}
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  document.getElementById('logo-fallback').style.display = 'block';
-                }}
+                className="h-20 md:h-28 lg:h-36 w-auto mx-auto"
+                data-testid="hero-logo"
               />
-              <div 
-                id="logo-fallback" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight"
-                style={{ 
-                  display: 'none',
-                  fontFamily: "'Fraunces', serif"
-                }}
-              >
-                <span className="text-white">Alt</span>
-                <span className="text-[#7CB342]">&</span>
-                <span className="text-white">Act</span>
-              </div>
             </div>
-            <p className="text-sm md:text-base italic text-blue-100 mt-2">Altérité & Action</p>
+            <p className="text-sm md:text-base italic text-blue-100 mt-4">Altérité & Action</p>
           </div>
         </div>
         
