@@ -48,8 +48,8 @@ const ReActifProPresentation = () => {
             backgroundImage: `url('https://customer-assets.emergentagent.com/job_b9667b3b-f143-44c0-a669-48155a9ec421/artifacts/fmab74oi_Carrieres_bleu.jpg')`
           }}
         />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/70 via-[#3730a3]/50 to-transparent" />
+        {/* Gradient Overlay - darker at top for navigation readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0b2a55]/90 via-[#1e3a8a]/60 to-[#3730a3]/40" />
         
         {/* Content */}
         <div className="relative h-full flex items-center justify-center">
