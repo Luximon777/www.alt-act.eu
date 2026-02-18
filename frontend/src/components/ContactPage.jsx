@@ -97,7 +97,7 @@ const ContactPage = () => {
                     <h3 className="font-semibold text-gray-900 mb-1">Téléphone fixe</h3>
                     <a href="tel:+33960510882" className="text-gray-600 hover:text-[#0b2a55] transition-colors">09 60 51 08 82</a>
                     <h3 className="font-semibold text-gray-900 mb-1 mt-3">Téléphone mobile</h3>
-                    <a href="tel:+33658165858" className="text-gray-600 hover:text-[#0b2a55] transition-colors">06 58 16 58 58</a>
+                    <a href="tel:+33658165883" className="text-gray-600 hover:text-[#0b2a55] transition-colors">06 58 16 58 83</a>
                     <p className="text-sm text-gray-500 mt-2">Du lundi au vendredi, 9h-18h</p>
                   </div>
                 </div>
