@@ -87,6 +87,7 @@ function App() {
           <Route path="/reactif-pro/presentation" element={<ReActifProPresentation />} />
           <Route path="/reactif-pro/mission" element={<ReActifProMission />} />
           <Route path="/reactif-pro/actions" element={<ReActifProActions />} />
+          <Route path="/reactif-pro/charte-ia" element={<ReActifProCharteIA />} />
         </Routes>
         <Toaster />
       </div>
