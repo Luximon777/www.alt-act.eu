@@ -55,16 +55,20 @@ function Navigation() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`} data-testid="navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-start justify-between h-20 pt-3">
-            <a href="/" onClick={(e) => goToPage(e, '/')} className="flex flex-col items-start group" data-testid="logo-link">
-              <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Alt&Act" className="h-auto" style={{width: '100px'}} />
-              <img 
-                src="https://customer-assets.emergentagent.com/job_00b80eda-4919-479d-b71f-a9dcf4071f29/artifacts/l5dxt3sr_logo%20ia%20act.jpg" 
-                alt="AI Act - Conforme au règlement européen" 
-                className="h-auto rounded-sm opacity-90 hover:opacity-100 transition-opacity"
-                style={{width: '100px', marginTop: '12px'}}
-                title="Conforme au Règlement européen sur l'IA (AI Act)"
-              />
-            </a>
+            <div className="flex flex-col items-start">
+              <a href="/" onClick={(e) => goToPage(e, '/')} className="group" data-testid="logo-link">
+                <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Alt&Act" className="h-auto" style={{width: '100px'}} />
+              </a>
+              <a href="/reactif-pro/charte-ia" onClick={(e) => goToPage(e, '/reactif-pro/charte-ia')} className="group" data-testid="logo-ia-act-link">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_00b80eda-4919-479d-b71f-a9dcf4071f29/artifacts/l5dxt3sr_logo%20ia%20act.jpg" 
+                  alt="AI Act - Conforme au règlement européen" 
+                  className="h-auto rounded-sm opacity-90 hover:opacity-100 transition-opacity cursor-pointer"
+                  style={{width: '100px', marginTop: '12px'}}
+                  title="Conforme au Règlement européen sur l'IA (AI Act) - Cliquez pour en savoir plus"
+                />
+              </a>
+            </div>
             <div className="hidden md:flex items-center space-x-6">
               {/* Dropdown Présentation */}
               <div className="relative group">
