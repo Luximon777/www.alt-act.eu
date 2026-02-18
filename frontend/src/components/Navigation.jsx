@@ -54,8 +54,8 @@ function Navigation() {
     <React.Fragment>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`} data-testid="navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            <a href="/" onClick={(e) => goToPage(e, '/')} className="flex flex-col items-start group" style={{marginTop: '12px'}} data-testid="logo-link">
+          <div className="flex items-start justify-between h-20 pt-3">
+            <a href="/" onClick={(e) => goToPage(e, '/')} className="flex flex-col items-start group" data-testid="logo-link">
               <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Alt&Act" className="h-auto" style={{width: '100px'}} />
               <img 
                 src="https://customer-assets.emergentagent.com/job_00b80eda-4919-479d-b71f-a9dcf4071f29/artifacts/l5dxt3sr_logo%20ia%20act.jpg" 
