@@ -250,7 +250,7 @@ const ConseilsAccompagnement = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              onClick={handleBackHome}
+              onClick={() => navigate('/contact')}
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-lg"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
