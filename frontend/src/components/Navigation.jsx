@@ -229,6 +229,12 @@ function Navigation() {
                         </div>
                         <div><p className="font-semibold">Actions</p><p className="text-xs text-gray-500">Nos axes d'innovation</p></div>
                       </a>
+                      <a href="/reactif-pro/charte-ia" onClick={(e) => goToPage(e, '/reactif-pro/charte-ia')} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-indigo-50 hover:text-indigo-700 transition-all duration-200 group/item" data-testid="reactif-charte-ia-link">
+                        <div className="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center group-hover/item:bg-indigo-500 transition-colors duration-200">
+                          <Heart className="w-5 h-5 text-indigo-600 group-hover/item:text-white transition-colors duration-200" />
+                        </div>
+                        <div><p className="font-semibold">Charte éthique IA</p><p className="text-xs text-gray-500">Conforme AI Act</p></div>
+                      </a>
                     </div>
                   </div>
                 </div>
