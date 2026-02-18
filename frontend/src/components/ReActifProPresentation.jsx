@@ -112,6 +112,8 @@ const ReActifProPresentation = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
