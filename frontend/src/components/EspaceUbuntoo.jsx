@@ -83,7 +83,7 @@ function EspaceUbuntoo() {
             />
           </div>
           <p className="text-xl text-teal-100 max-w-2xl mx-auto">
-            La communauté apprenante au service de votre parcours professionnel
+            La communauté apprenante au service de votre parcours professionnel tout le long de votre vie
           </p>
         </div>
       </header>
