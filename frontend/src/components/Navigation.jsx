@@ -60,7 +60,8 @@ function Navigation() {
               <img 
                 src="https://customer-assets.emergentagent.com/job_00b80eda-4919-479d-b71f-a9dcf4071f29/artifacts/l5dxt3sr_logo%20ia%20act.jpg" 
                 alt="AI Act - Conforme au règlement européen" 
-                className="w-[100px] h-auto mt-5 rounded-sm opacity-90 hover:opacity-100 transition-opacity"
+                style={{width: '85px'}}
+                className="h-auto mt-5 rounded-sm opacity-90 hover:opacity-100 transition-opacity"
                 title="Conforme au Règlement européen sur l'IA (AI Act)"
               />
             </a>
