@@ -33,6 +33,7 @@ import DevenirMembrePage from "./components/DevenirMembrePage";
 import ReActifProPresentation from "./components/ReActifProPresentation";
 import ReActifProMission from "./components/ReActifProMission";
 import ReActifProActions from "./components/ReActifProActions";
+import ReActifProCharteIA from "./components/ReActifProCharteIA";
 
 // Homepage Component
 function HomePage() {
