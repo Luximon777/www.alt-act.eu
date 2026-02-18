@@ -1,36 +1,38 @@
 import React from 'react';
-import { ArrowLeft, Lightbulb, Users, Shield, Globe } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Lightbulb, Users, Shield, Globe } from 'lucide-react';
+import Navigation from './Navigation';
+import Footer from './Footer';
 
 const ReActifProPresentation = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="min-h-screen bg-white" data-testid="reactif-presentation-page">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#0b2a55] via-[#1a4280] to-teal-600 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-teal-300 rounded-full blur-3xl"></div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <button 
-            onClick={() => navigate('/')} 
-            className="flex items-center gap-2 text-white/80 hover:text-white mb-8 transition-colors"
-            data-testid="back-button"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            Retour à l'accueil
-          </button>
-          <div className="max-w-4xl">
+      <Navigation />
+      
+      {/* Hero Section with Image */}
+      <section className="relative pt-20 h-[45vh] min-h-[350px] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url('https://customer-assets.emergentagent.com/job_b9667b3b-f143-44c0-a669-48155a9ec421/artifacts/fmab74oi_Carrieres_bleu.jpg')`
+          }}
+        />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0b2a55]/80 via-[#1a4280]/60 to-transparent" />
+        
+        {/* Content */}
+        <div className="relative h-full flex items-center justify-center">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
               <Lightbulb className="w-4 h-4 text-amber-300" />
-              <span className="text-white text-sm font-medium">Innovation sociale</span>
+              <span className="text-amber-200 text-sm font-semibold">INNOVATION SOCIALE</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               RE'ACTIF PRO
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed">
+            
+            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
               Transformer l'insertion professionnelle par l'innovation sociale et technologique
             </p>
           </div>
