@@ -84,7 +84,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">contact@altact.org</p>
+                    <a href="mailto:contact@alt-act.eu" className="text-gray-600 hover:text-amber-600 transition-colors">contact@alt-act.eu</a>
                     <p className="text-sm text-gray-500 mt-1">Réponse sous 24-48h</p>
                   </div>
                 </div>
@@ -94,9 +94,11 @@ const ContactPage = () => {
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Téléphone</h3>
-                    <p className="text-gray-600">+33 (0)1 XX XX XX XX</p>
-                    <p className="text-sm text-gray-500 mt-1">Du lundi au vendredi, 9h-18h</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Téléphone fixe</h3>
+                    <a href="tel:+33960510882" className="text-gray-600 hover:text-[#0b2a55] transition-colors">09 60 51 08 82</a>
+                    <h3 className="font-semibold text-gray-900 mb-1 mt-3">Téléphone mobile</h3>
+                    <a href="tel:+33658165858" className="text-gray-600 hover:text-[#0b2a55] transition-colors">06 58 16 58 58</a>
+                    <p className="text-sm text-gray-500 mt-2">Du lundi au vendredi, 9h-18h</p>
                   </div>
                 </div>
 
@@ -106,7 +108,8 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Adresse</h3>
-                    <p className="text-gray-600">Paris, France</p>
+                    <p className="text-gray-600">23 rue de la Croix</p>
+                    <p className="text-gray-600">67201 Eckbolsheim, France</p>
                     <p className="text-sm text-gray-500 mt-1">Sur rendez-vous uniquement</p>
                   </div>
                 </div>

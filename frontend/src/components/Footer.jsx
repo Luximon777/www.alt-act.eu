@@ -81,17 +81,20 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
-                <span className="text-blue-200">Grand Est, France</span>
+                <span className="text-blue-200">23 rue de la Croix, 67201 Eckbolsheim</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                <div className="text-blue-200">
+                  <p>Fixe : <a href="tel:+33960510882" className="hover:text-white transition-colors">09 60 51 08 82</a></p>
+                  <p>Mobile : <a href="tel:+33658165858" className="hover:text-white transition-colors">06 58 16 58 58</a></p>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-amber-400 flex-shrink-0" />
-                <a href="mailto:contact@altact.org" className="text-blue-200 hover:text-white transition-colors">
-                  contact@altact.org
+                <a href="mailto:contact@alt-act.eu" className="text-blue-200 hover:text-white transition-colors">
+                  contact@alt-act.eu
                 </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-amber-400 flex-shrink-0" />
-                <span className="text-blue-200">+33 (0)3 XX XX XX XX</span>
               </li>
             </ul>
           </div>
