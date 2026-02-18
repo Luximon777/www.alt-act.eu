@@ -107,9 +107,8 @@ const ContactPage = () => {
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Adresse</h3>
-                    <p className="text-gray-600">23 rue de la Croix</p>
-                    <p className="text-gray-600">67201 Eckbolsheim, France</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Localisation</h3>
+                    <p className="text-gray-600">Grand Est - Strasbourg</p>
                     <p className="text-sm text-gray-500 mt-1">Sur rendez-vous uniquement</p>
                   </div>
                 </div>
