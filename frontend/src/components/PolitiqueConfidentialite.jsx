@@ -64,7 +64,7 @@ const PolitiqueConfidentialite = () => {
               <ul className="space-y-2 text-gray-700">
                 <li><strong>Association ALT&ACT - Altérité & Action</strong></li>
                 <li>23 rue de la Croix, 67201 Eckbolsheim, France</li>
-                <li>N° registre : W672017439</li>
+                <li>N° registre : En cours d'obtention</li>
                 <li>Email : <a href="mailto:contact@alt-act.eu" className="text-[#0b2a55] hover:underline">contact@alt-act.eu</a></li>
                 <li>Téléphone : <a href="tel:+33960510882" className="text-[#0b2a55] hover:underline">09 60 51 08 82</a></li>
                 <li>Représentant légal : Chitrasen Luximon, Président</li>
