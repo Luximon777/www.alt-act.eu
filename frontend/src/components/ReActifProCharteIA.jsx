@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Brain, Heart, Eye, Shield, Users, Target, Scale, Building, CheckCircle, ChevronRight, Scroll, UserCheck, Lock, FileCheck, Settings, Cpu } from 'lucide-react';
+import { Brain, Heart, Eye, Shield, Users, Target, Scale, Building, CheckCircle, ChevronRight, Scroll, UserCheck, Lock, FileCheck, Settings, Cpu, Globe, AlertTriangle, Landmark, TrendingUp, BookOpen } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
 const ReActifProCharteIA = () => {
   const navigate = useNavigate();
-  const [activeSection, setActiveSection] = useState('preambule');
+  const [activeSection, setActiveSection] = useState('ai-act');
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -14,7 +14,7 @@ const ReActifProCharteIA = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['preambule', 'article-1', 'article-2', 'article-3', 'article-4', 'article-5', 'article-6', 'article-7', 'article-8', 'article-9', 'article-10', 'article-11', 'article-12', 'engagement', 'statut'];
+      const sections = ['ai-act', 'preambule', 'article-1', 'article-2', 'article-3', 'article-4', 'article-5', 'article-6', 'article-7', 'article-8', 'article-9', 'article-10', 'article-11', 'article-12', 'engagement', 'statut'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -41,6 +41,7 @@ const ReActifProCharteIA = () => {
   };
 
   const memoItems = [
+    { id: 'ai-act', icon: Landmark, title: 'AI Act UE', summary: 'Cadre réglementaire européen', color: 'bg-blue-600' },
     { id: 'preambule', icon: Brain, title: 'Préambule', summary: 'Responsabilité et exigence', color: 'bg-indigo-600' },
     { id: 'article-1', icon: Heart, title: 'Art. 1 - Finalité', summary: 'Accompagnement humain', color: 'bg-rose-500' },
     { id: 'article-2', icon: Settings, title: 'Art. 2 - Conception', summary: 'Responsabilité éthique', color: 'bg-amber-500' },
@@ -54,6 +55,29 @@ const ReActifProCharteIA = () => {
     { id: 'article-10', icon: Target, title: 'Art. 10 - Responsabilité', summary: 'Engagement continu', color: 'bg-violet-500' },
     { id: 'article-11', icon: Building, title: 'Art. 11 - Gouvernance', summary: 'Encadrement éthique', color: 'bg-slate-500' },
     { id: 'article-12', icon: Cpu, title: 'Art. 12 - Primauté', summary: 'L\'humain d\'abord', color: 'bg-indigo-500' },
+  ];
+
+  const aiActDispositions = [
+    {
+      icon: AlertTriangle,
+      title: "Classification des risques",
+      description: "Les systèmes d'IA sont classés selon leur niveau de risque : inacceptable, haut risque, risque limité et risque minimal. RE'ACTIF PRO s'engage à respecter les normes les plus strictes."
+    },
+    {
+      icon: Eye,
+      title: "Transparence et explicabilité",
+      description: "Les utilisateurs doivent être informés lorsqu'ils interagissent avec une IA. Les décisions doivent être explicables et compréhensibles."
+    },
+    {
+      icon: UserCheck,
+      title: "Supervision humaine",
+      description: "Les systèmes d'IA doivent permettre une intervention humaine à tout moment, avec des mécanismes pour contester les décisions automatisées."
+    },
+    {
+      icon: FileCheck,
+      title: "Conformité et audits",
+      description: "Mise en place de systèmes de gestion des risques, audits réguliers et documentation complète des processus d'IA."
+    }
   ];
 
   const articles = [
@@ -279,7 +303,7 @@ const ReActifProCharteIA = () => {
             </div>
             
             <p className="text-xl md:text-2xl text-blue-100 max-w-2xl mx-auto">
-              Conception, développement et exploitation des technologies d'accompagnement
+              Une intelligence artificielle éthique, conforme au cadre réglementaire européen (AI Act)
             </p>
           </div>
         </div>
@@ -297,15 +321,10 @@ const ReActifProCharteIA = () => {
             />
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 text-center">Charte éthique de l'intelligence artificielle</h1>
             
-            {/* Lien vers charte ALT&ACT */}
-            <div className="mt-4 inline-flex items-center gap-3 bg-indigo-50 rounded-xl px-4 py-3 border border-indigo-100">
-              <span className="text-indigo-600 text-sm">Cette charte s'inscrit dans le cadre de la</span>
-              <button
-                onClick={() => navigate('/charte-ethique')}
-                className="text-amber-600 hover:text-amber-700 font-semibold text-sm underline underline-offset-2"
-              >
-                Charte éthique d'ALT&ACT
-              </button>
+            {/* Badge AI Act */}
+            <div className="mt-4 inline-flex items-center gap-3 bg-blue-50 rounded-xl px-4 py-3 border border-blue-200">
+              <Landmark className="w-5 h-5 text-blue-600" />
+              <span className="text-blue-700 text-sm font-medium">Conforme au Règlement européen sur l'IA (AI Act)</span>
             </div>
           </div>
         </div>
@@ -358,6 +377,133 @@ const ReActifProCharteIA = () => {
           {/* Main Content */}
           <main className="flex-1 min-w-0 space-y-8">
 
+            {/* Section AI Act */}
+            <div id="ai-act" className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 rounded-3xl p-8 md:p-10 text-white">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center">
+                  <Landmark className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <span className="text-blue-200 text-sm font-medium">Règlement (UE) 2024/1689</span>
+                  <h2 className="text-2xl font-bold">L'AI Act : un cadre pionnier pour une IA responsable</h2>
+                </div>
+              </div>
+
+              {/* Introduction */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20">
+                <p className="text-blue-100 leading-relaxed mb-4">
+                  L'Union européenne a franchi une étape décisive dans la régulation de l'intelligence artificielle avec l'<strong className="text-white">AI Act</strong>. Publiée au Journal officiel de l'UE, cette législation pionnière est entrée en vigueur le <strong className="text-white">1er août 2024</strong>, avec une application progressive prévue entre 2025 et 2030.
+                </p>
+                <p className="text-blue-100 leading-relaxed">
+                  RE'ACTIF PRO s'inscrit pleinement dans ce cadre réglementaire et s'engage à respecter les plus hautes exigences en matière d'éthique, de transparence et de protection des personnes.
+                </p>
+              </div>
+
+              {/* Citation Vestager */}
+              <div className="bg-amber-500/20 rounded-2xl p-6 mb-8 border border-amber-400/30">
+                <p className="text-white text-lg italic mb-3">
+                  "Le cadre réglementaire de l'AI Act est une avancée majeure pour garantir que l'intelligence artificielle soit utilisée de manière responsable et éthique. Il s'agit d'une législation cruciale pour protéger les utilisateurs et promouvoir une IA bénéfique pour tous."
+                </p>
+                <p className="text-amber-200 font-semibold text-sm">
+                  — Margrethe Vestager, Vice-présidente exécutive de la Commission européenne
+                </p>
+              </div>
+
+              {/* Principales dispositions */}
+              <h3 className="text-xl font-bold text-white mb-4">Principales dispositions de l'AI Act</h3>
+              <div className="grid md:grid-cols-2 gap-4 mb-8">
+                {aiActDispositions.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={index} className="bg-white/10 rounded-xl p-5 border border-white/20">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                          <Icon className="w-5 h-5 text-white" />
+                        </div>
+                        <h4 className="font-bold text-white">{item.title}</h4>
+                      </div>
+                      <p className="text-blue-100 text-sm leading-relaxed">{item.description}</p>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Alignement RE'ACTIF PRO */}
+              <div className="bg-gradient-to-r from-teal-500/30 to-cyan-500/30 rounded-2xl p-6 border border-teal-400/30">
+                <div className="flex items-center gap-3 mb-4">
+                  <CheckCircle className="w-6 h-6 text-teal-300" />
+                  <h3 className="text-xl font-bold text-white">L'engagement de RE'ACTIF PRO</h3>
+                </div>
+                <p className="text-teal-100 leading-relaxed mb-4">
+                  En tant que développeur et exploitant de technologies d'IA dans le domaine de l'insertion professionnelle, RE'ACTIF PRO anticipe ces exigences et s'engage à :
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    "Auditer régulièrement ses systèmes d'IA pour évaluer leur niveau de risque",
+                    "Former ses équipes aux exigences éthiques et réglementaires",
+                    "Mettre en place des processus de conformité documentés",
+                    "Garantir une supervision humaine effective sur tous les systèmes",
+                    "Planifier des évaluations continues pour maintenir la conformité"
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-white">
+                      <CheckCircle className="w-5 h-5 text-teal-300 flex-shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Pourquoi c'est important */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center">
+                  <BookOpen className="w-6 h-6 text-amber-600" />
+                </div>
+                <h2 className="text-2xl font-bold text-gray-900">Pourquoi l'AI Act est-il important ?</h2>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="bg-blue-50 rounded-xl p-5 border border-blue-100">
+                  <h3 className="font-bold text-blue-800 mb-2">Protection des droits</h3>
+                  <p className="text-gray-600 text-sm">L'AI Act protège les citoyens contre les abus et les biais des systèmes d'IA en imposant des normes strictes de transparence et d'explicabilité.</p>
+                </div>
+                <div className="bg-green-50 rounded-xl p-5 border border-green-100">
+                  <h3 className="font-bold text-green-800 mb-2">Innovation responsable</h3>
+                  <p className="text-gray-600 text-sm">En offrant un cadre clair, l'AI Act permet aux développeurs de savoir exactement quelles sont les attentes, réduisant les incertitudes juridiques.</p>
+                </div>
+                <div className="bg-purple-50 rounded-xl p-5 border border-purple-100">
+                  <h3 className="font-bold text-purple-800 mb-2">Confiance des utilisateurs</h3>
+                  <p className="text-gray-600 text-sm">Les organisations conformes renforcent la confiance de leurs partenaires et des personnes accompagnées.</p>
+                </div>
+                <div className="bg-amber-50 rounded-xl p-5 border border-amber-100">
+                  <h3 className="font-bold text-amber-800 mb-2">Compétitivité européenne</h3>
+                  <p className="text-gray-600 text-sm">Des standards communs facilitent la compétitivité des entreprises européennes sur la scène internationale.</p>
+                </div>
+              </div>
+
+              {/* Citation Wozniak */}
+              <div className="bg-gray-100 rounded-xl p-5 border-l-4 border-indigo-500">
+                <p className="text-gray-700 italic mb-2">
+                  "Nous avons désespérément besoin d'un cadre politique pour l'IA qui tienne les êtres humains responsables et aide à empêcher les mauvaises personnes d'utiliser cette technologie incroyable pour faire des choses horribles."
+                </p>
+                <p className="text-indigo-600 font-semibold text-sm">— Steve Wozniak, co-fondateur d'Apple</p>
+              </div>
+            </div>
+
+            {/* Lien vers Charte ALT&ACT */}
+            <div className="bg-indigo-50 rounded-2xl p-6 border border-indigo-100">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="text-indigo-600 text-sm">Cette charte technique s'inscrit dans le cadre de la</span>
+                <button
+                  onClick={() => navigate('/charte-ethique')}
+                  className="text-amber-600 hover:text-amber-700 font-semibold text-sm underline underline-offset-2"
+                >
+                  Charte éthique d'ALT&ACT
+                </button>
+              </div>
+            </div>
+
             {/* Préambule */}
             <div id="preambule" className="bg-gradient-to-r from-[#1e3a8a] via-[#3730a3] to-[#4f46e5] rounded-3xl p-8 md:p-10 text-white">
               <div className="flex items-center gap-3 mb-6">
@@ -369,7 +515,7 @@ const ReActifProCharteIA = () => {
               <div className="space-y-4 text-indigo-100">
                 <p>RE'ACTIF PRO conçoit, développe et exploite des technologies d'intelligence artificielle destinées à soutenir l'accompagnement professionnel, l'orientation, le développement des compétences et la capacité d'agir des personnes.</p>
                 <p>Dans ce cadre, RE'ACTIF PRO assume la <strong className="text-white">responsabilité directe</strong> de la création opérationnelle des systèmes, des dispositifs et des outils utilisant l'intelligence artificielle.</p>
-                <p>Cette responsabilité implique une <strong className="text-white">exigence renforcée</strong> en matière d'éthique, de sécurité, de transparence et de protection des personnes.</p>
+                <p>Cette responsabilité implique une <strong className="text-white">exigence renforcée</strong> en matière d'éthique, de sécurité, de transparence et de protection des personnes, conformément aux dispositions du Règlement européen sur l'intelligence artificielle (AI Act).</p>
               </div>
               <div className="mt-6 bg-white/10 rounded-xl p-4 border border-white/20">
                 <p className="text-sm text-indigo-100 mb-3">La présente charte établit les principes qui encadrent l'ensemble du cycle de vie des systèmes d'intelligence artificielle :</p>
@@ -442,11 +588,19 @@ const ReActifProCharteIA = () => {
                 <h2 className="text-2xl font-bold">Engagement du concepteur et de l'organisation</h2>
               </div>
               <p className="text-amber-100 text-lg leading-relaxed mb-4">
-                En concevant et exploitant des technologies d'intelligence artificielle, RE'ACTIF PRO s'engage à respecter les exigences éthiques, techniques et humaines définies dans cette charte.
+                En concevant et exploitant des technologies d'intelligence artificielle, RE'ACTIF PRO s'engage à respecter les exigences éthiques, techniques et humaines définies dans cette charte, ainsi que le cadre réglementaire européen applicable.
               </p>
               <p className="text-white font-medium">
                 Cet engagement s'applique à l'ensemble des technologies, dispositifs et systèmes développés dans le cadre de ses activités.
               </p>
+
+              {/* Citation Axel Voss */}
+              <div className="mt-6 bg-white/10 rounded-xl p-5 border border-white/20">
+                <p className="text-amber-100 italic mb-2">
+                  "L'AI Act représente une opportunité pour les entreprises de montrer leur engagement envers des pratiques éthiques en matière d'IA. En se conformant à cette législation, elles peuvent non seulement éviter des sanctions, mais aussi gagner la confiance des consommateurs."
+                </p>
+                <p className="text-white font-semibold text-sm">— Axel Voss, Député européen et rapporteur sur l'intelligence artificielle</p>
+              </div>
             </div>
 
             {/* Statut */}
@@ -460,12 +614,31 @@ const ReActifProCharteIA = () => {
               <p className="text-blue-100 text-lg leading-relaxed mb-4">
                 Cette charte constitue le <strong className="text-white">cadre de référence éthique</strong> applicable à l'ensemble des activités de conception, de développement et d'exploitation des technologies d'intelligence artificielle de RE'ACTIF PRO.
               </p>
-              <p className="text-blue-100">
-                Elle s'inscrit dans le respect du <strong className="text-white">cadre réglementaire européen</strong> applicable aux systèmes d'intelligence artificielle.
+              <p className="text-blue-100 mb-4">
+                Elle s'inscrit dans le respect du <strong className="text-white">Règlement (UE) 2024/1689</strong> (AI Act) et sera mise à jour pour intégrer les évolutions réglementaires futures.
               </p>
 
+              {/* Calendrier AI Act */}
+              <div className="bg-white/10 rounded-xl p-5 border border-white/20 mb-6">
+                <h3 className="text-white font-bold mb-3">Calendrier d'application de l'AI Act</h3>
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-center gap-3">
+                    <span className="px-2 py-1 bg-green-500/30 rounded text-green-200 font-bold">2024</span>
+                    <span className="text-blue-100">Entrée en vigueur (1er août)</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="px-2 py-1 bg-amber-500/30 rounded text-amber-200 font-bold">2025</span>
+                    <span className="text-blue-100">Interdiction des pratiques à risque inacceptable</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="px-2 py-1 bg-blue-500/30 rounded text-blue-200 font-bold">2026-2030</span>
+                    <span className="text-blue-100">Application progressive des autres dispositions</span>
+                  </div>
+                </div>
+              </div>
+
               {/* Lien vers charte ALT&ACT */}
-              <div className="mt-6 bg-white/10 rounded-xl p-4 border border-white/20">
+              <div className="bg-white/10 rounded-xl p-4 border border-white/20">
                 <p className="text-indigo-200 text-sm mb-2">Cette charte est complémentaire et cohérente avec :</p>
                 <button
                   onClick={() => navigate('/charte-ethique')}
