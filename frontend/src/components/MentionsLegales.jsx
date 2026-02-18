@@ -38,7 +38,7 @@ const MentionsLegales = () => {
               <li><strong>Dénomination :</strong> Association ALT&ACT - Altérité & Action</li>
               <li><strong>Forme juridique :</strong> Association de droit local Alsace-Moselle (loi du 19 avril 1908)</li>
               <li><strong>Siège social :</strong> 23 rue de la Croix, 67201 Eckbolsheim, France</li>
-              <li><strong>Numéro au registre des associations :</strong> W672017439</li>
+              <li><strong>Numéro au registre des associations :</strong> En cours d'obtention</li>
               <li><strong>Téléphone fixe :</strong> <a href="tel:+33960510882" className="text-[#0b2a55] hover:underline">09 60 51 08 82</a></li>
               <li><strong>Téléphone mobile :</strong> <a href="tel:+33658165883" className="text-[#0b2a55] hover:underline">06 58 16 58 83</a></li>
               <li>
