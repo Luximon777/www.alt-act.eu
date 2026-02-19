@@ -77,9 +77,9 @@ function EspaceUbuntoo() {
           </div>
           <div className="flex justify-center mb-4">
             <img 
-              src="https://customer-assets.emergentagent.com/job_b883b64b-db51-4ef2-a26d-0edeb89b18e9/artifacts/htfo02ca_ChatGPT%20Image%2019%20f%C3%A9vr.%202026%2C%2017_43_21.png" 
+              src="https://static.prod-images.emergentagent.com/jobs/b883b64b-db51-4ef2-a26d-0edeb89b18e9/images/44546e27c40ac2becb8ccdda96fc0028f80785b0405e5cbdc87020f9206f22f7.png" 
               alt="Ubuntoo" 
-              className="h-48 md:h-64 w-auto rounded-2xl"
+              className="h-48 md:h-64 w-auto"
             />
           </div>
           <p className="text-xl text-teal-100 max-w-2xl mx-auto">
