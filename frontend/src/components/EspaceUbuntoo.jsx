@@ -79,7 +79,7 @@ function EspaceUbuntoo() {
             <img 
               src="https://customer-assets.emergentagent.com/job_b883b64b-db51-4ef2-a26d-0edeb89b18e9/artifacts/htfo02ca_ChatGPT%20Image%2019%20f%C3%A9vr.%202026%2C%2017_43_21.png" 
               alt="Ubuntoo" 
-              className="h-32 md:h-40 w-auto mix-blend-multiply"
+              className="h-48 md:h-64 w-auto rounded-2xl"
             />
           </div>
           <p className="text-xl text-teal-100 max-w-2xl mx-auto">
