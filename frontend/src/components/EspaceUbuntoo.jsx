@@ -76,9 +76,11 @@ function EspaceUbuntoo() {
             <span className="text-sm font-medium">Communauté ALT&amp;ACT</span>
           </div>
           <div className="flex justify-center mb-4">
-            <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
-              <span className="text-teal-300">Ubun</span>too
-            </h1>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_b883b64b-db51-4ef2-a26d-0edeb89b18e9/artifacts/htfo02ca_ChatGPT%20Image%2019%20f%C3%A9vr.%202026%2C%2017_43_21.png" 
+              alt="Ubuntoo" 
+              className="h-32 md:h-40 w-auto mix-blend-multiply"
+            />
           </div>
           <p className="text-xl text-teal-100 max-w-2xl mx-auto">
             La communauté apprenante au service de votre parcours professionnel tout le long de votre vie
