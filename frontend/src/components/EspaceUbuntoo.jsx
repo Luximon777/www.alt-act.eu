@@ -77,7 +77,7 @@ function EspaceUbuntoo() {
           </div>
           <div className="flex justify-center mb-4">
             <img 
-              src="https://static.prod-images.emergentagent.com/jobs/b883b64b-db51-4ef2-a26d-0edeb89b18e9/images/44546e27c40ac2becb8ccdda96fc0028f80785b0405e5cbdc87020f9206f22f7.png" 
+              src="https://static.prod-images.emergentagent.com/jobs/b883b64b-db51-4ef2-a26d-0edeb89b18e9/images/ca985eee7c97472160227222fd470c0443dfe5bb96e8eef8646fc1b8f9bae5e4.png" 
               alt="Ubuntoo" 
               className="h-48 md:h-64 w-auto"
             />
