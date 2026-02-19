@@ -75,12 +75,17 @@ function EspaceUbuntoo() {
             <Users className="w-5 h-5" />
             <span className="text-sm font-medium">Communauté ALT&amp;ACT</span>
           </div>
-          <div className="flex justify-center mb-4">
-            <img 
-              src="https://static.prod-images.emergentagent.com/jobs/b883b64b-db51-4ef2-a26d-0edeb89b18e9/images/ca985eee7c97472160227222fd470c0443dfe5bb96e8eef8646fc1b8f9bae5e4.png" 
-              alt="Ubuntoo" 
-              className="h-48 md:h-64 w-auto"
-            />
+          <div className="flex flex-col items-center justify-center mb-4">
+            <h1 className="text-6xl md:text-8xl font-bold tracking-tight">
+              <span className="text-orange-500">u</span>
+              <span className="text-amber-500">b</span>
+              <span className="text-yellow-400">u</span>
+              <span className="text-green-500">n</span>
+              <span className="text-teal-400">t</span>
+              <span className="text-blue-500">o</span>
+              <span className="text-indigo-500">o</span>
+            </h1>
+            <div className="w-48 h-2 mt-2 rounded-full bg-gradient-to-r from-orange-500 via-green-500 to-indigo-500"></div>
           </div>
           <p className="text-xl text-teal-100 max-w-2xl mx-auto">
             La communauté apprenante au service de votre parcours professionnel tout le long de votre vie
