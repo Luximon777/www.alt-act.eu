@@ -76,11 +76,9 @@ function EspaceUbuntoo() {
             <span className="text-sm font-medium">Communauté ALT&amp;ACT</span>
           </div>
           <div className="flex justify-center mb-4">
-            <img 
-              src="/logo ubuntoo.png" 
-              alt="Ubuntoo" 
-              className="h-32 md:h-40 w-auto"
-            />
+            <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
+              <span className="text-teal-300">Ubun</span>too
+            </h1>
           </div>
           <p className="text-xl text-teal-100 max-w-2xl mx-auto">
             La communauté apprenante au service de votre parcours professionnel tout le long de votre vie
