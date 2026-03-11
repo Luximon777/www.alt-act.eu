@@ -162,8 +162,8 @@ function VisionMethode() {
                 {/* Image section - Équipe diverse */}
                 <div className="relative rounded-2xl overflow-hidden shadow-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1758873268663-5a362616b5a7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwzfHx0ZWFtd29yayUyMGNvbGxhYm9yYXRpb24lMjBkaXZlcnNlJTIwcGVvcGxlfGVufDB8fHx8MTc3MDQ2MzkyNXww&ixlib=rb-4.1.0&q=85" 
-                    alt="Équipe diverse collaborant ensemble" 
+                    src="https://images.unsplash.com/photo-1763982811982-e4901b18bbe3?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=1200&h=600&fit=crop" 
+                    alt="Mains unies au service de la solidarité" 
                     className="w-full h-64 md:h-80 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/70 to-transparent flex items-end">
