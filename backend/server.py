@@ -610,13 +610,12 @@ class AdhesionFormRequest(BaseModel):
 
 # ============== EMAIL HELPER ==============
 
-def send_email(subject: str, html_body: str, reply_to: Optional[str] = None):
-    """Send email via OVH SMTP to configured recipients"""
+def send_email(subject: str, html_body: str, recipients: List[str], reply_to: Optional[str] = None):
+    """Send email via OVH SMTP to specified recipients"""
     smtp_host = os.environ.get('SMTP_HOST')
     smtp_port = int(os.environ.get('SMTP_PORT', '465'))
     smtp_user = os.environ.get('SMTP_USER')
     smtp_password = os.environ.get('SMTP_PASSWORD')
-    recipients = os.environ.get('EMAIL_RECIPIENTS', '').split(',')
 
     msg = MIMEMultipart('alternative')
     msg['From'] = f"ALT&ACT <{smtp_user}>"
@@ -659,7 +658,7 @@ async def submit_contact_form(data: ContactFormRequest):
     </div>
     """
     try:
-        send_email(subject, html_body, reply_to=data.email)
+        send_email(subject, html_body, recipients=["alt-act@outlook.fr"], reply_to=data.email)
         # Save to DB
         doc = {"id": str(uuid.uuid4()), "created_at": datetime.now(timezone.utc).isoformat(), "type": "contact", **data.model_dump()}
         await db.form_submissions.insert_one(doc)
@@ -695,7 +694,7 @@ async def submit_adhesion_form(data: AdhesionFormRequest):
     </div>
     """
     try:
-        send_email(subject, html_body, reply_to=data.email)
+        send_email(subject, html_body, recipients=["ck.luximon@alt-act.eu"], reply_to=data.email)
         # Save to DB
         doc = {"id": str(uuid.uuid4()), "created_at": datetime.now(timezone.utc).isoformat(), "type": "adhesion", **data.model_dump()}
         await db.form_submissions.insert_one(doc)
