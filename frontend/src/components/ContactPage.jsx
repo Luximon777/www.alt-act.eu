@@ -9,6 +9,17 @@ const ContactPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.fullName.value;
+    const email = form.email.value;
+    const subject = form.subject.value || 'Contact depuis le site';
+    const message = form.message.value;
+    const body = `Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    window.location.href = `mailto:contact@alt-act.eu,ck.luximon@alt-act.eu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <div className="min-h-screen bg-gray-50" data-testid="contact-page">
       <Navigation />
@@ -110,7 +121,7 @@ const ContactPage = () => {
             {/* Contact Form */}
             <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border border-gray-100">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Envoyez-nous un message</h2>
-              <form className="space-y-6" data-testid="contact-form">
+              <form className="space-y-6" data-testid="contact-form" onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">Nom complet <span className="text-red-500">*</span></label>
                   <input type="text" id="fullName" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre nom complet" data-testid="contact-fullname" />

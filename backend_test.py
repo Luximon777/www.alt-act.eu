@@ -11,7 +11,7 @@ from datetime import datetime
 from typing import Dict, Any, Optional
 
 class VSIAPITester:
-    def __init__(self, base_url="https://logo-fix-deploy-1.preview.emergentagent.com"):
+    def __init__(self, base_url="https://form-submission-api.preview.emergentagent.com"):
         self.base_url = base_url
         self.api_url = f"{base_url}/api"
         self.tests_run = 0
