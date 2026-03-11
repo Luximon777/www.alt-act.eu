@@ -112,7 +112,7 @@ const ReactifProMission = () => {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex gap-8">
             <div className="hidden lg:block flex-shrink-0 sticky top-28 self-start">
-              <img src={process.env.PUBLIC_URL + '/logo-reactif-pro.png'} alt="RE'ACTIF PRO" className="w-40 rounded-xl shadow-lg" />
+              <img src={process.env.PUBLIC_URL + '/logo-reactif-pro.png'} alt="RE'ACTIF PRO" className="w-52 rounded-xl shadow-lg" />
             </div>
             <div className="flex-1 space-y-12">
           {missions.map((mission, index) => {
