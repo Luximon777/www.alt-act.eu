@@ -27,10 +27,14 @@ const DevenirMembrePage = () => {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 bg-gradient-to-br from-[#0b2a55] via-[#1a4280] to-[#0b2a55] overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-green-400 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-amber-400 rounded-full blur-3xl"></div>
+      <section className="relative pt-32 pb-16 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1771924368443-1d53147edbd1?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=1920&h=600&fit=crop" 
+            alt="Communauté de personnes unies" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#0b2a55]/80"></div>
         </div>
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 rounded-full mb-6">

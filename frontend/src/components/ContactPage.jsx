@@ -45,10 +45,14 @@ const ContactPage = () => {
       <Navigation />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 bg-gradient-to-br from-[#0b2a55] via-[#1a4280] to-[#0b2a55] overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-amber-400 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-orange-400 rounded-full blur-3xl"></div>
+      <section className="relative pt-32 pb-16 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1758691737568-a1572060ce5a?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=1920&h=600&fit=crop" 
+            alt="Équipe professionnelle en réunion" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#0b2a55]/80"></div>
         </div>
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full mb-6">
