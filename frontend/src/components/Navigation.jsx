@@ -41,7 +41,7 @@ function Navigation() {
             <div className="hidden lg:flex items-center space-x-5">
               {/* Dropdown Présentation */}
               <div className="relative group">
-                <button className="text-orange-600 hover:text-orange-700 font-semibold text-sm transition-colors duration-200 flex items-center gap-1 py-4" data-testid="presentation-dropdown">
+                <button className="text-orange-600 hover:text-orange-700 font-semibold text-base transition-colors duration-200 flex items-center gap-1 py-4" data-testid="presentation-dropdown">
                   Présentation
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
@@ -76,7 +76,7 @@ function Navigation() {
 
               {/* Dropdown Mission */}
               <div className="relative group">
-                <button className="text-orange-600 hover:text-orange-700 font-semibold text-sm transition-colors duration-200 flex items-center gap-1 py-4" data-testid="mission-dropdown">
+                <button className="text-orange-600 hover:text-orange-700 font-semibold text-base transition-colors duration-200 flex items-center gap-1 py-4" data-testid="mission-dropdown">
                   Mission
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
@@ -111,7 +111,7 @@ function Navigation() {
 
               {/* Dropdown Charte éthique */}
               <div className="relative group">
-                <button className="text-orange-600 hover:text-orange-700 font-semibold text-sm transition-colors duration-200 flex items-center gap-1 py-4" data-testid="charte-dropdown">
+                <button className="text-orange-600 hover:text-orange-700 font-semibold text-base transition-colors duration-200 flex items-center gap-1 py-4" data-testid="charte-dropdown">
                   Charte éthique
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
@@ -140,7 +140,7 @@ function Navigation() {
 
               {/* Dropdown Vos accès */}
               <div className="relative group">
-                <button className="text-orange-600 hover:text-orange-700 font-semibold text-sm transition-colors duration-200 flex items-center gap-1 py-4" data-testid="vos-acces-dropdown">
+                <button className="text-orange-600 hover:text-orange-700 font-semibold text-base transition-colors duration-200 flex items-center gap-1 py-4" data-testid="vos-acces-dropdown">
                   Vos accès
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
@@ -175,7 +175,7 @@ function Navigation() {
 
               {/* Dropdown RE'ACTIF PRO */}
               <div className="relative group">
-                <button className="text-orange-600 hover:text-orange-700 font-semibold text-sm transition-colors duration-200 flex items-center gap-1 py-4" data-testid="reactif-pro-dropdown">
+                <button className="text-orange-600 hover:text-orange-700 font-semibold text-base transition-colors duration-200 flex items-center gap-1 py-4" data-testid="reactif-pro-dropdown">
                   RE'ACTIF PRO
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
@@ -216,7 +216,7 @@ function Navigation() {
 
               {/* Dropdown Contact */}
               <div className="relative group">
-                <button className="text-orange-600 hover:text-orange-700 font-semibold text-sm transition-colors duration-200 flex items-center gap-1 py-4" data-testid="contact-dropdown">
+                <button className="text-orange-600 hover:text-orange-700 font-semibold text-base transition-colors duration-200 flex items-center gap-1 py-4" data-testid="contact-dropdown">
                   Contact
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
