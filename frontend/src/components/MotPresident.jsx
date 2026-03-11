@@ -69,8 +69,8 @@ function MotPresident() {
             backgroundImage: "url('https://images.unsplash.com/photo-1722963220475-979db2dbf216?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHw0fHxkaXZlcnNlJTIwdGVhbSUyMGNvbGxhYm9yYXRpb24lMjBncm91cCUyMHBlb3BsZSUyMGNpcmNsZXxlbnwwfHx8fDE3NzA0Njc1MzV8MA&ixlib=rb-4.1.0&q=85')"
           }}
         ></div>
-        {/* Overlay bleu plus léger */}
-        <div className="absolute inset-0 bg-[#0b2a55]/50"></div>
+        {/* Overlay bleu atténué */}
+        <div className="absolute inset-0 bg-[#0b2a55]/75"></div>
         {/* Contenu */}
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Quote className="w-16 h-16 mx-auto mb-6 opacity-70" />
