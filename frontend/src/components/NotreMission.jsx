@@ -49,10 +49,14 @@ const NotreMission = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#0b2a55] via-[#1a4280] to-[#0b2a55] overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-amber-400 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-orange-400 rounded-full blur-3xl"></div>
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1579100884318-4091378d0fc5?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=1920&h=600&fit=crop" 
+            alt="Révéler les capacités humaines" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#0b2a55]/80"></div>
         </div>
         
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -144,127 +148,81 @@ const NotreMission = () => {
             <main className="flex-1 min-w-0 space-y-12">
               
               {/* Conviction essentielle */}
-              <div id="conviction" className="rounded-3xl overflow-hidden border border-amber-200">
-                <div className="relative h-48 md:h-56">
-                  <img 
-                    src="https://images.unsplash.com/photo-1579100884318-4091378d0fc5?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=1200&h=400&fit=crop" 
-                    alt="Potentiel humain" 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-amber-900/70 to-amber-900/20"></div>
-                  <div className="absolute bottom-6 left-8 right-8">
-                    <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      Notre conviction essentielle
-                    </h2>
-                  </div>
-                </div>
-                <div className="bg-gradient-to-r from-amber-50 to-orange-50 p-8 md:p-12">
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    Nous partons d'une conviction essentielle : <strong className="text-amber-700">chaque personne porte en elle un potentiel de développement</strong> qui, lorsqu'il est reconnu et cultivé, devient une force pour l'ensemble de la collectivité.
-                  </p>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    Notre mission consiste à créer les conditions dans lesquelles ces capacités peuvent <strong className="text-amber-700">émerger, se renforcer et s'inscrire dans des trajectoires professionnelles porteuses de sens</strong>.
-                  </p>
-                </div>
+              <div id="conviction" className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-8 md:p-12 border-l-4 border-amber-500">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                  Notre conviction essentielle
+                </h2>
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  Nous partons d'une conviction essentielle : <strong className="text-amber-700">chaque personne porte en elle un potentiel de développement</strong> qui, lorsqu'il est reconnu et cultivé, devient une force pour l'ensemble de la collectivité.
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Notre mission consiste à créer les conditions dans lesquelles ces capacités peuvent <strong className="text-amber-700">émerger, se renforcer et s'inscrire dans des trajectoires professionnelles porteuses de sens</strong>.
+                </p>
               </div>
 
               {/* Le travail comme expression */}
-              <div id="travail" className="rounded-3xl overflow-hidden border border-gray-200">
-                <div className="relative h-48 md:h-56">
-                  <img 
-                    src="https://images.pexels.com/photos/4623110/pexels-photo-4623110.jpeg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop" 
-                    alt="Collaboration professionnelle" 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55]/70 to-[#0b2a55]/20"></div>
-                  <div className="absolute bottom-6 left-8 right-8">
-                    <h3 className="text-2xl font-bold text-white">
-                      Le travail, bien plus qu'une fonction économique
-                    </h3>
-                  </div>
+              <div id="travail" className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                    Le travail, bien plus qu'une fonction économique
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Nous considérons le travail non comme une simple fonction économique, mais comme un <strong>espace d'expression, d'apprentissage continu et de responsabilité</strong>.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    En favorisant l'autonomie, la maturité et la capacité de coopération, nous contribuons à former des femmes et des hommes capables de s'orienter dans un monde en transformation et de participer activement au bien commun.
+                  </p>
                 </div>
-                <div className="bg-white p-8 md:p-12">
-                  <div className="grid md:grid-cols-2 gap-8 items-start">
-                    <div>
-                      <p className="text-gray-700 leading-relaxed mb-4">
-                        Nous considérons le travail non comme une simple fonction économique, mais comme un <strong>espace d'expression, d'apprentissage continu et de responsabilité</strong>.
-                      </p>
-                      <p className="text-gray-700 leading-relaxed">
-                        En favorisant l'autonomie, la maturité et la capacité de coopération, nous contribuons à former des femmes et des hommes capables de s'orienter dans un monde en transformation et de participer activement au bien commun.
-                      </p>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-amber-50 rounded-2xl p-6 text-center">
-                        <Heart className="w-10 h-10 text-amber-600 mx-auto mb-3" />
-                        <p className="font-semibold text-gray-900">Expression</p>
-                        <p className="text-sm text-gray-600">Espace de développement</p>
-                      </div>
-                      <div className="bg-blue-50 rounded-2xl p-6 text-center">
-                        <Brain className="w-10 h-10 text-blue-600 mx-auto mb-3" />
-                        <p className="font-semibold text-gray-900">Apprentissage</p>
-                        <p className="text-sm text-gray-600">Croissance continue</p>
-                      </div>
-                      <div className="bg-green-50 rounded-2xl p-6 text-center">
-                        <Shield className="w-10 h-10 text-green-600 mx-auto mb-3" />
-                        <p className="font-semibold text-gray-900">Responsabilité</p>
-                        <p className="text-sm text-gray-600">Engagement citoyen</p>
-                      </div>
-                      <div className="bg-purple-50 rounded-2xl p-6 text-center">
-                        <Users className="w-10 h-10 text-purple-600 mx-auto mb-3" />
-                        <p className="font-semibold text-gray-900">Coopération</p>
-                        <p className="text-sm text-gray-600">Force collective</p>
-                      </div>
-                    </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-amber-50 rounded-2xl p-6 text-center">
+                    <Heart className="w-10 h-10 text-amber-600 mx-auto mb-3" />
+                    <p className="font-semibold text-gray-900">Expression</p>
+                    <p className="text-sm text-gray-600">Espace de développement</p>
+                  </div>
+                  <div className="bg-blue-50 rounded-2xl p-6 text-center">
+                    <Brain className="w-10 h-10 text-blue-600 mx-auto mb-3" />
+                    <p className="font-semibold text-gray-900">Apprentissage</p>
+                    <p className="text-sm text-gray-600">Croissance continue</p>
+                  </div>
+                  <div className="bg-green-50 rounded-2xl p-6 text-center">
+                    <Shield className="w-10 h-10 text-green-600 mx-auto mb-3" />
+                    <p className="font-semibold text-gray-900">Responsabilité</p>
+                    <p className="text-sm text-gray-600">Engagement citoyen</p>
+                  </div>
+                  <div className="bg-purple-50 rounded-2xl p-6 text-center">
+                    <Users className="w-10 h-10 text-purple-600 mx-auto mb-3" />
+                    <p className="font-semibold text-gray-900">Coopération</p>
+                    <p className="text-sm text-gray-600">Force collective</p>
                   </div>
                 </div>
               </div>
 
               {/* Le travail comme service */}
-              <div id="service" className="rounded-3xl overflow-hidden">
-                <div className="relative h-48 md:h-56">
-                  <img 
-                    src="https://images.unsplash.com/photo-1758599667729-a6f0f8bd213b?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=1200&h=400&fit=crop" 
-                    alt="Service communautaire" 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0b2a55] to-[#0b2a55]/30"></div>
-                  <div className="absolute bottom-6 left-8 right-8 flex items-center gap-3">
-                    <HandHeart className="w-8 h-8 text-amber-400" />
-                    <h3 className="text-2xl font-bold text-white">Le travail comme acte de service</h3>
-                  </div>
+              <div id="service" className="bg-gradient-to-r from-[#0b2a55] to-[#1a4280] rounded-3xl p-8 md:p-12 text-white">
+                <div className="flex items-center gap-3 mb-6">
+                  <HandHeart className="w-8 h-8 text-amber-400" />
+                  <h3 className="text-2xl font-bold">Le travail comme acte de service</h3>
                 </div>
-                <div className="bg-gradient-to-r from-[#0b2a55] to-[#1a4280] p-8 md:p-12 text-white">
-                  <p className="text-blue-100 text-lg leading-relaxed mb-6">
-                    Nous concevons le rapport au travail comme un <strong className="text-white">acte de service à la communauté</strong>. Chaque contribution professionnelle, quelle que soit sa nature, participe à l'édification d'une société plus solidaire et plus humaine.
-                  </p>
-                  <p className="text-blue-100 text-lg leading-relaxed">
-                    Cette vision transforme le travail en un vecteur de dignité, de reconnaissance mutuelle et de progrès partagé.
-                  </p>
-                </div>
+                <p className="text-blue-100 text-lg leading-relaxed mb-6">
+                  Nous concevons le rapport au travail comme un <strong className="text-white">acte de service à la communauté</strong>. Chaque contribution professionnelle, quelle que soit sa nature, participe à l'édification d'une société plus solidaire et plus humaine.
+                </p>
+                <p className="text-blue-100 text-lg leading-relaxed">
+                  Cette vision transforme le travail en un vecteur de dignité, de reconnaissance mutuelle et de progrès partagé.
+                </p>
               </div>
 
               {/* Alignement européen */}
-              <div id="europe" className="rounded-3xl overflow-hidden border border-blue-200">
-                <div className="relative h-48 md:h-56">
-                  <img 
-                    src="https://images.unsplash.com/photo-1662712375045-72023de1eee4?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=1200&h=400&fit=crop" 
-                    alt="Drapeaux européens" 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 to-blue-900/20"></div>
-                  <div className="absolute bottom-6 left-8 right-8 flex items-center gap-3">
-                    <Globe className="w-8 h-8 text-blue-300" />
-                    <h3 className="text-2xl font-bold text-white">Alignés sur les directives européennes</h3>
-                  </div>
+              <div id="europe" className="bg-blue-50 rounded-3xl p-8 md:p-12 border border-blue-200">
+                <div className="flex items-center gap-3 mb-6">
+                  <Globe className="w-8 h-8 text-blue-600" />
+                  <h3 className="text-2xl font-bold text-gray-900">Alignés sur les directives européennes</h3>
                 </div>
-                <div className="bg-blue-50 p-8 md:p-12">
-                  <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                    Notre action s'inscrit dans le cadre des orientations et visions européennes en matière d'emploi, d'inclusion sociale et de développement durable.
-                  </p>
-                  <p className="text-gray-700 leading-relaxed">
-                    Nous portons une attention particulière aux recommandations du <strong>Socle européen des droits sociaux</strong>, à la <strong>Stratégie européenne pour l'emploi</strong> et aux objectifs de développement durable (ODD), notamment ceux liés au travail décent et à la réduction des inégalités.
-                  </p>
-                </div>
+                <p className="text-gray-700 text-lg leading-relaxed mb-4">
+                  Notre action s'inscrit dans le cadre des orientations et visions européennes en matière d'emploi, d'inclusion sociale et de développement durable.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  Nous portons une attention particulière aux recommandations du <strong>Socle européen des droits sociaux</strong>, à la <strong>Stratégie européenne pour l'emploi</strong> et aux objectifs de développement durable (ODD), notamment ceux liés au travail décent et à la réduction des inégalités.
+                </p>
               </div>
 
               {/* Nos piliers */}
