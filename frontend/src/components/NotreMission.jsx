@@ -52,7 +52,7 @@ const NotreMission = () => {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1579100884318-4091378d0fc5?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=1920&h=600&fit=crop" 
+            src="https://images.unsplash.com/photo-1563457039413-0c39b8e8963d?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=1920&h=600&fit=crop" 
             alt="Révéler les capacités humaines" 
             className="w-full h-full object-cover"
           />
