@@ -94,7 +94,7 @@ const NotreAction = () => {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1758599667729-a6f0f8bd213b?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=1920&h=600&fit=crop" 
+            src="https://images.unsplash.com/photo-1758518730037-a16581a040e8?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=1920&h=600&fit=crop" 
             alt="Accompagner les transformations" 
             className="w-full h-full object-cover"
           />
