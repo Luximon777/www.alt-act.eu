@@ -1,23 +1,43 @@
-import React, { useEffect } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, Smartphone } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Mail, Phone, MapPin, Clock, Send, Smartphone, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { Button } from './ui/button';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
+const API_URL = process.env.REACT_APP_BACKEND_URL;
+
 const ContactPage = () => {
+  const [status, setStatus] = useState(null); // null | 'loading' | 'success' | 'error'
+  const [errorMsg, setErrorMsg] = useState('');
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus('loading');
+    setErrorMsg('');
     const form = e.target;
-    const name = form.fullName.value;
-    const email = form.email.value;
-    const subject = form.subject.value || 'Contact depuis le site';
-    const message = form.message.value;
-    const body = `Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-    window.location.href = `mailto:contact@alt-act.eu,ck.luximon@alt-act.eu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const payload = {
+      nom: form.fullName.value,
+      email: form.email.value,
+      sujet: form.subject.value || null,
+      message: form.message.value,
+    };
+    try {
+      const res = await fetch(`${API_URL}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error('Erreur serveur');
+      setStatus('success');
+      form.reset();
+    } catch (err) {
+      setStatus('error');
+      setErrorMsg("Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone.");
+    }
   };
 
   return (
@@ -121,28 +141,49 @@ const ContactPage = () => {
             {/* Contact Form */}
             <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border border-gray-100">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Envoyez-nous un message</h2>
-              <form className="space-y-6" data-testid="contact-form" onSubmit={handleSubmit}>
-                <div>
-                  <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">Nom complet <span className="text-red-500">*</span></label>
-                  <input type="text" id="fullName" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre nom complet" data-testid="contact-fullname" />
+
+              {status === 'success' ? (
+                <div className="flex flex-col items-center justify-center py-12 text-center" data-testid="contact-success">
+                  <CheckCircle className="w-16 h-16 text-green-500 mb-4" />
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Message envoyé !</h3>
+                  <p className="text-gray-600 mb-6">Nous vous répondrons dans les meilleurs délais.</p>
+                  <Button onClick={() => setStatus(null)} className="bg-[#0b2a55] hover:bg-[#1a4280] text-white" data-testid="contact-new-message">
+                    Envoyer un autre message
+                  </Button>
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email <span className="text-red-500">*</span></label>
-                  <input type="email" id="email" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="votre@email.com" data-testid="contact-email" />
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">Sujet</label>
-                  <input type="text" id="subject" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Sujet de votre message" data-testid="contact-subject" />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message <span className="text-red-500">*</span></label>
-                  <textarea id="message" rows={6} className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all resize-none" placeholder="Votre message..." data-testid="contact-message"></textarea>
-                </div>
-                <Button type="submit" className="w-full bg-[#0b2a55] hover:bg-[#1a4280] text-white py-4 text-lg rounded-xl" data-testid="contact-submit">
-                  <Send className="w-5 h-5 mr-2" />
-                  Envoyer le message
-                </Button>
-              </form>
+              ) : (
+                <form className="space-y-6" data-testid="contact-form" onSubmit={handleSubmit}>
+                  {status === 'error' && (
+                    <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-xl" data-testid="contact-error">
+                      <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                      <p className="text-red-700 text-sm">{errorMsg}</p>
+                    </div>
+                  )}
+                  <div>
+                    <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">Nom complet <span className="text-red-500">*</span></label>
+                    <input type="text" id="fullName" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre nom complet" data-testid="contact-fullname" />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email <span className="text-red-500">*</span></label>
+                    <input type="email" id="email" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="votre@email.com" data-testid="contact-email" />
+                  </div>
+                  <div>
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">Sujet</label>
+                    <input type="text" id="subject" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Sujet de votre message" data-testid="contact-subject" />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message <span className="text-red-500">*</span></label>
+                    <textarea id="message" rows={6} required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all resize-none" placeholder="Votre message..." data-testid="contact-message"></textarea>
+                  </div>
+                  <Button type="submit" disabled={status === 'loading'} className="w-full bg-[#0b2a55] hover:bg-[#1a4280] text-white py-4 text-lg rounded-xl disabled:opacity-60" data-testid="contact-submit">
+                    {status === 'loading' ? (
+                      <><Loader2 className="w-5 h-5 mr-2 animate-spin" /> Envoi en cours...</>
+                    ) : (
+                      <><Send className="w-5 h-5 mr-2" /> Envoyer le message</>
+                    )}
+                  </Button>
+                </form>
+              )}
             </div>
           </div>
         </div>

@@ -4,6 +4,9 @@ from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict
 from typing import List, Optional, Dict, Any
@@ -586,6 +589,121 @@ class ContactRequest(BaseModel):
     telephone: Optional[str] = None
     organisation: Optional[str] = None
     message: str
+
+
+# ============== EMAIL MODELS ==============
+
+class ContactFormRequest(BaseModel):
+    nom: str
+    email: str
+    sujet: Optional[str] = None
+    message: str
+
+class AdhesionFormRequest(BaseModel):
+    prenom: str
+    nom: str
+    email: str
+    telephone: Optional[str] = None
+    type_adhesion: str = "actif"
+    motivation: str
+
+
+# ============== EMAIL HELPER ==============
+
+def send_email(subject: str, html_body: str, reply_to: Optional[str] = None):
+    """Send email via OVH SMTP to configured recipients"""
+    smtp_host = os.environ.get('SMTP_HOST')
+    smtp_port = int(os.environ.get('SMTP_PORT', '465'))
+    smtp_user = os.environ.get('SMTP_USER')
+    smtp_password = os.environ.get('SMTP_PASSWORD')
+    recipients = os.environ.get('EMAIL_RECIPIENTS', '').split(',')
+
+    msg = MIMEMultipart('alternative')
+    msg['From'] = f"ALT&ACT <{smtp_user}>"
+    msg['To'] = ', '.join(recipients)
+    msg['Subject'] = subject
+    if reply_to:
+        msg['Reply-To'] = reply_to
+
+    msg.attach(MIMEText(html_body, 'html', 'utf-8'))
+
+    with smtplib.SMTP_SSL(smtp_host, smtp_port) as server:
+        server.login(smtp_user, smtp_password)
+        server.sendmail(smtp_user, recipients, msg.as_string())
+
+
+# ============== EMAIL ROUTES ==============
+
+@api_router.post("/contact")
+async def submit_contact_form(data: ContactFormRequest):
+    """Handle contact form submission and send email"""
+    subject = f"[ALT&ACT Contact] {data.sujet or 'Nouveau message'}"
+    html_body = f"""
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <div style="background-color: #0b2a55; padding: 20px; border-radius: 8px 8px 0 0;">
+            <h2 style="color: white; margin: 0;">Nouveau message de contact</h2>
+        </div>
+        <div style="padding: 24px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 8px 8px;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr><td style="padding: 8px 0; font-weight: bold; color: #374151;">Nom :</td><td style="padding: 8px 0; color: #111827;">{data.nom}</td></tr>
+                <tr><td style="padding: 8px 0; font-weight: bold; color: #374151;">Email :</td><td style="padding: 8px 0; color: #111827;"><a href="mailto:{data.email}">{data.email}</a></td></tr>
+                <tr><td style="padding: 8px 0; font-weight: bold; color: #374151;">Sujet :</td><td style="padding: 8px 0; color: #111827;">{data.sujet or 'Non précisé'}</td></tr>
+            </table>
+            <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 16px 0;">
+            <h3 style="color: #374151; margin-bottom: 8px;">Message :</h3>
+            <p style="color: #111827; line-height: 1.6; white-space: pre-wrap;">{data.message}</p>
+        </div>
+        <p style="color: #9ca3af; font-size: 12px; text-align: center; margin-top: 16px;">
+            Envoyé depuis le formulaire de contact du site ALT&ACT
+        </p>
+    </div>
+    """
+    try:
+        send_email(subject, html_body, reply_to=data.email)
+        # Save to DB
+        doc = {"id": str(uuid.uuid4()), "created_at": datetime.now(timezone.utc).isoformat(), "type": "contact", **data.model_dump()}
+        await db.form_submissions.insert_one(doc)
+        return {"success": True, "message": "Votre message a été envoyé avec succès."}
+    except Exception as e:
+        logger.error(f"Email sending failed: {e}")
+        raise HTTPException(status_code=500, detail="Erreur lors de l'envoi du message. Veuillez réessayer.")
+
+@api_router.post("/adhesion")
+async def submit_adhesion_form(data: AdhesionFormRequest):
+    """Handle membership form submission and send email"""
+    subject = f"[ALT&ACT Adhésion] Nouvelle demande - {data.prenom} {data.nom}"
+    html_body = f"""
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <div style="background-color: #0b2a55; padding: 20px; border-radius: 8px 8px 0 0;">
+            <h2 style="color: white; margin: 0;">Nouvelle demande d'adhésion</h2>
+        </div>
+        <div style="padding: 24px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 8px 8px;">
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr><td style="padding: 8px 0; font-weight: bold; color: #374151;">Prénom :</td><td style="padding: 8px 0; color: #111827;">{data.prenom}</td></tr>
+                <tr><td style="padding: 8px 0; font-weight: bold; color: #374151;">Nom :</td><td style="padding: 8px 0; color: #111827;">{data.nom}</td></tr>
+                <tr><td style="padding: 8px 0; font-weight: bold; color: #374151;">Email :</td><td style="padding: 8px 0; color: #111827;"><a href="mailto:{data.email}">{data.email}</a></td></tr>
+                <tr><td style="padding: 8px 0; font-weight: bold; color: #374151;">Téléphone :</td><td style="padding: 8px 0; color: #111827;">{data.telephone or 'Non renseigné'}</td></tr>
+                <tr><td style="padding: 8px 0; font-weight: bold; color: #374151;">Type d'adhésion :</td><td style="padding: 8px 0; color: #111827;">{data.type_adhesion.capitalize()}</td></tr>
+            </table>
+            <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 16px 0;">
+            <h3 style="color: #374151; margin-bottom: 8px;">Motivation :</h3>
+            <p style="color: #111827; line-height: 1.6; white-space: pre-wrap;">{data.motivation}</p>
+        </div>
+        <p style="color: #9ca3af; font-size: 12px; text-align: center; margin-top: 16px;">
+            Envoyé depuis le formulaire d'adhésion du site ALT&ACT
+        </p>
+    </div>
+    """
+    try:
+        send_email(subject, html_body, reply_to=data.email)
+        # Save to DB
+        doc = {"id": str(uuid.uuid4()), "created_at": datetime.now(timezone.utc).isoformat(), "type": "adhesion", **data.model_dump()}
+        await db.form_submissions.insert_one(doc)
+        return {"success": True, "message": "Votre demande d'adhésion a été envoyée avec succès."}
+    except Exception as e:
+        logger.error(f"Email sending failed: {e}")
+        raise HTTPException(status_code=500, detail="Erreur lors de l'envoi. Veuillez réessayer.")
+
 
 @api_router.get("/reactif/profile/{profile_id}")
 async def get_reactif_profile(profile_id: str):

@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { UserPlus, Users, Heart, Target, GraduationCap, Send } from 'lucide-react';
+import { UserPlus, Users, Heart, Target, GraduationCap, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { Button } from './ui/button';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
+const API_URL = process.env.REACT_APP_BACKEND_URL;
+
 const DevenirMembrePage = () => {
   const [adhesionType, setAdhesionType] = useState('actif');
+  const [status, setStatus] = useState(null); // null | 'loading' | 'success' | 'error'
+  const [errorMsg, setErrorMsg] = useState('');
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -78,7 +82,49 @@ const DevenirMembrePage = () => {
           </div>
 
           <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border border-gray-100">
-            <form className="space-y-6" data-testid="adhesion-form">
+            {status === 'success' ? (
+              <div className="flex flex-col items-center justify-center py-12 text-center" data-testid="adhesion-success">
+                <CheckCircle className="w-16 h-16 text-green-500 mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Demande envoyée !</h3>
+                <p className="text-gray-600 mb-6">Nous avons bien reçu votre demande d'adhésion. Nous vous recontacterons rapidement.</p>
+                <Button onClick={() => setStatus(null)} className="bg-[#0b2a55] hover:bg-[#1a4280] text-white" data-testid="adhesion-new-request">
+                  Envoyer une autre demande
+                </Button>
+              </div>
+            ) : (
+            <form className="space-y-6" data-testid="adhesion-form" onSubmit={async (e) => {
+              e.preventDefault();
+              setStatus('loading');
+              setErrorMsg('');
+              const form = e.target;
+              const payload = {
+                prenom: form.prenom.value,
+                nom: form.nom.value,
+                email: form.email.value,
+                telephone: form.telephone.value || null,
+                type_adhesion: adhesionType,
+                motivation: form.motivation.value,
+              };
+              try {
+                const res = await fetch(`${API_URL}/api/adhesion`, {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(payload),
+                });
+                if (!res.ok) throw new Error('Erreur serveur');
+                setStatus('success');
+                form.reset();
+              } catch (err) {
+                setStatus('error');
+                setErrorMsg("Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone.");
+              }
+            }}>
+              {status === 'error' && (
+                <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-xl" data-testid="adhesion-error">
+                  <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                  <p className="text-red-700 text-sm">{errorMsg}</p>
+                </div>
+              )}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="prenom" className="block text-sm font-medium text-gray-700 mb-2">Prénom <span className="text-red-500">*</span></label>
@@ -124,11 +170,15 @@ const DevenirMembrePage = () => {
                 <label htmlFor="motivation" className="block text-sm font-medium text-gray-700 mb-2">Motivation <span className="text-red-500">*</span></label>
                 <textarea id="motivation" rows={5} className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all resize-none" placeholder="Décrivez vos motivations pour rejoindre ALT&ACT..." data-testid="adhesion-motivation"></textarea>
               </div>
-              <Button type="submit" className="w-full bg-[#0b2a55] hover:bg-[#1a4280] text-white py-4 text-lg rounded-xl" data-testid="adhesion-submit">
-                <Send className="w-5 h-5 mr-2" />
-                Envoyer ma candidature
+              <Button type="submit" disabled={status === 'loading'} className="w-full bg-[#0b2a55] hover:bg-[#1a4280] text-white py-4 text-lg rounded-xl disabled:opacity-60" data-testid="adhesion-submit">
+                {status === 'loading' ? (
+                  <><Loader2 className="w-5 h-5 mr-2 animate-spin" /> Envoi en cours...</>
+                ) : (
+                  <><Send className="w-5 h-5 mr-2" /> Envoyer ma candidature</>
+                )}
               </Button>
             </form>
+            )}
           </div>
         </div>
       </section>
