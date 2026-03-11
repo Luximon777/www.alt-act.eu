@@ -34,7 +34,7 @@ function Navigation() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`} data-testid="navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <a href="/" onClick={goHome} className="flex flex-col items-start group mt-2" data-testid="logo-link" style={{width: '80px'}}>
+            <a href="/" onClick={goHome} className="flex flex-col items-start group mt-5" data-testid="logo-link" style={{width: '80px'}}>
               <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Alt&Act" className="w-full h-auto" />
               <img src={process.env.PUBLIC_URL + '/logo-ia-act.png'} alt="AI Act" className="w-full h-auto mt-0.5 rounded-md" />
             </a>
