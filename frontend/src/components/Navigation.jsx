@@ -34,9 +34,9 @@ function Navigation() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`} data-testid="navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <a href="/" onClick={goHome} className="flex flex-col items-start group" data-testid="logo-link">
-              <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Alt&Act" className="h-6 w-auto" />
-              <img src={process.env.PUBLIC_URL + '/logo-ia-act.png'} alt="AI Act" className="h-10 w-auto mt-1 rounded" />
+            <a href="/" onClick={goHome} className="flex flex-col items-center group" data-testid="logo-link">
+              <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Alt&Act" className="h-7 w-auto" />
+              <img src={process.env.PUBLIC_URL + '/logo-ia-act.png'} alt="AI Act" className="w-16 mt-0.5 rounded-sm" />
             </a>
             <div className="hidden lg:flex items-center space-x-5">
               {/* Dropdown Présentation */}
