@@ -228,8 +228,8 @@ function VisionMethode() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="relative rounded-2xl overflow-hidden shadow-lg">
                     <img 
-                      src="https://images.unsplash.com/photo-1758518727600-2c5f48419eac?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtZWV0aW5nJTIwYnVzaW5lc3MlMjBkaXNjdXNzaW9uJTIwb2ZmaWNlfGVufDB8fHx8MTc3MDQ2Mzk0Mnww&ixlib=rb-4.1.0&q=85" 
-                      alt="Accompagnement professionnel" 
+                      src="https://images.unsplash.com/photo-1758270705696-ec9caffc73dd?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800&h=500&fit=crop" 
+                      alt="Accompagnement personnalisé en salle" 
                       className="w-full h-48 md:h-56 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
@@ -240,8 +240,8 @@ function VisionMethode() {
                   </div>
                   <div className="relative rounded-2xl overflow-hidden shadow-lg">
                     <img 
-                      src="https://images.unsplash.com/photo-1758518726869-01aff69a56e3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBtZWV0aW5nJTIwYnVzaW5lc3MlMjBkaXNjdXNzaW9uJTIwb2ZmaWNlfGVufDB8fHx8MTc3MDQ2Mzk0Mnww&ixlib=rb-4.1.0&q=85" 
-                      alt="Discussion et échange professionnel" 
+                      src="https://images.unsplash.com/photo-1573496546471-398eacdbd679?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800&h=500&fit=crop" 
+                      alt="Dialogue et co-construction sur whiteboard" 
                       className="w-full h-48 md:h-56 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
