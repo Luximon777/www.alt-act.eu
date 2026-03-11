@@ -109,7 +109,12 @@ const ReactifProActions = () => {
 
       {/* Actions */}
       <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex gap-8">
+            <div className="hidden lg:block flex-shrink-0 sticky top-28 self-start">
+              <img src={process.env.PUBLIC_URL + '/logo-reactif-pro.png'} alt="RE'ACTIF PRO" className="w-40 rounded-xl shadow-lg" />
+            </div>
+            <div className="flex-1 space-y-10">
           {actions.map((action, index) => {
             const Icon = action.icon;
             const colors = colorMap[action.color];
@@ -136,6 +141,8 @@ const ReactifProActions = () => {
               </div>
             );
           })}
+            </div>
+          </div>
         </div>
       </section>
 

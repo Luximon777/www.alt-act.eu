@@ -81,7 +81,12 @@ const CharteEthiqueIA = () => {
       </section>
 
       <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex gap-8">
+            <div className="hidden lg:block flex-shrink-0 sticky top-28 self-start">
+              <img src={process.env.PUBLIC_URL + '/logo-reactif-pro.png'} alt="RE'ACTIF PRO" className="w-40 rounded-xl shadow-lg" />
+            </div>
+            <div className="flex-1">
 
           {/* AI Act Introduction */}
           <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl p-8 md:p-12 border-l-4 border-blue-500 mb-12">
@@ -270,6 +275,8 @@ const CharteEthiqueIA = () => {
               <Button onClick={() => navigate('/reactif-pro/presentation')} variant="outline" className="border-[#0b2a55] text-[#0b2a55] hover:bg-[#0b2a55] hover:text-white px-8 py-6 text-lg rounded-full" data-testid="cta-presentation">
                 Retour à RE'ACTIF PRO
               </Button>
+            </div>
+          </div>
             </div>
           </div>
         </div>

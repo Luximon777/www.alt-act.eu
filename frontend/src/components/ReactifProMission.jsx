@@ -109,7 +109,12 @@ const ReactifProMission = () => {
 
       {/* Missions */}
       <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex gap-8">
+            <div className="hidden lg:block flex-shrink-0 sticky top-28 self-start">
+              <img src={process.env.PUBLIC_URL + '/logo-reactif-pro.png'} alt="RE'ACTIF PRO" className="w-40 rounded-xl shadow-lg" />
+            </div>
+            <div className="flex-1 space-y-12">
           {missions.map((mission, index) => {
             const Icon = mission.icon;
             const colors = colorMap[mission.color];
@@ -137,10 +142,10 @@ const ReactifProMission = () => {
               </div>
             );
           })}
+            </div>
+          </div>
         </div>
       </section>
-
-      {/* CTA */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4">
