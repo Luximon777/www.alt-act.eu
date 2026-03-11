@@ -33,10 +33,10 @@ function Navigation() {
     <React.Fragment>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`} data-testid="navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            <a href="/" onClick={goHome} className="flex flex-col items-start group mt-5" data-testid="logo-link">
-              <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Alt&Act" className="h-5 w-auto" />
-              <img src={process.env.PUBLIC_URL + '/logo-ia-act.png'} alt="AI Act" className="w-24 h-auto mt-1 rounded-md" />
+          <div className="flex items-center justify-between h-24">
+            <a href="/" onClick={goHome} className="flex flex-col items-start group" data-testid="logo-link" style={{width: '110px'}}>
+              <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Alt&Act" className="w-full h-auto" />
+              <img src={process.env.PUBLIC_URL + '/logo-ia-act.png'} alt="AI Act" className="w-full h-auto mt-2 rounded-md" />
             </a>
             <div className="hidden lg:flex items-center space-x-5">
               {/* Dropdown Présentation */}
@@ -227,7 +227,7 @@ function Navigation() {
 
       {/* Mobile Menu */}
       <div className={`fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={() => setIsMobileMenuOpen(false)}>
-        <div className={`fixed top-20 right-0 bottom-0 w-80 bg-white shadow-2xl transform transition-transform duration-300 overflow-y-auto ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} onClick={(e) => e.stopPropagation()} data-testid="mobile-menu">
+        <div className={`fixed top-24 right-0 bottom-0 w-80 bg-white shadow-2xl transform transition-transform duration-300 overflow-y-auto ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} onClick={(e) => e.stopPropagation()} data-testid="mobile-menu">
           <div className="flex flex-col p-6 space-y-2">
             <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">Présentation</p>
             <a href="/vision-methode" onClick={(e) => goToPage(e, '/vision-methode')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-[#0b2a55]/10 transition-colors">
