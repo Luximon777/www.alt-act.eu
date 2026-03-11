@@ -228,8 +228,8 @@ function VisionMethode() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="relative rounded-2xl overflow-hidden shadow-lg">
                     <img 
-                      src="https://images.unsplash.com/photo-1758270705696-ec9caffc73dd?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=800&h=500&fit=crop" 
-                      alt="Accompagnement personnalisé en salle" 
+                      src="https://customer-assets.emergentagent.com/job_7da2981c-f34a-4f2c-a39e-e88f2c02c17d/artifacts/lknwdcjt_5.webp" 
+                      alt="Accompagnement personnalisé inclusif" 
                       className="w-full h-48 md:h-56 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
