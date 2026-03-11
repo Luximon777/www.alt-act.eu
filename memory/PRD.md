@@ -23,6 +23,7 @@ Application React (Create React App, TailwindCSS) avec HashRouter déployée sur
   - `ReactifProPresentation.jsx` : Présentation du dispositif, coffre-fort numérique, tiers de confiance
   - `ReactifProMission.jsx` : 5 missions (révéler, sécuriser, faciliter, intelligence collective, éthique)
   - `ReactifProActions.jsx` : 5 actions + section vision
+  - `CharteEthiqueIA.jsx` : Charte éthique IA conforme à l'AI Act (12 articles, citations, calendrier)
 - **Navigation mise à jour** :
   - Ajout du dropdown RE'ACTIF PRO (Présentation, Missions, Actions)
   - Contact et Devenir Membre pointent vers des pages séparées (plus d'ancres)

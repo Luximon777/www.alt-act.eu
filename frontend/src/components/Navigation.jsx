@@ -167,6 +167,12 @@ function Navigation() {
                         </div>
                         <div><p className="font-semibold">Actions</p><p className="text-xs text-gray-500">Les actions déployées</p></div>
                       </a>
+                      <a href="/reactif-pro/charte-ia" onClick={(e) => goToPage(e, '/reactif-pro/charte-ia')} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-200 group/item" data-testid="reactif-charte-ia-link">
+                        <div className="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center group-hover/item:bg-rose-500 transition-colors duration-200">
+                          <ShieldCheck className="w-5 h-5 text-rose-600 group-hover/item:text-white transition-colors duration-200" />
+                        </div>
+                        <div><p className="font-semibold">Charte éthique IA</p><p className="text-xs text-gray-500">IA conforme à l'AI Act</p></div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -261,6 +267,9 @@ function Navigation() {
             </a>
             <a href="/reactif-pro/actions" onClick={(e) => goToPage(e, '/reactif-pro/actions')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-cyan-50 transition-colors">
               <Zap className="w-5 h-5 text-green-600" /><span className="font-medium">Actions</span>
+            </a>
+            <a href="/reactif-pro/charte-ia" onClick={(e) => goToPage(e, '/reactif-pro/charte-ia')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-cyan-50 transition-colors">
+              <ShieldCheck className="w-5 h-5 text-rose-600" /><span className="font-medium">Charte éthique IA</span>
             </a>
             
             <p className="text-xs text-gray-400 uppercase tracking-wider mt-4 mb-2">Contact</p>

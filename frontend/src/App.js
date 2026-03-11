@@ -33,6 +33,7 @@ import DevenirMembrePage from "./components/DevenirMembrePage";
 import ReactifProPresentation from "./components/ReactifProPresentation";
 import ReactifProMission from "./components/ReactifProMission";
 import ReactifProActions from "./components/ReactifProActions";
+import CharteEthiqueIA from "./components/CharteEthiqueIA";
 
 // Homepage Component
 function HomePage() {
@@ -82,6 +83,7 @@ function App() {
           <Route path="/reactif-pro/presentation" element={<ReactifProPresentation />} />
           <Route path="/reactif-pro/mission" element={<ReactifProMission />} />
           <Route path="/reactif-pro/actions" element={<ReactifProActions />} />
+          <Route path="/reactif-pro/charte-ia" element={<CharteEthiqueIA />} />
           
           {/* Legal Pages */}
           <Route path="/mentions-legales" element={<MentionsLegales />} />
