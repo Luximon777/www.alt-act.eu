@@ -103,7 +103,7 @@ const PolitiqueConfidentialite = () => {
               <h2 className="text-2xl font-bold text-gray-900">5. Contact</h2>
             </div>
             <p className="text-gray-700 leading-relaxed">
-              Pour exercer vos droits ou pour toute question relative à la protection de vos données personnelles, vous pouvez nous contacter à l'adresse : <a href="mailto:contact@altact.org" className="text-[#0b2a55] hover:underline font-medium">contact@altact.org</a>
+              Pour exercer vos droits ou pour toute question relative à la protection de vos données personnelles, vous pouvez nous contacter à l'adresse : <a href="mailto:contact@alt-act.eu" className="text-[#0b2a55] hover:underline font-medium">contact@alt-act.eu</a>
             </p>
           </section>
 

@@ -40,8 +40,8 @@ const MentionsLegales = () => {
               <li><strong>Numero au registre des associations :</strong> W672017439</li>
               <li>
                 <strong>Email :</strong>{' '}
-                <a href="mailto:contact@altact.org" className="text-[#0b2a55] hover:underline">
-                  contact@altact.org
+                <a href="mailto:contact@alt-act.eu" className="text-[#0b2a55] hover:underline">
+                  contact@alt-act.eu
                 </a>
               </li>
             </ul>
@@ -122,8 +122,8 @@ const MentionsLegales = () => {
             
             <p className="text-gray-700 leading-relaxed">
               Pour exercer vos droits, vous pouvez contacter ALT&ACT a l'adresse :{' '}
-              <a href="mailto:contact@altact.org" className="text-[#0b2a55] hover:underline">
-                contact@altact.org
+              <a href="mailto:contact@alt-act.eu" className="text-[#0b2a55] hover:underline">
+                contact@alt-act.eu
               </a>
             </p>
           </section>
@@ -133,8 +133,8 @@ const MentionsLegales = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Contact</h2>
             <p className="text-gray-700">
               Pour toute question, vous pouvez contacter ALT&ACT a l'adresse :{' '}
-              <a href="mailto:contact@altact.org" className="text-[#0b2a55] hover:underline">
-                contact@altact.org
+              <a href="mailto:contact@alt-act.eu" className="text-[#0b2a55] hover:underline">
+                contact@alt-act.eu
               </a>
             </p>
           </section>
