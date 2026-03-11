@@ -27,6 +27,13 @@ import EspaceUbuntoo from "./components/EspaceUbuntoo";
 import MentionsLegales from "./components/MentionsLegales";
 import PolitiqueConfidentialite from "./components/PolitiqueConfidentialite";
 
+// New Pages
+import ContactPage from "./components/ContactPage";
+import DevenirMembrePage from "./components/DevenirMembrePage";
+import ReactifProPresentation from "./components/ReactifProPresentation";
+import ReactifProMission from "./components/ReactifProMission";
+import ReactifProActions from "./components/ReactifProActions";
+
 // Homepage Component
 function HomePage() {
   return (
@@ -66,6 +73,15 @@ function App() {
           <Route path="/conseils-accompagnement" element={<ConseilsAccompagnement />} />
           <Route path="/espace-personnel" element={<EspacePersonnel />} />
           <Route path="/espace-ubuntoo" element={<EspaceUbuntoo />} />
+          
+          {/* Contact & Membre */}
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/devenir-membre" element={<DevenirMembrePage />} />
+          
+          {/* RE'ACTIF PRO */}
+          <Route path="/reactif-pro/presentation" element={<ReactifProPresentation />} />
+          <Route path="/reactif-pro/mission" element={<ReactifProMission />} />
+          <Route path="/reactif-pro/actions" element={<ReactifProActions />} />
           
           {/* Legal Pages */}
           <Route path="/mentions-legales" element={<MentionsLegales />} />
