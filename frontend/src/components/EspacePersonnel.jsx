@@ -34,9 +34,10 @@ const EspacePersonnel = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <Navigation />
-      <header className="relative bg-gradient-to-br from-orange-500 via-orange-600 to-amber-600 text-white pt-28 pb-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=srgb&fm=jpg&w=1200" alt="" className="w-full h-full object-cover" />
+      <header className="relative bg-gradient-to-br from-[#0b2a55] via-[#1a4280] to-[#0b2a55] text-white pt-28 pb-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-amber-400 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-orange-400 rounded-full blur-3xl"></div>
         </div>
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <Button variant="ghost" onClick={handleBackHome} className="text-white hover:bg-white/20 mb-6">
