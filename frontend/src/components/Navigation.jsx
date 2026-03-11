@@ -34,8 +34,22 @@ function Navigation() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`} data-testid="navigation">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <a href="/" onClick={goHome} className="flex items-center group" data-testid="logo-link">
+            <a href="/" onClick={goHome} className="flex flex-col items-start group" data-testid="logo-link">
               <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Alt&Act" className="h-6 w-auto" />
+              <div className="flex items-center gap-1.5 mt-1 px-2 py-0.5 bg-gradient-to-r from-[#003399] to-[#003399]/80 rounded-md">
+                <svg viewBox="0 0 100 100" className="w-3.5 h-3.5 flex-shrink-0">
+                  {Array.from({ length: 12 }, (_, i) => {
+                    const angle = (i * 30 - 90) * (Math.PI / 180);
+                    const r = 38;
+                    const cx = 50 + r * Math.cos(angle);
+                    const cy = 50 + r * Math.sin(angle);
+                    return (
+                      <polygon key={i} transform={`translate(${cx}, ${cy})`} points="0,-6 1.8,-1.8 6,-1.8 3,1.2 4.5,6 0,3 -4.5,6 -3,1.2 -6,-1.8 -1.8,-1.8" fill="#FFD700" />
+                    );
+                  })}
+                </svg>
+                <span className="text-white text-[9px] font-bold tracking-wide">ALT&ACT</span>
+              </div>
             </a>
             <div className="hidden lg:flex items-center space-x-5">
               {/* Dropdown Présentation */}
