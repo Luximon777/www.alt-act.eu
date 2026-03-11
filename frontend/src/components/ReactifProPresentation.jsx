@@ -30,11 +30,11 @@ const ReactifProPresentation = () => {
             <Cpu className="w-4 h-4 text-cyan-300" />
             <span className="text-cyan-300 text-sm font-semibold">RE'ACTIF PRO</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Présentation
+          <h1 className="mb-6">
+            <img src={process.env.PUBLIC_URL + '/logo-reactif-pro.png'} alt="RE'ACTIF PRO - Intelligence Professionnelle" className="h-28 md:h-36 lg:h-44 w-auto mx-auto" />
           </h1>
-          <p className="text-lg md:text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-            Un dispositif d'innovation sociale et numérique pour répondre aux transformations profondes du monde du travail.
+          <p className="text-base md:text-lg text-blue-100 max-w-4xl mx-auto leading-relaxed">
+            Un dispositif d'innovation sociale et numérique au service de l'intelligence professionnelle, pour répondre aux transformations profondes du monde du travail.
           </p>
         </div>
       </section>
