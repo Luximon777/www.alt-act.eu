@@ -1,8 +1,10 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Send, Users, Building, Heart } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Users, Building, Heart, Smartphone } from 'lucide-react';
 import { Button } from './ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const ContactSection = () => {
+  const navigate = useNavigate();
   return (
     <section id="contact" className="py-24 bg-gradient-to-b from-white to-gray-50" data-testid="contact-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,7 +114,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold mb-1">Adresse</p>
-                    <p className="text-blue-200">Grand Est, France</p>
+                    <p className="text-blue-200">Grand Est - Strasbourg</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -121,8 +123,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold mb-1">Email</p>
-                    <a href="mailto:contact@altact.org" className="text-blue-200 hover:text-white transition-colors">
-                      contact@altact.org
+                    <a href="mailto:contact@alt-act.eu" className="text-blue-200 hover:text-white transition-colors">
+                      contact@alt-act.eu
                     </a>
                   </div>
                 </div>
@@ -131,8 +133,17 @@ const ContactSection = () => {
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="font-semibold mb-1">Téléphone</p>
-                    <p className="text-blue-200">+33 (0)3 XX XX XX XX</p>
+                    <p className="font-semibold mb-1">Téléphone fixe</p>
+                    <a href="tel:+33960510882" className="text-blue-200 hover:text-white transition-colors">09 60 51 08 82</a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Smartphone className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="font-semibold mb-1">Téléphone mobile</p>
+                    <a href="tel:+33658165883" className="text-blue-200 hover:text-white transition-colors">06 58 16 58 83</a>
                   </div>
                 </div>
               </div>
@@ -161,7 +172,7 @@ const ContactSection = () => {
               <p className="text-gray-600 mb-6">
                 Rejoignez ALT&ACT et participez à la construction d'une société plus inclusive et plus humaine.
               </p>
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-xl">
+              <Button onClick={() => navigate('/devenir-membre')} className="bg-orange-500 hover:bg-orange-600 text-white rounded-xl">
                 En savoir plus sur l'adhésion
               </Button>
             </div>
