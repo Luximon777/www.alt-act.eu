@@ -1,0 +1,240 @@
+@import '@fontsource/fraunces/400.css';
+@import '@fontsource/fraunces/600.css';
+@import '@fontsource/fraunces/700.css';
+@import '@fontsource/manrope/400.css';
+@import '@fontsource/manrope/500.css';
+@import '@fontsource/manrope/600.css';
+@import '@fontsource/manrope/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: 'Fraunces', serif;
+  --font-body: 'Manrope', sans-serif;
+  
+  /* VSI Color Palette */
+  --vsi-primary: #D97706;
+  --vsi-primary-light: #F59E0B;
+  --vsi-secondary: #0F766E;
+  --vsi-secondary-light: #14B8A6;
+  --vsi-background: #FAFAF9;
+  --vsi-paper: #FFFFFF;
+  --vsi-text: #1C1917;
+  --vsi-text-secondary: #57534E;
+  --vsi-text-muted: #A8A29E;
+  --vsi-accent-warm: #FEF3C7;
+  --vsi-accent-cool: #CCFBF1;
+}
+
+@layer base {
+  :root {
+    --background: 40 20% 98%;
+    --foreground: 24 10% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 24 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 10% 10%;
+    --primary: 32 95% 44%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 173 78% 26%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 40 20% 96%;
+    --muted-foreground: 24 5% 45%;
+    --accent: 40 100% 92%;
+    --accent-foreground: 24 10% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 24 6% 90%;
+    --input: 24 6% 90%;
+    --ring: 32 95% 44%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vsi-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vsi-text-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vsi-text-secondary);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(217, 119, 6, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(217, 119, 6, 0.5);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Delay utilities for staggered animations */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Card hover effects */
+.vsi-card {
+  @apply bg-white rounded-2xl p-6 md:p-8 transition-all duration-300;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.vsi-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 12px 32px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+}
+
+/* Entry door cards */
+.door-card {
+  @apply relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500;
+  min-height: 400px;
+}
+
+.door-card::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10;
+}
+
+.door-card:hover {
+  transform: scale(1.02);
+}
+
+.door-card:hover::before {
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.4), transparent);
+}
+
+/* Progress bar */
+.progress-bar {
+  @apply h-2 bg-stone-200 rounded-full overflow-hidden;
+}
+
+.progress-bar-fill {
+  @apply h-full bg-gradient-to-r from-amber-500 to-teal-500 transition-all duration-500 ease-out;
+}
+
+/* Option buttons for questionnaire */
+.option-btn {
+  @apply w-full text-left p-4 md:p-6 rounded-xl border-2 border-stone-200 bg-white 
+         transition-all duration-300 hover:border-amber-400 hover:bg-amber-50;
+}
+
+.option-btn.selected {
+  @apply border-amber-500 bg-amber-50 shadow-lg;
+}
+
+.option-btn:hover {
+  transform: translateX(4px);
+}
+
+/* Vertu badges */
+.vertu-badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+/* Radar chart container */
+.radar-container {
+  @apply w-full aspect-square max-w-md mx-auto;
+}
+
+/* Print styles for PDF */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+  }
+  
+  .vsi-card {
+    box-shadow: none !important;
+    border: 1px solid #e5e5e5;
+  }
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Gradient backgrounds */
+.bg-warm-gradient {
+  background: linear-gradient(135deg, #FEF3C7 0%, #FFEDD5 100%);
+}
+
+.bg-cool-gradient {
+  background: linear-gradient(135deg, #CCFBF1 0%, #D1FAE5 100%);
+}
+
+/* Loading skeleton */
+.skeleton {
+  @apply animate-pulse bg-stone-200 rounded;
+}
+
+/* European stars slow rotation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 120s linear infinite;
+}
