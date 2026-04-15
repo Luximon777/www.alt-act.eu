@@ -238,3 +238,10 @@
 .animate-spin-slow {
   animation: spin-slow 120s linear infinite;
 }
+
+
+/* Hide Google Translate default bar */
+.goog-te-banner-frame { display: none !important; }
+body { top: 0 !important; }
+.goog-te-gadget { display: none !important; }
+.skiptranslate { display: none !important; }
