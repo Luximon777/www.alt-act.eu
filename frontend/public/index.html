@@ -1,5 +1,18 @@
 <!doctype html>
 <html lang="en">
+    <script>
+  const _originalFetch = window.fetch;
+  window.fetch = function(url, options) {
+    if (typeof url === 'string' && url.includes('/api/adhesion')) {
+      return _originalFetch('https://formspree.io/f/xdajwvnq', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: options && options.body
+      });
+    }
+    return _originalFetch(url, options);
+  };
+</script>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
