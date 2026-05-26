@@ -4,7 +4,8 @@ import { Button } from './ui/button';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
-const API_URL = process.env.REACT_APP_BACKEND_URL;
+// ✅ MODIF 1 — Remplace process.env par l'endpoint Formspree
+const FORMSPREE_URL = 'https://formspree.io/f/xdajwvnq';
 
 const DevenirMembrePage = () => {
   const [adhesionType, setAdhesionType] = useState('actif');
@@ -110,9 +111,13 @@ const DevenirMembrePage = () => {
                 motivation: form.motivation.value,
               };
               try {
-                const res = await fetch(`${API_URL}/api/adhesion`, {
+                // ✅ MODIF 2 — Utilise FORMSPREE_URL avec Accept: application/json
+                const res = await fetch(FORMSPREE_URL, {
                   method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                  },
                   body: JSON.stringify(payload),
                 });
                 if (!res.ok) throw new Error('Erreur serveur');
@@ -132,21 +137,21 @@ const DevenirMembrePage = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="prenom" className="block text-sm font-medium text-gray-700 mb-2">Prénom <span className="text-red-500">*</span></label>
-                  <input type="text" id="prenom" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre prénom" data-testid="adhesion-prenom" />
+                  <input type="text" id="prenom" name="prenom" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre prénom" data-testid="adhesion-prenom" />
                 </div>
                 <div>
                   <label htmlFor="nom" className="block text-sm font-medium text-gray-700 mb-2">Nom <span className="text-red-500">*</span></label>
-                  <input type="text" id="nom" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre nom" data-testid="adhesion-nom" />
+                  <input type="text" id="nom" name="nom" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre nom" data-testid="adhesion-nom" />
                 </div>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email <span className="text-red-500">*</span></label>
-                  <input type="email" id="email" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="votre@email.com" data-testid="adhesion-email" />
+                  <input type="email" id="email" name="email" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="votre@email.com" data-testid="adhesion-email" />
                 </div>
                 <div>
                   <label htmlFor="telephone" className="block text-sm font-medium text-gray-700 mb-2">Téléphone</label>
-                  <input type="tel" id="telephone" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre téléphone" data-testid="adhesion-telephone" />
+                  <input type="tel" id="telephone" name="telephone" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre téléphone" data-testid="adhesion-telephone" />
                 </div>
               </div>
               <div>
@@ -172,7 +177,7 @@ const DevenirMembrePage = () => {
               </div>
               <div>
                 <label htmlFor="motivation" className="block text-sm font-medium text-gray-700 mb-2">Motivation <span className="text-red-500">*</span></label>
-                <textarea id="motivation" rows={5} required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all resize-none" placeholder="Décrivez vos motivations pour rejoindre ALT&ACT..." data-testid="adhesion-motivation"></textarea>
+                <textarea id="motivation" name="motivation" rows={5} required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all resize-none" placeholder="Décrivez vos motivations pour rejoindre ALT&ACT..." data-testid="adhesion-motivation"></textarea>
               </div>
               <Button type="submit" disabled={status === 'loading'} className="w-full bg-[#0b2a55] hover:bg-[#1a4280] text-white py-4 text-lg rounded-xl disabled:opacity-60" data-testid="adhesion-submit">
                 {status === 'loading' ? (
