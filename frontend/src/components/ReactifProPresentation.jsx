@@ -43,7 +43,7 @@ const ReactifProPresentation = () => {
     <img
       src={process.env.PUBLIC_URL + '/logo-reactif-pro.png'}
       alt="RE'ACTIF PRO - Intelligence Professionnelle"
-      className={`h-28 md:h-36 lg:h-44 w-auto mx-auto ${logoActive ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
+      className={`h-24 md:h-28 lg:h-36 w-auto mx-auto ${logoActive ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
       data-testid="reactif-pro-logo"
     />
   );
