@@ -569,6 +569,34 @@ async def get_stats():
     }
 
 
+# ============== ADMIN TOGGLE ROUTES ==============
+
+class AdminToggleRequest(BaseModel):
+    password: str
+    active: bool
+
+@api_router.get("/admin/logo-toggle")
+async def get_logo_toggle():
+    """Get current state of RE'ACTIF PRO logo link"""
+    doc = await db.admin_settings.find_one({"key": "reactif_logo_active"}, {"_id": 0})
+    if not doc:
+        return {"active": False}
+    return {"active": doc.get("active", False)}
+
+@api_router.post("/admin/logo-toggle")
+async def set_logo_toggle(data: AdminToggleRequest):
+    """Toggle RE'ACTIF PRO logo link (admin only)"""
+    if data.password != "Choukette@777":
+        raise HTTPException(status_code=403, detail="Mot de passe incorrect")
+    
+    await db.admin_settings.update_one(
+        {"key": "reactif_logo_active"},
+        {"$set": {"key": "reactif_logo_active", "active": data.active}},
+        upsert=True
+    )
+    return {"success": True, "active": data.active}
+
+
 # ============== RE'ACTIF PRO ROUTES ==============
 
 # Plan d'action model

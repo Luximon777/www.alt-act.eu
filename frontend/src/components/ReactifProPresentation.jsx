@@ -1,16 +1,79 @@
-import React, { useEffect } from 'react';
-import { Shield, Lock, Database, Users, Globe, ArrowRight, Cpu, Layers } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Shield, Lock, Database, Users, Globe, ArrowRight, Cpu, Layers, Settings } from 'lucide-react';
 import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
 const ReactifProPresentation = () => {
   const navigate = useNavigate();
+  const [logoActive, setLogoActive] = useState(false);
+  const [showAdminPopup, setShowAdminPopup] = useState(false);
+  const [adminPassword, setAdminPassword] = useState('');
+  const [adminError, setAdminError] = useState('');
+  const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    fetchLogoState();
   }, []);
+
+  const fetchLogoState = async () => {
+    try {
+      const res = await fetch(`${BACKEND_URL}/api/admin/logo-toggle`);
+      const data = await res.json();
+      setLogoActive(data.active);
+    } catch (e) {
+      console.error('Error fetching logo state:', e);
+    }
+  };
+
+  const handleAdminLogin = async () => {
+    try {
+      const res = await fetch(`${BACKEND_URL}/api/admin/logo-toggle`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: adminPassword, active: logoActive })
+      });
+      if (res.ok) {
+        setIsAdmin(true);
+        setShowAdminPopup(false);
+        setAdminPassword('');
+        setAdminError('');
+      } else {
+        setAdminError('Mot de passe incorrect');
+      }
+    } catch (e) {
+      setAdminError('Erreur de connexion');
+    }
+  };
+
+  const handleToggle = async () => {
+    const newState = !logoActive;
+    try {
+      const res = await fetch(`${BACKEND_URL}/api/admin/logo-toggle`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: 'Choukette@777', active: newState })
+      });
+      if (res.ok) {
+        setLogoActive(newState);
+      }
+    } catch (e) {
+      console.error('Error toggling logo:', e);
+    }
+  };
+
+  const logoImage = (
+    <img
+      src={process.env.PUBLIC_URL + '/logo-reactif-pro.png'}
+      alt="RE'ACTIF PRO - Intelligence Professionnelle"
+      className={`h-28 md:h-36 lg:h-44 w-auto mx-auto ${logoActive ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
+      data-testid="reactif-pro-logo"
+    />
+  );
 
   return (
     <div className="min-h-screen bg-gray-50" data-testid="reactif-pro-presentation-page">
@@ -31,8 +94,76 @@ const ReactifProPresentation = () => {
             <span className="text-cyan-300 text-sm font-semibold">RE'ACTIF PRO</span>
           </div>
           <h1 className="mb-6">
-            <img src={process.env.PUBLIC_URL + '/logo-reactif-pro.png'} alt="RE'ACTIF PRO - Intelligence Professionnelle" className="h-28 md:h-36 lg:h-44 w-auto mx-auto" />
+            {logoActive ? (
+              <a href="https://www.alt-act.eu/reactif-pro/presentation" target="_blank" rel="noopener noreferrer" data-testid="reactif-logo-link">
+                {logoImage}
+              </a>
+            ) : (
+              logoImage
+            )}
           </h1>
+
+          {/* Admin toggle button */}
+          {isAdmin ? (
+            <div className="flex items-center justify-center gap-3 mb-4" data-testid="admin-toggle-panel">
+              <span className="text-sm text-blue-200">Lien logo :</span>
+              <button
+                onClick={handleToggle}
+                data-testid="toggle-logo-btn"
+                className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${logoActive ? 'bg-green-500' : 'bg-gray-500'}`}
+              >
+                <span className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${logoActive ? 'translate-x-9' : 'translate-x-1'}`} />
+              </button>
+              <span className={`text-sm font-semibold ${logoActive ? 'text-green-300' : 'text-gray-400'}`}>
+                {logoActive ? 'Activé' : 'Désactivé'}
+              </span>
+            </div>
+          ) : (
+            <button
+              onClick={() => setShowAdminPopup(true)}
+              data-testid="admin-access-btn"
+              className="absolute top-4 right-4 p-2 text-blue-300/30 hover:text-blue-200 transition-colors"
+              title="Administration"
+            >
+              <Settings className="w-5 h-5" />
+            </button>
+          )}
+
+          {/* Admin password popup */}
+          {showAdminPopup && (
+            <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50" data-testid="admin-popup">
+              <div className="bg-white rounded-2xl p-6 w-80 shadow-2xl">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Accès administrateur</h3>
+                <input
+                  type="password"
+                  value={adminPassword}
+                  onChange={(e) => { setAdminPassword(e.target.value); setAdminError(''); }}
+                  onKeyDown={(e) => e.key === 'Enter' && handleAdminLogin()}
+                  placeholder="Mot de passe"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg mb-2 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  data-testid="admin-password-input"
+                  autoFocus
+                />
+                {adminError && <p className="text-red-500 text-sm mb-2" data-testid="admin-error">{adminError}</p>}
+                <div className="flex gap-2 mt-3">
+                  <button
+                    onClick={() => { setShowAdminPopup(false); setAdminPassword(''); setAdminError(''); }}
+                    className="flex-1 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
+                    data-testid="admin-cancel-btn"
+                  >
+                    Annuler
+                  </button>
+                  <button
+                    onClick={handleAdminLogin}
+                    className="flex-1 px-4 py-2 bg-[#0b2a55] text-white rounded-lg hover:bg-[#1a4280] transition-colors"
+                    data-testid="admin-submit-btn"
+                  >
+                    Valider
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
           <p className="text-base md:text-lg text-blue-100 max-w-4xl mx-auto leading-relaxed">
             Un dispositif d'innovation sociale et numérique au service de l'intelligence professionnelle, pour répondre aux transformations profondes du monde du travail.
           </p>
