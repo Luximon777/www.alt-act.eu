@@ -5,11 +5,14 @@ import { useNavigate } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const ADMIN_PASSWORD = 'Choukette@777';
+const STORAGE_KEY = 'reactif_logo_active';
 
 const ReactifProPresentation = () => {
   const navigate = useNavigate();
-  const [logoActive, setLogoActive] = useState(false);
+  const [logoActive, setLogoActive] = useState(() => {
+    try { return localStorage.getItem(STORAGE_KEY) === 'true'; } catch { return false; }
+  });
   const [showAdminPopup, setShowAdminPopup] = useState(false);
   const [adminPassword, setAdminPassword] = useState('');
   const [adminError, setAdminError] = useState('');
@@ -17,53 +20,23 @@ const ReactifProPresentation = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    fetchLogoState();
   }, []);
 
-  const fetchLogoState = async () => {
-    try {
-      const res = await fetch(`${BACKEND_URL}/api/admin/logo-toggle`);
-      const data = await res.json();
-      setLogoActive(data.active);
-    } catch (e) {
-      console.error('Error fetching logo state:', e);
+  const handleAdminLogin = () => {
+    if (adminPassword === ADMIN_PASSWORD) {
+      setIsAdmin(true);
+      setShowAdminPopup(false);
+      setAdminPassword('');
+      setAdminError('');
+    } else {
+      setAdminError('Mot de passe incorrect');
     }
   };
 
-  const handleAdminLogin = async () => {
-    try {
-      const res = await fetch(`${BACKEND_URL}/api/admin/logo-toggle`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password: adminPassword, active: logoActive })
-      });
-      if (res.ok) {
-        setIsAdmin(true);
-        setShowAdminPopup(false);
-        setAdminPassword('');
-        setAdminError('');
-      } else {
-        setAdminError('Mot de passe incorrect');
-      }
-    } catch (e) {
-      setAdminError('Erreur de connexion');
-    }
-  };
-
-  const handleToggle = async () => {
+  const handleToggle = () => {
     const newState = !logoActive;
-    try {
-      const res = await fetch(`${BACKEND_URL}/api/admin/logo-toggle`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password: 'Choukette@777', active: newState })
-      });
-      if (res.ok) {
-        setLogoActive(newState);
-      }
-    } catch (e) {
-      console.error('Error toggling logo:', e);
-    }
+    setLogoActive(newState);
+    try { localStorage.setItem(STORAGE_KEY, String(newState)); } catch {}
   };
 
   const logoImage = (
