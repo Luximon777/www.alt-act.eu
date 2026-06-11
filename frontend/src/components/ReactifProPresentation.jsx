@@ -122,7 +122,7 @@ const ReactifProPresentation = () => {
             <button
               onClick={() => setShowAdminPopup(true)}
               data-testid="admin-access-btn"
-              className="absolute top-4 right-4 p-2 text-blue-300/30 hover:text-blue-200 transition-colors"
+              className="absolute top-4 right-4 p-2 bg-white/10 rounded-full text-white/70 hover:bg-white/20 hover:text-white transition-all"
               title="Administration"
             >
               <Settings className="w-5 h-5" />
