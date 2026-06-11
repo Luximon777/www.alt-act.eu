@@ -95,7 +95,7 @@ const ReactifProPresentation = () => {
           </div>
           <h1 className="mb-6">
             {logoActive ? (
-              <a href="https://www.alt-act.eu/reactif-pro/presentation" target="_blank" rel="noopener noreferrer" data-testid="reactif-logo-link">
+              <a href="https://reactif.pro" target="_blank" rel="noopener noreferrer" data-testid="reactif-logo-link">
                 {logoImage}
               </a>
             ) : (
