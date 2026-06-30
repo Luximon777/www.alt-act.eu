@@ -126,12 +126,9 @@ const PolitiqueConfidentialite = () => {
                 <p className="text-gray-700 text-sm">Seuls les membres du bureau autoris&eacute;s ont acc&egrave;s &agrave; vos donn&eacute;es.</p>
               </div>
               <div className="bg-blue-50 rounded-xl p-5 border border-blue-100">
-                <h3 className="font-semibold text-gray-900 mb-2">Sous-traitants conformes au RGPD</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">Sous-traitant conforme au RGPD</h3>
                 <ul className="text-gray-700 text-sm space-y-1 ml-4 list-disc">
-                  <li><strong>H&eacute;bergement web :</strong> OVH (serveurs en UE)</li>
-                  <li><strong>Email :</strong> Gmail (Google LLC, clauses contractuelles UE-US)</li>
-                  <li><strong>Paiements :</strong> HelloAsso (h&eacute;bergement en France)</li>
-                  <li><strong>Newsletters :</strong> Mailchimp (The Rocket Science Group, clauses contractuelles UE-US)</li>
+                  <li><strong>Paiements et adh&eacute;sions :</strong> HelloAsso (h&eacute;bergement en France)</li>
                 </ul>
               </div>
               <div className="bg-blue-50 rounded-xl p-5 border border-blue-100">

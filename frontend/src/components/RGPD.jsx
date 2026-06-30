@@ -143,7 +143,7 @@ const RGPD = () => {
                     <td className="px-3 py-2">Consentement (Art. 6.1.a)</td>
                     <td className="px-3 py-2">Nom, pr&eacute;nom, email</td>
                     <td className="px-3 py-2">3 ans ou jusqu'au d&eacute;sabonnement</td>
-                    <td className="px-3 py-2">Gmail, Mailchimp</td>
+                    <td className="px-3 py-2">HelloAsso</td>
                   </tr>
                   <tr className="border-b hover:bg-gray-50">
                     <td className="px-3 py-2">Gestion des adh&eacute;sions</td>
@@ -159,7 +159,7 @@ const RGPD = () => {
                     <td className="px-3 py-2">Consentement (Art. 6.1.a)</td>
                     <td className="px-3 py-2">Email, pr&eacute;nom</td>
                     <td className="px-3 py-2">Jusqu'au d&eacute;sabonnement</td>
-                    <td className="px-3 py-2">Mailchimp</td>
+                    <td className="px-3 py-2">HelloAsso</td>
                   </tr>
                   <tr className="border-b hover:bg-gray-50">
                     <td className="px-3 py-2">Organisation d'ateliers</td>
@@ -167,7 +167,7 @@ const RGPD = () => {
                     <td className="px-3 py-2">Consentement (Art. 6.1.a)</td>
                     <td className="px-3 py-2">Nom, pr&eacute;nom, email, t&eacute;l&eacute;phone</td>
                     <td className="px-3 py-2">6 mois apr&egrave;s l'atelier</td>
-                    <td className="px-3 py-2">Google Forms</td>
+                    <td className="px-3 py-2">HelloAsso</td>
                   </tr>
                 </tbody>
               </table>
