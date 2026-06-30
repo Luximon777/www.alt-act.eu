@@ -112,7 +112,7 @@ const COMITES = [
         expertise: ["Pédagogie et transmission", "Développement des compétences", "Éco-conseil", "Développement durable", "Engagement humanitaire", "Interculturalité", "Égalité des chances", "Accompagnement éducatif"]
       },
       {
-        nom: "Anthony Ratolojanahary",
+        nom: "Confidentiel",
         fonction: "Membre fondateur",
         role: "Décisionnaire",
         soustitre: "Confidentiel",
@@ -152,7 +152,7 @@ const COMITES = [
     color: "purple",
     membres: [
       {
-        nom: "Anthony Ratolojanahary",
+        nom: "Confidentiel",
         fonction: "Cybersécurité & données sensibles",
         role: "Consultatif",
         soustitre: "Confidentiel",
