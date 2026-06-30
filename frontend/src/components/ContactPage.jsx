@@ -187,6 +187,9 @@ const ContactPage = () => {
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message <span className="text-red-500">*</span></label>
                     <textarea id="message" name="message" rows={6} required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all resize-none" placeholder="Votre message..." data-testid="contact-message"></textarea>
                   </div>
+                  <p className="text-xs text-gray-500 mb-4">
+                    En soumettant ce formulaire, vous acceptez que vos donn&eacute;es soient trait&eacute;es par ALT&ACT pour r&eacute;pondre &agrave; votre demande. Vos donn&eacute;es seront conserv&eacute;es pendant 3 ans &agrave; compter de ce contact. Vous disposez de droits d'acc&egrave;s, rectification, effacement et opposition. Contact RGPD : <a href="mailto:rgpd@alt-act.eu" className="text-[#0b2a55] hover:underline">rgpd@alt-act.eu</a>. <a href="/#/confidentialite" className="text-[#0b2a55] hover:underline">Politique de confidentialit&eacute;</a> | <a href="/#/rgpd" className="text-[#0b2a55] hover:underline">RGPD</a>
+                  </p>
                   <Button type="submit" disabled={status === 'loading'} className="w-full bg-[#0b2a55] hover:bg-[#1a4280] text-white py-4 text-lg rounded-xl disabled:opacity-60" data-testid="contact-submit">
                     {status === 'loading' ? (
                       <><Loader2 className="w-5 h-5 mr-2 animate-spin" /> Envoi en cours...</>

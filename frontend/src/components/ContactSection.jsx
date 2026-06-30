@@ -152,6 +152,10 @@ const ContactSection = () => {
                   ></textarea>
                 </div>
 
+                <p className="text-xs text-gray-500 mb-4">
+                  En soumettant ce formulaire, vous acceptez que vos donn&eacute;es soient trait&eacute;es par ALT&ACT. Conservation : 3 ans. Droits : acc&egrave;s, rectification, effacement. Contact RGPD : <a href="mailto:rgpd@alt-act.eu" className="text-[#0b2a55] hover:underline">rgpd@alt-act.eu</a>
+                </p>
+
                 <Button
                   type="submit"
                   disabled={status === 'loading'}

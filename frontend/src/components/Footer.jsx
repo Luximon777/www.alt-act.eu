@@ -112,6 +112,9 @@ const Footer = () => {
               <a href="/confidentialite" onClick={(e) => { e.preventDefault(); navigate('/confidentialite'); }} className="text-blue-300 hover:text-white text-sm transition-colors">
                 Politique de confidentialité
               </a>
+              <a href="/rgpd" onClick={(e) => { e.preventDefault(); navigate('/rgpd'); }} className="text-blue-300 hover:text-white text-sm transition-colors">
+                RGPD
+              </a>
               <button 
                 onClick={scrollToTop}
                 className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors"

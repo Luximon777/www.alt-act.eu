@@ -26,6 +26,7 @@ import EspacePersonnel from "./components/EspacePersonnel";
 import EspaceUbuntoo from "./components/EspaceUbuntoo";
 import MentionsLegales from "./components/MentionsLegales";
 import PolitiqueConfidentialite from "./components/PolitiqueConfidentialite";
+import RGPD from "./components/RGPD";
 
 // New Pages
 import ContactPage from "./components/ContactPage";
@@ -88,6 +89,7 @@ function App() {
           {/* Legal Pages */}
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/confidentialite" element={<PolitiqueConfidentialite />} />
+          <Route path="/rgpd" element={<RGPD />} />
         </Routes>
         <Toaster />
       </div>
