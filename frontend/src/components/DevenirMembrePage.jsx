@@ -182,9 +182,24 @@ const DevenirMembrePage = () => {
                 <label htmlFor="motivation" className="block text-sm font-medium text-gray-700 mb-2">Motivation <span className="text-red-500">*</span></label>
                 <textarea id="motivation" name="motivation" rows={5} required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all resize-none" placeholder="Décrivez vos motivations pour rejoindre ALT&ACT..." data-testid="adhesion-motivation"></textarea>
               </div>
-              <p className="text-xs text-gray-500 mb-4">
-                En soumettant ce formulaire, vous acceptez que vos donn&eacute;es soient trait&eacute;es par ALT&ACT pour g&eacute;rer votre adh&eacute;sion. Vos donn&eacute;es seront conserv&eacute;es pendant la dur&eacute;e de votre adh&eacute;sion + 1 an. Vous disposez de droits d'acc&egrave;s, rectification, effacement et opposition. Contact RGPD : <a href="mailto:rgpd@alt-act.eu" className="text-[#0b2a55] hover:underline">rgpd@alt-act.eu</a>. <a href="/#/confidentialite" className="text-[#0b2a55] hover:underline">Politique de confidentialit&eacute;</a> | <a href="/#/rgpd" className="text-[#0b2a55] hover:underline">RGPD</a>
-              </p>
+              <div className="border border-gray-200 rounded-xl p-5 bg-gray-50 space-y-3">
+                <h4 className="font-semibold text-gray-900">Autorisation de contact pour RE'ACTIF PRO</h4>
+                <p className="text-sm text-gray-700">
+                  En cochant cette case, j'accepte que l'association ALT&ACT :
+                </p>
+                <ul className="text-sm text-gray-700 list-disc ml-5 space-y-1">
+                  <li>Me contacte par email pour me proposer de rejoindre RE'ACTIF PRO ;</li>
+                  <li>M'envoie des informations sur les ateliers, &eacute;v&eacute;nements et actualit&eacute;s de l'association ;</li>
+                  <li>Conserve mes donn&eacute;es (nom, email) pendant <strong>3 ans</strong> &agrave; compter de mon adh&eacute;sion ou de mon dernier &eacute;change avec l'association.</li>
+                </ul>
+                <p className="text-sm text-gray-700 font-semibold">
+                  Je peux retirer mon consentement &agrave; tout moment en r&eacute;pondant &agrave; un email ou en contactant <a href="mailto:rgpd@alt-act.eu" className="text-[#0b2a55] hover:underline">rgpd@alt-act.eu</a>.
+                </p>
+                <label className="flex items-start gap-3 cursor-pointer mt-2">
+                  <input type="checkbox" required className="mt-1 w-4 h-4 text-[#0b2a55] border-gray-300 rounded focus:ring-[#0b2a55]" data-testid="adhesion-consent-checkbox" />
+                  <span className="text-sm text-gray-800 font-medium">J'accepte les conditions ci-dessus</span>
+                </label>
+              </div>
               <Button type="submit" disabled={status === 'loading'} className="w-full bg-[#0b2a55] hover:bg-[#1a4280] text-white py-4 text-lg rounded-xl disabled:opacity-60" data-testid="adhesion-submit">
                 {status === 'loading' ? (
                   <><Loader2 className="w-5 h-5 mr-2 animate-spin" /> Envoi en cours...</>
