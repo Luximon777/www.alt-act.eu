@@ -1,10 +1,43 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Send, Users, Building, Heart, Smartphone } from 'lucide-react';
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Send, Users, Building, Heart, Smartphone, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgolzajz';
+
 const ContactSection = () => {
   const navigate = useNavigate();
+  const [status, setStatus] = useState(null); // null | 'loading' | 'success' | 'error'
+  const [errorMsg, setErrorMsg] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('loading');
+    setErrorMsg('');
+    const form = e.target;
+    const payload = {
+      prenom: form.firstName.value,
+      nom: form.lastName.value,
+      email: form.email.value,
+      sujet: form.subject.value || '',
+      message: form.message.value,
+      _subject: `Nouveau message (page d'accueil) : ${form.firstName.value} ${form.lastName.value}`,
+    };
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error('Erreur serveur');
+      setStatus('success');
+      form.reset();
+    } catch (err) {
+      setStatus('error');
+      setErrorMsg("Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone.");
+    }
+  };
+
   return (
     <section id="contact" className="py-24 bg-gradient-to-b from-white to-gray-50" data-testid="contact-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,80 +59,113 @@ const ContactSection = () => {
           {/* Contact Form */}
           <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Envoyez-nous un message</h3>
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                    Prénom
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all"
-                    placeholder="Votre prénom"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                    Nom
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all"
-                    placeholder="Votre nom"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all"
-                  placeholder="votre@email.com"
-                />
-              </div>
 
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  Sujet
-                </label>
-                <select
-                  id="subject"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all"
+            {status === 'success' ? (
+              <div className="flex flex-col items-center justify-center py-12 text-center" data-testid="home-contact-success">
+                <CheckCircle className="w-16 h-16 text-green-500 mb-4" />
+                <h4 className="text-xl font-bold text-gray-900 mb-2">Message envoyé !</h4>
+                <p className="text-gray-600 mb-6">Nous vous répondrons dans les meilleurs délais.</p>
+                <Button onClick={() => setStatus(null)} className="bg-[#0b2a55] hover:bg-[#1a4280] text-white" data-testid="home-contact-new-message">
+                  Envoyer un autre message
+                </Button>
+              </div>
+            ) : (
+              <form className="space-y-6" onSubmit={handleSubmit} data-testid="home-contact-form">
+                {status === 'error' && (
+                  <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-xl" data-testid="home-contact-error">
+                    <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                    <p className="text-red-700 text-sm">{errorMsg}</p>
+                  </div>
+                )}
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                      Prénom <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
+                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all"
+                      placeholder="Votre prénom"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                      Nom <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all"
+                      placeholder="Votre nom"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all"
+                    placeholder="votre@email.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    Sujet
+                  </label>
+                  <select
+                    id="subject"
+                    name="subject"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all"
+                  >
+                    <option value="">Choisir un sujet</option>
+                    <option value="particulier">Accompagnement personnel</option>
+                    <option value="entreprise">Partenariat entreprise</option>
+                    <option value="membre">Devenir membre</option>
+                    <option value="autre">Autre demande</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Message <span className="text-red-500">*</span>
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    required
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all resize-none"
+                    placeholder="Décrivez votre projet ou votre demande..."
+                  ></textarea>
+                </div>
+
+                <Button
+                  type="submit"
+                  disabled={status === 'loading'}
+                  className="w-full bg-[#0b2a55] hover:bg-[#1a4280] text-white py-4 text-lg rounded-xl transition-all duration-200 disabled:opacity-60"
+                  data-testid="home-contact-submit"
                 >
-                  <option value="">Choisir un sujet</option>
-                  <option value="particulier">Accompagnement personnel</option>
-                  <option value="entreprise">Partenariat entreprise</option>
-                  <option value="membre">Devenir membre</option>
-                  <option value="autre">Autre demande</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all resize-none"
-                  placeholder="Décrivez votre projet ou votre demande..."
-                ></textarea>
-              </div>
-
-              <Button
-                type="submit"
-                className="w-full bg-[#0b2a55] hover:bg-[#1a4280] text-white py-4 text-lg rounded-xl transition-all duration-200"
-              >
-                <Send className="w-5 h-5 mr-2" />
-                Envoyer le message
-              </Button>
-            </form>
+                  {status === 'loading' ? (
+                    <><Loader2 className="w-5 h-5 mr-2 animate-spin" /> Envoi en cours...</>
+                  ) : (
+                    <><Send className="w-5 h-5 mr-2" /> Envoyer le message</>
+                  )}
+                </Button>
+              </form>
+            )}
           </div>
 
           {/* Contact Info */}

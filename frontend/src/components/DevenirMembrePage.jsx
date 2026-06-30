@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
-const API_URL = process.env.REACT_APP_BACKEND_URL;
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xdajwvnq';
 
 const DevenirMembrePage = () => {
   const [adhesionType, setAdhesionType] = useState('actif');
@@ -96,33 +96,41 @@ const DevenirMembrePage = () => {
                 </Button>
               </div>
             ) : (
-            <form className="space-y-6" data-testid="adhesion-form" onSubmit={async (e) => {
-              e.preventDefault();
-              setStatus('loading');
-              setErrorMsg('');
-              const form = e.target;
-              const payload = {
-                prenom: form.prenom.value,
-                nom: form.nom.value,
-                email: form.email.value,
-                telephone: form.telephone.value || null,
-                type_adhesion: adhesionType,
-                motivation: form.motivation.value,
-              };
-              try {
-                const res = await fetch(`${API_URL}/api/adhesion`, {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify(payload),
-                });
-                if (!res.ok) throw new Error('Erreur serveur');
-                setStatus('success');
-                form.reset();
-              } catch (err) {
-                setStatus('error');
-                setErrorMsg("Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone.");
-              }
-            }}>
+            <form
+              className="space-y-6"
+              data-testid="adhesion-form"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                setStatus('loading');
+                setErrorMsg('');
+                const form = e.target;
+                const payload = {
+                  prenom: form.prenom.value,
+                  nom: form.nom.value,
+                  email: form.email.value,
+                  telephone: form.telephone.value || '',
+                  type_adhesion: adhesionType,
+                  motivation: form.motivation.value,
+                  _subject: `Nouvelle demande d'adhésion : ${form.prenom.value} ${form.nom.value}`,
+                };
+                try {
+                  const res = await fetch(FORMSPREE_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                      Accept: 'application/json',
+                    },
+                    body: JSON.stringify(payload),
+                  });
+                  if (!res.ok) throw new Error('Erreur serveur');
+                  setStatus('success');
+                  form.reset();
+                } catch (err) {
+                  setStatus('error');
+                  setErrorMsg("Une erreur est survenue. Veuillez réessayer ou nous contacter par téléphone.");
+                }
+              }}
+            >
               {status === 'error' && (
                 <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-xl" data-testid="adhesion-error">
                   <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
@@ -132,21 +140,21 @@ const DevenirMembrePage = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="prenom" className="block text-sm font-medium text-gray-700 mb-2">Prénom <span className="text-red-500">*</span></label>
-                  <input type="text" id="prenom" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre prénom" data-testid="adhesion-prenom" />
+                  <input type="text" id="prenom" name="prenom" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre prénom" data-testid="adhesion-prenom" />
                 </div>
                 <div>
                   <label htmlFor="nom" className="block text-sm font-medium text-gray-700 mb-2">Nom <span className="text-red-500">*</span></label>
-                  <input type="text" id="nom" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre nom" data-testid="adhesion-nom" />
+                  <input type="text" id="nom" name="nom" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre nom" data-testid="adhesion-nom" />
                 </div>
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email <span className="text-red-500">*</span></label>
-                  <input type="email" id="email" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="votre@email.com" data-testid="adhesion-email" />
+                  <input type="email" id="email" name="email" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="votre@email.com" data-testid="adhesion-email" />
                 </div>
                 <div>
                   <label htmlFor="telephone" className="block text-sm font-medium text-gray-700 mb-2">Téléphone</label>
-                  <input type="tel" id="telephone" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre téléphone" data-testid="adhesion-telephone" />
+                  <input type="tel" id="telephone" name="telephone" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre téléphone" data-testid="adhesion-telephone" />
                 </div>
               </div>
               <div>
@@ -172,7 +180,7 @@ const DevenirMembrePage = () => {
               </div>
               <div>
                 <label htmlFor="motivation" className="block text-sm font-medium text-gray-700 mb-2">Motivation <span className="text-red-500">*</span></label>
-                <textarea id="motivation" rows={5} required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all resize-none" placeholder="Décrivez vos motivations pour rejoindre ALT&ACT..." data-testid="adhesion-motivation"></textarea>
+                <textarea id="motivation" name="motivation" rows={5} required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all resize-none" placeholder="Décrivez vos motivations pour rejoindre ALT&ACT..." data-testid="adhesion-motivation"></textarea>
               </div>
               <Button type="submit" disabled={status === 'loading'} className="w-full bg-[#0b2a55] hover:bg-[#1a4280] text-white py-4 text-lg rounded-xl disabled:opacity-60" data-testid="adhesion-submit">
                 {status === 'loading' ? (

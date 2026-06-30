@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
-const API_URL = process.env.REACT_APP_BACKEND_URL;
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgolzajz';
 
 const ContactPage = () => {
   const [status, setStatus] = useState(null); // null | 'loading' | 'success' | 'error'
@@ -22,13 +22,17 @@ const ContactPage = () => {
     const payload = {
       nom: form.fullName.value,
       email: form.email.value,
-      sujet: form.subject.value || null,
+      sujet: form.subject.value || '',
       message: form.message.value,
+      _subject: `Nouveau message de contact : ${form.fullName.value}`,
     };
     try {
-      const res = await fetch(`${API_URL}/api/contact`, {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error('Erreur serveur');
@@ -156,7 +160,11 @@ const ContactPage = () => {
                   </Button>
                 </div>
               ) : (
-                <form className="space-y-6" data-testid="contact-form" onSubmit={handleSubmit}>
+                <form
+                  className="space-y-6"
+                  data-testid="contact-form"
+                  onSubmit={handleSubmit}
+                >
                   {status === 'error' && (
                     <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-xl" data-testid="contact-error">
                       <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
@@ -165,19 +173,19 @@ const ContactPage = () => {
                   )}
                   <div>
                     <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">Nom complet <span className="text-red-500">*</span></label>
-                    <input type="text" id="fullName" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre nom complet" data-testid="contact-fullname" />
+                    <input type="text" id="fullName" name="fullName" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Votre nom complet" data-testid="contact-fullname" />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email <span className="text-red-500">*</span></label>
-                    <input type="email" id="email" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="votre@email.com" data-testid="contact-email" />
+                    <input type="email" id="email" name="email" required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="votre@email.com" data-testid="contact-email" />
                   </div>
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">Sujet</label>
-                    <input type="text" id="subject" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Sujet de votre message" data-testid="contact-subject" />
+                    <input type="text" id="subject" name="subject" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all" placeholder="Sujet de votre message" data-testid="contact-subject" />
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message <span className="text-red-500">*</span></label>
-                    <textarea id="message" rows={6} required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all resize-none" placeholder="Votre message..." data-testid="contact-message"></textarea>
+                    <textarea id="message" name="message" rows={6} required className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all resize-none" placeholder="Votre message..." data-testid="contact-message"></textarea>
                   </div>
                   <Button type="submit" disabled={status === 'loading'} className="w-full bg-[#0b2a55] hover:bg-[#1a4280] text-white py-4 text-lg rounded-xl disabled:opacity-60" data-testid="contact-submit">
                     {status === 'loading' ? (
