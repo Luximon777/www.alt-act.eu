@@ -218,7 +218,7 @@ const COMITES = [
   },
   {
     id: "ethique",
-    nom: "Comité de mission éthique",
+    nom: "Comité de mission éthique et en justice sociale",
     description: "Garants de l'intégrité et de la conformité",
     icon: Heart,
     color: "green",
