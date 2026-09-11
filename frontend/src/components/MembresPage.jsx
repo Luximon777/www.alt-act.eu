@@ -121,13 +121,6 @@ const COMITES = [
         expertise: ["Pédagogie et transmission", "Développement des compétences", "Éco-conseil", "Développement durable", "Engagement humanitaire", "Interculturalité", "Égalité des chances", "Accompagnement éducatif"]
       },
       {
-        nom: "Confidentiel",
-        fonction: "Membre fondateur",
-        role: "Décisionnaire",
-        soustitre: "Confidentiel",
-        expertise: ["Cybersécurité", "Protection des données", "Gestion des risques IT", "Conformité RGPD", "Sécurité des systèmes d'information", "Résilience organisationnelle", "Gouvernance informatique"]
-      },
-      {
         nom: "Rajwantee Lepain",
         fonction: "Membre fondatrice",
         role: "Décisionnaire",
@@ -138,18 +131,6 @@ const COMITES = [
         vision: "La contribution de Rajwantee à la gouvernance enrichit la stratégie de l'association en apportant une compréhension fine des facteurs humains au cœur de l'employabilité, une capacité à intégrer des dimensions psychologiques et systémiques dans les parcours d'accompagnement, une expertise essentielle dans la construction de dispositifs adaptés à la personne, et une ressource stratégique pour penser l'impact social en termes d'effets durables sur le bien-être, la confiance et les trajectoires de vie. Cette dimension est particulièrement recherchée dans les projets européens ou institutionnels portant sur l'inclusion, le développement des compétences ou le renforcement des capacités des publics.",
         signature: "Rajwantee incarne une approche centrée sur l'humain dans sa globalité, plaçant l'expérience subjective et les ressources internes comme des vecteurs indispensables de construction de trajectoires stables et durables. Cette posture s'articule avec les valeurs portées par ALT&ACT : humanisme, responsabilité, équité et transformation positive. Elle constitue une voix qualifiée pour connecter les dimensions psychologiques aux enjeux sociétaux.",
         expertise: ["Psychologie clinique", "Accompagnement des transitions", "Dynamiques humaines", "Développement personnel", "Analyse systémique", "Écoute empathique", "Reconstruction identitaire", "Facteurs d'employabilité"]
-      },
-      {
-        nom: "Sébastien Ehlenberger",
-        fonction: "Membre fondateur",
-        role: "Décisionnaire",
-        soustitre: "Manager de projets | Expert en coordination intersectorielle",
-        photo: null,
-        bio: "Sébastien E. est un professionnel confirmé dans le pilotage de projets, la coordination d'équipes et la mise en œuvre d'initiatives collaboratives. Son parcours repose sur l'acquisition d'une expertise opérationnelle riche, orientée vers l'efficacité organisationnelle, la structuration de processus et l'animation de partenariats. Présent au sein de la gouvernance d'ALT&ACT en tant que membre fondateur, il contribue à renforcer la capacité de l'association à concevoir, déployer et piloter des projets structurants à impact social, avec une lecture pragmatique des exigences organisationnelles et des dynamiques collectives.",
-        realisations: "Le parcours de Sébastien se développe dans des environnements où le pilotage de projet, la coordination multi-acteurs et l'élaboration de stratégies d'action concrètes sont centraux. Il assure la gestion de projets complexes impliquant de multiples parties prenantes, la coordination intersectorielle garantissant l'alignement des objectifs et des livrables, l'animation de projets structurants intégrant des stratégies de communication et de mobilisation des ressources, et l'accompagnement de transformations organisationnelles avec une attention particulière à l'efficacité collective.",
-        vision: "La présence de Sébastien au sein du conseil fondateur constitue un atout stratégique pour assurer la cohérence opérationnelle entre les orientations stratégiques et leur mise en œuvre effective, renforcer la gouvernance interne par une approche structurée du pilotage de projets, faciliter les coopérations avec des acteurs institutionnels, économiques et associatifs, et soutenir la professionnalisation des processus de coordination pour des programmes ambitieux. Cette position lui permet de contribuer à l'émergence d'un cadre d'action robuste, capable de soutenir des projets complexes et à fort impact social.",
-        signature: "Sébastien fonctionne à l'interface entre direction stratégique et opérationnalité. Il sait traduire les ambitions institutionnelles - conceptuelles ou politiques - en plans d'action clairs, mesurables et alignés sur les objectifs collectifs. Il favorise une approche inclusive, structurée et axée résultats, tout en gardant une lecture fine des dynamiques organisationnelles qui influencent la qualité de la mise en œuvre.",
-        expertise: ["Pilotage de projet", "Coordination opérationnelle", "Gestion multi-acteurs", "Dispositifs collaboratifs", "Leadership transversal", "Communication structurée", "Transformation organisationnelle"]
       }
     ]
   },
@@ -161,11 +142,29 @@ const COMITES = [
     color: "purple",
     membres: [
       {
-        nom: "Confidentiel",
-        fonction: "Cybersécurité & données sensibles",
+        nom: "Joseph Noussa",
+        fonction: "Intégration applicative, données de santé & performance",
         role: "Consultatif",
-        soustitre: "Confidentiel",
-        expertise: ["Cybersécurité", "RGPD", "Protection des données", "Architecture technique", "Gestion des risques IT", "Conformité réglementaire"]
+        soustitre: "Consultant expérimenté — Intégrateur applicatif, analyste données de santé & architecte technique",
+        photo: null,
+        bio: "Joseph Noussa est un consultant expérimenté spécialisé dans l'intégration applicative, les tests de performance, l'administration de bases de données et l'analyse de données de santé. Fort de plus de vingt ans d'expérience au sein d'institutions publiques majeures (CNAMTS, INSERM, DGFIP), il conjugue une expertise technique de haut niveau avec une compréhension approfondie des enjeux liés aux systèmes d'information critiques et à la valorisation des données. Sa double compétence — technique et analytique — fait de lui un contributeur stratégique pour ALT&ACT, notamment dans la structuration des infrastructures numériques et la fiabilisation des processus de traitement des données au service de l'impact social.",
+        realisations: "Joseph Noussa a construit une carrière riche au croisement de l'ingénierie informatique et de l'analyse de données. Il exerce actuellement comme analyste de données de santé et chargé d'études épidémiologiques à l'INSERM, où il mène des analyses statistiques sur les séjours hospitaliers, étudie l'effet de la charge des professionnels de santé sur la performance hospitalière et rédige des rapports décisionnels. Auparavant, il a été responsable d'application à la CNAMTS pendant plus de dix ans, assurant l'intégration applicative, le benchmarking, l'optimisation des performances et l'architecture technique. Il a également exercé à la DGFIP, chez EDF/RTE et dans plusieurs groupes internationaux, développant une expertise reconnue en administration Oracle, DB2, PostgreSQL, en environnements Unix/Linux et en outils de performance (LoadRunner, NeoLoad, JMeter, Dynatrace).",
+        vision: "Joseph Noussa apporte au Comité de pilotage d'ALT&ACT une expertise rare à l'intersection de la technologie et de la donnée de santé. Sa capacité à structurer des systèmes d'information robustes, à garantir la performance des applications critiques et à exploiter les données au service de la décision constitue un levier essentiel pour accompagner RE'ACTIF PRO dans sa dimension numérique. Son expérience des institutions publiques (Assurance Maladie, INSERM, Finances publiques) renforce la crédibilité technique de l'association face aux partenaires institutionnels et financeurs exigeants.",
+        signature: "Son approche associe rigueur technique, culture de la donnée et engagement au service de l'intérêt général. Les valeurs qui guident son parcours — fiabilité, transparence des processus, excellence opérationnelle et impact sociétal — résonnent directement avec la mission d'ALT&ACT : construire des solutions structurantes et responsables pour transformer les trajectoires professionnelles.",
+        formation: ["Master Systèmes Répartis en Informatique et Télécommunication – INTEC"],
+        expertise: ["Intégration applicative", "Tests de performance", "Analyse de données de santé", "Épidémiologie et statistiques", "Administration Oracle / DB2 / PostgreSQL", "Architecture technique", "Environnements Unix/Linux", "Benchmarking et optimisation", "Reporting décisionnel", "Systèmes d'information de santé"]
+      },
+      {
+        nom: "Sébastien Ehlenberger",
+        fonction: "Pilotage de projets & coordination intersectorielle",
+        role: "Consultatif",
+        soustitre: "Manager de projets | Expert en coordination intersectorielle",
+        photo: null,
+        bio: "Sébastien E. est un professionnel confirmé dans le pilotage de projets, la coordination d'équipes et la mise en œuvre d'initiatives collaboratives. Son parcours repose sur l'acquisition d'une expertise opérationnelle riche, orientée vers l'efficacité organisationnelle, la structuration de processus et l'animation de partenariats. Au sein du Comité de pilotage d'ALT&ACT, il contribue à renforcer la capacité de l'association à concevoir, déployer et piloter des projets structurants à impact social.",
+        realisations: "Le parcours de Sébastien se développe dans des environnements où le pilotage de projet, la coordination multi-acteurs et l'élaboration de stratégies d'action concrètes sont centraux. Il assure la gestion de projets complexes impliquant de multiples parties prenantes, la coordination intersectorielle garantissant l'alignement des objectifs et des livrables, l'animation de projets structurants intégrant des stratégies de communication et de mobilisation des ressources, et l'accompagnement de transformations organisationnelles avec une attention particulière à l'efficacité collective.",
+        vision: "La présence de Sébastien au sein du Comité de pilotage constitue un atout stratégique pour assurer la cohérence opérationnelle entre les orientations stratégiques et leur mise en œuvre effective, renforcer la gouvernance interne par une approche structurée du pilotage de projets, faciliter les coopérations avec des acteurs institutionnels, économiques et associatifs, et soutenir la professionnalisation des processus de coordination pour des programmes ambitieux.",
+        signature: "Sébastien fonctionne à l'interface entre direction stratégique et opérationnalité. Il sait traduire les ambitions institutionnelles en plans d'action clairs, mesurables et alignés sur les objectifs collectifs. Il favorise une approche inclusive, structurée et axée résultats.",
+        expertise: ["Pilotage de projet", "Coordination opérationnelle", "Gestion multi-acteurs", "Dispositifs collaboratifs", "Leadership transversal", "Communication structurée", "Transformation organisationnelle"]
       },
       {
         nom: "Stephano Vacher",
