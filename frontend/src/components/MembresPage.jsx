@@ -156,7 +156,7 @@ const COMITES = [
       },
       {
         nom: "Sébastien Ehlenberger",
-        fonction: "Pilotage de projets & coordination intersectorielle",
+        fonction: "Membre fondateur — Pilotage de projets & coordination intersectorielle",
         role: "Consultatif",
         soustitre: "Manager de projets | Expert en coordination intersectorielle",
         photo: null,
