@@ -131,6 +131,15 @@ const COMITES = [
         vision: "La contribution de Rajwantee à la gouvernance enrichit la stratégie de l'association en apportant une compréhension fine des facteurs humains au cœur de l'employabilité, une capacité à intégrer des dimensions psychologiques et systémiques dans les parcours d'accompagnement, une expertise essentielle dans la construction de dispositifs adaptés à la personne, et une ressource stratégique pour penser l'impact social en termes d'effets durables sur le bien-être, la confiance et les trajectoires de vie. Cette dimension est particulièrement recherchée dans les projets européens ou institutionnels portant sur l'inclusion, le développement des compétences ou le renforcement des capacités des publics.",
         signature: "Rajwantee incarne une approche centrée sur l'humain dans sa globalité, plaçant l'expérience subjective et les ressources internes comme des vecteurs indispensables de construction de trajectoires stables et durables. Cette posture s'articule avec les valeurs portées par ALT&ACT : humanisme, responsabilité, équité et transformation positive. Elle constitue une voix qualifiée pour connecter les dimensions psychologiques aux enjeux sociétaux.",
         expertise: ["Psychologie clinique", "Accompagnement des transitions", "Dynamiques humaines", "Développement personnel", "Analyse systémique", "Écoute empathique", "Reconstruction identitaire", "Facteurs d'employabilité"]
+      },
+      {
+        nom: "Sébastien Ehlenberger",
+        fonction: "Membre fondateur",
+        role: "Décisionnaire",
+        soustitre: "Manager de projets | Expert en coordination intersectorielle",
+        photo: null,
+        bio: "Co-fondateur, professionnel confirmé dans le pilotage de projets et la coordination d'équipes. Sa capacité à traduire les ambitions stratégiques en plans d'action concrets renforce la gouvernance opérationnelle d'ALT&ACT.",
+        expertise: ["Pilotage de projet", "Coordination opérationnelle", "Gestion multi-acteurs", "Leadership transversal", "Transformation organisationnelle"]
       }
     ]
   },
