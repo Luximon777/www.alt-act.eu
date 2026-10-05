@@ -32,3 +32,8 @@ Site associatif ALT&ACT (www.alt-act.eu) hébergé sur OVH, code source sur GitH
 
 ## Next Tasks
 - Push final vers GitHub et déclencher le workflow de déploiement
+
+
+## 2026-06 — Ajout Marie-Josée Assa
+- Ajoutée au Comité de pilotage (MembresPage.jsx) comme Directrice Ressources Humaines (DRH), profil complet (bio, réalisations, vision, signature, formation, expertise) rédigé à partir de son CV.
+- Rappel : le routage est en HashRouter → URL de la page membres : `/#/membres`.
