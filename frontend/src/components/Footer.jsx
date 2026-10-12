@@ -26,52 +26,27 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Mission */}
+          {/* Qui sommes-nous */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Mission</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">Qui sommes-nous ?</h4>
             <ul className="space-y-3">
-              <li>
-                <a href="/notre-mission" onClick={(e) => { e.preventDefault(); navigate('/notre-mission'); }} className="text-blue-200 hover:text-white transition-colors">
-                  Notre mission
-                </a>
-              </li>
-              <li>
-                <a href="/notre-vision" onClick={(e) => { e.preventDefault(); navigate('/notre-vision'); }} className="text-blue-200 hover:text-white transition-colors">
-                  Notre vision
-                </a>
-              </li>
-              <li>
-                <a href="/notre-action" onClick={(e) => { e.preventDefault(); navigate('/notre-action'); }} className="text-blue-200 hover:text-white transition-colors">
-                  Notre action
-                </a>
-              </li>
+              {[['/notre-mission', "Notre raison d'être"], ['/vision-methode', 'Nos repères & méthode'], ['/mot-president', 'Le mot du fondateur'], ['/membres', 'Notre équipe'], ['/charte-ethique', 'Éthique']].map(([p, l]) => (
+                <li key={p}>
+                  <a href={p} onClick={(e) => { e.preventDefault(); navigate(p); window.scrollTo(0, 0); }} className="text-blue-200 hover:text-white transition-colors">{l}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Présentation */}
+          {/* Agir & coopérer */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Présentation</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">Agir & coopérer</h4>
             <ul className="space-y-3">
-              <li>
-                <a href="/vision-methode" onClick={(e) => { e.preventDefault(); navigate('/vision-methode'); }} className="text-blue-200 hover:text-white transition-colors">
-                  Vision et méthode
-                </a>
-              </li>
-              <li>
-                <a href="/mot-president" onClick={(e) => { e.preventDefault(); navigate('/mot-president'); }} className="text-blue-200 hover:text-white transition-colors">
-                  Le mot du fondateur
-                </a>
-              </li>
-              <li>
-                <a href="/membres" onClick={(e) => { e.preventDefault(); navigate('/membres'); }} className="text-blue-200 hover:text-white transition-colors">
-                  Nos membres
-                </a>
-              </li>
-              <li>
-                <a href="/charte-ethique" onClick={(e) => { e.preventDefault(); navigate('/charte-ethique'); }} className="text-blue-200 hover:text-white transition-colors">
-                  Charte éthique
-                </a>
-              </li>
+              {[['/agir-avec-vous', 'Je suis…'], ['/prevenir-les-ruptures', 'Prévenir les ruptures'], ['/cooperations', 'Nos coopérations'], ['/reactif-pro/presentation', "RE'ACTIF PRO"], ['/devenir-membre', 'Contribuer / Devenir membre']].map(([p, l]) => (
+                <li key={p}>
+                  <a href={p} onClick={(e) => { e.preventDefault(); navigate(p); window.scrollTo(0, 0); }} className="text-blue-200 hover:text-white transition-colors">{l}</a>
+                </li>
+              ))}
             </ul>
           </div>
 

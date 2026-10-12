@@ -70,3 +70,57 @@ export const colorMap = {
   indigo: { bg: 'bg-indigo-50', border: 'border-indigo-100', iconBg: 'bg-indigo-500', text: 'text-indigo-600', light: 'bg-indigo-100' },
   green: { bg: 'bg-green-50', border: 'border-green-100', iconBg: 'bg-green-500', text: 'text-green-600', light: 'bg-green-100' }
 };
+
+export const maniereAgir = [
+  { etape: 'Observer', texte: "Comprendre la réalité avant d'intervenir." },
+  { etape: 'Écouter', texte: "Prendre en compte l'expérience des personnes concernées." },
+  { etape: 'Consulter', texte: 'Croiser les perspectives.' },
+  { etape: 'Agir', texte: 'Expérimenter une réponse.' },
+  { etape: 'Évaluer', texte: 'Observer les effets réels.' },
+  { etape: 'Apprendre', texte: 'Capitaliser les enseignements.' },
+  { etape: 'Réajuster', texte: "Modifier l'action lorsque l'expérience l'exige." }
+];
+
+export const cooperations = [
+  {
+    id: 'recherche', categorie: 'Universités, laboratoires & écoles', color: 'green',
+    construit: "Des terrains d'observation et d'expérimentation ouverts à la recherche, des projets étudiants et des démarches d'évaluation co-construites.",
+    objectif: 'Produire une connaissance utile, partagée et vérifiée sur les transitions professionnelles et les capacités des personnes.',
+    apprentissages: "Croiser le regard des chercheurs et l'expérience des personnes concernées rend les résultats plus justes et plus utilisables sur le terrain."
+  },
+  {
+    id: 'emploi', categorie: "France Travail & service public de l'emploi", color: 'blue',
+    construit: "Des espaces d'écoute et d'orientation complémentaires, une meilleure lisibilité des dispositifs existants et des relais entre acteurs.",
+    objectif: "Éviter que les personnes ne circulent de guichet en guichet et rendre visibles des possibilités souvent méconnues.",
+    apprentissages: "Une information n'est réellement accessible que lorsqu'elle est comprise : l'accompagnement à la compréhension fait la différence."
+  },
+  {
+    id: 'entreprises', categorie: 'Entreprises', color: 'amber',
+    construit: 'Des démarches de prévention des ruptures (absentéisme, maintien dans l\'emploi, évolutions de métiers) et de reconnaissance des compétences.',
+    objectif: "Agir en amont, avec les personnes et l'organisation, pour que les transitions restent des étapes et non des ruptures.",
+    apprentissages: "Les signaux faibles sont repérables tôt lorsqu'un cadre de confiance existe entre la personne, l'entreprise et un tiers neutre."
+  },
+  {
+    id: 'associations', categorie: 'Associations & acteurs de l\'accompagnement', color: 'rose',
+    construit: 'Des actions communes plutôt que des dispositifs concurrents : partage de ressources, de connaissances et de réseaux, expérimentations croisées.',
+    objectif: 'Relier des compétences et des publics qui se croisent rarement, au bénéfice des personnes accompagnées.',
+    apprentissages: 'La coopération demande du temps de connaissance mutuelle ; elle produit ensuite des réponses plus complètes que chaque acteur isolé.'
+  },
+  {
+    id: 'collectivites', categorie: 'Collectivités & institutions', color: 'indigo',
+    construit: "Des partenariats d'innovation sociale et territoriale : expérimentations locales, évaluation des effets, partage des enseignements.",
+    objectif: "Contribuer aux politiques d'emploi, de compétences et de prévention à partir de réalités observées sur le territoire.",
+    apprentissages: "Une expérimentation évaluée honnêtement — y compris dans ses limites — est plus utile à la décision publique qu'une réussite proclamée."
+  }
+];
+
+export const temoignages = [
+  { prenom: 'Nadia', situation: 'Ancienne salariée en reconversion, aujourd\'hui personne ressource', color: 'amber',
+    texte: "On ne m'a pas dit quoi faire. On m'a aidée à comprendre ce que je savais déjà faire, et ce qui était possible. Aujourd'hui, je partage mon expérience avec d'autres personnes qui traversent la même période." },
+  { prenom: 'Karim', situation: 'Demandeur d\'emploi devenu participant aux ateliers', color: 'teal',
+    texte: "J'arrivais avec une liste de freins. Je suis reparti avec une liste de possibilités et quelqu'un à appeler pour chacune. Maintenant, c'est moi qui accueille les nouveaux." },
+  { prenom: 'Sophie', situation: 'Responsable RH dans une PME partenaire', color: 'blue',
+    texte: "Nous avons appris à repérer plus tôt les situations qui se tendent. Ce que nous avons construit avec ALT&ACT, nous le partageons aujourd'hui avec d'autres entreprises du territoire." },
+  { prenom: 'Mathieu', situation: 'Conseiller en insertion, contributeur aux retours d\'expérience', color: 'purple',
+    texte: "Évaluer honnêtement ce qui marche et ce qui ne marche pas, puis réajuster : c'est ce qui m'a donné envie de contribuer. Mes retours de terrain servent maintenant à d'autres professionnels." }
+];

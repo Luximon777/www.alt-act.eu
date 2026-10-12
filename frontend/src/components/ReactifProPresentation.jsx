@@ -4,6 +4,7 @@ import { Button } from './ui/button';
 import { useNavigate } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer';
+import ManiereAgirFrise from './ManiereAgirFrise';
 
 const ADMIN_PASSWORD = 'Choukette@777';
 const STORAGE_KEY = 'reactif_logo_active';
@@ -137,8 +138,8 @@ const ReactifProPresentation = () => {
               </div>
             </div>
           )}
-          <p className="text-base md:text-lg text-blue-100 max-w-4xl mx-auto leading-relaxed">
-            Un dispositif d'innovation sociale et numérique au service de l'intelligence professionnelle, pour répondre aux transformations profondes du monde du travail.
+          <p className="text-base md:text-lg text-blue-100 max-w-4xl mx-auto leading-relaxed" data-testid="reactif-hero-intro">
+            Une innovation développée dans l'écosystème ALT&ACT : rendre visibles les capacités et élargir les possibilités professionnelles.
           </p>
         </div>
       </section>
@@ -146,17 +147,27 @@ const ReactifProPresentation = () => {
       {/* Introduction */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-3xl p-8 md:p-12 border-l-4 border-cyan-500 mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">RE'ACTIF PRO</h2>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0b2a55]/10 rounded-full mb-6" data-testid="reactif-ecosysteme-badge">
+            <Layers className="w-4 h-4 text-[#0b2a55]" />
+            <span className="text-[#0b2a55] text-sm font-semibold">UN PROJET DE L'ÉCOSYSTÈME ALT&ACT</span>
+          </div>
+          <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-3xl p-8 md:p-12 border-l-4 border-cyan-500 mb-12" data-testid="reactif-intro">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">RE'ACTIF PRO — Rendre visibles les capacités et élargir les possibilités professionnelles.</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              RE'ACTIF PRO est un dispositif d'innovation sociale et numérique développé par l'association ALT&ACT afin de répondre aux transformations profondes du monde du travail.
+              RE'ACTIF PRO explore une nouvelle approche de la trajectoire professionnelle : partir de l'identité, des expériences et des capacités d'une personne pour l'aider à comprendre ses possibilités, développer son pouvoir d'agir et construire une trajectoire professionnelle durable.
             </p>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Aujourd'hui, les trajectoires professionnelles deviennent de plus en plus complexes : reconversions, mobilités professionnelles, évolution rapide des métiers et émergence de nouvelles compétences. Dans ce contexte, les outils traditionnels d'orientation et de reconnaissance des compétences montrent leurs limites, car ils reposent encore largement sur une logique centrée sur le diplôme ou l'intitulé de poste.
+              RE'ACTIF PRO n'est pas ALT&ACT : c'est l'une des réponses que l'association expérimente, dans son rôle de laboratoire d'innovation sociale. Les trajectoires professionnelles deviennent plus complexes — reconversions, mobilités, évolution rapide des métiers — et les outils fondés sur le seul diplôme ou l'intitulé de poste montrent leurs limites.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed font-semibold">
-              RE'ACTIF PRO propose une approche différente.
+              RE'ACTIF PRO propose une approche différente, construite avec les personnes et non à leur place.
             </p>
+          </div>
+
+          <div className="bg-gray-50 rounded-3xl p-8 md:p-10 border border-gray-100 mb-12" data-testid="reactif-maniere-agir">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">Notre manière d'agir</h3>
+            <p className="text-gray-600 mb-8">RE'ACTIF PRO est développé selon la démarche d'ALT&ACT : observer avant d'intervenir, écouter les personnes concernées, expérimenter, évaluer les effets réels et réajuster.</p>
+            <ManiereAgirFrise />
           </div>
 
           {/* Objectif principal */}

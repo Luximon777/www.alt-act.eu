@@ -10,12 +10,15 @@ import PresentationSection from "./components/PresentationSection";
 import ReperesSection from "./components/ReperesSection";
 import AgirAvecSection from "./components/AgirAvecSection";
 import JeSuisSection from "./components/JeSuisSection";
+import CooperationsSection from "./components/CooperationsSection";
+import TemoignagesSection from "./components/TemoignagesSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 
 // Parcours visiteurs
 import AgirAvecVous from "./components/AgirAvecVous";
 import PrevenirRuptures from "./components/PrevenirRuptures";
+import Cooperations from "./components/Cooperations";
 
 // Mission Pages
 import NotreMission from "./components/NotreMission";
@@ -53,6 +56,8 @@ function HomePage() {
       <ReperesSection />
       <AgirAvecSection />
       <JeSuisSection />
+      <CooperationsSection />
+      <TemoignagesSection />
       <ContactSection />
       <Footer />
     </div>
@@ -73,6 +78,7 @@ function App() {
           <Route path="/notre-action" element={<NotreAction />} />
           <Route path="/prevenir-les-ruptures" element={<PrevenirRuptures />} />
           <Route path="/agir-avec-vous" element={<AgirAvecVous />} />
+          <Route path="/cooperations" element={<Cooperations />} />
           
           {/* Presentation Pages */}
           <Route path="/vision-methode" element={<VisionMethode />} />
