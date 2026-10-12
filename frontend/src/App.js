@@ -7,8 +7,15 @@ import { Toaster } from "./components/ui/sonner";
 import Navigation from "./components/Navigation";
 import HeroSection from "./components/HeroSection";
 import PresentationSection from "./components/PresentationSection";
+import ReperesSection from "./components/ReperesSection";
+import AgirAvecSection from "./components/AgirAvecSection";
+import JeSuisSection from "./components/JeSuisSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+
+// Parcours visiteurs
+import AgirAvecVous from "./components/AgirAvecVous";
+import PrevenirRuptures from "./components/PrevenirRuptures";
 
 // Mission Pages
 import NotreMission from "./components/NotreMission";
@@ -43,6 +50,9 @@ function HomePage() {
       <Navigation />
       <HeroSection />
       <PresentationSection />
+      <ReperesSection />
+      <AgirAvecSection />
+      <JeSuisSection />
       <ContactSection />
       <Footer />
     </div>
@@ -61,6 +71,8 @@ function App() {
           <Route path="/notre-mission" element={<NotreMission />} />
           <Route path="/notre-ambition" element={<NotreAmbition />} />
           <Route path="/notre-action" element={<NotreAction />} />
+          <Route path="/prevenir-les-ruptures" element={<PrevenirRuptures />} />
+          <Route path="/agir-avec-vous" element={<AgirAvecVous />} />
           
           {/* Presentation Pages */}
           <Route path="/vision-methode" element={<VisionMethode />} />

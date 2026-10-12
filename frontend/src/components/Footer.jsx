@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold mb-4">ALT&ACT</h3>
             <p className="text-blue-200 mb-6 leading-relaxed">
-              L'insertion sans barrières. Des trajectoires professionnelles durables pour tous.
+              Permettre à chacun d'agir et de contribuer. Développer les capacités, élargir les possibilités, agir ensemble.
             </p>
             <div className="flex items-center gap-2 text-amber-400">
               <Heart className="w-5 h-5" />

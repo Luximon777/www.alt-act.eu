@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, Heart, Users, Globe, Scale } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
+import { reperes, SIGNATURE } from '../data/reperes';
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -19,12 +20,7 @@ const HeroSection = () => {
     }
   };
 
-  const valeurs = [
-    { icon: Heart, label: "Humanisme", description: "L'humain au cœur de tout" },
-    { icon: Users, label: "Inclusion", description: "L'insertion sans barrières" },
-    { icon: Globe, label: "Impact social", description: "Transformer durablement" },
-    { icon: Scale, label: "Éthique", description: "Intégrité et transparence" }
-  ];
+  const valeurs = reperes.map((r) => ({ icon: r.icon, label: r.label, description: r.short }));
 
   // Composant pour les étoiles européennes
   const EuropeanStars = () => {
@@ -135,53 +131,53 @@ const HeroSection = () => {
           </div>
         </div>
         
-        <p className="text-2xl md:text-3xl text-blue-100 mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-          Des trajectoires professionnelles sans barrières
+        <p className="text-2xl md:text-3xl text-blue-100 mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }} data-testid="hero-signature">
+          {SIGNATURE}
         </p>
 
-        {/* Encart éthique */}
-        <div className="max-w-4xl mx-auto mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/20">
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-4">Une éthique tournée vers l'avenir</h3>
-            <div className="text-blue-100 text-sm md:text-base leading-relaxed space-y-3 text-left">
-              <p>Dans un monde en quête de repères, l'éthique n'est plus un simple cadre de conformité : elle devient une force d'orientation. ALT&ACT s'inscrit dans cette perspective en faisant le choix d'une <strong className="text-white">éthique vivante</strong> — une éthique qui éclaire les décisions, structure les pratiques et soutient les transformations durables.</p>
-              <p>Être en avance aujourd'hui, c'est savoir placer l'humain au cœur des évolutions économiques et sociales. Nous considérons que la <strong className="text-white">confiance, l'équité et la reconnaissance des capacités</strong> constituent les fondements d'une société capable de traverser la complexité sans renoncer à sa cohésion.</p>
-              <p className="italic text-blue-200">Car les organisations qui compteront demain seront celles qui auront su faire de l'éthique non pas une contrainte, mais une boussole.</p>
-            </div>
-          </div>
-        </div>
+        <p className="max-w-3xl mx-auto text-base md:text-lg text-blue-100/90 leading-relaxed mb-10 animate-fade-in-up" style={{ animationDelay: '0.15s' }} data-testid="hero-intro">
+          ALT&ACT est une association d'innovation sociale qui agit aux côtés des personnes et des organisations pour prévenir les ruptures, développer le pouvoir d'agir et construire des réponses plus humaines, accessibles et durables.
+        </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <Button
-            onClick={() => navigate('/notre-mission')}
+            onClick={() => scrollToSection('#presentation')}
             size="lg"
             className="bg-white text-[#0b2a55] hover:bg-blue-50 text-lg px-8 py-6 transform hover:scale-105 transition-all duration-200 shadow-xl"
-            data-testid="discover-mission-btn"
+            data-testid="discover-btn"
           >
-            Découvrir notre mission
+            Découvrir ALT&ACT
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
           <Button
-            onClick={() => scrollToSection('#contact')}
+            onClick={() => { navigate('/agir-avec-vous#personne'); }}
+            size="lg"
+            className="bg-orange-500 text-white hover:bg-orange-600 text-lg px-8 py-6 transform hover:scale-105 transition-all duration-200 shadow-xl"
+            data-testid="appui-btn"
+          >
+            J'ai besoin d'un appui
+          </Button>
+          <Button
+            onClick={() => { navigate('/agir-avec-vous'); window.scrollTo(0, 0); }}
             size="lg"
             variant="outline"
             className="border-2 border-white text-white hover:bg-white hover:text-[#0b2a55] text-lg px-8 py-6 transform hover:scale-105 transition-all duration-200"
-            data-testid="contact-btn"
+            data-testid="cooperer-btn"
           >
-            Nous contacter
+            Coopérer avec nous
           </Button>
         </div>
 
-        {/* Valeurs */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        {/* Repères */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-14" data-testid="hero-reperes">
           {valeurs.map((valeur, index) => {
             const Icon = valeur.icon;
             return (
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-6 transform hover:scale-105 transition-all duration-300 animate-fade-in-up hover:bg-white/20"
-                style={{ animationDelay: `${0.4 + index * 0.1}s` }}
+                style={{ animationDelay: `${0.3 + index * 0.1}s` }}
               >
                 <div className="flex justify-center mb-3">
                   <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
@@ -197,6 +193,18 @@ const HeroSection = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Encart éthique */}
+        <div className="max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/20">
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-4">Une éthique tournée vers l'avenir</h3>
+            <div className="text-blue-100 text-sm md:text-base leading-relaxed space-y-3 text-left">
+              <p>Dans un monde en quête de repères, l'éthique n'est plus un simple cadre de conformité : elle devient une force d'orientation. ALT&ACT s'inscrit dans cette perspective en faisant le choix d'une <strong className="text-white">éthique vivante</strong> — une éthique qui éclaire les décisions, structure les pratiques et soutient les transformations durables.</p>
+              <p>Être en avance aujourd'hui, c'est savoir placer l'humain au cœur des évolutions économiques et sociales. Nous considérons que la <strong className="text-white">confiance, l'équité et la reconnaissance des capacités</strong> constituent les fondements d'une société capable de traverser la complexité sans renoncer à sa cohésion.</p>
+              <p className="italic text-blue-200">Car les organisations qui compteront demain seront celles qui auront su faire de l'éthique non pas une contrainte, mais une boussole.</p>
+            </div>
+          </div>
         </div>
       </div>
 

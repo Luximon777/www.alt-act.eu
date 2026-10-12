@@ -51,7 +51,7 @@ const ContactSection = () => {
             Parlons de votre projet
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Que vous soyez un particulier en recherche d'accompagnement ou une organisation souhaitant transformer ses pratiques, nous sommes à votre écoute.
+            Que vous traversiez une transition, une difficulté ou une période d'incertitude, ou que vous souhaitiez coopérer avec nous, nous sommes à votre écoute.
           </p>
         </div>
 
@@ -131,8 +131,9 @@ const ContactSection = () => {
                     className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0b2a55] focus:border-transparent transition-all"
                   >
                     <option value="">Choisir un sujet</option>
-                    <option value="particulier">Accompagnement personnel</option>
-                    <option value="entreprise">Partenariat entreprise</option>
+                    <option value="particulier">J'ai besoin d'un appui</option>
+                    <option value="entreprise">Coopération entreprise / institution</option>
+                    <option value="association">Action commune (association, professionnel, recherche)</option>
                     <option value="membre">Devenir membre</option>
                     <option value="autre">Autre demande</option>
                   </select>
@@ -223,13 +224,13 @@ const ContactSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100 hover:shadow-lg transition-shadow">
                 <Users className="w-10 h-10 text-amber-600 mb-4" />
-                <h4 className="font-bold text-gray-900 mb-2">Particuliers</h4>
-                <p className="text-gray-600 text-sm">Accompagnement personnalisé pour votre parcours professionnel</p>
+                <h4 className="font-bold text-gray-900 mb-2">Personnes</h4>
+                <p className="text-gray-600 text-sm">Un appui pour comprendre votre situation et élargir vos possibilités</p>
               </div>
               <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100 hover:shadow-lg transition-shadow">
                 <Building className="w-10 h-10 text-teal-600 mb-4" />
-                <h4 className="font-bold text-gray-900 mb-2">Entreprises</h4>
-                <p className="text-gray-600 text-sm">Partenariats pour des pratiques RH responsables</p>
+                <h4 className="font-bold text-gray-900 mb-2">Organisations</h4>
+                <p className="text-gray-600 text-sm">Coopérations avec entreprises, associations, institutions et chercheurs</p>
               </div>
             </div>
 

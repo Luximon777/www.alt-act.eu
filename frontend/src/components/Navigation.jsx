@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, ChevronDown, FileText, Quote, UserCircle, Heart, Building, User, Mail, UserPlus, Target, Eye, Zap, Users, Cpu, ShieldCheck, Globe } from 'lucide-react';
+import { Menu, X, ChevronDown, FileText, Quote, UserCircle, Heart, Building, User, Mail, UserPlus, Target, Eye, Zap, Users, Cpu, ShieldCheck, Globe, ShieldAlert, HandHeart } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 function Navigation() {
@@ -188,6 +188,18 @@ function Navigation() {
                           <Zap className="w-5 h-5 text-green-600 group-hover/item:text-white transition-colors duration-200" />
                         </div>
                         <div><p className="font-semibold">Notre action</p><p className="text-xs text-gray-500">Accompagner les transformations</p></div>
+                      </a>
+                      <a href="/agir-avec-vous" onClick={(e) => goToPage(e, '/agir-avec-vous')} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-all duration-200 group/item" data-testid="agir-avec-vous-link">
+                        <div className="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center group-hover/item:bg-orange-500 transition-colors duration-200">
+                          <HandHeart className="w-5 h-5 text-orange-600 group-hover/item:text-white transition-colors duration-200" />
+                        </div>
+                        <div><p className="font-semibold">Agir avec vous</p><p className="text-xs text-gray-500">Je suis… personne, professionnel, entreprise</p></div>
+                      </a>
+                      <a href="/prevenir-les-ruptures" onClick={(e) => goToPage(e, '/prevenir-les-ruptures')} className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-all duration-200 group/item" data-testid="prevenir-ruptures-link">
+                        <div className="w-10 h-10 rounded-lg bg-rose-100 flex items-center justify-center group-hover/item:bg-rose-500 transition-colors duration-200">
+                          <ShieldAlert className="w-5 h-5 text-rose-600 group-hover/item:text-white transition-colors duration-200" />
+                        </div>
+                        <div><p className="font-semibold">Prévenir les ruptures</p><p className="text-xs text-gray-500">Agir en amont, nos limites</p></div>
                       </a>
                     </div>
                   </div>
@@ -387,6 +399,12 @@ function Navigation() {
             </a>
             <a href="/notre-action" onClick={(e) => goToPage(e, '/notre-action')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-amber-50 transition-colors">
               <Zap className="w-5 h-5 text-green-600" /><span className="font-medium">Notre action</span>
+            </a>
+            <a href="/agir-avec-vous" onClick={(e) => goToPage(e, '/agir-avec-vous')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-amber-50 transition-colors">
+              <HandHeart className="w-5 h-5 text-orange-600" /><span className="font-medium">Agir avec vous</span>
+            </a>
+            <a href="/prevenir-les-ruptures" onClick={(e) => goToPage(e, '/prevenir-les-ruptures')} className="flex items-center gap-3 p-3 rounded-lg text-gray-700 hover:bg-amber-50 transition-colors">
+              <ShieldAlert className="w-5 h-5 text-rose-600" /><span className="font-medium">Prévenir les ruptures</span>
             </a>
             
             <p className="text-xs text-gray-400 uppercase tracking-wider mt-4 mb-2">Charte éthique</p>
