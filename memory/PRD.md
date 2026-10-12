@@ -64,3 +64,6 @@ Choix utilisateur : fiches coopérations par catégorie (génériques, à préci
 ### Reste à faire (Dossier V1)
 - P4 : Page Connaissance & ressources (en attente des contenus utilisateur) ; remplacer les témoignages fictifs par de vrais ; préciser les fiches coopérations avec les partenaires réels ; mesure d'impact.
 - Option : intégrer la frise « Notre manière d'agir » dans Vision & Méthode.
+
+## 2026-06 — Boussole des repères
+- `BoussoleReperes.jsx` monté une fois dans App.js (bas gauche, fixe) : 4 points colorés = repères incarnés par la page courante (mapping route → repères) ; sur l accueil, suit la section visible via IntersectionObserver (ids top/presentation/reperes/agir-avec/je-suis/cooperer/ils-contribuent/contact). Clic → panneau détaillé. Masquée sur les pages légales. Vérifié par screenshot.

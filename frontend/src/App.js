@@ -19,6 +19,7 @@ import Footer from "./components/Footer";
 import AgirAvecVous from "./components/AgirAvecVous";
 import PrevenirRuptures from "./components/PrevenirRuptures";
 import Cooperations from "./components/Cooperations";
+import BoussoleReperes from "./components/BoussoleReperes";
 
 // Mission Pages
 import NotreMission from "./components/NotreMission";
@@ -109,6 +110,7 @@ function App() {
           <Route path="/confidentialite" element={<PolitiqueConfidentialite />} />
           <Route path="/rgpd" element={<RGPD />} />
         </Routes>
+        <BoussoleReperes />
         <Toaster />
       </div>
     </HashRouter>
