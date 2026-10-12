@@ -37,3 +37,16 @@ Site associatif ALT&ACT (www.alt-act.eu) hébergé sur OVH, code source sur GitH
 ## 2026-06 — Ajout Marie-Josée Assa
 - Ajoutée au Comité de pilotage (MembresPage.jsx) comme Directrice Ressources Humaines (DRH), profil complet (bio, réalisations, vision, signature, formation, expertise) rédigé à partir de son CV.
 - Rappel : le routage est en HashRouter → URL de la page membres : `/#/membres`.
+
+
+## 2026-06 — Réajustement éditorial (Dossier V1) — Priorités 1 + 2 LIVRÉES
+Choix utilisateur : slogan « Permettre à chacun d'agir et de contribuer. » ; menu à réorganiser plus tard ; page Connaissance & ressources attendra les contenus.
+- Données centralisées : `src/data/reperes.js` (repères, missions, 6 profils « Je suis… », signature).
+- Accueil : HeroSection (signature, intro innovation sociale, 3 CTA, 4 repères, encart éthique conservé), PresentationSection (raison d'être, 4 facettes), ReperesSection, AgirAvecSection (Agir avec pas à la place + 4 missions), JeSuisSection (+ teaser prévention).
+- Nouvelles pages : `/agir-avec-vous` (6 profils, ancres #personne…), `/prevenir-les-ruptures` (prévention, limites, orientation).
+- Navigation : 2 liens ajoutés dans dropdown Mission (desktop + mobile). Footer + ContactSection vocabulaire révisé.
+- Testé : iteration_3.json — tout passé.
+
+### Reste à faire (Dossier V1)
+- P3 : Repositionner RE'ACTIF PRO (§11), frise « Notre manière d'agir » dans Vision & Méthode (§12), innovation sociale (§13), réorganisation menu (§17, décision utilisateur en attente).
+- P4 : Page Connaissance & ressources (contenus à fournir par l'utilisateur), coopérations territoriales par fiches (§15), mesure d'impact.
