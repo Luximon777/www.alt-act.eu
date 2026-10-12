@@ -50,3 +50,17 @@ Choix utilisateur : slogan « Permettre à chacun d'agir et de contribuer. » ; 
 ### Reste à faire (Dossier V1)
 - P3 : Repositionner RE'ACTIF PRO (§11), frise « Notre manière d'agir » dans Vision & Méthode (§12), innovation sociale (§13), réorganisation menu (§17, décision utilisateur en attente).
 - P4 : Page Connaissance & ressources (contenus à fournir par l'utilisateur), coopérations territoriales par fiches (§15), mesure d'impact.
+
+
+## 2026-06 — Priorité 3 (+ une partie P4) LIVRÉE
+Choix utilisateur : fiches coopérations par catégorie (génériques, à préciser) ; témoignages illustratifs anonymisés signalés comme exemples ; placement accueil + page /cooperations ; anciennes entrées « Vos accès » dans « Agir avec vous ».
+- Menu réorganisé (data-driven `src/data/menu.js`, rendu `Navigation.jsx`) : Qui sommes-nous ? / Agir avec vous / Nos actions / Nos projets / Coopérer. data-testid : `<groupId>-dropdown`, items `<testid>` desktop, `mobile-<testid>` mobile.
+- RE'ACTIF PRO (`ReactifProPresentation.jsx`) : intro §11 (innovation de l'écosystème ALT&ACT) + frise `ManiereAgirFrise.jsx` (7 étapes). Admin toggle logo conservé.
+- Coopérations : `CooperationsSection.jsx` (accueil, 3 fiches + FicheCooperation export), page `/cooperations` (`Cooperations.jsx` : 5 fiches, manière d'agir, témoignages, CTA Devenir partenaire / Proposer une expérimentation / Contribuer).
+- Témoignages : `TemoignagesSection.jsx` (4 témoignages fictifs, mention explicite) sur accueil + /cooperations. Données dans `src/data/reperes.js` (maniereAgir, cooperations, temoignages).
+- Footer réaligné (lien mort /notre-vision supprimé).
+- Testé : iteration_4.json — tout passé.
+
+### Reste à faire (Dossier V1)
+- P4 : Page Connaissance & ressources (en attente des contenus utilisateur) ; remplacer les témoignages fictifs par de vrais ; préciser les fiches coopérations avec les partenaires réels ; mesure d'impact.
+- Option : intégrer la frise « Notre manière d'agir » dans Vision & Méthode.
