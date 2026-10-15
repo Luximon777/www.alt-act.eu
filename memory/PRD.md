@@ -67,3 +67,6 @@ Choix utilisateur : fiches coopérations par catégorie (génériques, à préci
 
 ## 2026-06 — Boussole des repères
 - `BoussoleReperes.jsx` monté une fois dans App.js (bas gauche, fixe) : 4 points colorés = repères incarnés par la page courante (mapping route → repères) ; sur l accueil, suit la section visible via IntersectionObserver (ids top/presentation/reperes/agir-avec/je-suis/cooperer/ils-contribuent/contact). Clic → panneau détaillé. Masquée sur les pages légales. Vérifié par screenshot.
+
+## 2026-06 — Florence Scheidecker ajoutée au Comité de pilotage
+- Fiche « Directrice Administrative et Financière – DAF externe » (Consultatif) en tête du Comité de pilotage dans MembresPage.jsx, à partir du texte fourni par l utilisateur. Sa fiche Trésorière (Bureau) et sa mention membre fondatrice sont conservées.
