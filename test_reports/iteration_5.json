@@ -1,0 +1,23 @@
+{
+  "summary": "Production verification (https://www.alt-act.eu/#/membres) with a fresh browser context. Live HTML references static/js/main.23132e13.js (latest build). Comité de pilotage first card = Florence Scheidecker / 'Directrice Administrative et Financière – DAF externe' / badge 'Consultatif'; 'Voir le profil complet' expands bio starting 'Florence Scheidecker dispose d'un profil senior en finance'. Bureau still shows Florence Scheidecker as 'Trésorière'. Marie-Josée Assa present on page; 5-item menu (Qui sommes-nous ? / Agir avec vous / Nos actions / Nos projets / Coopérer) visible. Deployment is effective; user's observation is a cached version.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": []},
+  "http_headers_production": {
+    "url": "https://www.alt-act.eu/",
+    "cache-control": "max-age=600",
+    "last-modified": "Thu, 15 Oct 2026 16:26:38 GMT",
+    "etag": "\"6ad0febe-e6e\"",
+    "x-cache": "HIT (Fastly/varnish, age 63s)",
+    "bundle": "static/js/main.23132e13.js (cache-control max-age=600, last-modified 16:26:38 GMT)",
+    "bundle_contains": "'DAF externe' x2, 'Marie-Josée Assa', 'profil senior en finance'"
+  },
+  "test_report_links": [],
+  "action_items": ["None on code. Tell the user: GitHub Pages/Fastly caches index.html up to 10 min (max-age=600); do a hard refresh (Ctrl+F5) or wait ~10 min after deploy. The new card is live."],
+  "critical_code_review_comments": [],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A", "frontend": "100%"},
+  "seed_data_creation": "none",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Production verified for bundle main.23132e13.js on 2026-10-15 16:35 UTC. No forms submitted."
+}
