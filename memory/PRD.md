@@ -72,3 +72,5 @@ Choix utilisateur : fiches coopérations par catégorie (génériques, à préci
 - Fiche « Directrice Administrative et Financière – DAF externe » (Consultatif) en tête du Comité de pilotage dans MembresPage.jsx, à partir du texte fourni par l utilisateur. Sa fiche Trésorière (Bureau) et sa mention membre fondatrice sont conservées.
 
 ## 2026-06 — Mounyr : mention « Ancien Responsable pédagogique ICAM Strasbourg » supprimée (sous-titre + bio). La mention du webinaire ICAM dans ses réalisations est conservée.
+
+## 2026-06 — Prévenir les ruptures : bloc « ne se substitue pas » reformulé : « Nous ne nous substituons pas aux professionnels — nous les mobilisons » + intro (professionnels qualifiés sélectionnés selon la charte éthique) + note orientation urgence/compétence réglementée. Icônes X remplacées par HandHeart.

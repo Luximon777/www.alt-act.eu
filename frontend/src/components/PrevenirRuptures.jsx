@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, ShieldAlert, Check, X, Compass, User, Search, Building2, Briefcase, Network, Clock } from 'lucide-react';
+import { ArrowRight, ShieldAlert, Check, HandHeart, Compass, User, Search, Building2, Briefcase, Network, Clock } from 'lucide-react';
 import { Button } from './ui/button';
 import Navigation from './Navigation';
 import Footer from './Footer';
@@ -14,7 +14,7 @@ const publics = [
 ];
 
 const faisons = ['Écouter', 'Informer', 'Accompagner', 'Orienter', 'Mettre en relation', 'Former', 'Expérimenter', 'Développer des outils'];
-const neFaisonsPas = ['Les professionnels médicaux', 'Les professionnels psychologiques', 'Les professionnels juridiques', 'Les professionnels sociaux', 'Les services publics compétents', "Les dispositifs d'urgence"];
+const neFaisonsPas = ['Professionnels médicaux', 'Professionnels psychologiques', 'Professionnels juridiques', 'Professionnels sociaux', 'Services publics compétents', "Dispositifs d'urgence"];
 
 const PrevenirRuptures = () => {
   const navigate = useNavigate();
@@ -88,15 +88,21 @@ const PrevenirRuptures = () => {
               </ul>
             </div>
             <div className="bg-white rounded-3xl p-8 border border-rose-100 shadow-sm" data-testid="ce-que-nous-ne-faisons-pas">
-              <h3 className="text-xl font-bold text-rose-700 mb-6">ALT&ACT ne se substitue pas à</h3>
+              <h3 className="text-xl font-bold text-rose-700 mb-3">Nous ne nous substituons pas aux professionnels — nous les mobilisons</h3>
+              <p className="text-gray-700 text-sm leading-relaxed mb-6" data-testid="ne-substitue-intro">
+                ALT&ACT ne remplace pas les professionnels compétents ni les services publics. En revanche, l'association peut faire intervenir, dans chacun de ces domaines, des professionnels qualifiés, sélectionnés avec rigueur sur la base de notre charte de travail éthique.
+              </p>
               <ul className="space-y-3">
                 {neFaisonsPas.map((f) => (
                   <li key={f} className="flex items-center gap-2 text-gray-800">
-                    <span className="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center flex-shrink-0"><X className="w-4 h-4 text-rose-600" /></span>
+                    <span className="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center flex-shrink-0"><HandHeart className="w-4 h-4 text-rose-600" /></span>
                     {f}
                   </li>
                 ))}
               </ul>
+              <p className="mt-6 text-xs text-gray-500 leading-relaxed" data-testid="ne-substitue-note">
+                Les situations relevant de l'urgence ou d'une compétence réglementée sont systématiquement orientées vers l'interlocuteur habilité.
+              </p>
             </div>
           </div>
           <div className="mt-8 bg-[#0b2a55] rounded-3xl p-8 md:p-10 text-white flex flex-col md:flex-row gap-6 items-start md:items-center" data-testid="orientation-bloc">
