@@ -74,3 +74,5 @@ Choix utilisateur : fiches coopérations par catégorie (génériques, à préci
 ## 2026-06 — Mounyr : mention « Ancien Responsable pédagogique ICAM Strasbourg » supprimée (sous-titre + bio). La mention du webinaire ICAM dans ses réalisations est conservée.
 
 ## 2026-06 — Prévenir les ruptures : bloc « ne se substitue pas » reformulé : « Nous ne nous substituons pas aux professionnels — nous les mobilisons » + intro (professionnels qualifiés sélectionnés selon la charte éthique) + note orientation urgence/compétence réglementée. Icônes X remplacées par HandHeart.
+
+## 2026-06 — Prévenir les ruptures : lien inline « charte de travail éthique » + bouton « Consulter la Charte éthique et nos critères de sélection » → /charte-ethique (vérifié par screenshot).

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, ShieldAlert, Check, HandHeart, Compass, User, Search, Building2, Briefcase, Network, Clock } from 'lucide-react';
+import { ArrowRight, ShieldAlert, Check, HandHeart, Compass, User, Search, Building2, Briefcase, Network, Clock, ScrollText } from 'lucide-react';
 import { Button } from './ui/button';
 import Navigation from './Navigation';
 import Footer from './Footer';
@@ -90,7 +90,8 @@ const PrevenirRuptures = () => {
             <div className="bg-white rounded-3xl p-8 border border-rose-100 shadow-sm" data-testid="ce-que-nous-ne-faisons-pas">
               <h3 className="text-xl font-bold text-rose-700 mb-3">Nous ne nous substituons pas aux professionnels — nous les mobilisons</h3>
               <p className="text-gray-700 text-sm leading-relaxed mb-6" data-testid="ne-substitue-intro">
-                ALT&ACT ne remplace pas les professionnels compétents ni les services publics. En revanche, l'association peut faire intervenir, dans chacun de ces domaines, des professionnels qualifiés, sélectionnés avec rigueur sur la base de notre charte de travail éthique.
+                ALT&ACT ne remplace pas les professionnels compétents ni les services publics. En revanche, l'association peut faire intervenir, dans chacun de ces domaines, des professionnels qualifiés, sélectionnés avec rigueur sur la base de notre{' '}
+                <a href="/charte-ethique" onClick={(e) => { e.preventDefault(); navigate('/charte-ethique'); window.scrollTo(0, 0); }} className="text-rose-700 font-semibold underline underline-offset-2 hover:text-rose-900" data-testid="charte-ethique-inline-link">charte de travail éthique</a>.
               </p>
               <ul className="space-y-3">
                 {neFaisonsPas.map((f) => (
@@ -103,6 +104,15 @@ const PrevenirRuptures = () => {
               <p className="mt-6 text-xs text-gray-500 leading-relaxed" data-testid="ne-substitue-note">
                 Les situations relevant de l'urgence ou d'une compétence réglementée sont systématiquement orientées vers l'interlocuteur habilité.
               </p>
+              <button
+                onClick={() => { navigate('/charte-ethique'); window.scrollTo(0, 0); }}
+                className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-rose-200 text-rose-700 text-sm font-semibold hover:bg-rose-50 transition-colors"
+                data-testid="charte-ethique-btn"
+              >
+                <ScrollText className="w-4 h-4" />
+                Consulter la Charte éthique et nos critères de sélection
+                <ArrowRight className="w-4 h-4" />
+              </button>
             </div>
           </div>
           <div className="mt-8 bg-[#0b2a55] rounded-3xl p-8 md:p-10 text-white flex flex-col md:flex-row gap-6 items-start md:items-center" data-testid="orientation-bloc">
